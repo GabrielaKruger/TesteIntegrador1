@@ -1,0 +1,7 @@
+FROM selenium/hub:latest
+
+ENV LANG pt_BR.UTF-8
+ENV LANGUAGE pt_BR:pt
+ENV LC_ALL pt_BR.UTF-8
+
+EXPOSE 4444
