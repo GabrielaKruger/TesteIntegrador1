@@ -7,7 +7,7 @@ Funcionalidade: MKT002 - Ofertas Originação
     Então acessar o programa "MKT002" feature MKT002
 
   Cenario: Cadastro de Tipos de Informação de Precificação | Caminho feliz
-    Então acessa o programa "MKT002"
+    Então acessa o programa "MKT003"
 
 #    Quando informar dados de filtro
 #    E clicar botão Informações Adicionais
