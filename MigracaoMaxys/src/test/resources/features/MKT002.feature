@@ -8,6 +8,7 @@ Funcionalidade: MKT002 - Ofertas Originação
 
   Cenario: Cadastro de Tipos de Informação de Precificação | Caminho feliz
     Então acessa o programa "MKT002"
+    E clicar botão ToolBar salvar feature EXP088
 
 #    Quando informar dados de filtro
 #    E clicar botão Informações Adicionais
