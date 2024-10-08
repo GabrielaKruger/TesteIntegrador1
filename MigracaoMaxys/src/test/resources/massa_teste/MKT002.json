@@ -1,0 +1,19 @@
+{
+  "empresa": "84",
+  "item": "58",
+  "tradeSlip": "943",
+  "clifor": "910031",
+  "tipo": "FIXAÇÃO",
+
+  "ctrCorretora": "0,001029",
+  "tFornecedor": "tFornecedor",
+  "tDeCompra": "06987",
+  "localDescarga": "SAO PAULO",
+  "terminalPorto": "PORTO DE PARANAGUÁ(3)",
+  "comissaoExp": "ACT EXPORTACAO LTDA",
+  "carryingChargesExp": "ACDIP EXPORTACAO LTDA",
+  "despatchExp": "ACDA EXPORTACAO LTDA",
+  "extensionExp": "EXPORTACAO LTDA",
+  "preAdviceExp": "ACT EXPORTAR AD",
+  "loadingRateExp": "ACT EXPORTAR RATE"
+}
