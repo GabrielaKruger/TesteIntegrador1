@@ -2,7 +2,7 @@
 @test @Pricing @dt_MKT002 @MKT @MKT002 @chrome
 Funcionalidade: MKT002 - Ofertas Originação
 
-  #Cenario Teste
+  # Teste MKT002
 
   Cenario de Fundo:
     Dado inicialize a execução dos cenários do MKT002
