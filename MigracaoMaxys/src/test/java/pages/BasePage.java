@@ -150,6 +150,13 @@ public class BasePage {
         driver.findElement(By.xpath(elemento)).click();
     }
 
+    // Método para clicar no elemento web
+    public void clicarElementoWebByXpath(String elementoXpath) {
+        WebElement elemento = new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.elementToBeClickable(By.xpath(elementoXpath))); // Espera o elemento ser clicável
+        elemento.click();
+    }
+
     // duplo clique em um elemento
     public void darDuploCliqueNoElemento(WebElement elemento) {
         Actions action = new Actions(driver);
@@ -195,7 +202,7 @@ public class BasePage {
     public void clicarBotaoToolBar(String botao) {
         String botaoXpath = xpathMap.get(botao);
         if (botaoXpath != null) {
-            esperarElementoByXpath(botaoXpath);
+            //esperarElementoByXpath(botaoXpath);
             clicarElementoByXpathComRetentativa(botaoXpath);
         } else {
             System.out.println("Botão não reconhecido: " + botao);
@@ -267,7 +274,6 @@ public class BasePage {
     public WebElement selecionarElementByXpath(String element) {
         return driver.findElement(By.xpath(element));
     }
-
 
     // método que seleciona um valor em uma lista suspensa -
     // - passamos o xpath e o valor que queremos selecionar
@@ -1161,13 +1167,6 @@ public class BasePage {
         return -1;
     }
 
-//    public boolean verificarLinhaEmBranco(WebElement inputElement) {
-//        // Obter todas as classes do elemento
-//        String classes = inputElement.getAttribute("class");
-//
-//        // Verificar se a classe "ng-dirty" está presente
-//        return classes.contains("ng-dirty");
-//    }
 
     // Verifica valor vazio e ausência da classe "ng-dirty".
     public boolean isInputVazioSemClasseDirty(WebElement inputElement) {
@@ -1260,18 +1259,18 @@ public class BasePage {
     }
 
 //-------------------------------------------------------------------------------------------
-//    //Funções de ESPERAR - ENCONTRAR - LOCALIZAR - CLICAR - PREENCHER - funções completas
+//    //Funções de ESPERAR - ENCONTRAR - LOCALIZAR - CLICAR - PREENCHER - FUNÇÕES COMPLETAS
 // ------------------------------------------------------------------------------------------
 
     // para preencher um elemento com um valor - função completa - com esperas
     public void esperarEncontrarEPreencherElementos(String elemento, String valor) {
-        esperarMilissegundos(300); //espera necessaria
+        esperarMilissegundos(300); //espera necessária
         encontrarElementoByXpath(elemento);
-        esperarMilissegundos(200);//espera necessaria
+        esperarMilissegundos(200);//espera necessária
         clicarElementoByXpath(elemento);
-        esperarMilissegundos(200);//espera necessaria
+        esperarMilissegundos(200);//espera necessária
         preencherElementoByXpath(elemento, valor);
-        esperarMilissegundos(300); //espera necessaria
+        esperarMilissegundos(300); //espera necessária
         pressionaTabActions();
     }
 
@@ -1298,6 +1297,25 @@ public class BasePage {
         apagarCampoClicandoBackSpace(elemento);
         esperarMilissegundos(500); //espera necessaria
         pressionaTabActions();
+    }
+
+    // Altera o contexto para o iframe que contém o elemento
+    public void alterarParaIframeComElemento(String xpathElemento) {
+        List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+        boolean encontrouIframe = false;
+
+        for (WebElement iframe : iframes) {
+            driver.switchTo().frame(iframe); // Alterna para o iframe atual
+            if (!driver.findElements(By.xpath(xpathElemento)).isEmpty()) { // Verifica se o elemento existe no iframe
+                encontrouIframe = true;
+                break; // Sai do loop se encontrar o elemento
+            }
+            driver.switchTo().defaultContent(); // Volta para o contexto principal caso o elemento não esteja no iframe
+        }
+
+        if (!encontrouIframe) {
+            throw new RuntimeException("O elemento não foi encontrado em nenhum iframe!");
+        }
     }
 }
 

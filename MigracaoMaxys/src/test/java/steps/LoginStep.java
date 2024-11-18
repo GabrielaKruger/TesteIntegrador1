@@ -14,7 +14,7 @@ public class LoginStep {
 
     @E("acessa o programa {string}")
     public void acessarPrograma(String programa) {
-        loginPage.loginNewMaxys(programa);
+        loginPage.loginNewMaxysNovo(programa);
     }
 }
 

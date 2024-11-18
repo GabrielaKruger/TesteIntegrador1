@@ -7,8 +7,8 @@ import java.util.List;
 
 public class DataBaseConnection {
     private static final String url = "jdbc:oracle:thin:@192.168.181.199:1521:AUTOLDC";
-    private static final String user = "ldc";
-    private static final String pwd = "ldc";
+    private static final String user = "Features";
+    private static final String pwd = "Features";
     private Connection conn;
 
     public static void executeQuery(String query) {

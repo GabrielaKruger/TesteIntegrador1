@@ -24,21 +24,7 @@ public class LoginPage extends BasePage {
     String nmUsuario = "ADMINISTRADOR DO SISTEMA - AUTO";
     String urlDefault = "https://auto.maxiconsystems.com.br";
 
-//    public void loginNewMaxys(String programa) {
-//        // Set para programas permitidos (Set é mais eficiente para busca)
-//        Set<String> programasPermitidos = new HashSet<>(Arrays.asList(
-//                "INC001","GPE001", "TGR029" , "TGR030",
-//                "MKT002", "MKT010", "MKT025", "MKT026", "MKT027", "MKT032"
-//        ));
-//
-//        if (programasPermitidos.contains(programa)) {
-//            System.out.println(callForm(programa));
-//            driver.get(callForm(programa));
-//        } else {
-//            driver.get("https://auto.maxiconsystems.com.br/index.html?" + programa.toLowerCase());
-//            driver.switchTo().frame("myIframe");
-//        }
-//    }
+
 
     public void loginNewMaxysNovo(String programa) {
         // Navegar para a página de login
@@ -48,7 +34,7 @@ public class LoginPage extends BasePage {
 
         // Verificar se o elemento sidenavAccordion está presente (usuário já logado)
         boolean jaLogado;
-//        esperarPorSegundos(5);
+
         try {
             // Verifica se o menu lateral (sidenavAccordion) está visível
             jaLogado = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='sidenavAccordion']"))) != null;
@@ -59,21 +45,20 @@ public class LoginPage extends BasePage {
 
         if (!jaLogado) {
             // Caso não esteja logado, realiza o processo de login
-//            esperarPorSegundos(2);
+
             WebElement emailField = driver.findElement(By.xpath("//*[@id='email']"));
             emailField.sendKeys("MAX");
 
-//            esperarPorSegundos(2);
+
             WebElement passwordField = driver.findElement(By.xpath("//*[@id='password']"));
             passwordField.sendKeys("123456");
 
             WebElement loginButton = driver.findElement(By.xpath("/html/body/app-root/app-login/div/div[1]/div/form/div[3]/button"));
-            loginButton.click();
-//            esperarPorSegundos(2);
+            pressionaTabActions();
+            esperarMilissegundos(2000); // espera necessária
             loginButton.click();
 
-            // Aguarda até ser redirecionado para o home
-//            esperarPorSegundos(3);
+            // Aguarda até ser redirecionado para o Home
             wait.until(ExpectedConditions.urlContains("/#/home"));
         } else {
             System.out.println("Usuário já está logado, pulando a etapa de login.");
@@ -87,39 +72,18 @@ public class LoginPage extends BasePage {
             String programUrl = "https://auto.maxiconsystems.com.br/#/" + programa.toLowerCase();
             driver.get(programUrl);
         }
-    }
-
-
-    public void loginNewMaxys(String programa) {
-        if (programa.equals("MKT027") || programa.equals("MKT002") || programa.equals("GPE001")) {
-            System.out.println(callForm(programa));
-            driver.get(callForm(programa));
+        // Altera o contexto para o primeiro iframe encontrado, ou lança exceção se não houver iframes
+        List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
+        if (!iframes.isEmpty()) {
+            driver.switchTo().frame(iframes.get(0));
         } else {
-            driver.get("https://auto.maxiconsystems.com.br/index.html?" + programa.toLowerCase());
-            driver.switchTo().frame("myIframe");
+            throw new RuntimeException("Nenhum iframe encontrado!");
         }
     }
 
+
     public String callForm(String programa) {
-        String globalJson = String.format(
-                "{" +
-                        "\"cdUsuario\":\"%s\"," +
-                        "\"cdEmpresa\":%s," +
-                        "\"nmUsuario\":\"%s\"," +
-                        "\"dsPrograma\":\"%s\"," +
-                        "\"cdModulo\":\"%s\"," +
-                        "\"cdPrograma\":%d," +
-                        "\"stAuditoria\":\"S\"," +
-                        "\"tpAcesso\":\"M\"," +
-                        "\"cdModalidade\":null" +
-                        "}",
-                cdUsuario,
-                cdEmpresa,
-                nmUsuario,
-                programa.substring(0, 3) + Integer.parseInt(programa.substring(3)),
-                programa.substring(0, 3),
-                Integer.parseInt(programa.substring(3))
-        );
+        String globalJson = String.format("{" + "\"cdUsuario\":\"%s\"," + "\"cdEmpresa\":%s," + "\"nmUsuario\":\"%s\"," + "\"dsPrograma\":\"%s\"," + "\"cdModulo\":\"%s\"," + "\"cdPrograma\":%d," + "\"stAuditoria\":\"S\"," + "\"tpAcesso\":\"M\"," + "\"cdModalidade\":null" + "}", cdUsuario, cdEmpresa, nmUsuario, programa.substring(0, 3) + Integer.parseInt(programa.substring(3)), programa.substring(0, 3), Integer.parseInt(programa.substring(3)));
 
         String text = cdEmpresa + "|" + programa.toUpperCase() + "|" + cdUsuario + "|" + nmUsuario + "|" + LocalDate.now().minusDays(1).atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli() + "|" + globalJson + "|" + UUID.randomUUID().toString();
         text += '|';
@@ -134,15 +98,7 @@ public class LoginPage extends BasePage {
         cal.add(Calendar.DATE, -1);
         Date yesterday = cal.getTime();
 
-        text = String.format("%s|%s|%s|%s|%d|%s|%s|",
-                cdEmpresa,
-                programa.toUpperCase(),
-                cdUsuario,
-                nmUsuario,
-                yesterday.getTime(),
-                globalJson,
-                globalTelaId
-        );
+        text = String.format("%s|%s|%s|%s|%d|%s|%s|", cdEmpresa, programa.toUpperCase(), cdUsuario, nmUsuario, yesterday.getTime(), globalJson, globalTelaId);
 
         int soma = text.length();
         for (int i = 0; i < text.trim().length(); i++) {
