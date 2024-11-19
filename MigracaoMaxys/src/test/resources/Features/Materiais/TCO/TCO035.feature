@@ -1,5 +1,5 @@
  #language: pt
-@test @TCO035 @dt_TCO035 @chrome
+ @test @TCO035 @dt_TCO035 @chrome
  Funcionalidade: TCO035 - Autorizador Restrito
 
    Cenário de Fundo:
@@ -21,8 +21,8 @@
 
      Quando recarregar o programa feature TCO035
      E informa Autorizador feature TCO035
-     E realiza consulta feature TCO035
-     E seleciona Autorizador feature TCO035
+     E realizar consulta feature TCO035
+     E selecionar Autorizador feature TCO035
      Então seleciona Status "Inativo" feature TCO035
 
      Quando clicar botão ToolBar "salvar" feature TCO035
@@ -31,42 +31,80 @@
      Então clicar botão "ok" do modal feature TCO035
 
      Quando recarregar o programa feature TCO035
-     Então seleciona Autorizador feature TCO035
+     E informa Autorizador feature TCO035
+     E realizar consulta feature TCO035
+     Então selecionar Autorizador feature TCO035
 
      Quando clicar botão ToolBar "excluir" feature TCO035
      E apresenta o modal H4 "modal-basic-title" feature TCO035
-     E clicar botão "sim" do modal feature TCO035
+     Então clicar botão "sim" do modal feature TCO035
+
+   @wip #Valores não são apresentados na LOV - Repassado para o desenvolvedor Guilherme
+   Cenario: Cadastro, edição e exclusão de Autorizador Restrito | Teclas Atalho
+
+     Quando pressionar tecla "f6" feature TCO035
+     E selecionar a Empresa Grid feature TCO035
+#     E selecionar o Autorizador Grid feature TCO035
+     E selecionar o C.Custo Grid feature TCO035
+     Então seleciona Status "Ativo" feature TCO035
+
+     Quando clicar botão ToolBar "salvar" feature TCO035
      E apresentar o modal H5 "modal-basic-title" feature TCO035
-     E apresentar a mensagem "Registro Excluído com Sucesso!" feature TCO035
+     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
      Então clicar botão "ok" do modal feature TCO035
 
+     Quando recarregar o programa feature TCO035
+     E selecionar a Empresa Consulta feature TCO035
+     E selecionar o Autorizador Consulta feature TCO035
+     E selecionar o C.Custo Consulta feature TCO035
+     E pressionar tecla "f7" feature TCO035
+     E selecionar Autorizador feature TCO035
+     Então seleciona Status "Inativo" feature TCO035
 
-#   Cenario: Cadastro, edição e exclusão de Autorizador Restrito | Teclas Atalho | Caminho feliz
-#     Quando verificar se o código da caracteristica e tabela utilizado esta cadastrado feature TCT035
-#     E preencher filtros e consultar pelo F4 feature TCT035
-#     E pressionar tecla "f6" feature TCT035
-#     E preencher todos os campos caracteristica tabela de classificação feature TCT035
-#     E pressionar tecla "f10" feature TCT035
-#     E apresentar o modal H5 "modal-basic-title" feature TCT035
-#     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCT035
-#     Então clicar botão "ok" do modal feature TCT035
-#
-#     Quando recarregar o programa feature TCT035
-#     E preencher filtros e consultar pelo F4 feature TCT035
-#     E selecionar o item cadastrado feature TCT035
-#     E alterar os valores minimo, maximo e resultado padrão feature TCT035
-#     E pressionar tecla "f10" feature TCT035
-#     E apresentar o modal H5 "modal-basic-title" feature TCT035
-#     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCT035
-#     Então clicar botão "ok" do modal feature TCT035
-#
-#     Quando recarregar o programa feature TCT035
-#     E preencher filtros e consultar pelo F4 feature TCT035
-#     E selecionar o item cadastrado feature TCT035
-#     E pressionar teclas shift + f6 para excluir cadastro de sigla feature TCT035
-#     E apresenta o modal H4 "modal-basic-title" feature TCT035
-#     E clicar botão "sim" do modal feature TCT035
-#     E apresentar o modal H5 "modal-basic-title" feature TCT035
-#     E apresentar a mensagem "Registro Excluído com Sucesso!" feature TCT035
-#     Então clicar botão "ok" do modal feature TCT035
-#     Então clicar botão Ok de Inconsistências feature TCT035
+     Quando pressionar tecla "f10" feature TCO035
+     E apresentar o modal H5 "modal-basic-title" feature TCO035
+     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
+     Então clicar botão "ok" do modal feature TCO035
+
+     Quando recarregar o programa feature TCO035
+     E selecionar o Autorizador Consulta feature TCO035
+     E pressionar tecla "f7" feature TCO035
+     Então selecionar Autorizador feature TCO035
+
+     Quando pressionar tecla shift + f6 feature TCO035
+     E apresenta o modal H4 "modal-basic-title" feature TCO035
+     Então clicar botão "sim" do modal feature TCO035
+
+    @wip # Não se comporta como o Forms - Campo Automatizador
+   Cenário: Consulta, cadastro e exclusão| Negativo - Validação Campos obrigatórios Consulta
+
+     Quando clicar botão ToolBar "novo" feature TCO035
+#     E preencher Empresa Negativo feature TCO035
+#     E preencher Autorizador Negativo feature TCO035
+#     E preencher C.Custo Negativo feature TCO035
+     Então seleciona Status "Ativo" feature TCO035
+
+     Quando clicar botão ToolBar "salvar" feature TCO035
+     E apresentar o modal H5 "modal-basic-title" feature TCO035
+     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
+     Então clicar botão "ok" do modal feature TCO035
+
+     Quando recarregar o programa feature TCO035
+     E informa Autorizador feature TCO035
+     E realizar consulta feature TCO035
+     E selecionar Autorizador feature TCO035
+     Então seleciona Status "Inativo" feature TCO035
+
+     Quando clicar botão ToolBar "salvar" feature TCO035
+     E apresentar o modal H5 "modal-basic-title" feature TCO035
+     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
+     Então clicar botão "ok" do modal feature TCO035
+
+     Quando recarregar o programa feature TCO035
+     E informa Autorizador feature TCO035
+     E realizar consulta feature TCO035
+     Então selecionar Autorizador feature TCO035
+
+     Quando clicar botão ToolBar "excluir" feature TCO035
+     E apresenta o modal H4 "modal-basic-title" feature TCO035
+     Então clicar botão "sim" do modal feature TCO035

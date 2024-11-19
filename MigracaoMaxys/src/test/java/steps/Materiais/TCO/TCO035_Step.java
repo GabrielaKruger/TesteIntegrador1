@@ -109,14 +109,55 @@ public class TCO035_Step {
         TCO035_Page.informaAutorizadorFeatureTCO035( massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
     }
 
-    @E("realiza consulta feature TCO035")
-    public void realizaConsultaFeatureTCO035() {
-        TCO035_Page.realizaConsultaFeatureTCO035();
+    @E("realizar consulta feature TCO035")
+    public void realizarConsultaFeatureTCO035() {
+        TCO035_Page.realizarConsultaFeatureTCO035();
     }
 
-    @E("seleciona Autorizador feature TCO035")
-    public void selecionaAutorizadorFeatureTCO035() {
-        TCO035_Page.selecionaAutorizadorFeatureTCO035(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
+    @E("selecionar Autorizador feature TCO035")
+    public void selecionarAutorizadorFeatureTCO035() {
+        TCO035_Page.selecionarAutorizadorFeatureTCO035(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
+    }
+
+    @Quando("pressionar tecla {string} feature TCO035")
+    public void pressionarTeclaFeatureTCO035(String tecla) {
+        basePage.pressionarTecla(tecla);
+    }
+
+    @Quando("pressionar tecla shift + f6 feature TCO035")
+    public void pressionarTeclaShiftFFeatureTCO035() {
+        basePage.pressionarShiftF6();
+    }
+
+
+    @E("selecionar a Empresa Consulta feature TCO035")
+    public void selecionarAEmpresaConsultaFeatureTCO035() {
+        TCO035_Page.selecionarEmpresaConsultaFeatureTCO035();
+    }
+
+    @E("selecionar o Autorizador Consulta feature TCO035")
+    public void selecionarOAutorizadorConsultaFeatureTCO035() {
+        TCO035_Page.selecionarOAutorizadorConsultaFeatureTCO035(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
+    }
+
+    @E("selecionar o C.Custo Consulta feature TCO035")
+    public void selecionarOCCustoConsultaFeatureTCO035() {
+        TCO035_Page.selecionarOCCustoConsultaFeatureTCO035();
+    }
+
+    @E("selecionar a Empresa Grid feature TCO035")
+    public void selecionarAEmpresaGridFeatureTCO035() {
+        TCO035_Page.selecionarAEmpresaGridFeatureTCO035();
+    }
+
+    @E("selecionar o Autorizador Grid feature TCO035")
+    public void selecionarOAutorizadorGridFeatureTCO035() {
+        TCO035_Page.selecionarOAutorizadorGridFeatureTCO035(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
+    }
+
+    @E("selecionar o C.Custo Grid feature TCO035")
+    public void selecionarOCCustoGridFeatureTCO035() {
+        TCO035_Page.selecionarOCCustoGridFeatureTCO035();
     }
 
     @After
