@@ -2,7 +2,7 @@
  @wip @TCO035 @dt_TCO024 @chrome
  Funcionalidade: TCO024 - Usuários Por Departamentos
 
-
+    # Essa tela está com refluxo pois ao inserir valores está apresentando erro ORA - Reportado card.
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TCO024
      E acessar o programa "TCO024" feature TCO024
