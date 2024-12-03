@@ -1,15 +1,20 @@
-//package pages.Originacção;
+package pages.Originação;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import pages.BasePage;
+
+public class GPE001_Page extends BasePage {
+    WebDriver driver;
+
+    public GPE001_Page(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+    }
 //
-//import org.openqa.selenium.By;
-//import org.openqa.selenium.WebDriver;
-//import org.openqa.selenium.WebElement;
-//import org.openqa.selenium.support.ui.Select;
-//import pages.BasePage;
-//
-//public class GPE001_Page extends BasePage {
-//    WebDriver driver;
-//
-//    // Filtros
+//     //Filtros
 //    String inputEmpresaXpath = "//*[@id='controlerestrito-cdEmpresa']/div/input";
 //    String inputAutorizadorXpath = "//*[@id='controlerestrito-cdAutorizador']/div/input";
 //    String inputCCustoXpath = "//*[@id='controlerestrito-cdCentrocusto']/div/input";
@@ -27,10 +32,7 @@
 //    String selectXpathFim = "']/div/select";
 //    int primeiraLinhaEmBranco;
 //
-//    public GPE001_Page(WebDriver driver) {
-//        super(driver);
-//        this.driver = driver;
-//    }
+//
 //
 //    // Inicialização da primeiraLinhaEmBranco
 //    public void setPrimeiraLinhaEmBranco() { primeiraLinhaEmBranco = encontrarPrimeiraLinhaEmBrancoNoGrid(driver);}
@@ -168,4 +170,4 @@
 //
 //        esperarClicarESelecionarF9(inputCentroCustoGridXpath,centroCustoAutorizador, elementoTabelaCCusto);
 //    }
-//}
+}

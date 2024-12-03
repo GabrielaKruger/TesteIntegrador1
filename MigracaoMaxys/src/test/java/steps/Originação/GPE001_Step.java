@@ -1,58 +1,59 @@
-//package steps.Originacção;
-//
-//import driver.driverManager.DriverManager;
-//import io.cucumber.java.After;
-//import io.cucumber.java.Before;
-//import io.cucumber.java.Scenario;
-//import io.cucumber.java.pt.Dado;
-//import io.cucumber.java.pt.E;
-//import io.cucumber.java.pt.Então;
-//import io.cucumber.java.pt.Quando;
-//import org.openqa.selenium.OutputType;
-//import org.openqa.selenium.TakesScreenshot;
-//import org.openqa.selenium.WebDriver;
-//import pages.BasePage;
-//import pages.LoginPage;
-//import pages.Materiais.TCO.TCO035_Page;
-//import utils.MassaTeste;
-//
-//import java.time.Duration;
-//
-//public class GPE001_Step {
-//
-//    private WebDriver driver;
-//    private MassaTeste massaTeste;
-//    private pages.Materiais.TCO.TCO035_Page TCO035_Page;
-//    private BasePage basePage;
-//    private LoginPage loginPage;
-//    private String tagMassa;
-//    private String browser;
-//    Scenario scenario;
-//
-//    @Before
-//    public void before(Scenario scenario) {
-//        this.scenario = scenario;
-//    }
-//
-//    @Dado("inicialize a execução dos cenários do TCO035")
-//    public void inicializeAExecuçãoDosCenáriosDoTCO035() {
-//        massaTeste = new MassaTeste();
-//        tagMassa = massaTeste.getPathByScenario(this.scenario);
-//        browser = DriverManager.getBrowserByScenario(this.scenario);
-//        this.driver = DriverManager.getBrowserManager(browser).getDriver();
-//        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        this.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-//        driver.manage().window().maximize();
-//        TCO035_Page = new TCO035_Page(driver);
-//        loginPage = new LoginPage(driver);
-//        basePage = new BasePage(driver);
-//    }
-//
-//    @E("acessar o programa {string} feature TCO035")
-//    public void acessarOProgramaFeatureTCO035(String programa) {
-//        loginPage.loginNewMaxysNovo(programa);
-//        basePage.esperarMilissegundos(4000); // espera necessária
-//    }
+package steps.Originação;
+
+import driver.driverManager.DriverManager;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
+import io.cucumber.java.pt.Dado;
+import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Quando;
+import org.openqa.selenium.WebDriver;
+import pages.BasePage;
+import pages.LoginPage;
+import pages.Originação.GPE001_Page;
+import utils.MassaTeste;
+
+import java.time.Duration;
+
+public class GPE001_Step {
+
+    private WebDriver driver;
+    private MassaTeste massaTeste;
+    private pages.Originação.GPE001_Page GPE001_Page;
+    private BasePage basePage;
+    private LoginPage loginPage;
+    private String tagMassa;
+    private String browser;
+    Scenario scenario;
+
+
+   @Before
+   public void before(Scenario scenario) {
+        this.scenario = scenario;
+    }
+
+    @Dado("inicialize a execução dos cenários do GPE001")
+    public void inicializeAExecuçãoDosCenáriosDoGPE001() {
+        massaTeste = new MassaTeste();
+        tagMassa = massaTeste.getPathByScenario(this.scenario);
+        browser = DriverManager.getBrowserByScenario(this.scenario);
+        this.driver = DriverManager.getBrowserManager(browser).getDriver();
+        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        this.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        GPE001_Page = new GPE001_Page(driver);
+        loginPage = new LoginPage(driver);
+        basePage = new BasePage(driver);
+    }
+
+    @E("acessar o programa {string} feature GPE001")
+    public void acessarOProgramaFeatureTCO035(String programa) {
+        loginPage.loginNewMaxysNovo(programa);
+        basePage.esperarMilissegundos(4000); // espera necessária
+   }
+
+    @Quando("preencher Clifor feature GPE001")
+    public void preencherCliforFeatureGPE(int arg0) {
+    }
 //
 //    @Quando("clicar botão ToolBar {string} feature TCO035")
 //    public void clicarBotãoToolbarFeatureTCO035(String botao) {
@@ -171,4 +172,4 @@
 //        BasePage.tearDownCloseQuit(driver);
 //    }
 //
-//}
+}
