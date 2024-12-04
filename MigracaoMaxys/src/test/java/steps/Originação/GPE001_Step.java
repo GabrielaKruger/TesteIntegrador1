@@ -5,6 +5,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
@@ -52,8 +53,116 @@ public class GPE001_Step {
    }
 
     @Quando("preencher Clifor feature GPE001")
-    public void preencherCliforFeatureGPE(int arg0) {
+    public void preencherCliforFeatureGPE001(String clifor) {
+        GPE001_Page.preencherCliforFeatureGPE001(clifor);
     }
+
+    @Então("preencher Endereço feature GPE001")
+    public void preencherEndereçoFeatureGPE001(String endereco) {
+        GPE001_Page.preencherEndereçoFeatureGPE001(endereco);
+        
+    }
+
+    @Quando("acessa page Dados feature GPE001")
+    public void acessaPageDadosFeatureGPE001() {
+        GPE001_Page.acessaPageDadosFeatureGPE001();
+    }
+
+    @E("seleciona Tipo de Contrato {string} feature GPE001")
+    public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
+       GPE001_Page.selecionaTipoDeContratoFeatureGPE001(opcao);
+    }
+
+    @E("preencher Produto feature GPE001")
+    public void preencherProdutoFeatureGPE001(String produto) {
+       GPE001_Page.preencherProdutoFeatureGPE001(produto);
+    }
+
+    @E("preencher Tabela de Desconto feature GPE001")
+    public void preencherTabelaDeDescontoFeatureGPE001(String tbdesconto) {
+        GPE001_Page.preencherTabelaDeDescontoFeatureGPE001(tbdesconto);
+    }
+
+    @E("preencher Negócio feature GPE001")
+    public void preencherNegócioFeatureGPE001(String negocio) {
+        GPE001_Page.preencherNegócioFeatureGPE001(negocio);
+
+    }
+
+    @E("preencher Moeda feature GPE001")
+    public void preencherMoedaFeatureGPE001(String moeda) {
+        GPE001_Page.preencherMoedaFeatureGPE001(moeda);
+        
+    }
+
+    @E("preencher Data de Vencimento feature GPE001")
+    public void preencherDataDeVencimentoFeatureGPE001(String dtvencimento) {
+        GPE001_Page.preencherDataDeVencimentoFeatureGPE001(dtvencimento);
+        
+    }
+
+    @E("preencher Ano safra feature GPE001")
+    public void preencherAnoSafraFeatureGPE001(String anosafra) {
+        GPE001_Page.preencherAnoSafraFeatureGPE001(anosafra);
+        
+    }
+
+    @E("seleciona Tipos de Cálculo {string} feature GPE001")
+    public void selecionaTiposDeCálculoFeatureGPE001(String opcao) {
+        GPE001_Page.selecionaTiposDeCálculoFeatureGPE001(opcao);
+        
+    }
+
+    @E("preencher PesoEVolume Contratado feature GPE001")
+    public void preencherPesoVolumeContratadoFeatureGPE001(String pesoevolume) {
+        GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(pesoevolume);
+    }
+
+    @Então("preencher Preço Unitário feature GPE001")
+    public void preencherPreçoUnitárioFeatureGPE001(String precounitario) {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(precounitario);
+    }
+
+    @Quando("clicar botão ToolBar {string} feature GPE001")
+    public void clicarBotãoToolBarFeatureGPE001(String botao) {
+       basePage.clicarBotaoToolBar(botao);
+    }
+
+    @E("apresentar o modal H5 {string} feature GPE001")
+    public void apresentarOModalH5FeatureGPE001(String title) {
+       basePage.validaModalByH5(title);
+    }
+
+    @E("apresentar a mensagem parcial {string} feature GPE001")
+    public void apresentarAMensagemParcialFeatureGPE001(String mensagem) {
+       basePage.validaMensagemLabelByContainsText(mensagem);
+    }
+
+    @Então("clicar botão {string} do modal feature GPE001")
+    public void clicarBotãoDoModalFeatureGPE001(String acao) {
+        basePage.clicarBotaoDoModal(acao);
+    }
+
+    @Quando("acessar page {string} feature GPE001")
+    public void acessarPageFeatureGPE001() {
+        GPE001_Page.acessarPageFeatureGPE001();
+    }
+
+    @E("preencher Dia feature GPE001")
+    public void preencherDiaFeatureGPE001(String dia) {
+        GPE001_Page.preencherDiaFeatureGPE001(dia);
+    }
+
+    @Então("preencher Condição de pagamento feature GPE001")
+    public void preencherCondiçãoDePagamentoFeatureGPE001(String condicaopagamento) {
+        GPE001_Page.preencherCondiçãoDePagamentoFeatureGPE001(condicaopagamento);
+    }
+
+    @E("apresentar o modal H5{int} {string} feature GPE001")
+    public void apresentarOModalHFeatureGPE(String title) {
+        basePage.validaModalByH5(title);
+    }
+
 //
 //    @Quando("clicar botão ToolBar {string} feature TCO035")
 //    public void clicarBotãoToolbarFeatureTCO035(String botao) {

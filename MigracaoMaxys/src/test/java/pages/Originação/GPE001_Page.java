@@ -13,6 +13,127 @@ public class GPE001_Page extends BasePage {
         super(driver);
         this.driver = driver;
     }
+
+    //Strings Page Dados
+    String btnPagDadosXpath = "//*[@id='PAG_DADOS']/a/span";
+    String inputEnderecoXpath = "//*[@id='contratograo-cdEndereco']/div/input";
+    String inputCliforXpath = "//*[@id='contratograo-cdClifor']/div/input";
+    String inputProdutoXpath = "//*[@id='contratograo-cdItem']/div/input";
+    String selectFixoXpath = "//*[@id='contratograo-tpContrato']/div/select";
+    String inputTbdescontoXpath = "//*[@id='contratograo-nrTabdescgrao']/div/input";
+    String inputNegocioXpath = "//*[@id='contratograo-cdNegocio']/div/input";
+    String inputMoedaXpath = "//*[@id='contratograo-cdMoeda']/div/input";
+    String inputDatavencimentoXpath = "//*[@id='contratograo-dtVencimento']/div/div/input";
+    String inputAnosafraXpath = "//*[@id='contratograo-dtAnosafra']/div/input";
+    String select3sacasXpath = "//*[@id='contratograo-cdTipocalculo']/div/select";
+    String inputPesoevolumeXpath= "//*[@id='contratograo-psContratado']/div/input";
+    String inputPrecounitarioXpath= "//*[@id='contratograo-prUnitcomicms']/div/input";
+    String btnPagVencimentosICMSXpath= "//*[@id='FATURAMENTO']/a";
+    String inputDiaXpath= "//*[@id='vencicmsgrao-nrDiafaturamento-0']/div/input";
+    String inputCondicaopagamentoXpath= "//*[@id='vencicmsgrao-cdCondpagto-0']/div/input";
+
+    public void preencherCliforFeatureGPE001(String clifor) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputCliforXpath);
+        preencherElementoByXpath(inputCliforXpath, clifor);
+        pressionaTabActions();
+    }
+
+    public void preencherEndereçoFeatureGPE001(String endereco) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputEnderecoXpath);
+        preencherElementoByXpath(inputEnderecoXpath, endereco);
+        pressionaTabActions();
+    }
+
+    public void acessaPageDadosFeatureGPE001() {
+        clicarElementoByIdNVezes(btnPagDadosXpath, 2);
+    }
+
+    public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
+        esperarEncontrarEPreencherElementos(selectFixoXpath, opcao);
+    }
+
+    public void preencherProdutoFeatureGPE001(String produto) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputProdutoXpath);
+        preencherElementoByXpath(inputProdutoXpath, produto);
+        pressionaTabActions();
+    }
+
+    public void preencherTabelaDeDescontoFeatureGPE001(String tbdesconto) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputTbdescontoXpath);
+        preencherElementoByXpath(inputTbdescontoXpath, tbdesconto);
+        pressionaTabActions();
+    }
+
+    public void preencherNegócioFeatureGPE001( String negocio) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputNegocioXpath);
+        preencherElementoByXpath(inputNegocioXpath, negocio);
+        pressionaTabActions();
+    }
+
+    public void preencherMoedaFeatureGPE001(String moeda) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputMoedaXpath);
+        preencherElementoByXpath(inputMoedaXpath, moeda);
+        pressionaTabActions();
+    }
+
+    public void preencherDataDeVencimentoFeatureGPE001(String dtvencimento) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputDatavencimentoXpath);
+        preencherElementoByXpath(inputDatavencimentoXpath, dtvencimento);
+        pressionaTabActions();
+    }
+
+    public void preencherAnoSafraFeatureGPE001( String anosafra) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputAnosafraXpath);
+        preencherElementoByXpath(inputAnosafraXpath, anosafra);
+        pressionaTabActions();
+    }
+
+    public void selecionaTiposDeCálculoFeatureGPE001(String opcao) {
+        esperarEncontrarEPreencherElementos(select3sacasXpath, opcao);
+
+    }
+
+    public void preencherPesoVolumeContratadoFeatureGPE001(String pesoevolume) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputPesoevolumeXpath);
+        preencherElementoByXpath(inputPesoevolumeXpath,pesoevolume);
+        pressionaTabActions();
+    }
+
+    public void preencherPreçoUnitárioFeatureGPE001(String precounitario) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputPrecounitarioXpath);
+        preencherElementoByXpath(inputPrecounitarioXpath,precounitario);
+        pressionaTabActions();
+    }
+
+    public void acessarPageFeatureGPE001() {
+        clicarElementoByIdNVezes(btnPagVencimentosICMSXpath, 2);
+    }
+
+    public void preencherDiaFeatureGPE001(String dia) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputDiaXpath);
+        preencherElementoByXpath(inputDiaXpath, dia);
+        pressionaTabActions();
+    }
+
+    public void preencherCondiçãoDePagamentoFeatureGPE001(String condicaopagamento) {
+        esperarMilissegundos(1000);
+        encontrarElementoByXpath(inputCondicaopagamentoXpath);
+        preencherElementoByXpath(inputCondicaopagamentoXpath, condicaopagamento);
+        pressionaTabActions();
+    }
+
+
 //
 //     //Filtros
 //    String inputEmpresaXpath = "//*[@id='controlerestrito-cdEmpresa']/div/input";

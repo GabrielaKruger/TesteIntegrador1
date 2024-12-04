@@ -12,7 +12,7 @@
      Quando preencher Clifor feature GPE001
      Então preencher Endereço feature GPE001
 
-     #Page dados
+     #Page Dados
      Quando acessa page Dados feature GPE001
      E seleciona Tipo de Contrato "FIXO" feature GPE001
      E preencher Produto feature GPE001
@@ -22,13 +22,13 @@
      E preencher Data de Vencimento feature GPE001
      E preencher Ano safra feature GPE001
      E seleciona Tipos de Cálculo "3- SACA 60 KG X PRECO" feature GPE001
-     E preencher Peso/Volume Contratado feature GPE001
+     E preencher PesoEVolume Contratado feature GPE001
      Então preencher Preço Unitário feature GPE001
 
      Quando clicar botão ToolBar "salvar" feature GPE001
-     E apresentar o modal H5 "modal-basic-title" feature EXP078
-     E apresentar a mensagem parcial "É necessário informar os dados do Vencimento do ICMS" feature EXP078
-     Então clicar botão "ok" do modal feature EXP078
+     E apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "É necessário informar os dados do Vencimento do ICMS" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
 
      Quando acessar page "Vencimento ICMS" feature GPE001
      E preencher Dia feature GPE001
@@ -37,7 +37,7 @@
      Quando clicar botão ToolBar "salvar" feature GPE001
      E apresentar o modal H5 "modal-basic-title" feature GPE001
      E apresentar a mensagem parcial "Contrato salvo com sucesso." feature GPE001
-     Então clicar botão "ok" do modal feature GPE0001
+     Então clicar botão "ok" do modal feature GPE001
 
 
    Cenário: Impressão de Contrato - Page Favorecidos/Impressão
@@ -56,7 +56,7 @@
      E preencher Data de Vencimento feature GPE001
      E preencher Ano safra feature GPE001
      E seleciona Tipos de Cálculo "3" feature GPE001
-     E preencher Peso/Volume Contratado feature GPE001
+     E preencher PesoEVolume Contratado feature GPE001
      Então preencher Preço Unitário feature GPE001
 
      Quando acessar page "Favorecidos/Impressão" feature GPE001
@@ -64,9 +64,9 @@
      Então preencher Valor pagamento feature GPE001
 
      Quando clicar botão ToolBar "salvar" feature GPE001
-     E apresentar o modal H5 "modal-basic-title" feature EXP078
-     E apresentar a mensagem parcial "O valor dos pagamentos é diferente do valor líquido do contrato. Favor verifique." feature EXP078
-     Então clicar botão "ok" do modal feature EXP078
+     E apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "O valor dos pagamentos é diferente do valor líquido do contrato. Favor verifique." feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
 
 
    Cenário: Impressão de Contrato - Page Favorecidos/Impressão
@@ -85,8 +85,8 @@
      E preencher Data de Vencimento feature GPE001
      E preencher Ano safra feature GPE001
      E seleciona Tipos de Cálculo "3" feature GPE001
-     E preencher Peso/Volume Contratado feature GPE001
-     Então preencher Preço Unitário feature GPE001]
+     E preencher PesoEVolume Contratado feature GPE001
+     Então preencher Preço Unitário feature GPE001
 
      Quando acessar page "Favorecidos/Impressão" feature GPE001
      E preencher Clifor feature GPE001
@@ -95,9 +95,9 @@
      Então seleciona "Recibo" feature GPE001
 
      Quando clicar botão ToolBar "salvar" feature GPE001
-     E apresentar o modal H5 "modal-basic-title" feature EXP078
-     E apresentar a mensagem parcial "O valor dos pagamentos é diferente do valor líquido do contrato. Favor verifique." feature EXP078
-     Então clicar botão "ok" do modal feature EXP078
+     E apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "O valor dos pagamentos é diferente do valor líquido do contrato. Favor verifique." feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
 
 
 
