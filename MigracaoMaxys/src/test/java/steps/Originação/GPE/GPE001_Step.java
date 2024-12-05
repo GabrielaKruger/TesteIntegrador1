@@ -1,4 +1,4 @@
-package steps.Originação;
+package steps.Originação.GPE;
 
 import driver.driverManager.DriverManager;
 import io.cucumber.java.Before;
@@ -10,7 +10,7 @@ import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.LoginPage;
-import pages.Originação.GPE001_Page;
+import pages.Originação.GPE.GPE001_Page;
 import utils.MassaTeste;
 
 import java.time.Duration;
@@ -19,7 +19,7 @@ public class GPE001_Step {
 
     private WebDriver driver;
     private MassaTeste massaTeste;
-    private pages.Originação.GPE001_Page GPE001_Page;
+    private pages.Originação.GPE.GPE001_Page GPE001_Page;
     private BasePage basePage;
     private LoginPage loginPage;
     private String tagMassa;
@@ -47,13 +47,15 @@ public class GPE001_Step {
     }
 
     @E("acessar o programa {string} feature GPE001")
-    public void acessarOProgramaFeatureTCO035(String programa) {
+    public void acessarOProgramaFeatureGPE001(String programa) {
+        basePage.esperarMilissegundos(1000);// espera necessária
         loginPage.loginNewMaxysNovo(programa);
-        basePage.esperarMilissegundos(4000); // espera necessária
+        basePage.esperarMilissegundos(1000); // espera necessária
    }
 
     @Quando("preencher Clifor feature GPE001")
     public void preencherCliforFeatureGPE001(String clifor) {
+        basePage.esperarMilissegundos(10000); // espera necessária
         GPE001_Page.preencherCliforFeatureGPE001(clifor);
     }
 

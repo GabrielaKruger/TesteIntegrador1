@@ -1,18 +1,14 @@
-package pages.Originação;
+package pages.Originação.GPE;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import pages.BasePage;
+import java.time.Duration;
 
 public class GPE001_Page extends BasePage {
     WebDriver driver;
-
-    public GPE001_Page(WebDriver driver) {
-        super(driver);
-        this.driver = driver;
-    }
 
     //Strings Page Dados
     String btnPagDadosXpath = "//*[@id='PAG_DADOS']/a/span";
@@ -32,15 +28,21 @@ public class GPE001_Page extends BasePage {
     String inputDiaXpath= "//*[@id='vencicmsgrao-nrDiafaturamento-0']/div/input";
     String inputCondicaopagamentoXpath= "//*[@id='vencicmsgrao-cdCondpagto-0']/div/input";
 
+    public GPE001_Page(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+    }
+
+
     public void preencherCliforFeatureGPE001(String clifor) {
-        esperarMilissegundos(1000);
+        esperarMilissegundos(1000);//espera necessária
         encontrarElementoByXpath(inputCliforXpath);
         preencherElementoByXpath(inputCliforXpath, clifor);
         pressionaTabActions();
     }
 
     public void preencherEndereçoFeatureGPE001(String endereco) {
-        esperarMilissegundos(1000);
+        esperarMilissegundos(1000); //espera necessária
         encontrarElementoByXpath(inputEnderecoXpath);
         preencherElementoByXpath(inputEnderecoXpath, endereco);
         pressionaTabActions();
