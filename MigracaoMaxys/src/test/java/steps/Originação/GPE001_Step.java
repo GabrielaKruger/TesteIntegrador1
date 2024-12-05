@@ -54,13 +54,13 @@ public class GPE001_Step {
 
     @Quando("preencher Clifor feature GPE001")
     public void preencherCliforFeatureGPE001(String clifor) {
+        basePage.esperarMilissegundos(5000); // espera para ele terminar de carregar todos as pages
         GPE001_Page.preencherCliforFeatureGPE001(clifor);
     }
 
     @Então("preencher Endereço feature GPE001")
     public void preencherEndereçoFeatureGPE001(String endereco) {
         GPE001_Page.preencherEndereçoFeatureGPE001(endereco);
-        
     }
 
     @Quando("acessa page Dados feature GPE001")

@@ -65,7 +65,7 @@ public class LoginPage extends BasePage {
         }
 
         // Verifica o programa e segue o fluxo original
-        if (programa.equals("MKT027") || programa.equals("MKT002") || programa.equals("GPE001")) {
+        if (programa.equals("MKT027") || programa.equals("MKT002")) {
             System.out.println(callForm(programa));
             driver.get(callForm(programa));
         } else {
