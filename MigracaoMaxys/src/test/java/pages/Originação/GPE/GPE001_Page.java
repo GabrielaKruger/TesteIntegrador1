@@ -28,17 +28,18 @@ public class GPE001_Page extends BasePage {
     String inputDiaXpath= "//*[@id='vencicmsgrao-nrDiafaturamento-0']/div/input";
     String inputCondicaopagamentoXpath= "//*[@id='vencicmsgrao-cdCondpagto-0']/div/input";
 
+
     public GPE001_Page(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }
 
-
     public void preencherCliforFeatureGPE001(String clifor) {
-        esperarMilissegundos(1000);//espera necessária
         encontrarElementoByXpath(inputCliforXpath);
+        clicarElementoByIdNVezes(inputCliforXpath, 4);
         preencherElementoByXpath(inputCliforXpath, clifor);
         pressionaTabActions();
+        esperarMilissegundos(1000);
     }
 
     public void preencherEndereçoFeatureGPE001(String endereco) {
@@ -46,14 +47,18 @@ public class GPE001_Page extends BasePage {
         encontrarElementoByXpath(inputEnderecoXpath);
         preencherElementoByXpath(inputEnderecoXpath, endereco);
         pressionaTabActions();
+        esperarMilissegundos(1000);
     }
 
     public void acessaPageDadosFeatureGPE001() {
-        clicarElementoByIdNVezes(btnPagDadosXpath, 2);
+       esperarMilissegundos(1000);
+       clicarElementoByIdNVezes(btnPagDadosXpath, 1);
     }
 
     public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
+        esperarMilissegundos(1000);
         esperarEncontrarEPreencherElementos(selectFixoXpath, opcao);
+        esperarMilissegundos(1000);
     }
 
     public void preencherProdutoFeatureGPE001(String produto) {
@@ -61,13 +66,15 @@ public class GPE001_Page extends BasePage {
         encontrarElementoByXpath(inputProdutoXpath);
         preencherElementoByXpath(inputProdutoXpath, produto);
         pressionaTabActions();
+        esperarMilissegundos(1000);
     }
 
-    public void preencherTabelaDeDescontoFeatureGPE001(String tbdesconto) {
+       public void preencherTabelaDeDescontoFeatureGPE001(String tbdesconto) {
         esperarMilissegundos(1000);
         encontrarElementoByXpath(inputTbdescontoXpath);
         preencherElementoByXpath(inputTbdescontoXpath, tbdesconto);
         pressionaTabActions();
+        esperarMilissegundos(1000);
     }
 
     public void preencherNegócioFeatureGPE001( String negocio) {
@@ -75,6 +82,7 @@ public class GPE001_Page extends BasePage {
         encontrarElementoByXpath(inputNegocioXpath);
         preencherElementoByXpath(inputNegocioXpath, negocio);
         pressionaTabActions();
+        esperarMilissegundos(1000);
     }
 
     public void preencherMoedaFeatureGPE001(String moeda) {

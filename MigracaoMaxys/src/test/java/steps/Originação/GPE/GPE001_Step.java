@@ -48,61 +48,60 @@ public class GPE001_Step {
 
     @E("acessar o programa {string} feature GPE001")
     public void acessarOProgramaFeatureGPE001(String programa) {
-        basePage.esperarMilissegundos(1000);// espera necessária
+        basePage.esperarMilissegundos(5000);// espera necessária
         loginPage.loginNewMaxysNovo(programa);
-        basePage.esperarMilissegundos(1000); // espera necessária
    }
 
-    @Quando("preencher Clifor feature GPE001")
+    @Quando("preencher Clifor {string} feature GPE001")
     public void preencherCliforFeatureGPE001(String clifor) {
-        basePage.esperarMilissegundos(5000); // espera para ele terminar de carregar todos as pages
+        basePage.esperarMilissegundos(18000); // espera para ele terminar de carregar todos as pages
         GPE001_Page.preencherCliforFeatureGPE001(clifor);
     }
 
-    @Então("preencher Endereço feature GPE001")
+    @Então("preencher Endereço {string} feature GPE001")
     public void preencherEndereçoFeatureGPE001(String endereco) {
         GPE001_Page.preencherEndereçoFeatureGPE001(endereco);
     }
 
-    @Quando("acessa page Dados feature GPE001")
-    public void acessaPageDadosFeatureGPE001() {
-        GPE001_Page.acessaPageDadosFeatureGPE001();
-    }
+    //@Quando("acessa page Dados feature GPE001")
+    //public void acessaPageDadosFeatureGPE001() {
+        //GPE001_Page.acessaPageDadosFeatureGPE001();
+   // }
 
     @E("seleciona Tipo de Contrato {string} feature GPE001")
     public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
        GPE001_Page.selecionaTipoDeContratoFeatureGPE001(opcao);
     }
 
-    @E("preencher Produto feature GPE001")
+    @E("preencher Produto {string} feature GPE001")
     public void preencherProdutoFeatureGPE001(String produto) {
        GPE001_Page.preencherProdutoFeatureGPE001(produto);
     }
 
-    @E("preencher Tabela de Desconto feature GPE001")
+    @E("preencher Tabela de Desconto {string} feature GPE001")
     public void preencherTabelaDeDescontoFeatureGPE001(String tbdesconto) {
         GPE001_Page.preencherTabelaDeDescontoFeatureGPE001(tbdesconto);
     }
 
-    @E("preencher Negócio feature GPE001")
+    @E("preencher Negócio {string} feature GPE001")
     public void preencherNegócioFeatureGPE001(String negocio) {
         GPE001_Page.preencherNegócioFeatureGPE001(negocio);
 
     }
 
-    @E("preencher Moeda feature GPE001")
+    @E("preencher Moeda {string} feature GPE001")
     public void preencherMoedaFeatureGPE001(String moeda) {
         GPE001_Page.preencherMoedaFeatureGPE001(moeda);
         
     }
 
-    @E("preencher Data de Vencimento feature GPE001")
+    @E("preencher Data de Vencimento {string} feature GPE001")
     public void preencherDataDeVencimentoFeatureGPE001(String dtvencimento) {
         GPE001_Page.preencherDataDeVencimentoFeatureGPE001(dtvencimento);
         
     }
 
-    @E("preencher Ano safra feature GPE001")
+    @E("preencher Ano safra {string} feature GPE001")
     public void preencherAnoSafraFeatureGPE001(String anosafra) {
         GPE001_Page.preencherAnoSafraFeatureGPE001(anosafra);
         
