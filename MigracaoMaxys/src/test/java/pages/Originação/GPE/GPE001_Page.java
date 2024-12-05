@@ -35,11 +35,11 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherCliforFeatureGPE001(String clifor) {
-        encontrarElementoByXpath(inputCliforXpath);
-        clicarElementoByIdNVezes(inputCliforXpath, 4);
+        //encontrarElementoByXpath(inputCliforXpath);
+        clicarElementoByXpathNVezes(inputCliforXpath, 2);
         preencherElementoByXpath(inputCliforXpath, clifor);
         pressionaTabActions();
-        esperarMilissegundos(1000);
+        esperarMilissegundos(1000); // espera necessária
     }
 
     public void preencherEndereçoFeatureGPE001(String endereco) {
