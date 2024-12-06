@@ -54,56 +54,56 @@ public class GPE001_Step {
 
     @Quando("preencher Clifor {string} feature GPE001")
     public void preencherCliforFeatureGPE001(String clifor) {
-        basePage.esperarMilissegundos(18000); // espera para ele terminar de carregar todos as pages
+        basePage.esperarMilissegundos(20000); // espera para ele terminar de carregar todos as pages
         GPE001_Page.preencherCliforFeatureGPE001(clifor);
     }
 
-    @Então("preencher Endereço {string} feature GPE001")
-    public void preencherEndereçoFeatureGPE001(String endereco) {
-        GPE001_Page.preencherEndereçoFeatureGPE001(endereco);
-    }
+   // @Então("preencher Endereço {string} feature GPE001")
+   // public void preencherEndereçoFeatureGPE001(String endereco) {
+    //    GPE001_Page.preencherEndereçoFeatureGPE001(endereco);
+    //}
 
     //@Quando("acessa page Dados feature GPE001")
     //public void acessaPageDadosFeatureGPE001() {
-        //GPE001_Page.acessaPageDadosFeatureGPE001();
-   // }
+      //  GPE001_Page.acessaPageDadosFeatureGPE001();
+    //}
 
     @E("seleciona Tipo de Contrato {string} feature GPE001")
     public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
        GPE001_Page.selecionaTipoDeContratoFeatureGPE001(opcao);
     }
 
-    @E("preencher Produto {string} feature GPE001")
-    public void preencherProdutoFeatureGPE001(String produto) {
-       GPE001_Page.preencherProdutoFeatureGPE001(produto);
+    @E("preencher Produto feature GPE001")
+    public void preencherProdutoFeatureGPE001() {
+       GPE001_Page.preencherProdutoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "produto"));
     }
 
-    @E("preencher Tabela de Desconto {string} feature GPE001")
-    public void preencherTabelaDeDescontoFeatureGPE001(String tbdesconto) {
-        GPE001_Page.preencherTabelaDeDescontoFeatureGPE001(tbdesconto);
+    @E("preencher Tabela de Desconto feature GPE001")
+    public void preencherTabelaDeDescontoFeatureGPE001() {
+        GPE001_Page.preencherTabelaDeDescontoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tbdesconto"));
     }
 
-    @E("preencher Negócio {string} feature GPE001")
-    public void preencherNegócioFeatureGPE001(String negocio) {
-        GPE001_Page.preencherNegócioFeatureGPE001(negocio);
+    @E("preencher Negócio feature GPE001")
+    public void preencherNegócioFeatureGPE001() {
+        GPE001_Page.preencherNegócioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "negocio"));
 
     }
 
-    @E("preencher Moeda {string} feature GPE001")
-    public void preencherMoedaFeatureGPE001(String moeda) {
-        GPE001_Page.preencherMoedaFeatureGPE001(moeda);
+    @E("preencher Moeda feature GPE001")
+    public void preencherMoedaFeatureGPE001() {
+        GPE001_Page.preencherMoedaFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "moeda"));
         
     }
 
-    @E("preencher Data de Vencimento {string} feature GPE001")
-    public void preencherDataDeVencimentoFeatureGPE001(String dtvencimento) {
-        GPE001_Page.preencherDataDeVencimentoFeatureGPE001(dtvencimento);
+    @E("preencher Data de Vencimento feature GPE001")
+    public void preencherDataDeVencimentoFeatureGPE001() {
+        GPE001_Page.preencherDataDeVencimentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "data de vencimento"));
         
     }
 
-    @E("preencher Ano safra {string} feature GPE001")
-    public void preencherAnoSafraFeatureGPE001(String anosafra) {
-        GPE001_Page.preencherAnoSafraFeatureGPE001(anosafra);
+    @E("preencher Ano safra feature GPE001")
+    public void preencherAnoSafraFeatureGPE001() {
+        GPE001_Page.preencherAnoSafraFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "ano safra"));
         
     }
 
@@ -114,13 +114,13 @@ public class GPE001_Step {
     }
 
     @E("preencher PesoEVolume Contratado feature GPE001")
-    public void preencherPesoVolumeContratadoFeatureGPE001(String pesoevolume) {
-        GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(pesoevolume);
+    public void preencherPesoVolumeContratadoFeatureGPE001() {
+        GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preço e volume contratado"));
     }
 
     @Então("preencher Preço Unitário feature GPE001")
-    public void preencherPreçoUnitárioFeatureGPE001(String precounitario) {
-        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(precounitario);
+    public void preencherPreçoUnitárioFeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preço unitário"));
     }
 
     @Quando("clicar botão ToolBar {string} feature GPE001")

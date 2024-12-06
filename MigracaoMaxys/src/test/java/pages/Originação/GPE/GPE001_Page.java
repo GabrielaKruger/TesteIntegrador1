@@ -12,7 +12,6 @@ public class GPE001_Page extends BasePage {
 
     //Strings Page Dados
     String btnPagDadosXpath = "//*[@id='PAG_DADOS']/a/span";
-    String inputEnderecoXpath = "//*[@id='contratograo-cdEndereco']/div/input";
     String inputCliforXpath = "//*[@id='contratograo-cdClifor']/div/input";
     String inputProdutoXpath = "//*[@id='contratograo-cdItem']/div/input";
     String selectFixoXpath = "//*[@id='contratograo-tpContrato']/div/select";
@@ -27,6 +26,9 @@ public class GPE001_Page extends BasePage {
     String btnPagVencimentosICMSXpath= "//*[@id='FATURAMENTO']/a";
     String inputDiaXpath= "//*[@id='vencicmsgrao-nrDiafaturamento-0']/div/input";
     String inputCondicaopagamentoXpath= "//*[@id='vencicmsgrao-cdCondpagto-0']/div/input";
+    String elementoTabela = "lovItem";
+
+
 
 
     public GPE001_Page(WebDriver driver) {
@@ -35,43 +37,44 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherCliforFeatureGPE001(String clifor) {
-        //encontrarElementoByXpath(inputCliforXpath);
+        esperarMilissegundos(1000); //espera necessária
         clicarElementoByXpathNVezes(inputCliforXpath, 2);
         preencherElementoByXpath(inputCliforXpath, clifor);
+        pressionarENTERByXpath(inputCliforXpath);
         pressionaTabActions();
         esperarMilissegundos(1000); // espera necessária
     }
 
-    public void preencherEndereçoFeatureGPE001(String endereco) {
-        esperarMilissegundos(1000); //espera necessária
-        encontrarElementoByXpath(inputEnderecoXpath);
-        preencherElementoByXpath(inputEnderecoXpath, endereco);
-        pressionaTabActions();
-        esperarMilissegundos(1000);
-    }
+    //public void preencherEndereçoFeatureGPE001(String endereco) {
+     //   esperarMilissegundos(1000); //espera necessária
+      //  clicarElementoByXpathNVezes(inputEnderecoXpath, 2);
+      //  preencherElementoByXpath(inputEnderecoXpath, endereco);
+        //pressionaTabActions();
+        //esperarMilissegundos(1000); // espera necessária
+   // }
 
-    public void acessaPageDadosFeatureGPE001() {
-       esperarMilissegundos(1000);
-       clicarElementoByIdNVezes(btnPagDadosXpath, 1);
-    }
+    //public void acessaPageDadosFeatureGPE001() {
+      //esperarMilissegundos(1000);
+       //clicarElementoByIdNVezes(btnPagDadosXpath, 1);
+    //}
 
     public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
-        esperarMilissegundos(1000);
+        esperarMilissegundos(2000);
         esperarEncontrarEPreencherElementos(selectFixoXpath, opcao);
         esperarMilissegundos(1000);
     }
 
     public void preencherProdutoFeatureGPE001(String produto) {
-        esperarMilissegundos(1000);
-        encontrarElementoByXpath(inputProdutoXpath);
-        preencherElementoByXpath(inputProdutoXpath, produto);
-        pressionaTabActions();
+        esperarMilissegundos(2000);
+        selecionarPeloF9(inputProdutoXpath, produto, elementoTabela);
         esperarMilissegundos(1000);
     }
 
        public void preencherTabelaDeDescontoFeatureGPE001(String tbdesconto) {
         esperarMilissegundos(1000);
-        encontrarElementoByXpath(inputTbdescontoXpath);
+
+        //encontrarElementoByXpath(inputTbdescontoXpath);
+        clicarElementoByXpathNVezes(inputTbdescontoXpath, 1);
         preencherElementoByXpath(inputTbdescontoXpath, tbdesconto);
         pressionaTabActions();
         esperarMilissegundos(1000);
