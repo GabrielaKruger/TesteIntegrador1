@@ -58,11 +58,6 @@ public class GPE001_Step {
         GPE001_Page.preencherCliforFeatureGPE001(clifor);
     }
 
-   // @Então("preencher Endereço {string} feature GPE001")
-   // public void preencherEndereçoFeatureGPE001(String endereco) {
-    //    GPE001_Page.preencherEndereçoFeatureGPE001(endereco);
-    //}
-
     //@Quando("acessa page Dados feature GPE001")
     //public void acessaPageDadosFeatureGPE001() {
       //  GPE001_Page.acessaPageDadosFeatureGPE001();
@@ -86,31 +81,21 @@ public class GPE001_Step {
     @E("preencher Negócio feature GPE001")
     public void preencherNegócioFeatureGPE001() {
         GPE001_Page.preencherNegócioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "negocio"));
-
-    }
-
-    @E("preencher Moeda feature GPE001")
-    public void preencherMoedaFeatureGPE001() {
-        GPE001_Page.preencherMoedaFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "moeda"));
-        
     }
 
     @E("preencher Data de Vencimento feature GPE001")
     public void preencherDataDeVencimentoFeatureGPE001() {
         GPE001_Page.preencherDataDeVencimentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "data de vencimento"));
-        
     }
 
     @E("preencher Ano safra feature GPE001")
     public void preencherAnoSafraFeatureGPE001() {
         GPE001_Page.preencherAnoSafraFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "ano safra"));
-        
     }
 
     @E("seleciona Tipos de Cálculo {string} feature GPE001")
     public void selecionaTiposDeCálculoFeatureGPE001(String opcao) {
         GPE001_Page.selecionaTiposDeCálculoFeatureGPE001(opcao);
-        
     }
 
     @E("preencher PesoEVolume Contratado feature GPE001")
@@ -149,19 +134,43 @@ public class GPE001_Step {
     }
 
     @E("preencher Dia feature GPE001")
-    public void preencherDiaFeatureGPE001(String dia) {
-        GPE001_Page.preencherDiaFeatureGPE001(dia);
+    public void preencherDiaFeatureGPE001() {
+        GPE001_Page.preencherDiaFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "dia"));
     }
 
     @Então("preencher Condição de pagamento feature GPE001")
-    public void preencherCondiçãoDePagamentoFeatureGPE001(String condicaopagamento) {
-        GPE001_Page.preencherCondiçãoDePagamentoFeatureGPE001(condicaopagamento);
+    public void preencherCondiçãoDePagamentoFeatureGPE001() {
+        GPE001_Page.preencherCondiçãoDePagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "condição de pagamento"));
     }
 
     @E("apresentar o modal H5{int} {string} feature GPE001")
     public void apresentarOModalHFeatureGPE(String title) {
         basePage.validaModalByH5(title);
     }
+
+    //2 caso de teste
+    @E("preencher Clifor {string} page Favorecidos feature GPE001")
+    public void preencherCliforPageFavorecidosFeatureGPE001(String clifor2) {
+        GPE001_Page.preencherCliforPageFavorecidosFeatureGPE001(clifor2);
+    }
+
+    @Então("preencher Valor pagamento feature GPE001")
+    public void preencherValorPagamentoFeatureGPE001() {
+        GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valor pagamento"));
+    }
+
+    @Quando("preencher Clifor2 {string} feature GPE001")
+    public void preencherCliforFeatureGPE(String clifor2) {
+        basePage.esperarMilissegundos(20000); // espera para ele terminar de carregar todos as pages
+        GPE001_Page.preencherClifor2FeatureGPE001(clifor2);
+    }
+
+    @E("preencher Data pagamento feature GPE001")
+    public void preencherDataPagamentoFeatureGPE() {
+        GPE001_Page.preencherDataPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "data do pagamento"));
+
+    }
+}
 
 //
 //    @Quando("clicar botão ToolBar {string} feature TCO035")
@@ -281,4 +290,4 @@ public class GPE001_Step {
 //        BasePage.tearDownCloseQuit(driver);
 //    }
 //
-}
+

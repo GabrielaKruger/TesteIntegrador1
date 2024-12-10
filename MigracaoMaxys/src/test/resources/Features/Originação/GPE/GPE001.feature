@@ -10,7 +10,6 @@
 
      #Pedidos/contratos de grão
      Quando preencher Clifor "991430" feature GPE001
-     #Então preencher Endereço "1" feature GPE001
 
      #Page Dados
      #Quando acessa page Dados feature GPE001
@@ -18,7 +17,6 @@
      E preencher Produto feature GPE001
      E preencher Tabela de Desconto feature GPE001
      E preencher Negócio feature GPE001
-     E preencher Moeda feature GPE001
      E preencher Data de Vencimento feature GPE001
      E preencher Ano safra feature GPE001
      E seleciona Tipos de Cálculo "3- SACA 60 KG X PRECO" feature GPE001
@@ -43,24 +41,21 @@
    Cenário: Impressão de Contrato - Page Favorecidos/Impressão
 
     #Pedidos/contratos de grão
-     Quando preencher Clifor feature GPE001
-     E preencher Endereço feature GPE001
+     Quando preencher Clifor "991430" feature GPE001
 
      #Page dados
-     Quando acessa page Dados feature GPE001
-     E seleciona Tipo de Contrato "Fixo" feature GPE001
+     Quando seleciona Tipo de Contrato "FIXO" feature GPE001
      E preencher Produto feature GPE001
      E preencher Tabela de Desconto feature GPE001
      E preencher Negócio feature GPE001
-     E preencher Moeda feature GPE001
      E preencher Data de Vencimento feature GPE001
      E preencher Ano safra feature GPE001
-     E seleciona Tipos de Cálculo "3" feature GPE001
+     E seleciona Tipos de Cálculo "3- SACA 60 KG X PRECO" feature GPE001
      E preencher PesoEVolume Contratado feature GPE001
      Então preencher Preço Unitário feature GPE001
 
      Quando acessar page "Favorecidos/Impressão" feature GPE001
-     E preencher Clifor feature GPE001
+     E preencher Clifor "991430" page Favorecidos feature GPE001
      Então preencher Valor pagamento feature GPE001
 
      Quando clicar botão ToolBar "salvar" feature GPE001
@@ -72,24 +67,21 @@
    Cenário: Impressão de Contrato - Page Favorecidos/Impressão
 
       #Pedidos/contratos de grão
-     Quando preencher Clifor feature GPE001
-     Então preencher Endereço feature GPE001
+     Quando preencher Clifor2 "991422" feature GPE001
 
      #Page dados
-     Quando acessa page Dados feature GPE001
-     E seleciona Tipo de Contrato "Fixo" feature GPE001
+     Quando seleciona Tipo de Contrato "FIXO" feature GPE001
      E preencher Produto feature GPE001
      E preencher Tabela de Desconto feature GPE001
      E preencher Negócio feature GPE001
-     E preencher Moeda feature GPE001
      E preencher Data de Vencimento feature GPE001
      E preencher Ano safra feature GPE001
-     E seleciona Tipos de Cálculo "3" feature GPE001
+     E seleciona Tipos de Cálculo "3- SACA 60 KG X PRECO" feature GPE001
      E preencher PesoEVolume Contratado feature GPE001
      Então preencher Preço Unitário feature GPE001
 
      Quando acessar page "Favorecidos/Impressão" feature GPE001
-     E preencher Clifor feature GPE001
+     E preencher Clifor "991422" page favorecidos feature GPE001
      E preencher Valor pagamento feature GPE001
      E preencher Data pagamento feature GPE001
      Então seleciona "Recibo" feature GPE001

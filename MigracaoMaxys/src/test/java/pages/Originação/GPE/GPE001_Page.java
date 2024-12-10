@@ -17,17 +17,20 @@ public class GPE001_Page extends BasePage {
     String selectFixoXpath = "//*[@id='contratograo-tpContrato']/div/select";
     String inputTbdescontoXpath = "//*[@id='contratograo-nrTabdescgrao']/div/input";
     String inputNegocioXpath = "//*[@id='contratograo-cdNegocio']/div/input";
-    String inputMoedaXpath = "//*[@id='contratograo-cdMoeda']/div/input";
     String inputDatavencimentoXpath = "//*[@id='contratograo-dtVencimento']/div/div/input";
     String inputAnosafraXpath = "//*[@id='contratograo-dtAnosafra']/div/input";
-    String select3sacasXpath = "//*[@id='contratograo-cdTipocalculo']/div/select";
+    String input3sacasXpath = "//*[@id='contratograo-cdTipocalculo']/div/select";
     String inputPesoevolumeXpath= "//*[@id='contratograo-psContratado']/div/input";
     String inputPrecounitarioXpath= "//*[@id='contratograo-prUnitcomicms']/div/input";
     String btnPagVencimentosICMSXpath= "//*[@id='FATURAMENTO']/a";
     String inputDiaXpath= "//*[@id='vencicmsgrao-nrDiafaturamento-0']/div/input";
     String inputCondicaopagamentoXpath= "//*[@id='vencicmsgrao-cdCondpagto-0']/div/input";
-    String elementoTabela = "lovItem";
-
+    String elementoProduto = "lovItem";
+    String elementoTbdesconto = "lovTabdescgrao";
+    String elementoNegocio = "lovNegocio";
+    String inputClifor2Xpath = "//*[@id='favorecidoscontrpagto-cdClifor-0']/div/input";
+    String inputValorpagamento = "//*[@id='favorecidoscontrpagto-vlPagamento-0']/div/input";
+    String inputDatadopagamento= "//*[@id='favorecidoscontrpagto-dtPagamento']/div/div/input";
 
 
 
@@ -45,87 +48,89 @@ public class GPE001_Page extends BasePage {
         esperarMilissegundos(1000); // espera necessária
     }
 
-    //public void preencherEndereçoFeatureGPE001(String endereco) {
-     //   esperarMilissegundos(1000); //espera necessária
-      //  clicarElementoByXpathNVezes(inputEnderecoXpath, 2);
-      //  preencherElementoByXpath(inputEnderecoXpath, endereco);
-        //pressionaTabActions();
-        //esperarMilissegundos(1000); // espera necessária
-   // }
-
     //public void acessaPageDadosFeatureGPE001() {
       //esperarMilissegundos(1000);
        //clicarElementoByIdNVezes(btnPagDadosXpath, 1);
     //}
 
     public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
-        esperarMilissegundos(2000);
+        esperarMilissegundos(2000); //espera necessária
         esperarEncontrarEPreencherElementos(selectFixoXpath, opcao);
-        esperarMilissegundos(1000);
+        esperarMilissegundos(1000); //espera necessária
     }
 
     public void preencherProdutoFeatureGPE001(String produto) {
-        esperarMilissegundos(2000);
-        selecionarPeloF9(inputProdutoXpath, produto, elementoTabela);
-        esperarMilissegundos(1000);
+        esperarMilissegundos(2000); //espera necessária
+        selecionarPeloF9(inputProdutoXpath, produto, elementoProduto);
+        esperarMilissegundos(1000); //espera necessária
     }
 
        public void preencherTabelaDeDescontoFeatureGPE001(String tbdesconto) {
-        esperarMilissegundos(1000);
-
-        //encontrarElementoByXpath(inputTbdescontoXpath);
-        clicarElementoByXpathNVezes(inputTbdescontoXpath, 1);
-        preencherElementoByXpath(inputTbdescontoXpath, tbdesconto);
-        pressionaTabActions();
-        esperarMilissegundos(1000);
+           esperarMilissegundos(2000); //espera necessária
+           selecionarPeloF9(inputTbdescontoXpath, tbdesconto, elementoTbdesconto);
+           esperarMilissegundos(1000); //espera necessária
     }
 
     public void preencherNegócioFeatureGPE001( String negocio) {
-        esperarMilissegundos(1000);
-        encontrarElementoByXpath(inputNegocioXpath);
-        preencherElementoByXpath(inputNegocioXpath, negocio);
-        pressionaTabActions();
-        esperarMilissegundos(1000);
-    }
-
-    public void preencherMoedaFeatureGPE001(String moeda) {
-        esperarMilissegundos(1000);
-        encontrarElementoByXpath(inputMoedaXpath);
-        preencherElementoByXpath(inputMoedaXpath, moeda);
-        pressionaTabActions();
+        esperarMilissegundos(2000); //espera necessária
+        selecionarPeloF9(inputNegocioXpath, negocio, elementoNegocio);
+        esperarMilissegundos(1000); //espera necessária
     }
 
     public void preencherDataDeVencimentoFeatureGPE001(String dtvencimento) {
-        esperarMilissegundos(1000);
-        encontrarElementoByXpath(inputDatavencimentoXpath);
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(inputDatavencimentoXpath, 2);
         preencherElementoByXpath(inputDatavencimentoXpath, dtvencimento);
+        pressionarENTERByXpath(inputDatavencimentoXpath);
         pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
     }
 
     public void preencherAnoSafraFeatureGPE001( String anosafra) {
-        esperarMilissegundos(1000);
+        esperarMilissegundos(1000); //espera necessária
         encontrarElementoByXpath(inputAnosafraXpath);
         preencherElementoByXpath(inputAnosafraXpath, anosafra);
         pressionaTabActions();
+        esperarMilissegundos(1000); //espera necessária
     }
 
     public void selecionaTiposDeCálculoFeatureGPE001(String opcao) {
-        esperarEncontrarEPreencherElementos(select3sacasXpath, opcao);
-
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(input3sacasXpath, 2);
+        preencherElementoByXpath(input3sacasXpath, opcao);
+        pressionarENTERByXpath(input3sacasXpath);
+        pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
     }
+     //   esperarMilissegundos(10000);
+       // esperarEncontrarEPreencherElementos(select3sacasXpath, opcao);
+        //esperarMilissegundos(5000);
+   // }
 
     public void preencherPesoVolumeContratadoFeatureGPE001(String pesoevolume) {
-        esperarMilissegundos(1000);
-        encontrarElementoByXpath(inputPesoevolumeXpath);
-        preencherElementoByXpath(inputPesoevolumeXpath,pesoevolume);
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(inputPesoevolumeXpath, 2);
+        preencherElementoByXpath(inputPesoevolumeXpath, pesoevolume);
+        pressionarENTERByXpath(inputPesoevolumeXpath);
         pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
+        //esperarMilissegundos(1000);
+        //encontrarElementoByXpath(inputPesoevolumeXpath);
+        //preencherElementoByXpath(inputPesoevolumeXpath,pesoevolume);
+        //pressionaTabActions();
     }
 
     public void preencherPreçoUnitárioFeatureGPE001(String precounitario) {
-        esperarMilissegundos(1000);
-        encontrarElementoByXpath(inputPrecounitarioXpath);
-        preencherElementoByXpath(inputPrecounitarioXpath,precounitario);
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(inputPrecounitarioXpath, 2);
+        preencherElementoByXpath(inputPrecounitarioXpath, precounitario);
+        pressionarENTERByXpath(inputPrecounitarioXpath);
         pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
+        //esperarMilissegundos(1000);
+        //encontrarElementoByXpath(inputPrecounitarioXpath);
+        //preencherElementoByXpath(inputPrecounitarioXpath,precounitario);
+        //pressionaTabActions();
     }
 
     public void acessarPageFeatureGPE001() {
@@ -133,17 +138,64 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherDiaFeatureGPE001(String dia) {
-        esperarMilissegundos(1000);
-        encontrarElementoByXpath(inputDiaXpath);
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(inputDiaXpath, 2);
         preencherElementoByXpath(inputDiaXpath, dia);
+        pressionarENTERByXpath(inputDiaXpath);
         pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
     }
 
     public void preencherCondiçãoDePagamentoFeatureGPE001(String condicaopagamento) {
-        esperarMilissegundos(1000);
-        encontrarElementoByXpath(inputCondicaopagamentoXpath);
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(inputCondicaopagamentoXpath, 2);
         preencherElementoByXpath(inputCondicaopagamentoXpath, condicaopagamento);
+        pressionarENTERByXpath(inputCondicaopagamentoXpath);
         pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
+
+        //esperarMilissegundos(1000);
+        //encontrarElementoByXpath(inputCondicaopagamentoXpath);
+        //preencherElementoByXpath(inputCondicaopagamentoXpath, condicaopagamento);
+        //pressionaTabActions();
+    }
+
+    public void preencherCliforPageFavorecidosFeatureGPE001(String clifor2) {
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(inputClifor2Xpath, 2);
+        preencherElementoByXpath(inputClifor2Xpath, clifor2);
+        pressionarENTERByXpath(inputClifor2Xpath);
+        pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
+    }
+
+    public void preencherValorPagamentoFeatureGPE001(String valorpagamento) {
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(inputValorpagamento, 2);
+        preencherElementoByXpath(inputValorpagamento, valorpagamento);
+        pressionarENTERByXpath(inputValorpagamento);
+        pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
+
+    }
+
+    public void preencherClifor2FeatureGPE001(String clifor2) {
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(inputCliforXpath, 2);
+        preencherElementoByXpath(inputCliforXpath, clifor2);
+        pressionarENTERByXpath(inputCliforXpath);
+        pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
+    }
+
+    public void preencherDataPagamentoFeatureGPE001(String dataDoPagamento) {
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(inputDatadopagamento, 2);
+        preencherElementoByXpath(inputDatadopagamento, dataDoPagamento);
+        pressionarENTERByXpath(inputDatadopagamento);
+        pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
+
     }
 
 

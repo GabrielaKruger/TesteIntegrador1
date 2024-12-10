@@ -6,6 +6,11 @@
   "data de vencimento": "31122024",
   "ano safra": "2024",
   "preço e volume contratado": "20000",
-  "preço unitário": "60"
-
+  "preço unitário": "60000000",
+  "dia":"1",
+  "condição de pagamento": "15",
+  "clifor page favorecidos": "991430",
+  "valor pagamento": "900000",
+  "data do pagamento": "12042024",
+  "tipo pagamento": "RECIBO"
 }
