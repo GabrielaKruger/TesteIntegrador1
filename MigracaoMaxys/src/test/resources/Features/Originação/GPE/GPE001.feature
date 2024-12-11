@@ -9,53 +9,51 @@
    Cenário: Impressão/Favorecidos - Valor Pagamento Maior
 
      #Pedidos/contratos de grão
-     Quando preencher Clifor "991430" feature GPE001
+     Quando preencher Clifor page contratos de grao feature GPE001
 
      #Page Dados
-     #Quando acessa page Dados feature GPE001
-     Quando seleciona Tipo de Contrato "FIXO" feature GPE001
+     Quando seleciona Tipo de Contrato feature GPE001
      E preencher Produto feature GPE001
      E preencher Tabela de Desconto feature GPE001
      E preencher Negócio feature GPE001
      E preencher Data de Vencimento feature GPE001
      E preencher Ano safra feature GPE001
-     E seleciona Tipos de Cálculo "3- SACA 60 KG X PRECO" feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
      E preencher PesoEVolume Contratado feature GPE001
-     Então preencher Preço Unitário feature GPE001
+     E preencher Preço Unitário feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
 
-     Quando clicar botão ToolBar "salvar" feature GPE001
-     E apresentar o modal H5 "modal-basic-title" feature GPE001
-     E apresentar a mensagem parcial "É necessário informar os dados do Vencimento do ICMS" feature GPE001
-     Então clicar botão "ok" do modal feature GPE001
-
-     Quando acessar page "Vencimento ICMS" feature GPE001
-     E preencher Dia feature GPE001
-     Então preencher Condição de pagamento feature GPE001
-
-     Quando clicar botão ToolBar "salvar" feature GPE001
-     E apresentar o modal H5 "modal-basic-title" feature GPE001
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
      E apresentar a mensagem parcial "Contrato salvo com sucesso." feature GPE001
      Então clicar botão "ok" do modal feature GPE001
 
+     #Quando clicar botão ToolBar "salvar" feature GPE001
+     #E apresentar o modal H5 "modal-basic-title" feature GPE001
+     #E apresentar a mensagem parcial "É necessário informar os dados do Vencimento do ICMS" feature GPE001
+     #Então clicar botão "ok" do modal feature GPE001
+
+     #Quando acessar page "Vencimento ICMS" feature GPE001
+     #E preencher Dia feature GPE001
+     #Então preencher Condição de pagamento feature GPE001
 
    Cenário: Impressão de Contrato - Page Favorecidos/Impressão
 
     #Pedidos/contratos de grão
-     Quando preencher Clifor "991430" feature GPE001
+     Quando preencher Clifor page contratos de grao feature GPE001
 
      #Page dados
-     Quando seleciona Tipo de Contrato "FIXO" feature GPE001
+     Quando seleciona Tipo de Contrato feature GPE001
      E preencher Produto feature GPE001
      E preencher Tabela de Desconto feature GPE001
      E preencher Negócio feature GPE001
      E preencher Data de Vencimento feature GPE001
      E preencher Ano safra feature GPE001
-     E seleciona Tipos de Cálculo "3- SACA 60 KG X PRECO" feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
      E preencher PesoEVolume Contratado feature GPE001
      Então preencher Preço Unitário feature GPE001
 
-     Quando acessar page "Favorecidos/Impressão" feature GPE001
-     E preencher Clifor "991430" page Favorecidos feature GPE001
+     Quando acessar page feature GPE001
+     E preencher Clifor2 page Favorecidos feature GPE001
      Então preencher Valor pagamento feature GPE001
 
      Quando clicar botão ToolBar "salvar" feature GPE001

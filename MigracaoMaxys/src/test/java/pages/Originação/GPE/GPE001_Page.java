@@ -31,6 +31,8 @@ public class GPE001_Page extends BasePage {
     String inputClifor2Xpath = "//*[@id='favorecidoscontrpagto-cdClifor-0']/div/input";
     String inputValorpagamento = "//*[@id='favorecidoscontrpagto-vlPagamento-0']/div/input";
     String inputDatadopagamento= "//*[@id='favorecidoscontrpagto-dtPagamento']/div/div/input";
+    String btnSetaXpath= "//*[@id='next-tab']/a";
+    String btnFavorecidosImpressaoXpath = "//*[@id='PAG_FAVORECIDOSPAGTO']/a";
 
 
 
@@ -48,10 +50,11 @@ public class GPE001_Page extends BasePage {
         esperarMilissegundos(1000); // espera necessária
     }
 
-    //public void acessaPageDadosFeatureGPE001() {
-      //esperarMilissegundos(1000);
-       //clicarElementoByIdNVezes(btnPagDadosXpath, 1);
-    //}
+    public void acessarPageFeatureGPE001() {
+        esperarMilissegundos(2000);
+        clicarElementoByXpathNVezes(btnSetaXpath, 15);
+        clicarElementoByXpath(btnFavorecidosImpressaoXpath);
+    }
 
     public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
         esperarMilissegundos(2000); //espera necessária
@@ -102,10 +105,6 @@ public class GPE001_Page extends BasePage {
         pressionaTabActions();
         esperarMilissegundos(1000); // espera necessária
     }
-     //   esperarMilissegundos(10000);
-       // esperarEncontrarEPreencherElementos(select3sacasXpath, opcao);
-        //esperarMilissegundos(5000);
-   // }
 
     public void preencherPesoVolumeContratadoFeatureGPE001(String pesoevolume) {
         esperarMilissegundos(1000); //espera necessária
@@ -114,10 +113,6 @@ public class GPE001_Page extends BasePage {
         pressionarENTERByXpath(inputPesoevolumeXpath);
         pressionaTabActions();
         esperarMilissegundos(1000); // espera necessária
-        //esperarMilissegundos(1000);
-        //encontrarElementoByXpath(inputPesoevolumeXpath);
-        //preencherElementoByXpath(inputPesoevolumeXpath,pesoevolume);
-        //pressionaTabActions();
     }
 
     public void preencherPreçoUnitárioFeatureGPE001(String precounitario) {
@@ -133,9 +128,9 @@ public class GPE001_Page extends BasePage {
         //pressionaTabActions();
     }
 
-    public void acessarPageFeatureGPE001() {
-        clicarElementoByIdNVezes(btnPagVencimentosICMSXpath, 2);
-    }
+    //public void acessarPageFeatureGPE001() {
+     //   clicarElementoByIdNVezes(btnPagVencimentosICMSXpath, 2);
+    //}
 
     public void preencherDiaFeatureGPE001(String dia) {
         esperarMilissegundos(1000); //espera necessária
@@ -153,11 +148,6 @@ public class GPE001_Page extends BasePage {
         pressionarENTERByXpath(inputCondicaopagamentoXpath);
         pressionaTabActions();
         esperarMilissegundos(1000); // espera necessária
-
-        //esperarMilissegundos(1000);
-        //encontrarElementoByXpath(inputCondicaopagamentoXpath);
-        //preencherElementoByXpath(inputCondicaopagamentoXpath, condicaopagamento);
-        //pressionaTabActions();
     }
 
     public void preencherCliforPageFavorecidosFeatureGPE001(String clifor2) {
@@ -176,7 +166,6 @@ public class GPE001_Page extends BasePage {
         pressionarENTERByXpath(inputValorpagamento);
         pressionaTabActions();
         esperarMilissegundos(1000); // espera necessária
-
     }
 
     public void preencherClifor2FeatureGPE001(String clifor2) {
