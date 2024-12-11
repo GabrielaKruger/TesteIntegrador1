@@ -13,8 +13,12 @@
   "dia":"1",
   "condicaoPagamento": "15",
   "cliforFavorecidos": "991430",
-  "valorPagamento": "900000",
-  "dataPagamento": "12042024",
+  "valorPagamento": "90000000",
+  "dataPagamento": "11122024",
   "tipoPagamento": "RECIBO",
-  "clifor2": "1005758"
+  "clifor2": "1005758",
+  "valorPagamento2": "50000",
+  "valorPagamento3": "100",
+  "clifor3": "1005740",
+  "valorPagamento4": "-100"
 }

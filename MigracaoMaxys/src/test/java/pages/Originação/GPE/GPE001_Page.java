@@ -10,9 +10,9 @@ import java.time.Duration;
 public class GPE001_Page extends BasePage {
     WebDriver driver;
 
-    //Strings Page Dados
-    String btnPagDadosXpath = "//*[@id='PAG_DADOS']/a/span";
+    //Strings Page Pedidos/Contratos de Grão
     String inputCliforXpath = "//*[@id='contratograo-cdClifor']/div/input";
+    //Strings Page Dados
     String inputProdutoXpath = "//*[@id='contratograo-cdItem']/div/input";
     String selectFixoXpath = "//*[@id='contratograo-tpContrato']/div/select";
     String inputTbdescontoXpath = "//*[@id='contratograo-nrTabdescgrao']/div/input";
@@ -22,17 +22,16 @@ public class GPE001_Page extends BasePage {
     String input3sacasXpath = "//*[@id='contratograo-cdTipocalculo']/div/select";
     String inputPesoevolumeXpath= "//*[@id='contratograo-psContratado']/div/input";
     String inputPrecounitarioXpath= "//*[@id='contratograo-prUnitcomicms']/div/input";
-    String btnPagVencimentosICMSXpath= "//*[@id='FATURAMENTO']/a";
     String inputDiaXpath= "//*[@id='vencicmsgrao-nrDiafaturamento-0']/div/input";
     String inputCondicaopagamentoXpath= "//*[@id='vencicmsgrao-cdCondpagto-0']/div/input";
     String elementoProduto = "lovItem";
     String elementoTbdesconto = "lovTabdescgrao";
     String elementoNegocio = "lovNegocio";
+    //Strings Page Favorecidos/Impressão
     String inputClifor2Xpath = "//*[@id='favorecidoscontrpagto-cdClifor-0']/div/input";
     String inputValorpagamento = "//*[@id='favorecidoscontrpagto-vlPagamento-0']/div/input";
     String inputDatadopagamento= "//*[@id='favorecidoscontrpagto-dtPagamento']/div/div/input";
-    String btnSetaXpath= "//*[@id='next-tab']/a";
-    String btnFavorecidosImpressaoXpath = "//*[@id='PAG_FAVORECIDOSPAGTO']/a";
+    String inputTipopagamentoXpath ="//*[@id='favorecidoscontrpagto-tpPagamento']/div/select";
 
 
 
@@ -50,10 +49,9 @@ public class GPE001_Page extends BasePage {
         esperarMilissegundos(1000); // espera necessária
     }
 
-    public void acessarPageFeatureGPE001() {
+    public void acessarPageFeatureGPE001(String botao) {
         esperarMilissegundos(2000);
-        clicarElementoByXpathNVezes(btnSetaXpath, 15);
-        clicarElementoByXpath(btnFavorecidosImpressaoXpath);
+        selecionarPaginaNoMenu(botao);
     }
 
     public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
@@ -122,15 +120,7 @@ public class GPE001_Page extends BasePage {
         pressionarENTERByXpath(inputPrecounitarioXpath);
         pressionaTabActions();
         esperarMilissegundos(1000); // espera necessária
-        //esperarMilissegundos(1000);
-        //encontrarElementoByXpath(inputPrecounitarioXpath);
-        //preencherElementoByXpath(inputPrecounitarioXpath,precounitario);
-        //pressionaTabActions();
     }
-
-    //public void acessarPageFeatureGPE001() {
-     //   clicarElementoByIdNVezes(btnPagVencimentosICMSXpath, 2);
-    //}
 
     public void preencherDiaFeatureGPE001(String dia) {
         esperarMilissegundos(1000); //espera necessária
@@ -170,9 +160,9 @@ public class GPE001_Page extends BasePage {
 
     public void preencherClifor2FeatureGPE001(String clifor2) {
         esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(inputCliforXpath, 2);
-        preencherElementoByXpath(inputCliforXpath, clifor2);
-        pressionarENTERByXpath(inputCliforXpath);
+        clicarElementoByXpathNVezes(inputClifor2Xpath, 2);
+        preencherElementoByXpath(inputClifor2Xpath, clifor2);
+        pressionarENTERByXpath(inputClifor2Xpath);
         pressionaTabActions();
         esperarMilissegundos(1000); // espera necessária
     }
@@ -186,6 +176,17 @@ public class GPE001_Page extends BasePage {
         esperarMilissegundos(1000); // espera necessária
 
     }
+
+    public void selecionaTipoPagamentoFeatureGPE001(String tipoPagamento) {
+        esperarMilissegundos(1000); //espera necessária
+        clicarElementoByXpathNVezes(inputTipopagamentoXpath, 2);
+        preencherElementoByXpath(inputTipopagamentoXpath,tipoPagamento);
+        pressionarENTERByXpath(inputTipopagamentoXpath);
+        pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
+    }
+
+
 
 
 //
