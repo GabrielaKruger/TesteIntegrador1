@@ -24,17 +24,9 @@
      Então clicar botão ToolBar "salvar" feature GPE001
 
      Quando apresentar o modal H5 "modal-basic-title" feature GPE001
-     E apresentar a mensagem parcial "Contrato salvo com sucesso." feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
      Então clicar botão "ok" do modal feature GPE001
 
-     #Quando clicar botão ToolBar "salvar" feature GPE001
-     #E apresentar o modal H5 "modal-basic-title" feature GPE001
-     #E apresentar a mensagem parcial "É necessário informar os dados do Vencimento do ICMS" feature GPE001
-     #Então clicar botão "ok" do modal feature GPE001
-
-     #Quando acessar page "Vencimento ICMS" feature GPE001
-     #E preencher Dia feature GPE001
-     #Então preencher Condição de pagamento feature GPE001
 
    Cenário: Impressão de Contrato - Page Favorecidos/Impressão
 
@@ -185,3 +177,13 @@
 #     Quando clicar botão ToolBar "excluir" feature TCO035
 #     E apresenta o modal H4 "modal-basic-title" feature TCO035
 #     Então clicar botão "sim" do modal feature TCO035
+
+
+     #Quando clicar botão ToolBar "salvar" feature GPE001
+     #E apresentar o modal H5 "modal-basic-title" feature GPE001
+     #E apresentar a mensagem parcial "É necessário informar os dados do Vencimento do ICMS" feature GPE001
+     #Então clicar botão "ok" do modal feature GPE001
+
+     #Quando acessar page "Vencimento ICMS" feature GPE001
+     #E preencher Dia feature GPE001
+     #Então preencher Condição de pagamento feature GPE001

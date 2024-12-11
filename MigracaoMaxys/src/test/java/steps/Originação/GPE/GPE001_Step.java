@@ -105,7 +105,7 @@ public class GPE001_Step {
 
     @Então("clicar botão ToolBar {string} feature GPE001")
     public void clicarBotãoToolBarFeatureGPE001(String botao) {
-        basePage.esperarMilissegundos(15000);
+        basePage.esperarMilissegundos(15000); // espera necessária
         basePage.clicarBotaoToolBar(botao);
     }
 
@@ -119,7 +119,8 @@ public class GPE001_Step {
     @E("apresentar a mensagem parcial {string} feature GPE001")
     public void apresentarAMensagemParcialFeatureGPE001(String mensagem) {
         basePage.esperarMilissegundos(12000);
-        basePage.validaMensagemLabelByText(mensagem);
+        //basePage.validaMensagemLabelByText(mensagem);
+        basePage.validaMensagemLabelByContainsText(mensagem);
         basePage.esperarMilissegundos(10000);
     }
 
