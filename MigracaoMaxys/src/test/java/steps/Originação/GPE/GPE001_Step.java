@@ -111,24 +111,24 @@ public class GPE001_Step {
 
     @E("apresentar o modal H5 {string} feature GPE001")
     public void apresentarOModalH5FeatureGPE001(String title) {
-        basePage.esperarMilissegundos(2000);
+        basePage.esperarMilissegundos(2000);//espera necessária
         basePage.validaModalByH5(title);
-        basePage.esperarMilissegundos(2000);
+        basePage.esperarMilissegundos(2000);//espera necessária
     }
 
     @E("apresentar a mensagem parcial {string} feature GPE001")
     public void apresentarAMensagemParcialFeatureGPE001(String mensagem) {
-        basePage.esperarMilissegundos(12000);
+        basePage.esperarMilissegundos(2000); //espera necessária
         //basePage.validaMensagemLabelByText(mensagem);
         basePage.validaMensagemLabelByContainsText(mensagem);
-        basePage.esperarMilissegundos(10000);
+        basePage.esperarMilissegundos(2000); //espera necessária
     }
 
     @Então("clicar botão {string} do modal feature GPE001")
     public void clicarBotãoDoModalFeatureGPE001(String acao) {
-        basePage.esperarMilissegundos(10000);
+        basePage.esperarMilissegundos(2000); //espera necessária
         basePage.clicarBotaoDoModal(acao);
-        basePage.esperarMilissegundos(2000);
+        basePage.esperarMilissegundos(2000); //espera necessária
     }
 
     @E("preencher Dia feature GPE001")
@@ -146,11 +146,9 @@ public class GPE001_Step {
         basePage.validaModalByH5(title);
     }
 
-    //2 caso de teste
-
-    @Quando("acessar page feature GPE001")
-    public void acessarPageFeatureGPE001() {
-        GPE001_Page.acessarPageFeatureGPE001();
+    @Quando("acessar page {string} feature GPE001")
+    public void acessarPageFeatureGPE001(String botao) {
+        GPE001_Page.acessarPageFeatureGPE001(botao);
     }
 
     @Então("preencher Valor pagamento feature GPE001")
@@ -166,10 +164,43 @@ public class GPE001_Step {
 
     @E("preencher Clifor2 page Favorecidos feature GPE001")
     public void preencherCliforFeatureGPE() {
-        basePage.esperarMilissegundos(5000); // espera para ele terminar de carregar todos as pages
+        basePage.esperarMilissegundos(5000); // espera necessária
         GPE001_Page.preencherClifor2FeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor2"));
     }
+
+    @Então("seleciona Tipo pagamento feature GPE001")
+    public void selecionaTipoPagamentoFeatureGPE001() {
+        GPE001_Page.selecionaTipoPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoPagamento"));
+    }
+
+    @E("preencher Valor pagamento2 feature GPE001")
+    public void preencherValorPagamento2FeatureGPE001() {
+        GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorPagamento2"));
+    }
+
+    @E("preencher Valor pagamento3 feature GPE001")
+    public void preencherValorPagamento3FeatureGPE001() {
+        GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorPagamento3"));
+    }
+
+    @Quando("preencher Clifor3 page contratos de grao feature GPE001")
+    public void preencherClifor3PageContratosDeGraoFeatureGPE001() {
+        GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor3"));
+    }
+
+    @E("preencher Clifor4 page Favorecidos feature GPE001")
+    public void preencherCliforPageFavorecidosFeatureGPE001() {
+        basePage.esperarMilissegundos(5000); // espera necessária
+        GPE001_Page.preencherClifor2FeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor3"));
+    }
+
+    @E("preencher Valor pagamento4 feature GPE001")
+    public void preencherValorPagamento4FeatureGPE001() {
+        GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorPagamento4"));
+    }
 }
+
+
 
 
 //
