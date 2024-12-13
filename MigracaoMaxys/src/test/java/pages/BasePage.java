@@ -1306,6 +1306,46 @@ public class BasePage {
         pressionaTabActions();
     }
 
+    // Limpa um elemento pelo seu XPath e TAB após limpar o elemento.
+    public void limparElementoTABByXpath(String elemento) {
+        WebElement campo = driver.findElement(By.xpath(elemento));
+        campo.click(); // Garante que o campo está focado
+        campo.clear(); // Tenta limpar o campo inicialmente
+
+        // Utiliza Ctrl+A seguido de Delete para limpar o campo
+        campo.sendKeys(Keys.CONTROL + "a"); // Seleciona o texto por completo
+        campo.sendKeys(Keys.DELETE); // Apaga o texto selecionado
+
+        // Verifica se o campo ainda contém valor após tentar limpar com Ctrl+A e Delete
+        String valor = campo.getAttribute("value");
+        if (valor != null && !valor.isEmpty()) {
+            campo.sendKeys(Keys.CONTROL + "a"); // Seleciona o texto por completo, novamente
+            campo.sendKeys(Keys.DELETE); // Apaga o texto selecionado novamente
+        }
+
+        // Simula uma interação humana para garantir que a alteração seja detectada
+        campo.sendKeys(" "); // Adiciona um espaço
+        campo.sendKeys(Keys.DELETE); // Remove o espaço
+        campo.sendKeys(Keys.TAB); // Sai do campo para disparar eventos de alteração
+    }
+
+    public void limparCampoDeTextoPorXpath(String elemento) {
+        WebElement campo = driver.findElement(By.xpath(elemento));
+        campo.click(); // Garante que o campo está focado
+        campo.clear(); // Tenta limpar o campo inicialmente
+
+        // Utiliza Ctrl+A seguido de Delete para limpar o campo
+        campo.sendKeys(Keys.CONTROL + "a"); // Seleciona o texto por completo
+        campo.sendKeys(Keys.DELETE); // Apaga o texto selecionado
+
+        // Verifica se o campo ainda contém valor após tentar limpar com Ctrl+A e Delete
+        String valor = campo.getAttribute("value");
+        if (valor != null && !valor.isEmpty()) {
+            campo.sendKeys(Keys.CONTROL + "a"); // Seleciona o texto por completo, novamente
+            campo.sendKeys(Keys.DELETE); // Apaga o texto selecionado novamente
+        }
+    }
+
     // Altera o contexto para o iframe que contém o elemento
     public void alterarParaIframeComElemento(String xpathElemento) {
         List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
