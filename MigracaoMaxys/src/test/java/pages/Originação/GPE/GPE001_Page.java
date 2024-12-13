@@ -227,11 +227,6 @@ public class GPE001_Page extends BasePage {
     }
 
 
-
-
-
-
-
 //
 //     //Filtros
 //    String inputEmpresaXpath = "//*[@id='controlerestrito-cdEmpresa']/div/input";
