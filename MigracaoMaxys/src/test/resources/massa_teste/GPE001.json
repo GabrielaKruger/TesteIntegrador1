@@ -12,7 +12,6 @@
   "preçoUnitario": "60000000",
   "dia":"1",
   "condicaoPagamento": "15",
-  "cliforFavorecidos": "991430",
   "valorPagamento": "90000000",
   "dataPagamento": "11122024",
   "tipoPagamento": "RECIBO",
@@ -20,5 +19,8 @@
   "valorPagamento2": "50000",
   "valorPagamento3": "100",
   "clifor3": "1005740",
-  "valorPagamento4": "-100"
+  "valorPagamento4": "-100",
+  "produtoNaocadastrado": "103",
+  "produto2": "58",
+  "empresaOrigem": "22"
 }

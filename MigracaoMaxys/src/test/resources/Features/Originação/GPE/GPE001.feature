@@ -6,7 +6,7 @@
      Dado inicialize a execução dos cenários do GPE001
      E acessar o programa "GPE001" feature GPE001
 
-   Cenário: Impressão/Favorecidos - Valor Pagamento Maior
+   Cenário: Contrato Recebimento Normal
 
      #Pedidos/contratos de grão
      Quando preencher Clifor page contratos de grao feature GPE001
@@ -28,7 +28,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   Cenário: Impressão de Contrato - Page Favorecidos/Impressão- Valor pagamento menor
+   Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento maior [manual]
 
     #Pedidos/contratos de grão
      Quando preencher Clifor page contratos de grao feature GPE001
@@ -54,7 +54,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   Cenário: Impressão de Contrato - Page Favorecidos/Impressão- Valor pagamento maior
+   Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento Menor [manual]
 
       #Pedidos/contratos de grão
      Quando preencher Clifor page contratos de grao feature GPE001
@@ -82,7 +82,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   Cenário: Impressão de Contrato - Page Favorecidos/Impressão- Valor pagamento igual
+   Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento maior [contrato]
     #Pedidos/contratos de grão
      Quando preencher Clifor page contratos de grao feature GPE001
 
@@ -109,126 +109,87 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   #Cenário: Impressão de Contrato - Page Favorecidos/Impressão- Valor pagamento igual
+   Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento menor [contrato]
     #Pedidos/contratos de grão
-    # Quando preencher Clifor3 page contratos de grao feature GPE001
+     Quando preencher Clifor3 page contratos de grao feature GPE001
 
      #Page dados
-     #Quando seleciona Tipo de Contrato feature GPE001
-     #E preencher Produto feature GPE001
-     #E preencher Tabela de Desconto feature GPE001
-     #E preencher Negócio feature GPE001
-     #E preencher Data de Vencimento feature GPE001
-     #E preencher Ano safra feature GPE001
-     #E seleciona Tipos de Cálculo feature GPE001
-     #E preencher PesoEVolume Contratado feature GPE001
-     #Então preencher Preço Unitário feature GPE001
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento feature GPE001
+     E preencher Ano safra feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado feature GPE001
+     Então preencher Preço Unitário feature GPE001
 
-     #Quando acessar page "Favorecidos/Impressão" feature GPE001
-     #E preencher Clifor4 page Favorecidos feature GPE001
-     #E preencher Valor pagamento4 feature GPE001
-     #E preencher Data pagamento feature GPE001
-     #Então seleciona Tipo pagamento feature GPE001
+     Quando acessar page "Favorecidos/Impressão" feature GPE001
+     E preencher Clifor4 page Favorecidos feature GPE001
+     E preencher Valor pagamento4 feature GPE001
+     E preencher Data pagamento feature GPE001
+     E seleciona Tipo pagamento feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
 
-
-
-#
-#     Quando recarregar o programa feature TCO035
-#     E informa Autorizador feature TCO035
-#     E realizar consulta feature TCO035
-#     E selecionar Autorizador feature TCO035
-#     Então seleciona Status "Inativo" feature TCO035
-#
-#     Quando clicar botão ToolBar "salvar" feature TCO035
-#     E apresentar o modal H5 "modal-basic-title" feature TCO035
-#     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
-#     Então clicar botão "ok" do modal feature TCO035
-#
-#     Quando recarregar o programa feature TCO035
-#     E informa Autorizador feature TCO035
-#     E realizar consulta feature TCO035
-#     Então selecionar Autorizador feature TCO035
-#
-#     Quando clicar botão ToolBar "excluir" feature TCO035
-#     E apresenta o modal H4 "modal-basic-title" feature TCO035
-#     Então clicar botão "sim" do modal feature TCO035
-#
-#   @wip #Valores não são apresentados na LOV - Repassado para o desenvolvedor Guilherme
-#   Cenario: Cadastro, edição e exclusão de Autorizador Restrito | Teclas Atalho
-#
-#     Quando pressionar tecla "f6" feature TCO035
-#     E selecionar a Empresa Grid feature TCO035
-##     E selecionar o Autorizador Grid feature TCO035
-#     E selecionar o C.Custo Grid feature TCO035
-#     Então seleciona Status "Ativo" feature TCO035
-#
-#     Quando clicar botão ToolBar "salvar" feature TCO035
-#     E apresentar o modal H5 "modal-basic-title" feature TCO035
-#     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
-#     Então clicar botão "ok" do modal feature TCO035
-#
-#     Quando recarregar o programa feature TCO035
-#     E selecionar a Empresa Consulta feature TCO035
-#     E selecionar o Autorizador Consulta feature TCO035
-#     E selecionar o C.Custo Consulta feature TCO035
-#     E pressionar tecla "f7" feature TCO035
-#     E selecionar Autorizador feature TCO035
-#     Então seleciona Status "Inativo" feature TCO035
-#
-#     Quando pressionar tecla "f10" feature TCO035
-#     E apresentar o modal H5 "modal-basic-title" feature TCO035
-#     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
-#     Então clicar botão "ok" do modal feature TCO035
-#
-#     Quando recarregar o programa feature TCO035
-#     E selecionar o Autorizador Consulta feature TCO035
-#     E pressionar tecla "f7" feature TCO035
-#     Então selecionar Autorizador feature TCO035
-#
-#     Quando pressionar tecla shift + f6 feature TCO035
-#     E apresenta o modal H4 "modal-basic-title" feature TCO035
-#     Então clicar botão "sim" do modal feature TCO035
-#
-#    @wip # Não se comporta como o Forms - Campo Automatizador
-#   Cenário: Consulta, cadastro e exclusão| Negativo - Validação Campos obrigatórios Consulta
-#
-#     Quando clicar botão ToolBar "novo" feature TCO035
-##     E preencher Empresa Negativo feature TCO035
-##     E preencher Autorizador Negativo feature TCO035
-##     E preencher C.Custo Negativo feature TCO035
-#     Então seleciona Status "Ativo" feature TCO035
-#
-#     Quando clicar botão ToolBar "salvar" feature TCO035
-#     E apresentar o modal H5 "modal-basic-title" feature TCO035
-#     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
-#     Então clicar botão "ok" do modal feature TCO035
-#
-#     Quando recarregar o programa feature TCO035
-#     E informa Autorizador feature TCO035
-#     E realizar consulta feature TCO035
-#     E selecionar Autorizador feature TCO035
-#     Então seleciona Status "Inativo" feature TCO035
-#
-#     Quando clicar botão ToolBar "salvar" feature TCO035
-#     E apresentar o modal H5 "modal-basic-title" feature TCO035
-#     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
-#     Então clicar botão "ok" do modal feature TCO035
-#
-#     Quando recarregar o programa feature TCO035
-#     E informa Autorizador feature TCO035
-#     E realizar consulta feature TCO035
-#     Então selecionar Autorizador feature TCO035
-#
-#     Quando clicar botão ToolBar "excluir" feature TCO035
-#     E apresenta o modal H4 "modal-basic-title" feature TCO035
-#     Então clicar botão "sim" do modal feature TCO035
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
 
 
-     #Quando clicar botão ToolBar "salvar" feature GPE001
-     #E apresentar o modal H5 "modal-basic-title" feature GPE001
-     #E apresentar a mensagem parcial "É necessário informar os dados do Vencimento do ICMS" feature GPE001
-     #Então clicar botão "ok" do modal feature GPE001
+   Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento igual [contrato]
+   #Pedidos/contratos de grão
+     Quando preencher Clifor page contratos de grao feature GPE001
 
-     #Quando acessar page "Vencimento ICMS" feature GPE001
-     #E preencher Dia feature GPE001
-     #Então preencher Condição de pagamento feature GPE001
+     #Page dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento feature GPE001
+     E preencher Ano safra feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado feature GPE001
+     Então preencher Preço Unitário feature GPE001
+
+     Quando acessar page "Favorecidos/Impressão" feature GPE001
+     E preencher Clifor2 page Favorecidos feature GPE001
+     E preencher Data pagamento feature GPE001
+     E seleciona Tipo pagamento feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   Cenário: Validação de Item sem movimentação cadastrada no TGR007
+    #Pedidos/contratos de grão
+     Quando preencher Clifor3 page contratos de grao feature GPE001
+     Então selecionar Operação "Exportação" feature GPE001
+
+     #Page dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto sem lov feature GPE001
+     Então preencher Produto não cadastrado feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "Verifique TGR007" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+
+   Cenário: Validação de Item sem permissão de utilização na empresa do contrato
+     #Pedidos/contratos de grão
+
+     Quando preencher Empr.Origem page contratos de grao feature GPE001
+     Então preencher Clifor page contratos de grao feature GPE001
+
+     #Page dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     Então preencher Produto não cadastrado feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "Verifique TIT001" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
