@@ -191,12 +191,12 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherProdutoNãoCadastradoFeatureGPE001(String produtoNaocadastrado) {
-        esperarMilissegundos(3000); //espera necessária
+        esperarMilissegundos(2000); //espera necessária
         clicarElementoByXpathNVezes(inputProdutoXpath, 2);
         preencherElementoByXpath(inputProdutoXpath, produtoNaocadastrado);
         pressionarENTERByXpath(inputProdutoXpath);
         pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
+        esperarMilissegundos(2000); // espera necessária
     }
 
     public void selecionarOperaçãoFeatureGPE001(String exportacao) {
@@ -215,9 +215,9 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherEmprOrigemPageContratosDeGraoFeatureGPE001(String empresaOrigem) {
-        esperarMilissegundos(20000); // // espera para ele terminar de carregar todos as pages
+        esperarMilissegundos(20000);// // espera para ele terminar de carregar todos as pages
+        limparCampoDeTextoPorXpath(inputEmpresaorigemXpath);
         clicarElementoByXpathNVezes(inputEmpresaorigemXpath, 2);
-        apagarCampoClicandoBackSpace(inputEmpresaorigemXpath);
         preencherElementoByXpath(inputEmpresaorigemXpath, empresaOrigem);
         pressionarENTERByXpath(inputEmpresaorigemXpath);
         pressionaTabActions();

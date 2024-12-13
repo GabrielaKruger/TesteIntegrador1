@@ -110,7 +110,7 @@ public class GPE001_Step {
 
     @E("apresentar o modal H5 {string} feature GPE001")
     public void apresentarOModalH5FeatureGPE001(String title) {
-        basePage.esperarMilissegundos(2000);//espera necessária
+        basePage.esperarMilissegundos(4000);//espera necessária
         basePage.validaModalByH5(title);
         basePage.esperarMilissegundos(2000);//espera necessária
     }
