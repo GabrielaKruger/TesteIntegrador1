@@ -1131,6 +1131,13 @@ public class BasePage {
         }
     }
 
+    // Marca um botão de rádio especificado pelo XPath.
+    public void marcarRadioButon(String xpathDoElemento) {
+        WebElement radioButton = driver.findElement(By.xpath(xpathDoElemento));
+        if (!radioButton.isSelected()) {
+            radioButton.click();
+        }
+    }
 
     // Cria um objeto Actions para executar a ação de clicar em uma posição específica
     public void clicarAleatorioNaTelaPorCoordenada(int x, int y) {
