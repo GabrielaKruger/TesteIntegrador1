@@ -32,7 +32,6 @@
 
     #Pedidos/contratos de grão
      Quando preencher Clifor page contratos de grao feature GPE001
-
      #Page dados
      Quando seleciona Tipo de Contrato feature GPE001
      E preencher Produto feature GPE001
