@@ -191,7 +191,6 @@ public class GPE001_Step {
         GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorPagamento4"));
     }
 
-
     @Então("preencher Produto não cadastrado feature GPE001")
     public void preencherProdutoNãoCadastradoFeatureGPE001() {
         GPE001_Page.preencherProdutoNãoCadastradoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "produtoNaocadastrado"));
@@ -200,7 +199,6 @@ public class GPE001_Step {
     @Então("selecionar Operação {string} feature GPE001")
     public void selecionarOperaçãoFeatureGPE001(String exportacao) {
         GPE001_Page.selecionarOperaçãoFeatureGPE001(exportacao);
-
     }
 
     @E("preencher Produto sem lov feature GPE001")

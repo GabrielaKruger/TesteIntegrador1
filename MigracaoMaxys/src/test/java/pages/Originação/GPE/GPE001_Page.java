@@ -14,7 +14,7 @@ public class GPE001_Page extends BasePage {
     //Strings Page Pedidos/Contratos de Grão
     String inputCliforXpath = "//*[@id='contratograo-cdClifor']/div/input";
     String selectExportacaoXpath = "//*[@id='ngx-radio-5']";
-    String selectNormalXpath = "//*[@id='ngx-radio-3']";
+
     //Strings Page Dados
     String inputProdutoXpath = "//*[@id='contratograo-cdItem']/div/input";
     String selectFixoXpath = "//*[@id='contratograo-tpContrato']/div/select";
@@ -30,13 +30,13 @@ public class GPE001_Page extends BasePage {
     String elementoProduto = "lovItem";
     String elementoTbdesconto = "lovTabdescgrao";
     String elementoNegocio = "lovNegocio";
+
     //Strings Page Favorecidos/Impressão
     String inputClifor2Xpath = "//*[@id='favorecidoscontrpagto-cdClifor-0']/div/input";
     String inputValorpagamento = "//*[@id='favorecidoscontrpagto-vlPagamento-0']/div/input";
     String inputDatadopagamento = "//*[@id='favorecidoscontrpagto-dtPagamento']/div/div/input";
     String inputTipopagamentoXpath = "//*[@id='favorecidoscontrpagto-tpPagamento']/div/select";
-    String inputEmpresaorigemXpath= "//*[@id='contratograo-cdEmprorigem']/div/input";
-
+    String inputEmpresaorigemXpath = "//*[@id='contratograo-cdEmprorigem']/div/input";
 
 
     public GPE001_Page(WebDriver driver) {
@@ -45,7 +45,7 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherCliforFeatureGPE001(String clifor) {
-        esperarMilissegundos(20000); // // espera para ele terminar de carregar todos as pages
+        esperarMilissegundos(20000); // espera para ele terminar de carregar todos as pages
         clicarElementoByXpathNVezes(inputCliforXpath, 2);
         preencherElementoByXpath(inputCliforXpath, clifor);
         pressionarENTERByXpath(inputCliforXpath);
@@ -54,7 +54,7 @@ public class GPE001_Page extends BasePage {
     }
 
     public void acessarPageFeatureGPE001(String botao) {
-        esperarMilissegundos(2000);
+        esperarMilissegundos(2000); // espera necessária
         selecionarPaginaNoMenu(botao);
     }
 
@@ -65,133 +65,64 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherProdutoFeatureGPE001(String produto) {
-        esperarMilissegundos(2000); //espera necessária
-        selecionarPeloF9(inputProdutoXpath, produto, elementoProduto);
-        esperarMilissegundos(1000); //espera necessária
+          selecionarPeloF9FeatureGPE001(inputProdutoXpath, produto, elementoProduto);
     }
 
     public void preencherTabelaDeDescontoFeatureGPE001(String tbdesconto) {
-        esperarMilissegundos(2000); //espera necessária
-        selecionarPeloF9(inputTbdescontoXpath, tbdesconto, elementoTbdesconto);
-        esperarMilissegundos(1000); //espera necessária
+        selecionarPeloF9FeatureGPE001(inputTbdescontoXpath, tbdesconto, elementoTbdesconto);
     }
 
     public void preencherNegócioFeatureGPE001(String negocio) {
-        esperarMilissegundos(2000); //espera necessária
-        selecionarPeloF9(inputNegocioXpath, negocio, elementoNegocio);
-        esperarMilissegundos(1000); //espera necessária
+        selecionarPeloF9FeatureGPE001(inputNegocioXpath, negocio, elementoNegocio);
     }
 
     public void preencherDataDeVencimentoFeatureGPE001(String dtvencimento) {
-        esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(inputDatavencimentoXpath, 2);
-        preencherElementoByXpath(inputDatavencimentoXpath, dtvencimento);
-        pressionarENTERByXpath(inputDatavencimentoXpath);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
+        preencherCampoPorXpathFeatureGPE001(inputDatavencimentoXpath, dtvencimento);
     }
 
     public void preencherAnoSafraFeatureGPE001(String anosafra) {
-        esperarMilissegundos(1000); //espera necessária
-        encontrarElementoByXpath(inputAnosafraXpath);
-        preencherElementoByXpath(inputAnosafraXpath, anosafra);
-        pressionaTabActions();
-        esperarMilissegundos(1000); //espera necessária
+        preencherCampoPorXpathFeatureGPE001(inputAnosafraXpath, anosafra);
     }
 
     public void selecionaTiposDeCálculoFeatureGPE001(String opcao) {
-        esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(input3sacasXpath, 2);
-        preencherElementoByXpath(input3sacasXpath, opcao);
-        pressionarENTERByXpath(input3sacasXpath);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
+        preencherCampoPorXpathFeatureGPE001(input3sacasXpath, opcao);
     }
 
     public void preencherPesoVolumeContratadoFeatureGPE001(String pesoevolume) {
-        esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(inputPesoevolumeXpath, 2);
-        preencherElementoByXpath(inputPesoevolumeXpath, pesoevolume);
-        pressionarENTERByXpath(inputPesoevolumeXpath);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
+        preencherCampoPorXpathFeatureGPE001(inputPesoevolumeXpath, pesoevolume);
     }
 
     public void preencherPreçoUnitárioFeatureGPE001(String precounitario) {
-        esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(inputPrecounitarioXpath, 2);
-        preencherElementoByXpath(inputPrecounitarioXpath, precounitario);
-        pressionarENTERByXpath(inputPrecounitarioXpath);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
+        preencherCampoPorXpathFeatureGPE001(inputPrecounitarioXpath, precounitario);
     }
 
     public void preencherDiaFeatureGPE001(String dia) {
-        esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(inputDiaXpath, 2);
-        preencherElementoByXpath(inputDiaXpath, dia);
-        pressionarENTERByXpath(inputDiaXpath);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
+        preencherCampoPorXpathFeatureGPE001(inputDiaXpath, dia);
     }
 
     public void preencherCondiçãoDePagamentoFeatureGPE001(String condicaopagamento) {
-        esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(inputCondicaopagamentoXpath, 2);
-        preencherElementoByXpath(inputCondicaopagamentoXpath, condicaopagamento);
-        pressionarENTERByXpath(inputCondicaopagamentoXpath);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
+        preencherCampoPorXpathFeatureGPE001(inputCondicaopagamentoXpath,  condicaopagamento);
     }
 
     public void preencherValorPagamentoFeatureGPE001(String valorpagamento) {
-        esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(inputValorpagamento, 2);
-        preencherElementoByXpath(inputValorpagamento, valorpagamento);
-        pressionarENTERByXpath(inputValorpagamento);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
+        preencherCampoPorXpathFeatureGPE001(inputValorpagamento,  valorpagamento);
     }
 
     public void preencherClifor2FeatureGPE001(String clifor2) {
-        esperarMilissegundos(5000); //espera necessária
-        clicarElementoByXpathNVezes(inputClifor2Xpath, 2);
-        preencherElementoByXpath(inputClifor2Xpath, clifor2);
-        pressionarENTERByXpath(inputClifor2Xpath);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
+        preencherCampoPorXpathFeatureGPE001(inputClifor2Xpath, clifor2);
     }
 
     public void preencherDataPagamentoFeatureGPE001(String dataDoPagamento) {
-        esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(inputDatadopagamento, 2);
-        preencherElementoByXpath(inputDatadopagamento, dataDoPagamento);
-        pressionarENTERByXpath(inputDatadopagamento);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
-
+        preencherCampoPorXpathFeatureGPE001(inputDatadopagamento, dataDoPagamento);
     }
 
     public void selecionaTipoPagamentoFeatureGPE001(String tipoPagamento) {
-        esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(inputTipopagamentoXpath, 2);
-        preencherElementoByXpath(inputTipopagamentoXpath, tipoPagamento);
-        pressionarENTERByXpath(inputTipopagamentoXpath);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
-    }
-
-    public void preencherCliforTrêsPageContratosDeGraoFeatureGPE001(String clifor) {
-        esperarMilissegundos(1000); //espera necessária
-        clicarElementoByXpathNVezes(inputCliforXpath, 2);
-        preencherElementoByXpath(inputCliforXpath, clifor);
-        pressionarENTERByXpath(inputCliforXpath);
-        pressionaTabActions();
-        esperarMilissegundos(1000); // espera necessária
+        preencherCampoPorXpathFeatureGPE001(inputTipopagamentoXpath, tipoPagamento);
     }
 
     public void preencherProdutoNãoCadastradoFeatureGPE001(String produtoNaocadastrado) {
         esperarMilissegundos(2000); //espera necessária
+        limparCampoDeTextoPorXpath(inputProdutoXpath);
         clicarElementoByXpathNVezes(inputProdutoXpath, 2);
         preencherElementoByXpath(inputProdutoXpath, produtoNaocadastrado);
         pressionarENTERByXpath(inputProdutoXpath);
@@ -206,16 +137,18 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherProdutoSemLovFeatureGPE001(String produto2) {
-        esperarMilissegundos(2000); //espera necessária
+        esperarMilissegundos(3000); //espera necessária
         clicarElementoByXpathNVezes(inputProdutoXpath, 2);
+        esperarMilissegundos(2000); //espera necessária
         preencherElementoByXpath(inputProdutoXpath, produto2);
+        esperarMilissegundos(2000); //espera necessária
         pressionarENTERByXpath(inputProdutoXpath);
         pressionaTabActions();
         esperarMilissegundos(2000); // espera necessária
     }
 
     public void preencherEmprOrigemPageContratosDeGraoFeatureGPE001(String empresaOrigem) {
-        esperarMilissegundos(20000);// // espera para ele terminar de carregar todos as pages
+        esperarMilissegundos(20000);// espera para ele terminar de carregar todos as pages
         limparCampoDeTextoPorXpath(inputEmpresaorigemXpath);
         clicarElementoByXpathNVezes(inputEmpresaorigemXpath, 2);
         preencherElementoByXpath(inputEmpresaorigemXpath, empresaOrigem);
@@ -224,163 +157,21 @@ public class GPE001_Page extends BasePage {
         esperarMilissegundos(1000); // espera necessária
     }
 
+    public void selecionarPeloF9FeatureGPE001(String elementoCampo, String valor, String elementoTabela){ //metodo auxiliar
+        esperarMilissegundos(2000); //espera necessária
+        selecionarPeloF9(elementoCampo, valor, elementoTabela);
+        esperarMilissegundos(1000); //espera necessária
     }
 
+    public void preencherCampoPorXpathFeatureGPE001(String campoXpath, String valor) {
+        esperarMilissegundos(1000); // Espera necessária
+        clicarElementoByXpathNVezes(campoXpath, 2);
+        preencherElementoByXpath(campoXpath, valor);
+        pressionarENTERByXpath(campoXpath);
+        pressionaTabActions();
+        esperarMilissegundos(1000); // Espera necessária
+    }
 
-//
-//     //Filtros
-//    String inputEmpresaXpath = "//*[@id='controlerestrito-cdEmpresa']/div/input";
-//    String inputAutorizadorXpath = "//*[@id='controlerestrito-cdAutorizador']/div/input";
-//    String inputCCustoXpath = "//*[@id='controlerestrito-cdCentrocusto']/div/input";
-//    String btnConsultarXpath = "//*[@id='controle-btnConsulta']/button/div";
-//
-//    // Grid Autorizadores
-//    String inputEmpresaGridXpathInicio = "//*[@id='carregaDados-cdEmpresa-";
-//    String inputAutorizadorGridXpathInicio = "//*[@id='carregaDados-cdAutorizador-";
-//    String inputCCustoGridXpathInicio = "//*[@id='carregaDados-cdCentrocusto-";
-//    String selectStatusGridXpathInicio = "//*[@id='carregaDados-stRegistro-";
-//
-//
-//    // Globais
-//    String inputXpathFim = "']/div/input";
-//    String selectXpathFim = "']/div/select";
-//    int primeiraLinhaEmBranco;
-//
-//
-//
-//    // Inicialização da primeiraLinhaEmBranco
-//    public void setPrimeiraLinhaEmBranco() { primeiraLinhaEmBranco = encontrarPrimeiraLinhaEmBrancoNoGrid(driver);}
-//
-//    // Garantindo que a primeiraLinhaEmBranco seja inicializada apenas uma vez
-//    private void verificarOuSetarPrimeiraLinhaEmBranco() {
-//        if (primeiraLinhaEmBranco != 0) {setPrimeiraLinhaEmBranco();}
-//    }
-//
-//    // Informa Autorizador para Consulta
-//    public void informaAutorizadorFeatureTCO035(String autorizador) {
-//        alterarParaIframeComElemento(inputAutorizadorXpath); // Alterna para o iframe correto
-//        esperarEncontrarEPreencherElementos(inputAutorizadorXpath, autorizador); // Clica no elemento
-//    }
-//
-//    // Realiza Consulta
-//    public void realizarConsultaFeatureTCO035() {
-//        clicarElementoByXpath(btnConsultarXpath);
-//    }
-//
-//    // Informar Empresa no Grid Autorizador
-//    public void preencherEmpresaFeatureTCO035() {
-//        int[] empresas = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 33, 48, 84, 108, 121, 122, 150, 500, 3009, 6666}; // Código das empresas apresentadas
-//        int indiceEmpresasAleatorio = faker.random().nextInt(0, empresas.length - 1); // Gera um índice aleatório conforme o tamanho do array
-//        int empresaSelecionada = empresas[indiceEmpresasAleatorio]; // Seleciona o valor no índice aleatório
-//        String empresaAutorizador = Integer.toString(empresaSelecionada); // Converte o valor selecionado para String
-//
-//        verificarOuSetarPrimeiraLinhaEmBranco();
-//        String inputEmpresaGridXpath = inputEmpresaGridXpathInicio + primeiraLinhaEmBranco + inputXpathFim;
-//
-//        esperarEncontrarEPreencherElementos(inputEmpresaGridXpath, empresaAutorizador);
-//    }
-//
-//    // Informar Autorizador no Gride Autorizador
-//    public void preencherAutorizadorFeatureTCO035(String autorizador) {
-//        verificarOuSetarPrimeiraLinhaEmBranco();
-//        String inputAutorizadorGridXpath = inputAutorizadorGridXpathInicio + primeiraLinhaEmBranco + inputXpathFim;
-//        esperarEncontrarEPreencherElementos(inputAutorizadorGridXpath, autorizador);
-//    }
-//
-//    // Informar Centro de Custo no Gride Autorizador
-//    public void preencherCCustoFeatureTCO035() {
-//        int[] centrosDeCusto = {1, 6, 20, 23, 100, 403, 404, 501, 700, 800 }; // Código dos centros de custo. Limitado em 10 valores
-//        int indiceCCAleatorio = faker.random().nextInt(0, centrosDeCusto.length - 1); // Gera um índice aleatório conforme o tamanho do array
-//        int centroCustoSelecionado = centrosDeCusto[indiceCCAleatorio]; // Seleciona o valor no índice aleatório
-//        String centroCustoAutorizador = Integer.toString(centroCustoSelecionado); // Converte o valor selecionado para String
-//
-//        verificarOuSetarPrimeiraLinhaEmBranco();
-//        String inputCentroCustoGridXpath = inputCCustoGridXpathInicio + primeiraLinhaEmBranco + inputXpathFim;
-//        esperarEncontrarEPreencherElementos(inputCentroCustoGridXpath, centroCustoAutorizador);
-//    }
-//
-//    // Seleciona Status do Autorizador
-//    public void selecionaStatusFeatureTCO035(String status) {
-//        verificarOuSetarPrimeiraLinhaEmBranco();
-//        String selectStatusGridXpath = selectStatusGridXpathInicio + primeiraLinhaEmBranco + selectXpathFim;
-//
-//        // Cria um objeto Web
-//        WebElement dropdown = driver.findElement(By.xpath(selectStatusGridXpath));
-//        // Clicar elemento
-//        dropdown.click();
-//        // Cria uma instância de Select
-//        Select select = new Select(dropdown);
-//
-//        // Espera necessária
-//        esperarMilissegundos(4000);
-//
-//        // Seleciona o Status reportado
-//        if ("Ativo".equalsIgnoreCase(status)) {
-//            select.selectByVisibleText("Ativo");
-//        } else if ("Inativo".equalsIgnoreCase(status)) {
-//            select.selectByVisibleText("Inativo");
-//        }    }
-//
-//    public void selecionarAutorizadorFeatureTCO035(String autorizador) {
-//        esperarMilissegundos(5000); // espera necessária
-//        testConsultaRegistroGrid(autorizador, inputAutorizadorGridXpathInicio, inputXpathFim);
-//    }
-//
-//    public void selecionarEmpresaConsultaFeatureTCO035() {
-//        int[] empresas = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 33, 48, 84, 108, 121, 122, 150, 500, 3009, 6666}; // Código das empresas apresentadas
-//        int indiceEmpresasAleatorio = faker.random().nextInt(0, empresas.length - 1); // Gera um índice aleatório conforme o tamanho do array
-//        int empresaSelecionada = empresas[indiceEmpresasAleatorio]; // Seleciona o valor no índice aleatório
-//        String empresaAutorizador = Integer.toString(empresaSelecionada); // Converte o valor selecionado para String
-//        String elementoTabelaEmpresa = "lovEmpresa1";
-//
-//        esperarClicarESelecionarF9(inputEmpresaXpath, empresaAutorizador, elementoTabelaEmpresa);
-//    }
-//
-//    public void selecionarOAutorizadorConsultaFeatureTCO035(String autorizador) {
-//        String elementoTabelaAutorizador = "lovSolres";
-//        esperarClicarESelecionarF9(inputAutorizadorXpath, autorizador, elementoTabelaAutorizador);
-//    }
-//
-//    public void selecionarOCCustoConsultaFeatureTCO035() {
-//        int[] centrosDeCusto = {1, 6, 20, 23, 100, 403, 404, 501, 700, 800 }; // Código dos centros de custo. Limitado em 10 valores
-//        int indiceCCAleatorio = faker.random().nextInt(0, centrosDeCusto.length - 1); // Gera um índice aleatório conforme o tamanho do array
-//        int centroCustoSelecionado = centrosDeCusto[indiceCCAleatorio]; // Seleciona o valor no índice aleatório
-//        String centroCustoAutorizador = Integer.toString(centroCustoSelecionado); // Converte o valor selecionado para String
-//        String elementoTabelaCCusto = "lovCentrocusto1";
-//
-//        esperarClicarESelecionarF9(inputCCustoXpath,centroCustoAutorizador, elementoTabelaCCusto);
-//    }
-//
-//    public void selecionarAEmpresaGridFeatureTCO035() {
-//        int[] empresas = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 33, 48, 84, 108, 121, 122, 150, 500, 3009, 6666}; // Código das empresas apresentadas
-//        int indiceEmpresasAleatorio = faker.random().nextInt(0, empresas.length - 1); // Gera um índice aleatório conforme o tamanho do array
-//        int empresaSelecionada = empresas[indiceEmpresasAleatorio]; // Seleciona o valor no índice aleatório
-//        String empresaAutorizador = Integer.toString(empresaSelecionada); // Converte o valor selecionado para String
-//        String elementoTabelaEmpresa = "lovEmpresa";
-//
-//        verificarOuSetarPrimeiraLinhaEmBranco();
-//        String inputEmpresaGridXpath = inputEmpresaGridXpathInicio + primeiraLinhaEmBranco + inputXpathFim;
-//
-//        esperarClicarESelecionarF9(inputEmpresaGridXpath,empresaAutorizador, elementoTabelaEmpresa);
-//    }
-//
-//    public void selecionarOAutorizadorGridFeatureTCO035(String autorizador) {
-//        verificarOuSetarPrimeiraLinhaEmBranco();
-//        String inputAutorizadorGridXpath = inputAutorizadorGridXpathInicio + primeiraLinhaEmBranco + inputXpathFim;
-//        String elementoTabelaAutorizador = "lovSol";
-//
-//        esperarClicarESelecionarF9(inputAutorizadorGridXpath,autorizador, elementoTabelaAutorizador );
-//    }
-//
-//    public void selecionarOCCustoGridFeatureTCO035() {
-//        int[] centrosDeCusto = {1, 6, 20, 23, 100, 403, 404, 501, 700, 800 }; // Código dos centros de custo. Limitado em 10 valores
-//        int indiceCCAleatorio = faker.random().nextInt(0, centrosDeCusto.length - 1); // Gera um índice aleatório conforme o tamanho do array
-//        int centroCustoSelecionado = centrosDeCusto[indiceCCAleatorio]; // Seleciona o valor no índice aleatório
-//        String centroCustoAutorizador = Integer.toString(centroCustoSelecionado); // Converte o valor selecionado para String
-//        String elementoTabelaCCusto = "lovCen";
-//
-//        verificarOuSetarPrimeiraLinhaEmBranco();
-//        String inputCentroCustoGridXpath = inputCCustoGridXpathInicio + primeiraLinhaEmBranco + inputXpathFim;
-//
-//        esperarClicarESelecionarF9(inputCentroCustoGridXpath,centroCustoAutorizador, elementoTabelaCCusto);
-//    }
+ }
+
+

@@ -177,7 +177,6 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-
    Cenário: Validação de Item sem permissão de utilização na empresa do contrato
      #Pedidos/contratos de grão
 
