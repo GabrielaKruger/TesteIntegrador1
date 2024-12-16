@@ -1,5 +1,5 @@
  #language: pt
- @wip @GPE001 @dt_GPE001 @chrome
+ @test @GPE001 @dt_GPE001 @chrome
  Funcionalidade: GPE001 - Autorizador Restrito
 
    Cenário de Fundo:
