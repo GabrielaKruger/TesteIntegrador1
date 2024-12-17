@@ -70,7 +70,7 @@ public class TCO024_Step {
     }
 
     @E("clicar botão {string} do modal feature TCO024")
-    public void clicarBotãoDoModalFeatureTCO035(String acao) {
+    public void clicarBotãoDoModalFeatureTCO024(String acao) {
         basePage.clicarBotaoDoModal(acao);
     }
 
@@ -80,10 +80,70 @@ public class TCO024_Step {
     }
 
     @Quando("apresenta o modal H4 {string} feature TCO024")
-    public void apresentaOModalH4FeatureTCO035(String title) {
+    public void apresentaOModalH4FeatureTCO024(String title) {
         basePage.validaModalByH4(title);
     }
 
+    @Quando("apresenta o modal {string} feature TCO024")
+    public void apresentaOModalFeatureTCO024(String title) {
+        basePage.validaModalByH5(title);
+    }
+
+    @Quando("informar Departamento feature TCO024")
+    public void informarDepartamentoFeatureTCO024() {
+        TCO024_Page.informarDepartamentoFeatureTCO024(massaTeste.getMassaTestePorPathEChave(tagMassa, "departamento"));
+    }
+
+    @Então("realizar a consulta feature TCO024")
+    public void realizarAConsultaFeatureTCO024() {
+        TCO024_Page.realizarAConsultaFeatureTCO024();
+    }
+
+    @Quando("selecionar o Grid Solicitante feature TCO024")
+    public void selecionarOGridSolicitanteFeatureTCO024() {
+        TCO024_Page.selecionarOGridSolicitanteFeatureTCO024();
+    }
+
+    @Então("informar Solicitante feature TCO024")
+    public void informarSolicitanteFeatureTCO024() {
+        TCO024_Page.informarSolicitanteFeatureTCO024(massaTeste.getMassaTestePorPathEChave(tagMassa, "solicitante"));
+    }
+
+    @Quando("selecionar o Grid Autorizador feature TCO024")
+    public void selecionarOGridAutorizadorFeatureTCO024() {
+        TCO024_Page.selecionarOGridAutorizadorFeatureTCO024();
+    }
+
+    @E("informar Autorizador feature TCO024")
+    public void informarAutorizadorFeatureTCO024() {
+        TCO024_Page.informarAutorizadorFeatureTCO024(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
+    }
+
+    @E("informar Alcada feature TCO024")
+    public void informarAlcadaFeatureTCO024() {
+        TCO024_Page.informarAlcadaFeatureTCO024();
+    }
+
+    @E("informar Tipo Cargo feature TCO024")
+    public void informarTipoCargoFeatureTCO024() {
+        TCO024_Page.informarTipoCargoFeatureTCO024();
+    }
+
+
+    @E("{string} Aprovador de Necessidade feature TCO024")
+    public void aprovadorDeNecessidadeFeatureTCO024(String selecionar) {
+        TCO024_Page.aprovadorDeNecessidadeFeatureTCO024(selecionar);
+    }
+
+    @Então("{string} Comprador feature TCO024")
+    public void compradorFeatureTCO024(String selecionar) {
+        TCO024_Page.compradorFeatureTCO024(selecionar);
+    }
+
+    @Então("localiza Autorizador cadastrado feature TCO024")
+    public void localizaAutorizadorCadastradoFeatureTCO024() {
+        TCO024_Page.localizaAutorizadorCadastradoFeatureTCO024(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
+    }
 
     @After
     public void tearDown() {
