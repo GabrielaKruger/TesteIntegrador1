@@ -6,6 +6,7 @@
      Dado inicialize a execução dos cenários do GPE001
      E acessar o programa "GPE001" feature GPE001
 
+   @5619v1
    Cenário: Contrato Recebimento Normal
 
      #Pedidos/contratos de grão
@@ -28,6 +29,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
+   @5619v2
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento maior [manual]
 
     #Pedidos/contratos de grão
@@ -53,6 +55,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
+   @5619v3
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento Menor [manual]
 
       #Pedidos/contratos de grão
@@ -81,6 +84,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
+   @5619v4
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento maior [contrato]
     #Pedidos/contratos de grão
      Quando preencher Clifor page contratos de grao feature GPE001
@@ -108,6 +112,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
+   @5619v5
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento menor [contrato]
     #Pedidos/contratos de grão
      Quando preencher Clifor3 page contratos de grao feature GPE001
@@ -135,6 +140,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
+   @5716
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento igual [contrato]
    #Pedidos/contratos de grão
      Quando preencher Clifor page contratos de grao feature GPE001
@@ -161,6 +167,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
+   @5717
    Cenário: Validação de Item sem movimentação cadastrada no TGR007
     #Pedidos/contratos de grão
      Quando preencher Clifor3 page contratos de grao feature GPE001
