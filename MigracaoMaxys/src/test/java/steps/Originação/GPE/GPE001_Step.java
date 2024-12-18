@@ -104,20 +104,20 @@ public class GPE001_Step {
 
     @Então("clicar botão ToolBar {string} feature GPE001")
     public void clicarBotãoToolBarFeatureGPE001(String botao) {
-        basePage.esperarMilissegundos(15000); // espera necessária
+        basePage.esperarMilissegundos(5000); // espera necessária
         basePage.clicarBotaoToolBar(botao);
     }
 
     @E("apresentar o modal H5 {string} feature GPE001")
     public void apresentarOModalH5FeatureGPE001(String title) {
-        basePage.esperarMilissegundos(4000);//espera necessária
+        basePage.esperarMilissegundos(2000);//espera necessária
         basePage.validaModalByH5(title);
         basePage.esperarMilissegundos(2000);//espera necessária
     }
 
     @E("apresentar a mensagem parcial {string} feature GPE001")
     public void apresentarAMensagemParcialFeatureGPE001(String mensagem) {
-        basePage.esperarMilissegundos(6000); //espera necessária
+        basePage.esperarMilissegundos(2000); //espera necessária
         //basePage.validaMensagemLabelByText(mensagem);
         basePage.validaMensagemLabelByContainsText(mensagem);
         basePage.esperarMilissegundos(2000); //espera necessária
@@ -125,7 +125,7 @@ public class GPE001_Step {
 
     @Então("clicar botão {string} do modal feature GPE001")
     public void clicarBotãoDoModalFeatureGPE001(String acao) {
-        basePage.esperarMilissegundos(5000); //espera necessária
+        basePage.esperarMilissegundos(2000); //espera necessária
         basePage.clicarBotaoDoModal(acao);
         basePage.esperarMilissegundos(2000); //espera necessária
     }
