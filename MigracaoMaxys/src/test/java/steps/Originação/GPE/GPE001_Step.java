@@ -110,24 +110,24 @@ public class GPE001_Step {
 
     @E("apresentar o modal H5 {string} feature GPE001")
     public void apresentarOModalH5FeatureGPE001(String title) {
-        basePage.esperarMilissegundos(2000);//espera necessária
+        basePage.esperarMilissegundos(1000);//espera necessária
         basePage.validaModalByH5(title);
-        basePage.esperarMilissegundos(2000);//espera necessária
+        basePage.esperarMilissegundos(1000);//espera necessária
     }
 
     @E("apresentar a mensagem parcial {string} feature GPE001")
     public void apresentarAMensagemParcialFeatureGPE001(String mensagem) {
-        basePage.esperarMilissegundos(2000); //espera necessária
+        basePage.esperarMilissegundos(1000); //espera necessária
         //basePage.validaMensagemLabelByText(mensagem);
         basePage.validaMensagemLabelByContainsText(mensagem);
-        basePage.esperarMilissegundos(2000); //espera necessária
+        basePage.esperarMilissegundos(1000); //espera necessária
     }
 
     @Então("clicar botão {string} do modal feature GPE001")
     public void clicarBotãoDoModalFeatureGPE001(String acao) {
         basePage.esperarMilissegundos(2000); //espera necessária
         basePage.clicarBotaoDoModal(acao);
-        basePage.esperarMilissegundos(2000); //espera necessária
+        basePage.esperarMilissegundos(1000); //espera necessária
     }
 
     @E("preencher Dia feature GPE001")
