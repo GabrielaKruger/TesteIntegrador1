@@ -85,8 +85,8 @@
 //        int codigoSimulatedInt = faker.random().nextInt(1, 16);
 //        String codigoSimulateAlcada = Integer.toString(codigoSimulatedInt);
 //
-//        clicarElementoByXpathNVezes(inputDepartamentoXpath, 2);
-//        preencherElementoByXpath(inputDepartamentoXpath, inputAutorizadorXpath);
+//        clicarElementoByXpathNVezes(inputAutorizadorXpath, 2);
+//        preencherElementoByXpath(inputAutorizadorXpath, codigoSimulateAlcada);
 //
 //    }
 //

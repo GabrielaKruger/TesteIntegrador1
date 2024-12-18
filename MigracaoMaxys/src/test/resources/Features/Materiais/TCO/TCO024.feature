@@ -54,7 +54,7 @@
 #     E pressionar tecla "f6" feature TCO024
 #     E informar Autorizador feature TCO024
 #     E informar Alcada feature TCO024
-#     E formar Tipo Cardo feature TCO024
+#     E informar Tipo Cargo feature TCO024
 #     E "marcar" Aprovador de Necessidade feature TCO024
 #     Então "marcar" Comprador feature TCO024
 #
@@ -96,7 +96,7 @@
 #     E apresentar a mensagem parcial "O Tipo do Cargo deve ser informado." feature TCO024
 #     Então clicar botão "ok" do modal feature TCO024
 #
-#     Quando informar Tipo Cardo feature TCO024
+#     Quando informar Tipo Cargo feature TCO024
 #     E "marcar" Aprovador de Necessidade feature TCO024
 #     Então "marcar" Comprador feature TCO024
 #
