@@ -29,7 +29,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   @5619v2
+   @5619v1
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento maior [manual]
 
     #Pedidos/contratos de grão
@@ -55,7 +55,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   @5619v3
+   @5619v2
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento Menor [manual]
 
       #Pedidos/contratos de grão
@@ -84,7 +84,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   @5619v4
+   @5619v3
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento maior [contrato]
     #Pedidos/contratos de grão
      Quando preencher Clifor page contratos de grao feature GPE001
@@ -112,7 +112,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   @5619v5
+   @5619v4
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento menor [contrato]
     #Pedidos/contratos de grão
      Quando preencher Clifor3 page contratos de grao feature GPE001
@@ -140,7 +140,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   @5716
+   @5619v5
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento igual [contrato]
    #Pedidos/contratos de grão
      Quando preencher Clifor page contratos de grao feature GPE001
@@ -167,7 +167,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   @5717
+   @5716
    Cenário: Validação de Item sem movimentação cadastrada no TGR007
     #Pedidos/contratos de grão
      Quando preencher Clifor3 page contratos de grao feature GPE001
@@ -182,7 +182,7 @@
      E apresentar a mensagem parcial "Verifique TGR007" feature GPE001
      Então clicar botão "ok" do modal feature GPE001
 
-
+   @5717
    Cenário: Validação de Item sem permissão de utilização na empresa do contrato
      #Pedidos/contratos de grão
 

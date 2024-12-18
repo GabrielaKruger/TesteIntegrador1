@@ -1,10 +1,10 @@
-# #language: pt
-# @test @TCO035 @dt_TCO035 @chrome
-# Funcionalidade: TCO035 - Autorizador Restrito
-#
-#   Cenário de Fundo:
-#     Dado inicialize a execução dos cenários do TCO035
-#     E acessar o programa "TCO035" feature TCO035
+ #language: pt
+ @test @FTC007 @dt_FTC007 @chrome
+ Funcionalidade: FTC007 - Autorizador Restrito
+
+   Cenário de Fundo:
+     Dado inicialize a execução dos cenários do FTC007
+     E acessar o programa "FTC007" feature TCO035
 #
 #   Cenário: Cadastro, edição e exclusão de Autorizador Restrito| Caminho feliz
 #

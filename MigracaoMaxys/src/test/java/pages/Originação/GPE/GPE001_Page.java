@@ -45,7 +45,7 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherCliforFeatureGPE001(String clifor) {
-        esperarMilissegundos(20000); // espera para ele terminar de carregar todos as pages
+        esperarMilissegundos(5000); // espera para ele terminar de carregar todos as pages
         clicarElementoByXpathNVezes(inputCliforXpath, 2);
         preencherElementoByXpath(inputCliforXpath, clifor);
         pressionarENTERByXpath(inputCliforXpath);
@@ -59,9 +59,7 @@ public class GPE001_Page extends BasePage {
     }
 
     public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
-        esperarMilissegundos(2000); //espera necessária
         esperarEncontrarEPreencherElementos(selectFixoXpath, opcao);
-        esperarMilissegundos(1000); //espera necessária
     }
 
     public void preencherProdutoFeatureGPE001(String produto) {
@@ -93,6 +91,7 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherPreçoUnitárioFeatureGPE001(String precounitario) {
+        esperarMilissegundos(1000);
         preencherCampoPorXpathFeatureGPE001(inputPrecounitarioXpath, precounitario);
     }
 
@@ -121,34 +120,32 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherProdutoNãoCadastradoFeatureGPE001(String produtoNaocadastrado) {
-        esperarMilissegundos(2000); //espera necessária
+        esperarMilissegundos(1); //espera necessária
         limparCampoDeTextoPorXpath(inputProdutoXpath);
         clicarElementoByXpathNVezes(inputProdutoXpath, 2);
         preencherElementoByXpath(inputProdutoXpath, produtoNaocadastrado);
         pressionarENTERByXpath(inputProdutoXpath);
         pressionaTabActions();
-        esperarMilissegundos(2000); // espera necessária
+        esperarMilissegundos(1000); // espera necessária
     }
 
     public void selecionarOperaçãoFeatureGPE001(String exportacao) {
-        esperarMilissegundos(5000); //espera necessária
         marcarRadioButon(selectExportacaoXpath);
-        esperarMilissegundos(3000); //espera necessária
     }
 
     public void preencherProdutoSemLovFeatureGPE001(String produto2) {
-        esperarMilissegundos(3000); //espera necessária
+        esperarMilissegundos(2000); //espera necessária
         clicarElementoByXpathNVezes(inputProdutoXpath, 2);
         esperarMilissegundos(2000); //espera necessária
         preencherElementoByXpath(inputProdutoXpath, produto2);
         esperarMilissegundos(2000); //espera necessária
         pressionarENTERByXpath(inputProdutoXpath);
         pressionaTabActions();
-        esperarMilissegundos(2000); // espera necessária
+        esperarMilissegundos(1000); // espera necessária
     }
 
     public void preencherEmprOrigemPageContratosDeGraoFeatureGPE001(String empresaOrigem) {
-        esperarMilissegundos(20000);// espera para ele terminar de carregar todos as pages
+        esperarMilissegundos(5000);// espera para ele terminar de carregar todos as pages
         limparCampoDeTextoPorXpath(inputEmpresaorigemXpath);
         clicarElementoByXpathNVezes(inputEmpresaorigemXpath, 2);
         preencherElementoByXpath(inputEmpresaorigemXpath, empresaOrigem);
@@ -158,18 +155,14 @@ public class GPE001_Page extends BasePage {
     }
 
     public void selecionarPeloF9FeatureGPE001(String elementoCampo, String valor, String elementoTabela){ //metodo auxiliar
-        esperarMilissegundos(2000); //espera necessária
         selecionarPeloF9(elementoCampo, valor, elementoTabela);
-        esperarMilissegundos(1000); //espera necessária
     }
 
     public void preencherCampoPorXpathFeatureGPE001(String campoXpath, String valor) {
-        esperarMilissegundos(1000); // Espera necessária
         clicarElementoByXpathNVezes(campoXpath, 2);
         preencherElementoByXpath(campoXpath, valor);
         pressionarENTERByXpath(campoXpath);
         pressionaTabActions();
-        esperarMilissegundos(1000); // Espera necessária
     }
 
  }
