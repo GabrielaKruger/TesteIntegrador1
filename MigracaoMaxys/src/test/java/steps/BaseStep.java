@@ -54,9 +54,4 @@ public class BaseStep {
         massaTeste.lerJson(pathJson);
     }
 
-    @Entao("apresenta o modal {string}")
-    public void validaModal(String title) throws IOException, InterruptedException {
-      //  basePage.validaModalByH4(title);
-    }
-
 }
