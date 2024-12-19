@@ -1156,7 +1156,7 @@ public class BasePage {
     public void setPrimeiraLinhaEmBranco() { primeiraLinhaEmBranco = encontrarPrimeiraLinhaEmBrancoNoGrid(driver);}
 
     // Garantindo que a primeiraLinhaEmBranco seja inicializada apenas uma vez
-    private void verificarOuSetarPrimeiraLinhaEmBranco() {
+    public void verificarOuSetarPrimeiraLinhaEmBranco() {
         if (primeiraLinhaEmBranco != 0) {setPrimeiraLinhaEmBranco();}
     }
 
