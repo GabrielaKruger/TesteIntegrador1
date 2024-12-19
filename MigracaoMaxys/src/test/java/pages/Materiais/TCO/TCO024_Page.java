@@ -25,13 +25,6 @@ public class TCO024_Page extends BasePage {
         this.driver = driver;
     }
 
-    // Inicialização da primeiraLinhaEmBranco
-    public void setPrimeiraLinhaEmBranco() { primeiraLinhaEmBranco = encontrarPrimeiraLinhaEmBrancoNoGrid(driver);}
-
-    // Garantindo que a primeiraLinhaEmBranco seja inicializada apenas uma vez
-    private void verificarOuSetarPrimeiraLinhaEmBranco() {
-        if (primeiraLinhaEmBranco != 0) {setPrimeiraLinhaEmBranco();}
-    }
 
     public void informarDepartamentoFeatureTCO024(String departamento) {
         //int codigoSimulatedInt = faker.random().nextInt(1, 7);

@@ -26,6 +26,8 @@ public class BasePage {
     public MaxiconFaker faker = new MaxiconFaker();
     public static String varPosLinha;
 
+    int primeiraLinhaEmBranco;
+
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -1148,6 +1150,14 @@ public class BasePage {
             esperarMilissegundos(2000);
             actions.moveByOffset(510, 310).click().perform();
         }
+    }
+
+    // Inicialização da primeiraLinhaEmBranco
+    public void setPrimeiraLinhaEmBranco() { primeiraLinhaEmBranco = encontrarPrimeiraLinhaEmBrancoNoGrid(driver);}
+
+    // Garantindo que a primeiraLinhaEmBranco seja inicializada apenas uma vez
+    private void verificarOuSetarPrimeiraLinhaEmBranco() {
+        if (primeiraLinhaEmBranco != 0) {setPrimeiraLinhaEmBranco();}
     }
 
     public int encontrarPrimeiraLinhaEmBrancoNoGrid(WebDriver driver) {
