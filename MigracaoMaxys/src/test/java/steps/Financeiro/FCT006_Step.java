@@ -122,12 +122,11 @@
 //        FCT006_Page.autorizaProcessoFeatureFCT006();
 //    }
 //
-//    @Quando("Rescusa Processo feature FCT{int}")
-//    public void rescusaProcessoFeatureFCT(int arg0) {
+//    @Quando("Rescusa Processo feature FCT006")
+//    public void rescusaProcessoFeatureFCT006() {
 //    }
 //
 //    @Então("clicar botão {string} feature FCT006")
-//
 //    public void clicarBotãoFeatureFCT(String botao) {
 //
 //        switch (botao.toLowerCase()) {
@@ -153,6 +152,5 @@
 //                throw new IllegalArgumentException("Elemento não reconhecido: " + botao);
 //        }
 //    }
-//
 //
 //}
