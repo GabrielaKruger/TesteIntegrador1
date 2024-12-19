@@ -1,43 +1,53 @@
-//package pages.Financeiro;
-//
-//import org.openqa.selenium.WebDriver;
-//import pages.BasePage;
-//
-//public class FCT007_Page extends BasePage {
-//    WebDriver driver;
-//
-//    //Strings Page Pedidos/Contratos de Grão
-//    String inputCliforXpath = "//*[@id='contratograo-cdClifor']/div/input";
-//    String selectExportacaoXpath = "//*[@id='ngx-radio-5']";
-//
-//    //Strings Page Dados
-//    String inputProdutoXpath = "//*[@id='contratograo-cdItem']/div/input";
-//    String selectFixoXpath = "//*[@id='contratograo-tpContrato']/div/select";
-//    String inputTbdescontoXpath = "//*[@id='contratograo-nrTabdescgrao']/div/input";
-//    String inputNegocioXpath = "//*[@id='contratograo-cdNegocio']/div/input";
-//    String inputDatavencimentoXpath = "//*[@id='contratograo-dtVencimento']/div/div/input";
-//    String inputAnosafraXpath = "//*[@id='contratograo-dtAnosafra']/div/input";
-//    String input3sacasXpath = "//*[@id='contratograo-cdTipocalculo']/div/select";
-//    String inputPesoevolumeXpath = "//*[@id='contratograo-psContratado']/div/input";
-//    String inputPrecounitarioXpath = "//*[@id='contratograo-prUnitcomicms']/div/input";
-//    String inputDiaXpath = "//*[@id='vencicmsgrao-nrDiafaturamento-0']/div/input";
-//    String inputCondicaopagamentoXpath = "//*[@id='vencicmsgrao-cdCondpagto-0']/div/input";
-//    String elementoProduto = "lovItem";
-//    String elementoTbdesconto = "lovTabdescgrao";
-//    String elementoNegocio = "lovNegocio";
-//
-//    //Strings Page Favorecidos/Impressão
-//    String inputClifor2Xpath = "//*[@id='favorecidoscontrpagto-cdClifor-0']/div/input";
-//    String inputValorpagamento = "//*[@id='favorecidoscontrpagto-vlPagamento-0']/div/input";
-//    String inputDatadopagamento = "//*[@id='favorecidoscontrpagto-dtPagamento']/div/div/input";
-//    String inputTipopagamentoXpath = "//*[@id='favorecidoscontrpagto-tpPagamento']/div/select";
-//    String inputEmpresaorigemXpath = "//*[@id='contratograo-cdEmprorigem']/div/input";
-//
-//
-//    public FCT007_Page(WebDriver driver) {
-//        super(driver);
-//        this.driver = driver;
-//    }
+package pages.Financeiro;
+
+import org.openqa.selenium.WebDriver;
+import pages.BasePage;
+
+public class FCT007_Page extends BasePage {
+    WebDriver driver;
+
+    //Strings Page Pedidos/Contratos de Grão
+    //String selectEmpresaXpath = "//*[@id='processocaixa-cbProcesso-0']/div/button";
+    //String selectEmpresaXpath = "//*[@id='processocaixa-cbProcesso-0']/div/button";
+
+    int primeiraLinhaEmBranco;
+    String inputObservacaoXpath = "//*[@id='processocaixa-dsObservacao']/div/textarea";
+    String inputCreditoemcontaXpath = "//*[@id='processocaixa-btnCreditoemconta']/button/div";
+    String inputFecharXpath = "//*[@id='recebchequepag-btnFechar']/button/div";
+
+    public FCT007_Page(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+    }
+
+    public void selecionarEmpresafeatureFCT007(String acao) {
+        esperarMilissegundos(5000);//espera necessária
+        verificarOuSetarPrimeiraLinhaEmBranco();
+
+        String chkEmpresaXpath = "//*[@id='processocaixa-cbProcesso-" + primeiraLinhaEmBranco + "']/div/button";
+
+        testMarcaDesmarcaCheckBox(acao, chkEmpresaXpath);
+    }
+
+    public void preencherObservaçãoFeatureFCT007(String observacao) {
+        esperarMilissegundos(2000);//espera necessária
+        clicarElementoByXpathNVezes(inputObservacaoXpath, 2);
+        preencherElementoByXpath(inputObservacaoXpath, observacao);
+        esperarMilissegundos(2000);//espera necessária
+    }
+
+    public void clicarCréditoEmContaFeatureFCT007(String creditoemconta) {
+        esperarMilissegundos(2000);//espera necessária
+        clicarElementoByXpathNVezes(inputCreditoemcontaXpath, 1);
+        esperarMilissegundos(2000);//espera necessária
+    }
+
+    public void clicarFecharFeatureFCT007(String fechar) {
+        esperarMilissegundos(2000);//espera necessária
+        clicarElementoByXpathNVezes(inputCreditoemcontaXpath, 1);
+        esperarMilissegundos(2000);//espera necessária
+    }
+}
 //
 //    public void preencherCliforFeatureGPE001(String clifor) {
 //        esperarMilissegundos(20000); // espera para ele terminar de carregar todos as pages
