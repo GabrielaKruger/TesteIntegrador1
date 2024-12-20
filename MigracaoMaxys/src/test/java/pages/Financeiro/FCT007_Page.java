@@ -6,11 +6,10 @@ import pages.BasePage;
 public class FCT007_Page extends BasePage {
     WebDriver driver;
 
-    //Strings Page Pedidos/Contratos de Grão
-    //String selectEmpresaXpath = "//*[@id='processocaixa-cbProcesso-0']/div/button";
-    //String selectEmpresaXpath = "//*[@id='processocaixa-cbProcesso-0']/div/button";
-
+    //Globais
     int primeiraLinhaEmBranco;
+
+    //Strings Aprovação Comercial
     String inputObservacaoXpath = "//*[@id='processocaixa-dsObservacao']/div/textarea";
     String inputCreditoemcontaXpath = "//*[@id='processocaixa-btnCreditoemconta']/button/div";
     String inputFecharXpath = "//*[@id='recebchequepag-btnFechar']/button/div";
@@ -20,13 +19,13 @@ public class FCT007_Page extends BasePage {
         this.driver = driver;
     }
 
-    public void selecionarEmpresafeatureFCT007(String acao) {
-        esperarMilissegundos(5000);//espera necessária
+    public void marcarCheckboxEmpresaFeatureFCT007() {
+        esperarMilissegundos(20000);//espera necessária
         verificarOuSetarPrimeiraLinhaEmBranco();
 
         String chkEmpresaXpath = "//*[@id='processocaixa-cbProcesso-" + primeiraLinhaEmBranco + "']/div/button";
 
-        testMarcaDesmarcaCheckBox(acao, chkEmpresaXpath);
+        testMarcaDesmarcaCheckBox("marcar", chkEmpresaXpath);
     }
 
     public void preencherObservaçãoFeatureFCT007(String observacao) {
@@ -44,7 +43,7 @@ public class FCT007_Page extends BasePage {
 
     public void clicarFecharFeatureFCT007(String fechar) {
         esperarMilissegundos(2000);//espera necessária
-        clicarElementoByXpathNVezes(inputCreditoemcontaXpath, 1);
+        clicarElementoByXpathNVezes(inputFecharXpath, 1);
         esperarMilissegundos(2000);//espera necessária
     }
 }
