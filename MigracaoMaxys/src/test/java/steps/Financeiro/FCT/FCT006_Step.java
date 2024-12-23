@@ -1,4 +1,4 @@
-package steps.Financeiro;//package steps.Financeiro;
+package steps.Financeiro.FCT;//package steps.Financeiro;
 
 import driver.driverManager.DriverManager;
 import io.cucumber.java.Before;
@@ -11,7 +11,6 @@ import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.Financeiro.FCT006_Page;
 import pages.LoginPage;
-import pages.Originação.GPE.GPE001_Page;
 import utils.MassaTeste;
 
 import java.time.Duration;

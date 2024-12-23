@@ -1,4 +1,4 @@
-package steps.Financeiro;
+package steps.Financeiro.FCT;
 
 import driver.driverManager.DriverManager;
 import io.cucumber.java.Before;

@@ -1,12 +1,7 @@
 package pages.Originação.GPE;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import pages.BasePage;
-import java.time.Duration;
-import java.util.Objects;
 
 public class GPE001_Page extends BasePage {
     WebDriver driver;
