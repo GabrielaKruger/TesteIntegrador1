@@ -13,6 +13,7 @@ public class FCT007_Page extends BasePage {
     String inputObservacaoXpath = "//*[@id='processocaixa-dsObservacao']/div/textarea";
     String inputCreditoemcontaXpath = "//*[@id='processocaixa-btnCreditoemconta']/button/div";
     String inputFecharXpath = "//*[@id='recebchequepag-btnFechar']/button/div";
+    String inputUsuarioXpath = "//*[@id='processocaixa-cdUsuario']/div/input";
 
     public FCT007_Page(WebDriver driver) {
         super(driver);
@@ -45,6 +46,34 @@ public class FCT007_Page extends BasePage {
         esperarMilissegundos(2000);//espera necessária
         clicarElementoByXpathNVezes(inputFecharXpath, 1);
         esperarMilissegundos(2000);//espera necessária
+    }
+
+    public void recusarProcessoFeatureFCT007(String mensagem, String title, String acao, String botao) {
+        if (mensagem.equals("Erro: O tipo de pedido (FM) não pode ser recusado. Utilize o programa de fechamento de lote (AVE009).")) {
+            //validaModalByH4(title);
+            clicarBotaoDoModal(acao);
+            clicarBotaoToolBar(botao);
+            validaModalByH5(title);
+            validaMensagemLabelByText(mensagem);
+            clicarBotaoDoModal(acao);
+        } else if (mensagem.equals("Registro salvo com sucesso.")) {
+            //validaModalByH4(title);
+            clicarBotaoDoModal(acao);
+            validaModalByH5(title);
+            clicarBotaoDoModal(acao);
+        } else {
+            // Caso não seja nenhuma das mensagens esperadas, exibe um erro
+            System.out.println("Mensagem inesperada: " + mensagem);
+        }
+    }
+
+    public void preencherUsuárioProcessoFeatureFCT007(String usuarioProcesso) {
+        esperarMilissegundos(2000);//espera necessária
+        clicarElementoByXpathNVezes(inputUsuarioXpath, 2);
+        preencherElementoByXpath(inputUsuarioXpath, usuarioProcesso);
+        esperarMilissegundos(2000);//espera necessária
+
+
     }
 }
 //
@@ -175,7 +204,5 @@ public class FCT007_Page extends BasePage {
 //        pressionaTabActions();
 //        esperarMilissegundos(1000); // Espera necessária
 //    }
-//
-// }
 //
 //
