@@ -9,7 +9,7 @@
 //import io.cucumber.java.pt.Quando;
 //import org.openqa.selenium.WebDriver;
 //import pages.BasePage;
-//import pages.Financeiro.FCT007_Page;
+//import pages.Transporte.TTB.TTB163_Page;
 //import pages.LoginPage;
 //import utils.MassaTeste;
 //
@@ -19,7 +19,7 @@
 //
 //    private WebDriver driver;
 //    private MassaTeste massaTeste;
-//    private pages.Financeiro.FCT007_Page FCT007_Page;
+//    private pages.Transporte.TTB.TTB163_Page TTB163_Page;
 //    private BasePage basePage;
 //    private LoginPage loginPage;
 //    private String tagMassa;
@@ -32,8 +32,8 @@
 //        this.scenario = scenario;
 //    }
 //
-//    @Dado("inicialize a execução dos cenários do FCT007")
-//    public void inicializeAExecuçãoDosCenáriosDoFCT007() {
+//    @Dado("inicialize a execução dos cenários do TTB163")
+//    public void inicializeAExecuçãoDosCenáriosDoTTB163() {
 //        massaTeste = new MassaTeste();
 //        tagMassa = massaTeste.getPathByScenario(this.scenario);
 //        browser = DriverManager.getBrowserByScenario(this.scenario);
@@ -41,229 +41,82 @@
 //        this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //        this.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
 //        driver.manage().window().maximize();
-//        FCT007_Page FCT007_Page = new FCT007_Page(driver);
+//        TTB163_Page = new TTB163_Page(driver);
 //        loginPage = new LoginPage(driver);
 //        basePage = new BasePage(driver);
 //    }
 //
-//    @E("acessar o programa {string} feature FCT007")
-//    public void acessarOProgramaFeatureFCT007(String programa) {
+//    @E("acessar o programa {string} feature TTB163")
+//    public void acessarOProgramaFeatureTTB163(String programa) {
 //        basePage.esperarMilissegundos(20000);// espera necessária
 //        loginPage.loginNewMaxysNovo(programa);
+//        basePage.esperarMilissegundos(20000);// espera necessária
 //    }
 //
-//    @Quando("selecionar botão {string} feature FCT007")
-//    public void selecionarEmpresaFeatureFCT007(String empresa) {
-//        FCT007_Page.selecionarEmpresafeatureFCT007(empresa);
+//    @Quando("marcar checkbox Empresa feature TTB163")
+//    public void marcarCheckboxEmpresaFeatureTTB163() {
+//        TTB163_Page.marcarCheckboxEmpresaFeatureTTB163();
 //    }
 //
-//    @E("preencher Observação feature FCT007")
-//    public void preencherObservaçãoFeatureFCT007() {
-//        FCT007_Page.preencherObservaçãoFeatureFCT007(massaTeste.getMassaTestePorPathEChave(tagMassa, "observacao"));
-//
+//    @E("preencher Observação feature TTB163")
+//    public void preencherObservaçãoFeatureTTB163() {
+//        TTB163_Page.preencherObservaçãoFeatureTTB163(massaTeste.getMassaTestePorPathEChave(tagMassa, "observacao"));
 //    }
 //
-//    @E("clicar botão {string} feature FCT007")
-//    public void clicarCréditoEmContaFeatureFCT007(String creditoemconta) {
-//        FCT007_Page.clicarCréditoEmContaFeatureFCT007(creditoemconta);
+//    @E("clicar botão {string} feature TTB163")
+//    public void clicarCréditoEmContaFeatureTTB163(String creditoemconta) {
+//        TTB163_Page.clicarCréditoEmContaFeatureTTB163(creditoemconta);
 //    }
 //
-//    @E("clicar botão Crédito em Conta {string} feature FCT007")
-//    public void clicarFecharFeatureFCT007(String fechar) {
-//        FCT007_Page.clicarFecharFeatureFCT007(fechar);
+//    @E("clicar botão Crédito em Conta {string} feature TTB163")
+//    public void clicarFecharFeatureTTB163(String fechar) {
+//        TTB163_Page.clicarFecharFeatureTTB163(fechar);
 //    }
 //
-//    @Então("clicar botão ToolBar {string} feature FCT007")
-//    public void clicarBotãoToolBarFeatureFCT007(String botao) {
+//    @Então("clicar botão ToolBar {string} feature TTB163")
+//    public void clicarBotãoToolBarFeatureTTB163(String botao) {
 //       basePage.esperarMilissegundos(2000); // espera necessária
 //       basePage.clicarBotaoToolBar(botao);
 //    }
 //
-//    @Quando("apresentar o modal H5 {string} feature FCT007")
-//    public void apresentarOModalH5FeatureFCT007(String title) {
+//    @Quando("apresentar o modal H5 {string} feature TTB163")
+//    public void apresentarOModalH5FeatureTTB163(String title) {
 //            basePage.esperarMilissegundos(2000);//espera necessária
 //            basePage.validaModalByH5(title);
 //            basePage.esperarMilissegundos(2000);//espera necessária
 //        }
 //
-//    @E("apresentar a mensagem {string} feature FCT007")
-//    public void apresentarAMensagemFeatureFCT007(String mensagem) {
+//    @E("apresentar a mensagem {string} feature TTB163")
+//    public void apresentarAMensagemFeatureTTB163(String mensagem) {
 //        basePage.esperarMilissegundos(2000);//espera necessária
 //        basePage.validaMensagemLabelByText(mensagem);
 //    }
 //
-//    @Então("clicar botão {string} do modal feature FCT007")
-//    public void clicarBotãoDoModalFeatureFCT007(String arg0, int arg1) {
+//    @Então("clicar botão {string} do modal feature TTB163")
+//    public void clicarBotãoDoModalFeatureTTB163(String acao) {
+//        basePage.esperarMilissegundos(000); //espera necessária
+//        basePage.clicarBotaoDoModal(acao);
+//        basePage.esperarMilissegundos(2000); //espera necessária
 //    }
 //
-//    @Quando("selecionar Empresa feature FCT{int}")
-//    public void selecionarEmpresaFeatureFCT(int arg0) {
+//    @Quando("apresenta o modal H4 {string} feature TTB163")
+//    public void apresentaOModalHFeatureTTB163(String title) {
+//        basePage.validaModalByH4(title);
+//    }
+//
+//    @E("apresenta o modal {string} feature TTB163")
+//    public void apresentaOModalFeatureTTB163(String title) {
+//        basePage.validaModalByH5(title);
+//    }
+//
+//    @Então("pressionar tecla {string} feature TTB163")
+//    public void pressionarTeclaFeatureFCT(String tecla) {
+//        basePage.pressionarTecla(tecla);
+//    }
+//
+//    @Então("pressionar teclas shift + f6 para excluir TTB163")
+//    public void pressionarTeclasShiftF6ParaExcluirTTB163() {
+//        basePage.pressionarShiftF6();
 //    }
 //}
 //
-////    @E("acessar o programa {string} feature GPE001")
-////    public void acessarOProgramaFeatureGPE001(String programa) {
-////        basePage.esperarMilissegundos(5000);// espera necessária
-////        loginPage.loginNewMaxysNovo(programa);
-////    }
-////
-////    @Quando("preencher Clifor page contratos de grao feature GPE001")
-////    public void preencherCliforFeatureGPE001() {
-////        GPE001_Page.preencherCliforFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor1"));
-////    }
-////
-////    @E("seleciona Tipo de Contrato feature GPE001")
-////    public void selecionaTipoDeContratoFeatureGPE001() {
-////        GPE001_Page.selecionaTipoDeContratoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoContrato"));
-////    }
-////
-////    @E("preencher Produto feature GPE001")
-////    public void preencherProdutoFeatureGPE001() {
-////        GPE001_Page.preencherProdutoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "produto"));
-////    }
-////
-////    @E("preencher Tabela de Desconto feature GPE001")
-////    public void preencherTabelaDeDescontoFeatureGPE001() {
-////        GPE001_Page.preencherTabelaDeDescontoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tbDesconto"));
-////    }
-////
-////    @E("preencher Negócio feature GPE001")
-////    public void preencherNegócioFeatureGPE001() {
-////        GPE001_Page.preencherNegócioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "negocio"));
-////    }
-////
-////    @E("preencher Data de Vencimento feature GPE001")
-////    public void preencherDataDeVencimentoFeatureGPE001() {
-////        GPE001_Page.preencherDataDeVencimentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "dataVencimento"));
-////    }
-////
-////    @E("preencher Ano safra feature GPE001")
-////    public void preencherAnoSafraFeatureGPE001() {
-////        GPE001_Page.preencherAnoSafraFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "anoSafra"));
-////    }
-////
-////    @E("seleciona Tipos de Cálculo feature GPE001")
-////    public void selecionaTiposDeCálculoFeatureGPE001() {
-////        GPE001_Page.selecionaTiposDeCálculoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoCalculo"));
-////    }
-////
-////    @E("preencher PesoEVolume Contratado feature GPE001")
-////    public void preencherPesoVolumeContratadoFeatureGPE001() {
-////        GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "precoVolume"));
-////    }
-////
-////    @Então("preencher Preço Unitário feature GPE001")
-////    public void preencherPreçoUnitárioFeatureGPE001() {
-////        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario"));
-////    }
-////
-////    @Então("clicar botão ToolBar {string} feature GPE001")
-////    public void clicarBotãoToolBarFeatureGPE001(String botao) {
-////        basePage.esperarMilissegundos(15000); // espera necessária
-////        basePage.clicarBotaoToolBar(botao);
-////    }
-////
-////    @E("apresentar o modal H5 {string} feature GPE001")
-////    public void apresentarOModalH5FeatureGPE001(String title) {
-////        basePage.esperarMilissegundos(4000);//espera necessária
-////        basePage.validaModalByH5(title);
-////        basePage.esperarMilissegundos(2000);//espera necessária
-////    }
-////
-////    @E("apresentar a mensagem parcial {string} feature GPE001")
-////    public void apresentarAMensagemParcialFeatureGPE001(String mensagem) {
-////        basePage.esperarMilissegundos(6000); //espera necessária
-////        //basePage.validaMensagemLabelByText(mensagem);
-////        basePage.validaMensagemLabelByContainsText(mensagem);
-////        basePage.esperarMilissegundos(2000); //espera necessária
-////    }
-////
-////    @Então("clicar botão {string} do modal feature GPE001")
-////    public void clicarBotãoDoModalFeatureGPE001(String acao) {
-////        basePage.esperarMilissegundos(5000); //espera necessária
-////        basePage.clicarBotaoDoModal(acao);
-////        basePage.esperarMilissegundos(2000); //espera necessária
-////    }
-////
-////    @E("preencher Dia feature GPE001")
-////    public void preencherDiaFeatureGPE001() {
-////        GPE001_Page.preencherDiaFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "dia"));
-////    }
-////
-////    @Então("preencher Condição de pagamento feature GPE001")
-////    public void preencherCondiçãoDePagamentoFeatureGPE001() {
-////        GPE001_Page.preencherCondiçãoDePagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "condicaoPagamento"));
-////    }
-////
-////    @Quando("acessar page {string} feature GPE001")
-////    public void acessarPageFeatureGPE001(String botao) {
-////        GPE001_Page.acessarPageFeatureGPE001(botao);
-////    }
-////
-////    @Então("preencher Valor pagamento feature GPE001")
-////    public void preencherValorPagamentoFeatureGPE001() {
-////        GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorPagamento"));
-////    }
-////
-////    @E("preencher Data pagamento feature GPE001")
-////    public void preencherDataPagamentoFeatureGPE() {
-////        GPE001_Page.preencherDataPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "dataPagamento"));
-////
-////    }
-////
-////    @E("preencher Clifor2 page Favorecidos feature GPE001")
-////    public void preencherCliforFeatureGPE() {
-////        GPE001_Page.preencherClifor2FeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor2"));
-////    }
-////
-////    @Então("seleciona Tipo pagamento feature GPE001")
-////    public void selecionaTipoPagamentoFeatureGPE001() {
-////        GPE001_Page.selecionaTipoPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoPagamento"));
-////    }
-////
-////    @E("preencher Valor pagamento2 feature GPE001")
-////    public void preencherValorPagamento2FeatureGPE001() {
-////        GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorPagamento2"));
-////    }
-////
-////    @E("preencher Valor pagamento3 feature GPE001")
-////    public void preencherValorPagamento3FeatureGPE001() {
-////        GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorPagamento3"));
-////    }
-////
-////    @Quando("preencher Clifor3 page contratos de grao feature GPE001")
-////    public void preencherClifor3PageContratosDeGraoFeatureGPE001() {
-////        GPE001_Page.preencherCliforFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor3"));
-////    }
-////
-////    @E("preencher Clifor4 page Favorecidos feature GPE001")
-////    public void preencherClifor4PageFavorecidosFeatureGPE001() {
-////        GPE001_Page.preencherClifor2FeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor3"));
-////    }
-////
-////    @E("preencher Valor pagamento4 feature GPE001")
-////    public void preencherValorPagamento4FeatureGPE001() {
-////        GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorPagamento4"));
-////    }
-////
-////    @Então("preencher Produto não cadastrado feature GPE001")
-////    public void preencherProdutoNãoCadastradoFeatureGPE001() {
-////        GPE001_Page.preencherProdutoNãoCadastradoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "produtoNaocadastrado"));
-////    }
-////
-////    @Então("selecionar Operação {string} feature GPE001")
-////    public void selecionarOperaçãoFeatureGPE001(String exportacao) {
-////        GPE001_Page.selecionarOperaçãoFeatureGPE001(exportacao);
-////    }
-////
-////    @E("preencher Produto sem lov feature GPE001")
-////    public void preencherProdutoSemLovFeatureGPE001() {
-////        GPE001_Page.preencherProdutoSemLovFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "produto2"));
-////    }
-////
-////    @Quando("preencher Empr.Origem page contratos de grao feature GPE001")
-////    public void preencherEmprOrigemPageContratosDeGraoFeatureGPE001() {
-////        GPE001_Page.preencherEmprOrigemPageContratosDeGraoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresaOrigem"));
-////    }
-////
-////}
