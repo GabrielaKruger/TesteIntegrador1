@@ -48,9 +48,9 @@ public class FCT007_Step {
 
     @E("acessar o programa {string} feature FCT007")
     public void acessarOProgramaFeatureFCT007(String programa) {
-        basePage.esperarMilissegundos(20000);// espera necessária
+        basePage.esperarMilissegundos(5000);// espera necessária
         loginPage.loginNewMaxysNovo(programa);
-        basePage.esperarMilissegundos(20000);// espera necessária
+        basePage.esperarMilissegundos(5000);// espera necessária
     }
 
     @Quando("marcar checkbox Empresa feature FCT007")
@@ -94,13 +94,14 @@ public class FCT007_Step {
 
     @Então("clicar botão {string} do modal feature FCT007")
     public void clicarBotãoDoModalFeatureFCT007(String acao) {
-        basePage.esperarMilissegundos(000); //espera necessária
+        basePage.esperarMilissegundos(1000); //espera necessária
         basePage.clicarBotaoDoModal(acao);
         basePage.esperarMilissegundos(2000); //espera necessária
     }
 
     @Quando("apresenta o modal H4 {string} feature FCT007")
     public void apresentaOModalHFeatureFCT007(String title) {
+        basePage.esperarMilissegundos(2000); //espera necessária
         basePage.validaModalByH4(title);
     }
 
@@ -118,6 +119,20 @@ public class FCT007_Step {
     @Então("pressionar teclas shift + f6 para excluir FCT007")
     public void pressionarTeclasShiftF6ParaExcluirFCT007() {
         basePage.pressionarShiftF6();
+    }
+
+    @Então("recusar processo feature FCT007")
+    public void recusarProcessoFeatureFCT007(String mensagem, String title, String acao, String botao) {
+        FCT007_Page.recusarProcessoFeatureFCT007(mensagem, title, acao, botao);
+    }
+
+    @E("preencher Usuário processo feature FCT007")
+    public void preencherUsuárioProcessoFeatureFCT007() {
+        FCT007_Page.preencherUsuárioProcessoFeatureFCT007(massaTeste.getMassaTestePorPathEChave(tagMassa, "usuarioProcesso"));
+    }
+
+    @Então("validar pop up feature FCT{int}")
+    public void validarPopUpFeatureFCT(int arg0) {
     }
 }
 
