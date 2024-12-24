@@ -49,6 +49,7 @@ public class TTB163_Step {
     @E("acessar o programa {string} feature TTB163")
     public void acessarOProgramaFeatureTTB163(String programa) {
         loginPage.loginNewMaxysNovo(programa);
+        basePage.esperarMilissegundos(1000); // espera necessária
     }
 
     @Então("clicar botão ToolBar {string} feature TTB163")
