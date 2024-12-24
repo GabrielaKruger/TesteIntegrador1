@@ -48,7 +48,7 @@
      E apresenta o modal "modal-basic-title" feature TTB163
      Então clicar botão "ok" do modal feature TTB163
 
-   Cenário: Cadastro, edição e exclusão de Autorizador Restrito| Negativo - Empresa
+   Cenário: Cadastro, edição e exclusão de Autorizador Restrito| Negativo - Campos Obrigatórios
      Quando clicar botão ToolBar "salvar" feature TTB163
      E apresentar o modal H5 "modal-basic-title" feature TTB163
      E apresentar a mensagem "É obrigatório informar o código da empresa!" feature TTB163
