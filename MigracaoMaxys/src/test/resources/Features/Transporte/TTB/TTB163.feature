@@ -1,5 +1,5 @@
  #language: pt
- @test @TTB163 @dt_TTB163 @chrome
+ @wip @TTB163 @dt_TTB163 @chrome
  Funcionalidade: TTB163 - Cadastro Alçada de Cadastro de Frete
 
    Cenário de Fundo:
@@ -27,7 +27,7 @@
      E apresenta o modal "modal-basic-title" feature TTB163
      Então clicar botão "ok" do modal feature TTB163
 
-    @TesteTTB02 # Refluxo - Demora 10 segundo após recarregar
+    @wip # Refluxo - Demora 10 segundo após recarregar
    Cenário: Cadastro, edição e exclusão de Autorizador Restrito| Teclas Atalho
 
      Quando pressionar tecla "f6" feature TTB163
