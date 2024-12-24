@@ -83,12 +83,38 @@ public class TTB163_Step {
 
     @Então("pressionar tecla {string} feature TTB163")
     public void pressionarTeclaFeatureFCT(String tecla) {
+        basePage.esperarMilissegundos(1000); // espera necessária
         basePage.pressionarTecla(tecla);
     }
 
     @Então("pressionar teclas shift + f6 para excluir TTB163")
     public void pressionarTeclasShiftF6ParaExcluirTTB163() {
         basePage.pressionarShiftF6();
+    }
+
+    @E("preencher Empresa feature TTB163")
+    public void preencherEmpresaFeatureTTB163() {
+        TTB163_Page.preencherEmpresaFeatureTTB163(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
+    }
+
+    @E("preencher Usuário feature TTB163")
+    public void preencherUsuárioFeatureTTB163() {
+        TTB163_Page.preencherUsuárioFeatureTTB163(massaTeste.getMassaTestePorPathEChave(tagMassa, "user"));
+    }
+
+    @E("preencher Tipo Solic featue TTB163")
+    public void preencherTipoSolicFeatueTTB163() {
+        TTB163_Page.preencherTipoSolicFeatueTTB163(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoSolicitante"));
+    }
+
+    @E("preencher Cód. da Alçada feature TTB163")
+    public void preencherCódDaAlçadaFeatureTTB163() {
+        TTB163_Page.preencherCódDaAlçadaFeatureTTB163();
+    }
+
+    @Então("prencher Data de Vencimento feature TTB163")
+    public void prencherDataDeVencimentoFeatureTTB163() {
+        TTB163_Page.prencherDataDeVencimentoFeatureTTB163();
     }
 }
 

@@ -1,5 +1,5 @@
  #language: pt
- @wip @TTB163 @dt_TTB163 @chrome
+ @test @TTB163 @dt_TTB163 @chrome
  Funcionalidade: TTB163 - Cadastro Alçada de Cadastro de Frete
 
    Cenário de Fundo:
@@ -10,56 +10,44 @@
   Cenário: Cadastro Alçada de Cadastro de Frete| Caminho feliz
 
      Quando clicar botão ToolBar "novo" feature TTB163
-#     E preencher Empresa feature TTB163
-#     E preencher Usuário feature TTB163
-#     E preencher Tipo Solic featue TTB163
-#     E preencher Cód. da Alçada feature TTB163
-#     Então prencher Data de Vencimento feature TT163
+     E preencher Empresa feature TTB163
+     E preencher Usuário feature TTB163
+     E preencher Tipo Solic featue TTB163
+     E preencher Cód. da Alçada feature TTB163
+     Então prencher Data de Vencimento feature TTB163
 
      Quando clicar botão ToolBar "salvar" feature TTB163
      E apresentar o modal H5 "modal-basic-title" feature TTB163
-     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TTB163
+     E apresentar a mensagem "Registros salvos com sucesso." feature TTB163
      Então clicar botão "ok" do modal feature TTB163
 
      Quando clicar botão ToolBar "excluir" feature TTB163
      E apresenta o modal H4 "modal-basic-title" feature TTB163
      E clicar botão "sim" do modal feature TTB163
      E apresenta o modal "modal-basic-title" feature TTB163
-     Então clicar botão "ok" do modal feature FCT007
+     Então clicar botão "ok" do modal feature TTB163
 
-  # Cenário: Cadastro, edição e exclusão de Autorizador Restrito| Caminho feliz
+    @TesteTTB02 # Refluxo - Demora 10 segundo após recarregar
+   Cenário: Cadastro, edição e exclusão de Autorizador Restrito| Teclas Atalho
 
-   #  Quando clicar botão ToolBar "novo" feature TTB163
-    # E selecionar botão Empresa feature TTB163
-     #E preencher Observação feature TTB163
-     #E clicar Crédito em Conta feature TTB163
-     #E clicar Fechar feature TTB163
+     Quando pressionar tecla "f6" feature TTB163
+     E preencher Empresa feature TTB163
+     E preencher Usuário feature TTB163
+     E preencher Tipo Solic featue TTB163
+     E preencher Cód. da Alçada feature TTB163
+     Então prencher Data de Vencimento feature TTB163
 
-     #Quando clicar botão ToolBar "salvar" feature TTB163
-     #E apresentar o modal H5 "modal-basic-title" feature TTB163
-     #E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TTB163
-     #Então clicar botão "ok" do modal feature TTB163
+     Quando pressionar tecla "f10" feature TTB163
+     E apresentar o modal H5 "modal-basic-title" feature TTB163
+     E apresentar a mensagem "Registros salvos com sucesso." feature TTB163
+     Então clicar botão "ok" do modal feature TTB163
 
-#     Quando recarregar o programa feature TTB163
-#     E informa Autorizador feature TTB163
-#     E realizar consulta feature TTB163
-#     E selecionar Autorizador feature TTB163
-#     Então seleciona Status "Inativo" feature TTB163
-#
-#     Quando clicar botão ToolBar "salvar" feature TTB163
-#     E apresentar o modal H5 "modal-basic-title" feature TTB163
-#     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TTB163
-#     Então clicar botão "ok" do modal feature TTB163
-#
-#     Quando recarregar o programa feature TTB163
-#     E informa Autorizador feature TTB163
-#     E realizar consulta feature TTB163
-#     Então selecionar Autorizador feature TTB163
-#
-#     Quando clicar botão ToolBar "excluir" feature TTB163
-#     E apresenta o modal H4 "modal-basic-title" feature TTB163
-#     Então clicar botão "sim" do modal feature TTB163
-#
+     Quando pressionar teclas shift + f6 para excluir TTB163
+     E apresenta o modal H4 "modal-basic-title" feature TTB163
+     E clicar botão "sim" do modal feature TTB163
+     E apresenta o modal "modal-basic-title" feature TTB163
+     Então clicar botão "ok" do modal feature TTB163
+
 #   @wip #Valores não são apresentados na LOV - Repassado para o desenvolvedor Guilherme
 #   Cenario: Cadastro, edição e exclusão de Autorizador Restrito | Teclas Atalho
 #
