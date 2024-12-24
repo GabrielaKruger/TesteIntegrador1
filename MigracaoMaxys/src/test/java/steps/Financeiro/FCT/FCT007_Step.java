@@ -1,4 +1,4 @@
-package steps.Financeiro.FCT;
+package steps.Financeiro;
 
 import driver.driverManager.DriverManager;
 import io.cucumber.java.Before;
@@ -75,16 +75,16 @@ public class FCT007_Step {
 
     @Então("clicar botão ToolBar {string} feature FCT007")
     public void clicarBotãoToolBarFeatureFCT007(String botao) {
-       basePage.esperarMilissegundos(2000); // espera necessária
-       basePage.clicarBotaoToolBar(botao);
+        basePage.esperarMilissegundos(2000); // espera necessária
+        basePage.clicarBotaoToolBar(botao);
     }
 
     @Quando("apresentar o modal H5 {string} feature FCT007")
     public void apresentarOModalH5FeatureFCT007(String title) {
-            basePage.esperarMilissegundos(2000);//espera necessária
-            basePage.validaModalByH5(title);
-            basePage.esperarMilissegundos(2000);//espera necessária
-        }
+        basePage.esperarMilissegundos(2000);//espera necessária
+        basePage.validaModalByH5(title);
+        basePage.esperarMilissegundos(2000);//espera necessária
+    }
 
     @E("apresentar a mensagem {string} feature FCT007")
     public void apresentarAMensagemFeatureFCT007(String mensagem) {
@@ -110,7 +110,6 @@ public class FCT007_Step {
         basePage.validaModalByH5(title);
     }
 
-
     @Então("pressionar tecla {string} feature FCT007")
     public void pressionarTeclaFeatureFCT(String tecla) {
         basePage.pressionarTecla(tecla);
@@ -126,13 +125,18 @@ public class FCT007_Step {
         FCT007_Page.recusarProcessoFeatureFCT007(mensagem, title, acao, botao);
     }
 
-    @E("preencher Usuário processo feature FCT007")
-    public void preencherUsuárioProcessoFeatureFCT007() {
-        FCT007_Page.preencherUsuárioProcessoFeatureFCT007(massaTeste.getMassaTestePorPathEChave(tagMassa, "usuarioProcesso"));
+    @E("clicar botão em {string} feature FCT007")
+    public void clicarBotãoFeatureFCT007(String detalhes) {
+        FCT007_Page.clicarBotãoDetalhesFeatureFCT007(detalhes);
     }
 
-    @Então("validar pop up feature FCT{int}")
-    public void validarPopUpFeatureFCT(int arg0) {
+    @E("clicar botão o {string} feature FCT007")
+    public void clicarBotãoContratoFeatureFCT007(String contrato) {
+        FCT007_Page.clicarBotãoContratoFeatureFCT007(contrato);
+    }
+
+    @Então("clicar botão e {string} feature FCT007")
+    public void clicarBotãoVoltarFeatureFCT007(String voltar) {
+        FCT007_Page.clicarBotãoVoltarFeatureFCT007(voltar);
     }
 }
-
