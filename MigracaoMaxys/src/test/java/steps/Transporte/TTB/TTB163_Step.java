@@ -48,55 +48,27 @@ public class TTB163_Step {
 
     @E("acessar o programa {string} feature TTB163")
     public void acessarOProgramaFeatureTTB163(String programa) {
-        basePage.esperarMilissegundos(20000);// espera necessária
         loginPage.loginNewMaxysNovo(programa);
-        basePage.esperarMilissegundos(20000);// espera necessária
-    }
-
-    @Quando("marcar checkbox Empresa feature TTB163")
-    public void marcarCheckboxEmpresaFeatureTTB163() {
-        TTB163_Page.marcarCheckboxEmpresaFeatureTTB163();
-    }
-
-    @E("preencher Observação feature TTB163")
-    public void preencherObservaçãoFeatureTTB163() {
-        TTB163_Page.preencherObservaçãoFeatureTTB163(massaTeste.getMassaTestePorPathEChave(tagMassa, "observacao"));
-    }
-
-    @E("clicar botão {string} feature TTB163")
-    public void clicarCréditoEmContaFeatureTTB163(String creditoemconta) {
-        TTB163_Page.clicarCréditoEmContaFeatureTTB163(creditoemconta);
-    }
-
-    @E("clicar botão Crédito em Conta {string} feature TTB163")
-    public void clicarFecharFeatureTTB163(String fechar) {
-        TTB163_Page.clicarFecharFeatureTTB163(fechar);
     }
 
     @Então("clicar botão ToolBar {string} feature TTB163")
     public void clicarBotãoToolBarFeatureTTB163(String botao) {
-       basePage.esperarMilissegundos(2000); // espera necessária
-       basePage.clicarBotaoToolBar(botao);
+        basePage.clicarBotaoToolBar(botao);
     }
 
     @Quando("apresentar o modal H5 {string} feature TTB163")
     public void apresentarOModalH5FeatureTTB163(String title) {
-            basePage.esperarMilissegundos(2000);//espera necessária
-            basePage.validaModalByH5(title);
-            basePage.esperarMilissegundos(2000);//espera necessária
-        }
+        basePage.validaModalByH5(title);
+    }
 
     @E("apresentar a mensagem {string} feature TTB163")
     public void apresentarAMensagemFeatureTTB163(String mensagem) {
-        basePage.esperarMilissegundos(2000);//espera necessária
         basePage.validaMensagemLabelByText(mensagem);
     }
 
     @Então("clicar botão {string} do modal feature TTB163")
     public void clicarBotãoDoModalFeatureTTB163(String acao) {
-        basePage.esperarMilissegundos(000); //espera necessária
         basePage.clicarBotaoDoModal(acao);
-        basePage.esperarMilissegundos(2000); //espera necessária
     }
 
     @Quando("apresenta o modal H4 {string} feature TTB163")

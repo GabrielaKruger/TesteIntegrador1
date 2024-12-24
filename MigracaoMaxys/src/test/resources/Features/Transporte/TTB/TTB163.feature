@@ -10,22 +10,22 @@
   Cenário: Cadastro Alçada de Cadastro de Frete| Caminho feliz
 
      Quando clicar botão ToolBar "novo" feature TTB163
-     E preencher Empresa feature TTB163
-     E preencher Usuário feature TTB163
-     E preencher Tipo Solic featue TTB163
-     E preencher Cód. da Alçada feature TTB163
-     Então prencher Data de Vencimento feature TT163
+#     E preencher Empresa feature TTB163
+#     E preencher Usuário feature TTB163
+#     E preencher Tipo Solic featue TTB163
+#     E preencher Cód. da Alçada feature TTB163
+#     Então prencher Data de Vencimento feature TT163
 
      Quando clicar botão ToolBar "salvar" feature TTB163
      E apresentar o modal H5 "modal-basic-title" feature TTB163
      E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TTB163
      Então clicar botão "ok" do modal feature TTB163
 
-#     Quando selecionar Empresa feature TTB163
-     Então clicar botão ToolBar "excluir" feature TTB163
-
-     #Quando apresenta o modal H4 "modal-basic-title" feature TTB163
-     Então clicar botão "sim" do modal feature TTB163
+     Quando clicar botão ToolBar "excluir" feature TTB163
+     E apresenta o modal H4 "modal-basic-title" feature TTB163
+     E clicar botão "sim" do modal feature TTB163
+     E apresenta o modal "modal-basic-title" feature TTB163
+     Então clicar botão "ok" do modal feature FCT007
 
   # Cenário: Cadastro, edição e exclusão de Autorizador Restrito| Caminho feliz
 
