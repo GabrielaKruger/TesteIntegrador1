@@ -1,6 +1,6 @@
  #language: pt
  @test @GPE001 @dt_GPE001 @chrome
- Funcionalidade: GPE001 - Autorizador Restrito
+ Funcionalidade: GPE001 - Pedidos/Contrato de grão
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do GPE001
