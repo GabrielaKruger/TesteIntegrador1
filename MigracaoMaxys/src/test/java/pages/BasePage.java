@@ -637,6 +637,11 @@ public class BasePage {
         actions.keyDown(Keys.SHIFT).sendKeys(Keys.F8).keyUp(Keys.SHIFT).build().perform();
     }
 
+    // método para simular o pressionar do SHIFT + F6
+    public void pressionarAltF4() {
+        Actions actions = new Actions(driver);
+        actions.keyDown(Keys.ALT).sendKeys(Keys.F4).keyUp(Keys.SHIFT).build().perform();
+    }
 
 //----------------------------------------------------------------------------------
 //    //OUTRAS Funções
@@ -1153,11 +1158,15 @@ public class BasePage {
     }
 
     // Inicialização da primeiraLinhaEmBranco
-    public void setPrimeiraLinhaEmBranco() { primeiraLinhaEmBranco = encontrarPrimeiraLinhaEmBrancoNoGrid(driver);}
+    public void setPrimeiraLinhaEmBranco() {
+        primeiraLinhaEmBranco = encontrarPrimeiraLinhaEmBrancoNoGrid(driver);
+    }
 
     // Garantindo que a primeiraLinhaEmBranco seja inicializada apenas uma vez
     public void verificarOuSetarPrimeiraLinhaEmBranco() {
-        if (primeiraLinhaEmBranco != 0) {setPrimeiraLinhaEmBranco();}
+        if (primeiraLinhaEmBranco != 0) {
+            setPrimeiraLinhaEmBranco();
+        }
     }
 
     public int encontrarPrimeiraLinhaEmBrancoNoGrid(WebDriver driver) {

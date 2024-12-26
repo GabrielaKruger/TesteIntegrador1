@@ -1,5 +1,10 @@
 {
   "observacao": "Autorizado",
+  "clifor": "910031",
+  "dataEmissaoInicio": "26/10/2024",
+  "dataEmissaoFim": "26/12/2025",
+  "endereco": "1",
+  "empresa" : "84",
+  "motivoBloqueio": "Teste Automacao Liberacao Pre Contrato",
   "usuarioProcesso": "1"
-
 }

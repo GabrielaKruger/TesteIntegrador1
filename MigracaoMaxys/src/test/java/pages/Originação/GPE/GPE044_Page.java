@@ -1,208 +1,107 @@
-//package pages.Originação.GPE;
-//
-//import org.openqa.selenium.WebDriver;
-//import pages.BasePage;
-//
-//public class GPE044_Page extends BasePage {
-//    WebDriver driver;
-//
-//    //Globais
-//    int primeiraLinhaEmBranco;
-//
-//    //Strings Aprovação Comercial
-//    String inputObservacaoXpath = "//*[@id='processocaixa-dsObservacao']/div/textarea";
-//    String inputCreditoemcontaXpath = "//*[@id='processocaixa-btnCreditoemconta']/button/div";
-//    String inputFecharXpath = "//*[@id='recebchequepag-btnFechar']/button/div";
-//    String inputUsuarioXpath = "//*[@id='processocaixa-cdUsuario']/div/input";
-//
-//    public GPE044_Page(WebDriver driver) {
-//        super(driver);
-//        this.driver = driver;
-//    }
-//
-//    public void marcarCheckboxEmpresaFeatureGPE044() {
-//        esperarMilissegundos(20000);//espera necessária
-//        verificarOuSetarPrimeiraLinhaEmBranco();
-//
-//        String chkEmpresaXpath = "//*[@id='processocaixa-cbProcesso-" + primeiraLinhaEmBranco + "']/div/button";
-//
-//        testMarcaDesmarcaCheckBox("marcar", chkEmpresaXpath);
-//    }
-//
-//    public void preencherObservaçãoFeatureGPE044(String observacao) {
-//        esperarMilissegundos(2000);//espera necessária
-//        clicarElementoByXpathNVezes(inputObservacaoXpath, 2);
-//        preencherElementoByXpath(inputObservacaoXpath, observacao);
-//        esperarMilissegundos(2000);//espera necessária
-//    }
-//
-//    public void clicarCréditoEmContaFeatureGPE044(String creditoemconta) {
-//        esperarMilissegundos(2000);//espera necessária
-//        clicarElementoByXpathNVezes(inputCreditoemcontaXpath, 1);
-//        esperarMilissegundos(2000);//espera necessária
-//    }
-//
-//    public void clicarFecharFeatureGPE044(String fechar) {
-//        esperarMilissegundos(2000);//espera necessária
-//        clicarElementoByXpathNVezes(inputFecharXpath, 1);
-//        esperarMilissegundos(2000);//espera necessária
-//    }
-//
-//    public void recusarProcessoFeatureGPE044(String mensagem, String title, String acao, String botao) {
-//        if (mensagem.equals("Erro: O tipo de pedido (FM) não pode ser recusado. Utilize o programa de fechamento de lote (AVE009).")) {
-//            //validaModalByH4(title);
-//            clicarBotaoDoModal(acao);
-//            clicarBotaoToolBar(botao);
-//            validaModalByH5(title);
-//            validaMensagemLabelByText(mensagem);
-//            clicarBotaoDoModal(acao);
-//        } else if (mensagem.equals("Registro salvo com sucesso.")) {
-//            //validaModalByH4(title);
-//            clicarBotaoDoModal(acao);
-//            validaModalByH5(title);
-//            clicarBotaoDoModal(acao);
-//        } else {
-//            // Caso não seja nenhuma das mensagens esperadas, exibe um erro
-//            System.out.println("Mensagem inesperada: " + mensagem);
-//        }
-//    }
-//
-//    public void preencherUsuárioProcessoFeatureGPE044(String usuarioProcesso) {
-//        esperarMilissegundos(2000);//espera necessária
-//        clicarElementoByXpathNVezes(inputUsuarioXpath, 2);
-//        preencherElementoByXpath(inputUsuarioXpath, usuarioProcesso);
-//        esperarMilissegundos(2000);//espera necessária
-//
-//
-//    }
-//}
-////
-////    public void preencherCliforFeatureGPE001(String clifor) {
-////        esperarMilissegundos(20000); // espera para ele terminar de carregar todos as pages
-////        clicarElementoByXpathNVezes(inputCliforXpath, 2);
-////        preencherElementoByXpath(inputCliforXpath, clifor);
-////        pressionarENTERByXpath(inputCliforXpath);
-////        pressionaTabActions();
-////        esperarMilissegundos(1000); // espera necessária
-////    }
-////
-////    public void acessarPageFeatureGPE001(String botao) {
-////        esperarMilissegundos(2000); // espera necessária
-////        selecionarPaginaNoMenu(botao);
-////    }
-////
-////    public void selecionaTipoDeContratoFeatureGPE001(String opcao) {
-////        esperarMilissegundos(2000); //espera necessária
-////        esperarEncontrarEPreencherElementos(selectFixoXpath, opcao);
-////        esperarMilissegundos(1000); //espera necessária
-////    }
-////
-////    public void preencherProdutoFeatureGPE001(String produto) {
-////          selecionarPeloF9FeatureGPE001(inputProdutoXpath, produto, elementoProduto);
-////    }
-////
-////    public void preencherTabelaDeDescontoFeatureGPE001(String tbdesconto) {
-////        selecionarPeloF9FeatureGPE001(inputTbdescontoXpath, tbdesconto, elementoTbdesconto);
-////    }
-////
-////    public void preencherNegócioFeatureGPE001(String negocio) {
-////        selecionarPeloF9FeatureGPE001(inputNegocioXpath, negocio, elementoNegocio);
-////    }
-////
-////    public void preencherDataDeVencimentoFeatureGPE001(String dtvencimento) {
-////        preencherCampoPorXpathFeatureGPE001(inputDatavencimentoXpath, dtvencimento);
-////    }
-////
-////    public void preencherAnoSafraFeatureGPE001(String anosafra) {
-////        preencherCampoPorXpathFeatureGPE001(inputAnosafraXpath, anosafra);
-////    }
-////
-////    public void selecionaTiposDeCálculoFeatureGPE001(String opcao) {
-////        preencherCampoPorXpathFeatureGPE001(input3sacasXpath, opcao);
-////    }
-////
-////    public void preencherPesoVolumeContratadoFeatureGPE001(String pesoevolume) {
-////        preencherCampoPorXpathFeatureGPE001(inputPesoevolumeXpath, pesoevolume);
-////    }
-////
-////    public void preencherPreçoUnitárioFeatureGPE001(String precounitario) {
-////        preencherCampoPorXpathFeatureGPE001(inputPrecounitarioXpath, precounitario);
-////    }
-////
-////    public void preencherDiaFeatureGPE001(String dia) {
-////        preencherCampoPorXpathFeatureGPE001(inputDiaXpath, dia);
-////    }
-////
-////    public void preencherCondiçãoDePagamentoFeatureGPE001(String condicaopagamento) {
-////        preencherCampoPorXpathFeatureGPE001(inputCondicaopagamentoXpath,  condicaopagamento);
-////    }
-////
-////    public void preencherValorPagamentoFeatureGPE001(String valorpagamento) {
-////        preencherCampoPorXpathFeatureGPE001(inputValorpagamento,  valorpagamento);
-////    }
-////
-////    public void preencherClifor2FeatureGPE001(String clifor2) {
-////        preencherCampoPorXpathFeatureGPE001(inputClifor2Xpath, clifor2);
-////    }
-////
-////    public void preencherDataPagamentoFeatureGPE001(String dataDoPagamento) {
-////        preencherCampoPorXpathFeatureGPE001(inputDatadopagamento, dataDoPagamento);
-////    }
-////
-////    public void selecionaTipoPagamentoFeatureGPE001(String tipoPagamento) {
-////        preencherCampoPorXpathFeatureGPE001(inputTipopagamentoXpath, tipoPagamento);
-////    }
-////
-////    public void preencherProdutoNãoCadastradoFeatureGPE001(String produtoNaocadastrado) {
-////        esperarMilissegundos(2000); //espera necessária
-////        limparCampoDeTextoPorXpath(inputProdutoXpath);
-////        clicarElementoByXpathNVezes(inputProdutoXpath, 2);
-////        preencherElementoByXpath(inputProdutoXpath, produtoNaocadastrado);
-////        pressionarENTERByXpath(inputProdutoXpath);
-////        pressionaTabActions();
-////        esperarMilissegundos(2000); // espera necessária
-////    }
-////
-////    public void selecionarOperaçãoFeatureGPE001(String exportacao) {
-////        esperarMilissegundos(5000); //espera necessária
-////        marcarRadioButon(selectExportacaoXpath);
-////        esperarMilissegundos(3000); //espera necessária
-////    }
-////
-////    public void preencherProdutoSemLovFeatureGPE001(String produto2) {
-////        esperarMilissegundos(3000); //espera necessária
-////        clicarElementoByXpathNVezes(inputProdutoXpath, 2);
-////        esperarMilissegundos(2000); //espera necessária
-////        preencherElementoByXpath(inputProdutoXpath, produto2);
-////        esperarMilissegundos(2000); //espera necessária
-////        pressionarENTERByXpath(inputProdutoXpath);
-////        pressionaTabActions();
-////        esperarMilissegundos(2000); // espera necessária
-////    }
-////
-////    public void preencherEmprOrigemPageContratosDeGraoFeatureGPE001(String empresaOrigem) {
-////        esperarMilissegundos(20000);// espera para ele terminar de carregar todos as pages
-////        limparCampoDeTextoPorXpath(inputEmpresaorigemXpath);
-////        clicarElementoByXpathNVezes(inputEmpresaorigemXpath, 2);
-////        preencherElementoByXpath(inputEmpresaorigemXpath, empresaOrigem);
-////        pressionarENTERByXpath(inputEmpresaorigemXpath);
-////        pressionaTabActions();
-////        esperarMilissegundos(1000); // espera necessária
-////    }
-////
-////    public void selecionarPeloF9FeatureGPE001(String elementoCampo, String valor, String elementoTabela){ //metodo auxiliar
-////        esperarMilissegundos(2000); //espera necessária
-////        selecionarPeloF9(elementoCampo, valor, elementoTabela);
-////        esperarMilissegundos(1000); //espera necessária
-////    }
-////
-////    public void preencherCampoPorXpathFeatureGPE001(String campoXpath, String valor) {
-////        esperarMilissegundos(1000); // Espera necessária
-////        clicarElementoByXpathNVezes(campoXpath, 2);
-////        preencherElementoByXpath(campoXpath, valor);
-////        pressionarENTERByXpath(campoXpath);
-////        pressionaTabActions();
-////        esperarMilissegundos(1000); // Espera necessária
-////    }
-////
-////
+package pages.Originação.GPE;
+
+import org.openqa.selenium.WebDriver;
+import pages.BasePage;
+
+public class GPE044_Page extends BasePage {
+    WebDriver driver;
+
+    // Strings Consulta
+    String inputCliforXpath = "//*[@id='filtro-cdClifor";
+    String inputEnderecoXpath = "//*[@id='filtro-cdEndereco";
+    String inputEmpresaXpath = "//*[@id='filtro-cdEmpresa";
+    String inputItemXpath = "//*[@id='filtro-cdItem";
+    String inputPreContratoXpath = "//*[@id='filtro-nrPrecontrato";
+    String inputDataEmissaoInicioXapth = "//*[@id='filtro-dtInicial";
+    String inputDataEmissaoFimXpath = "//*[@id='filtro-dtFinal";
+    String btnConsultarXpath = "//*[@id='filtro-btnConsulta']/button";
+
+    // Pré-Contratos Bloqueados/Liberados/Recusados
+    String inputMotivoXpath = "//*[@id='precontrato-dsMotivo";
+    String btnLiberarXpath = "//*[@id='precontrato-btnLiberar']/button/div";
+    String btnRecusarXpath = "//*[@id='precontrato-btnRecusar']/button/div";
+    String btnConsultarGPE000Xpath = "//*[@id='precontrato-btnConsultar']/button/div";
+
+
+    // String Globais
+    int primeiraLinhaEmBranco;
+    String codigoSimulated;
+    String descricaoFaker;
+    String xPathColunaTabelaCodigoFim = "']/div/input";
+    String xPathColunaTabelaDataCodigoFim = "']/div/div/input";
+    String btnSairXpath = "//*[@id='btn-close-templateModalCanDetalhe']";
+
+
+    public GPE044_Page(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+    }
+
+    public void preencherCliforFeatureGPE044(String clifor) {
+        preencherCampoPorXpathFeatureGPE044(inputCliforXpath, xPathColunaTabelaCodigoFim, clifor);
+    }
+
+    public void preencherEndereçoFeatureGPE044(String endereco) {
+        preencherCampoPorXpathFeatureGPE044(inputEnderecoXpath, xPathColunaTabelaCodigoFim, endereco);
+    }
+
+    public void preencherEmpresaFeatureGPE044(String empresa) {
+        preencherCampoPorXpathFeatureGPE044(inputEmpresaXpath, xPathColunaTabelaCodigoFim, empresa);
+    }
+
+    public void preencherItemFeatureGPE044(String item) {
+        preencherCampoPorXpathFeatureGPE044(inputItemXpath, xPathColunaTabelaCodigoFim, item);
+    }
+
+    public void preencherPréContratoFeatureGPE044(String contrato) {
+        preencherCampoPorXpathFeatureGPE044(inputPreContratoXpath, xPathColunaTabelaCodigoFim, contrato);
+    }
+
+    public void preencherDataDeEmissãoFeatureGPE044(String dataEmissaoInicio) {
+        preencherCampoPorXpathFeatureGPE044(inputDataEmissaoInicioXapth, xPathColunaTabelaDataCodigoFim, dataEmissaoInicio);
+    }
+
+    public void preencherAtéFeatureGPE044(String dataEmissaoFim) {
+        preencherCampoPorXpathFeatureGPE044(inputDataEmissaoFimXpath, xPathColunaTabelaDataCodigoFim, dataEmissaoFim);
+    }
+
+    public void realizarAConsultaFeatureGPE044() {
+        clicarElementoByXpath(btnConsultarXpath);
+    }
+
+    public void selecionarNoGridPréContratoFeatureGPE044() {
+        String chekBoxPreContratoXpath = "//*[@id='precontrato-chkSeleciona-" + primeiraLinhaEmBranco + "']/div/button";
+        testMarcaDesmarcaCheckBox("marcar", chekBoxPreContratoXpath);
+    }
+
+    public void preencherMotivoFeatureGPE044(String motivoBloqueio) {
+        preencherCampoPorXpathFeatureGPE044(inputMotivoXpath, xPathColunaTabelaCodigoFim, motivoBloqueio);
+    }
+
+    public void realizarLiberaçãoFeatureGPE044() {
+        clicarElementoByXpath(btnLiberarXpath);
+    }
+
+    public void realizarRecusaFeatureGPE044() {
+        clicarElementoByXpath(btnRecusarXpath);
+    }
+
+    public void consultaGPE000FeatureGPE044() {
+        clicarElementoByXpath(btnConsultarGPE000Xpath);
+    }
+
+    public void sairDaTelaGPE000FeatureGPE() {
+        clicarElementoByXpath(btnSairXpath);
+        //pressionarAltF4();
+    }
+
+    // Metodo auxiliar
+    public void preencherCampoPorXpathFeatureGPE044(String campoInicioXpath, String campoFimXpath, String valor) {
+        String elementoXpath = campoInicioXpath + campoFimXpath;
+        clicarElementoByXpathNVezes(elementoXpath, 2);
+        preencherElementoByXpath(elementoXpath, valor);
+        pressionarENTERByXpath(elementoXpath);
+        pressionaTabActions();
+    }
+
+}
