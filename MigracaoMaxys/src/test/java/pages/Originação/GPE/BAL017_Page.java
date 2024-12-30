@@ -74,20 +74,15 @@ public class BAL017_Page extends BasePage {
     }
 
     public void clicarBotãoAutorizarFeatureBAL017(String botao) {
-        esperarMilissegundos(2000);//espera necessária
+        esperarMilissegundos(3500);//espera necessária
         clicarElementoByXpathNVezes(btnAutorizarXpath, 1);
         esperarMilissegundos(2000);//espera necessária
     }
 
     public void clicarBotãoRecusarFeatureBAL017(String botao2) {
-        esperarMilissegundos(2000);//espera necessária
+        esperarMilissegundos(3500);//espera necessária
         clicarElementoByXpathNVezes(btnRecusarXpath, 1);
         esperarMilissegundos(2000);//espera necessária
     }
 
-    public void selecionarStatusParaAutorizarFeatureBAL017(String opcao) {
-        esperarMilissegundos(3000);//espera necessária
-        esperarEncontrarESelecionar(selectAmbosXpath, opcao);
-        esperarMilissegundos(2000);//espera necessária
-    }
 }
