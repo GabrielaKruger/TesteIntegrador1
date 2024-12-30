@@ -1,4 +1,6 @@
 {
-  "empresa": "84"
-
+  "empresa": "84",
+  "deposito": "1",
+  "periodoInicial": "01012024",
+  "periodoFinal": "30122024"
 }
