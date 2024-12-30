@@ -1,5 +1,5 @@
 #language: pt
-@wip @BAL017 @dt_BAL017 @chrome
+@test @BAL017 @dt_BAL017 @chrome
 
 Funcionalidade: BAL017 - Pesagens bloqueadas/Peso manual
 
