@@ -76,8 +76,8 @@ public class BAL017_Page extends BasePage {
 
     public void clicarBotãoParaFiltrarBAL017(String filtrar) {
         esperarMilissegundos(3000);//espera necessária
-        clicarElementoByXpathNVezes(btnFiltrarXpath1, 1);
-        esperarMilissegundos(3000);//espera necessária
+        clicarElementoByXpathNVezes(btnFiltrarXpath1, 3);
+        esperarMilissegundos(5000);//espera necessária
 
     }
 
