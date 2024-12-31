@@ -3,8 +3,12 @@ package pages.Originação.GPE;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
+
+import java.time.Duration;
 
 public class BAL017_Page extends BasePage {
     WebDriver driver;
@@ -17,6 +21,7 @@ public class BAL017_Page extends BasePage {
     String btnAutorizarXpath= "//*[@id='pesagembal-bntAutorizar']/button/div";
     String btnRecusarXpath= "//*[@id='pesagembal-bntRecusar']/button/div";
     String btnFiltrarXpath= "//*[@id='filtro-btnFiltrar']/button/div";
+    String btnFiltrarXpath1 = "//*[@id='filtro-btnFiltrar']/button";
 
     //Strings para Filtrar
     String selectStatusXpath= "//*[@id='filtro-stBloqueio']/div/select";
@@ -64,14 +69,16 @@ public class BAL017_Page extends BasePage {
     public void preencherPeríodoFinalFeatureBAL017(String periodoFinal) {
         esperarMilissegundos(2000);//espera necessária
         clicarElementoByXpathNVezes(inputPeriodofinalXpath, 2);
+        esperarMilissegundos(2000);//espera necessária
         preencherElementoByXpath(inputPeriodofinalXpath, periodoFinal);
         esperarMilissegundos(2000);//espera necessária
     }
 
     public void clicarBotãoParaFiltrarBAL017(String filtrar) {
-        esperarMilissegundos(2000);//espera necessária
-        clicarElementoByXpathNVezes(btnFiltrarXpath, 1);
-        esperarMilissegundos(25000);//espera necessária
+        esperarMilissegundos(3000);//espera necessária
+        clicarElementoByXpathNVezes(btnFiltrarXpath1, 1);
+        esperarMilissegundos(3000);//espera necessária
+
     }
 
     public void clicarBotãoAutorizarFeatureBAL017(String botao) {
