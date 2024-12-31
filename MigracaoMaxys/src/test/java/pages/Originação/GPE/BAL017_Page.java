@@ -37,8 +37,9 @@ public class BAL017_Page extends BasePage {
     public void preencherDepósitoFeatureBAL017(String deposito) {
         esperarMilissegundos(4000);//espera necessária
         clicarElementoByXpathNVezes(inputDepositoXpath, 2);
+        esperarMilissegundos(2000);//espera necessária
         preencherElementoByXpath(inputDepositoXpath, deposito);
-        esperarMilissegundos(3000);//espera necessária
+        esperarMilissegundos(4000);//espera necessária
     }
 
     public void selecionarStatusFeatureBAL017(String opcao) {
@@ -70,7 +71,7 @@ public class BAL017_Page extends BasePage {
     public void clicarBotãoParaFiltrarBAL017(String filtrar) {
         esperarMilissegundos(2000);//espera necessária
         clicarElementoByXpathNVezes(btnFiltrarXpath, 1);
-        esperarMilissegundos(10000);//espera necessária
+        esperarMilissegundos(25000);//espera necessária
     }
 
     public void clicarBotãoAutorizarFeatureBAL017(String botao) {
