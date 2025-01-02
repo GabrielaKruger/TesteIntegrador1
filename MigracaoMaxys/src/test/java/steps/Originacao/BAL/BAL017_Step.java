@@ -1,12 +1,15 @@
 package steps.Originacao.BAL;
 
 import driver.driverManager.DriverManager;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.LoginPage;
@@ -123,6 +126,17 @@ public class BAL017_Step {
     @Então("clicar botão para filtrar {string} BAL017")
     public void clicarBotãoParaFiltrarBAL017(String filtrar) {
         BAL017_Page.clicarBotãoParaFiltrarBAL017(filtrar);
+    }
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
     }
 }
 

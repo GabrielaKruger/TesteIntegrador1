@@ -1,12 +1,15 @@
 package steps.Originacao.GPE;
 
 import driver.driverManager.DriverManager;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import pages.Originacao.GPE.GPE044_Page;
 import pages.BasePage;
@@ -168,5 +171,16 @@ public class GPE044_Step {
     @Então("sair da tela GPE000 feature GPE044")
     public void sairDaTelaGPE000FeatureGPE() {
         GPE044_Page.sairDaTelaGPE000FeatureGPE();
+    }
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
     }
 }

@@ -1,12 +1,15 @@
 package steps.Transporte.TTB;
 
 import driver.driverManager.DriverManager;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.Transporte.TTB.TTB163_Page;
@@ -117,5 +120,18 @@ public class TTB163_Step {
     public void prencherDataDeVencimentoFeatureTTB163() {
         TTB163_Page.prencherDataDeVencimentoFeatureTTB163();
     }
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
+    }
 }
+
+
 
