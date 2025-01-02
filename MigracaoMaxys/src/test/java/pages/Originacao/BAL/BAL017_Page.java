@@ -1,14 +1,7 @@
-package pages.Originação.GPE;
+package pages.Originacao.BAL;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
-
-import java.time.Duration;
 
 public class BAL017_Page extends BasePage {
     WebDriver driver;

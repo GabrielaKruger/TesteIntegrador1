@@ -1,4 +1,4 @@
-package steps.Originação.GPE;
+package steps.Originacao.GPE;
 
 import driver.driverManager.DriverManager;
 import io.cucumber.java.Before;
@@ -10,7 +10,7 @@ import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.LoginPage;
-import pages.Originação.GPE.GPE001_Page;
+import pages.Originacao.GPE.GPE001_Page;
 import utils.MassaTeste;
 
 import java.time.Duration;
@@ -19,7 +19,7 @@ public class GPE001_Step {
 
     private WebDriver driver;
     private MassaTeste massaTeste;
-    private pages.Originação.GPE.GPE001_Page GPE001_Page;
+    private pages.Originacao.GPE.GPE001_Page GPE001_Page;
     private BasePage basePage;
     private LoginPage loginPage;
     private String tagMassa;

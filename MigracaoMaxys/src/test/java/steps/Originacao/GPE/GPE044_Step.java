@@ -1,4 +1,4 @@
-package steps.Originação.GPE;
+package steps.Originacao.GPE;
 
 import driver.driverManager.DriverManager;
 import io.cucumber.java.Before;
@@ -8,7 +8,7 @@ import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.WebDriver;
-import pages.Originação.GPE.GPE044_Page;
+import pages.Originacao.GPE.GPE044_Page;
 import pages.BasePage;
 import pages.LoginPage;
 import utils.MassaTeste;

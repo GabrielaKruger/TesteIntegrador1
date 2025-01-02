@@ -1,4 +1,4 @@
-package pages.Originação.GPE;
+package pages.Originacao.GPE;
 
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
