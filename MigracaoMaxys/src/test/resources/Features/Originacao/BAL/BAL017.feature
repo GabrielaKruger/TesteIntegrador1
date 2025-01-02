@@ -10,7 +10,7 @@ Funcionalidade: BAL017 - Pesagens bloqueadas/Peso manual
   Cenário: Autorizar pesagens manuais bloqueadas |  Caminho feliz
     Quando preencher Empresa feature BAL017
     E preencher Depósito feature BAL017
-    #E selecionar status "Bloqueado" feature BAL017
+    E selecionar status "Bloqueado" feature BAL017
     E selecionar Faturamento "Ambos" feature BAL017
     E preencher Período inicial feature BAL017
     E preencher Período final feature BAL017
@@ -25,7 +25,7 @@ Funcionalidade: BAL017 - Pesagens bloqueadas/Peso manual
   Cenário: Recusar pesagens manuais bloqueadas |  Caminho feliz
     Quando preencher Empresa feature BAL017
     E preencher Depósito feature BAL017
-    #E selecionar status "Bloqueado" feature BAL017
+    E selecionar status "Bloqueado" feature BAL017
     E selecionar Faturamento "Ambos" feature BAL017
     E preencher Período inicial feature BAL017
     E preencher Período final feature BAL017
