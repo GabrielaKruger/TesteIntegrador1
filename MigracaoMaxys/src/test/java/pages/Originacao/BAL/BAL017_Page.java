@@ -3,9 +3,6 @@ package pages.Originacao.BAL;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 
-import static utils.DataUtils.DataAtual;
-import static utils.DataUtils.DataRetroativo;
-
 public class BAL017_Page extends BasePage {
     WebDriver driver;
 
@@ -18,8 +15,6 @@ public class BAL017_Page extends BasePage {
     String btnRecusarXpath= "//*[@id='pesagembal-bntRecusar']/button/div";
     String btnFiltrarXpath= "//*[@id='filtro-btnFiltrar']/button/div";
     String btnFiltrarXpath1 = "//*[@id='filtro-btnFiltrar']/button";
-    String dataAtual = DataAtual();
-    String dataRetroativa = DataRetroativo(40);
 
     //Strings para Filtrar
     String selectStatusXpath= "//*[@id='filtro-stBloqueio']/div/select";
@@ -60,7 +55,7 @@ public class BAL017_Page extends BasePage {
     public void preencherPeríodoInicialFeatureBAL017(String periodoInicial) {
         esperarMilissegundos(3000);//espera necessária
         clicarElementoByXpathNVezes(inputPeriodoInicialXpath, 2);
-        preencherElementoByXpath(inputPeriodoInicialXpath, dataRetroativa);
+        preencherElementoByXpath(inputPeriodoInicialXpath, periodoInicial);
         esperarMilissegundos(2000);//espera necessária
     }
 
@@ -68,7 +63,7 @@ public class BAL017_Page extends BasePage {
         esperarMilissegundos(2000);//espera necessária
         clicarElementoByXpathNVezes(inputPeriodoFinalXpath, 2);
         esperarMilissegundos(2000);//espera necessária
-        preencherElementoByXpath(inputPeriodoFinalXpath, dataAtual);
+        preencherElementoByXpath(inputPeriodoFinalXpath, periodoFinal);
         esperarMilissegundos(2000);//espera necessária
     }
 
