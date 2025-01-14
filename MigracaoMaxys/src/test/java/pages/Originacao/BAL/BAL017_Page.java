@@ -3,18 +3,23 @@ package pages.Originacao.BAL;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 
+import static utils.DataUtils.DataAtual;
+import static utils.DataUtils.DataRetroativo;
+
 public class BAL017_Page extends BasePage {
     WebDriver driver;
 
     //Strings Pesagens Bloqueadas
     String inputEmpresaXpath= "//*[@id='filtro-cdEmpresa']/div/input";
     String inputDepositoXpath= "//*[@id='filtro-nrMoega']/div/input";
-    String inputPeriodoinicialXpath="//*[@id='filtro-dtInicio']/div/div/input";
-    String inputPeriodofinalXpath="//*[@id='filtro-dtFinal']/div/div/input";
+    String inputPeriodoInicialXpath="//*[@id='filtro-dtInicio']/div/div/input";
+    String inputPeriodoFinalXpath="//*[@id='filtro-dtFinal']/div/div/input";
     String btnAutorizarXpath= "//*[@id='pesagembal-bntAutorizar']/button/div";
     String btnRecusarXpath= "//*[@id='pesagembal-bntRecusar']/button/div";
     String btnFiltrarXpath= "//*[@id='filtro-btnFiltrar']/button/div";
     String btnFiltrarXpath1 = "//*[@id='filtro-btnFiltrar']/button";
+    String dataAtual = DataAtual();
+    String dataRetroativa = DataRetroativo(40);
 
     //Strings para Filtrar
     String selectStatusXpath= "//*[@id='filtro-stBloqueio']/div/select";
@@ -54,16 +59,16 @@ public class BAL017_Page extends BasePage {
 
     public void preencherPeríodoInicialFeatureBAL017(String periodoInicial) {
         esperarMilissegundos(3000);//espera necessária
-        clicarElementoByXpathNVezes(inputPeriodoinicialXpath, 2);
-        preencherElementoByXpath(inputPeriodoinicialXpath, periodoInicial);
+        clicarElementoByXpathNVezes(inputPeriodoInicialXpath, 2);
+        preencherElementoByXpath(inputPeriodoInicialXpath, dataRetroativa);
         esperarMilissegundos(2000);//espera necessária
     }
 
     public void preencherPeríodoFinalFeatureBAL017(String periodoFinal) {
         esperarMilissegundos(2000);//espera necessária
-        clicarElementoByXpathNVezes(inputPeriodofinalXpath, 2);
+        clicarElementoByXpathNVezes(inputPeriodoFinalXpath, 2);
         esperarMilissegundos(2000);//espera necessária
-        preencherElementoByXpath(inputPeriodofinalXpath, periodoFinal);
+        preencherElementoByXpath(inputPeriodoFinalXpath, dataAtual);
         esperarMilissegundos(2000);//espera necessária
     }
 
@@ -74,7 +79,6 @@ public class BAL017_Page extends BasePage {
         //Incluido clicar no campo empresa para desbloquear grid abaixo autorizar
         clicarElementoByXpathNVezes(inputEmpresaXpath, 1);
         esperarMilissegundos(2000);
-
     }
 
     public void clicarBotãoAutorizarFeatureBAL017(String botao) {
@@ -88,5 +92,4 @@ public class BAL017_Page extends BasePage {
         clicarElementoByXpathNVezes(btnRecusarXpath, 1);
         esperarMilissegundos(4000);//espera necessária
     }
-
 }
