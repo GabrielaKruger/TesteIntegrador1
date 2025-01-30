@@ -72,7 +72,7 @@ public class BAL017_Page extends BasePage {
         clicarElementoByXpathNVezes(btnFiltrarXpath1, 3);
         esperarMilissegundos(5000);//espera necessária
         //Incluido clicar no campo empresa para desbloquear grid abaixo autorizar
-        clicarElementoByXpathNVezes(inputEmpresaXpath, 1);
+        //clicarElementoByXpathNVezes(inputEmpresaXpath, 1);
         esperarMilissegundos(2000);
     }
 
