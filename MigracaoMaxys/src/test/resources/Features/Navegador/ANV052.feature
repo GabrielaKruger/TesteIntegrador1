@@ -72,6 +72,27 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
     E apresentar a mensagem parcial "Excluído com Sucesso!" feature ANV052
     Então clicar botão "ok" do modal feature ANV052
 
+  Cenário: Cadastro de Programa/Recurso | Caminho Feliz
+
+    Quando preencher Programa feature ANV052
+    E preencher Descrição feature ANV052
+    E preencher Arquivo feature ANV052
+    E selecionar Tipo Programa feature ANV052
+    E selecionar Exclusão feature ANV052
+    E selecionar Inclusão feature ANV052
+    E selecionar Alteração feature ANV052
+    Então clicar botão "Consultar" para consultar feature ANV052
+
+    Quando clicar botão ToolBar "novo" feature ANV052
+    E preencher Programa "ABT072" page Programa feature ANV052
+    E preencher Descrição page Programa feature ANV052
+    E preencher Arquivo "ABT072" page Programa feature ANV052
+    E selecionar Tipo Programa page Programa feature ANV052
+    E selecionar Exclusão page Programa feature ANV052
+    E selecionar Inclusão page Programa feature ANV052
+    E selecionar Alteração page Programa feature ANV052
+    Então clicar botão ToolBar "salvar" feature ANV052
+
 
   Cenário: Validar botões Recurso  | Negativo
 
