@@ -8,7 +8,6 @@ public class FCT006_Page extends BasePage {
 
     // Strings Parâmetros de Consulta de Processos Bloqueados
     String inputEmpresaXpath = "//*[@id='controle-cdEmpresa']/div/input";
-                                //*[@id="controle-cdEmpresa"]/div/input
     String btnConsultarXpath = "//*[@id='controle-btConsulta']/button/div";
     String inputDataPagamentoXpath = "//*[@id='controle-dtPagamento']/div/div/input";
 

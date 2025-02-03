@@ -36,7 +36,6 @@
      E apresentar a mensagem parcial "recusada com sucesso." feature GPE044
      Então clicar botão "ok" do modal feature GPE044
 
-
    Cenário: Liberação e Rercusa de Pré - Contrato| Teclas Atalho
 
       #Filtros - Alterar para Buscar pelas LOVs
