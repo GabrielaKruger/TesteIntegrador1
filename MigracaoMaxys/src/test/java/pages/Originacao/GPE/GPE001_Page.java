@@ -1,4 +1,4 @@
-package pages.Originação.GPE;
+package pages.Originacao.GPE;
 
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
@@ -15,23 +15,23 @@ public class GPE001_Page extends BasePage {
     String selectFixoXpath = "//*[@id='contratograo-tpContrato']/div/select";
     String inputTbdescontoXpath = "//*[@id='contratograo-nrTabdescgrao']/div/input";
     String inputNegocioXpath = "//*[@id='contratograo-cdNegocio']/div/input";
-    String inputDatavencimentoXpath = "//*[@id='contratograo-dtVencimento']/div/div/input";
-    String inputAnosafraXpath = "//*[@id='contratograo-dtAnosafra']/div/input";
-    String input3sacasXpath = "//*[@id='contratograo-cdTipocalculo']/div/select";
-    String inputPesoevolumeXpath = "//*[@id='contratograo-psContratado']/div/input";
-    String inputPrecounitarioXpath = "//*[@id='contratograo-prUnitcomicms']/div/input";
+    String inputDataVencimentoXpath = "//*[@id='contratograo-dtVencimento']/div/div/input";
+    String inputAnoSafraXpath = "//*[@id='contratograo-dtAnosafra']/div/input";
+    String input3SacasXpath = "//*[@id='contratograo-cdTipocalculo']/div/select";
+    String inputPesoeVolumeXpath = "//*[@id='contratograo-psContratado']/div/input";
+    String inputPrecoUnitarioXpath = "//*[@id='contratograo-prUnitcomicms']/div/input";
     String inputDiaXpath = "//*[@id='vencicmsgrao-nrDiafaturamento-0']/div/input";
-    String inputCondicaopagamentoXpath = "//*[@id='vencicmsgrao-cdCondpagto-0']/div/input";
+    String inputCondicaoPagamentoXpath = "//*[@id='vencicmsgrao-cdCondpagto-0']/div/input";
     String elementoProduto = "lovItem";
     String elementoTbdesconto = "lovTabdescgrao";
     String elementoNegocio = "lovNegocio";
 
     //Strings Page Favorecidos/Impressão
     String inputClifor2Xpath = "//*[@id='favorecidoscontrpagto-cdClifor-0']/div/input";
-    String inputValorpagamento = "//*[@id='favorecidoscontrpagto-vlPagamento-0']/div/input";
-    String inputDatadopagamento = "//*[@id='favorecidoscontrpagto-dtPagamento']/div/div/input";
-    String inputTipopagamentoXpath = "//*[@id='favorecidoscontrpagto-tpPagamento']/div/select";
-    String inputEmpresaorigemXpath = "//*[@id='contratograo-cdEmprorigem']/div/input";
+    String inputValorPagamento = "//*[@id='favorecidoscontrpagto-vlPagamento-0']/div/input";
+    String inputDatadoPagamento = "//*[@id='favorecidoscontrpagto-dtPagamento']/div/div/input";
+    String inputTipoPagamentoXpath = "//*[@id='favorecidoscontrpagto-tpPagamento']/div/select";
+    String inputEmpresaOrigemXpath = "//*[@id='contratograo-cdEmprorigem']/div/input";
 
 
     public GPE001_Page(WebDriver driver) {
@@ -70,24 +70,24 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherDataDeVencimentoFeatureGPE001(String dtvencimento) {
-        preencherCampoPorXpathFeatureGPE001(inputDatavencimentoXpath, dtvencimento);
+        preencherCampoPorXpathFeatureGPE001(inputDataVencimentoXpath, dtvencimento);
     }
 
     public void preencherAnoSafraFeatureGPE001(String anosafra) {
-        preencherCampoPorXpathFeatureGPE001(inputAnosafraXpath, anosafra);
+        preencherCampoPorXpathFeatureGPE001(inputAnoSafraXpath, anosafra);
     }
 
     public void selecionaTiposDeCálculoFeatureGPE001(String opcao) {
-        preencherCampoPorXpathFeatureGPE001(input3sacasXpath, opcao);
+        preencherCampoPorXpathFeatureGPE001(input3SacasXpath, opcao);
     }
 
     public void preencherPesoVolumeContratadoFeatureGPE001(String pesoevolume) {
-        preencherCampoPorXpathFeatureGPE001(inputPesoevolumeXpath, pesoevolume);
+        preencherCampoPorXpathFeatureGPE001(inputPesoeVolumeXpath, pesoevolume);
     }
 
     public void preencherPreçoUnitárioFeatureGPE001(String precounitario) {
         esperarMilissegundos(1000);
-        preencherCampoPorXpathFeatureGPE001(inputPrecounitarioXpath, precounitario);
+        preencherCampoPorXpathFeatureGPE001(inputPrecoUnitarioXpath, precounitario);
     }
 
     public void preencherDiaFeatureGPE001(String dia) {
@@ -95,11 +95,11 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherCondiçãoDePagamentoFeatureGPE001(String condicaopagamento) {
-        preencherCampoPorXpathFeatureGPE001(inputCondicaopagamentoXpath,  condicaopagamento);
+        preencherCampoPorXpathFeatureGPE001(inputCondicaoPagamentoXpath,  condicaopagamento);
     }
 
     public void preencherValorPagamentoFeatureGPE001(String valorpagamento) {
-        preencherCampoPorXpathFeatureGPE001(inputValorpagamento,  valorpagamento);
+        preencherCampoPorXpathFeatureGPE001(inputValorPagamento,  valorpagamento);
     }
 
     public void preencherClifor2FeatureGPE001(String clifor2) {
@@ -107,11 +107,11 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherDataPagamentoFeatureGPE001(String dataDoPagamento) {
-        preencherCampoPorXpathFeatureGPE001(inputDatadopagamento, dataDoPagamento);
+        preencherCampoPorXpathFeatureGPE001(inputDatadoPagamento, dataDoPagamento);
     }
 
     public void selecionaTipoPagamentoFeatureGPE001(String tipoPagamento) {
-        preencherCampoPorXpathFeatureGPE001(inputTipopagamentoXpath, tipoPagamento);
+        preencherCampoPorXpathFeatureGPE001(inputTipoPagamentoXpath, tipoPagamento);
     }
 
     public void preencherProdutoNãoCadastradoFeatureGPE001(String produtoNaocadastrado) {
@@ -141,10 +141,10 @@ public class GPE001_Page extends BasePage {
 
     public void preencherEmprOrigemPageContratosDeGraoFeatureGPE001(String empresaOrigem) {
         esperarMilissegundos(5000);// espera para ele terminar de carregar todos as pages
-        limparCampoDeTextoPorXpath(inputEmpresaorigemXpath);
-        clicarElementoByXpathNVezes(inputEmpresaorigemXpath, 2);
-        preencherElementoByXpath(inputEmpresaorigemXpath, empresaOrigem);
-        pressionarENTERByXpath(inputEmpresaorigemXpath);
+        limparCampoDeTextoPorXpath(inputEmpresaOrigemXpath);
+        clicarElementoByXpathNVezes(inputEmpresaOrigemXpath, 2);
+        preencherElementoByXpath(inputEmpresaOrigemXpath, empresaOrigem);
+        pressionarENTERByXpath(inputEmpresaOrigemXpath);
         pressionaTabActions();
         esperarMilissegundos(1000); // espera necessária
     }

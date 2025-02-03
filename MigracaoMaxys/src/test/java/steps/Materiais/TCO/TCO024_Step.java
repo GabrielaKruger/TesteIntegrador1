@@ -195,7 +195,6 @@ public class TCO024_Step {
         TCO024_Page.informaDescricaoDeDepartamentoFeatureTCO024();
     }
 
-
     @After
     public void tearDown() {
         if (driver != null) {

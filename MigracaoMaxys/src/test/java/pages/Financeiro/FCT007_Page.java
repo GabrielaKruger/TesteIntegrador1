@@ -11,7 +11,7 @@ public class FCT007_Page extends BasePage {
 
     //Strings Aprovação Comercial
     String inputObservacaoXpath = "//*[@id='processocaixa-dsObservacao']/div/textarea";
-    String inputCreditoemcontaXpath = "//*[@id='processocaixa-btnCreditoemconta']/button/div";
+    String inputCreditoemContaXpath = "//*[@id='processocaixa-btnCreditoemconta']/button/div";
     String inputFecharXpath = "//*[@id='recebchequepag-btnFechar']/button/div";
     String inputDetalhesXpath = "//*[@id='processocaixa-btnDetalhe']/button/div";
     String inputContratoXpath = "//*[@id='itemproccaixa-btnConsultacontrato']/button/div";
@@ -40,7 +40,7 @@ public class FCT007_Page extends BasePage {
 
     public void clicarCréditoEmContaFeatureFCT007(String creditoemconta) {
         esperarMilissegundos(2000);//espera necessária
-        clicarElementoByXpathNVezes(inputCreditoemcontaXpath, 1);
+        clicarElementoByXpathNVezes(inputCreditoemContaXpath, 1);
         esperarMilissegundos(2000);//espera necessária
     }
 

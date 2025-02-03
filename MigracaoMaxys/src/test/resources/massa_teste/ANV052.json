@@ -1,0 +1,12 @@
+{
+  "programa": "ABT000",
+  "descricao": "DEBUG PROGRAMA",
+  "arquivo": "ABT000",
+  "tipoPrograma": "Cadastro",
+  "exclusao": "Sim",
+  "inclusao": "Sim",
+  "alteracao": "Sim",
+  "programa1": "ABT074",
+  "arquivo1": "ABT074"
+
+}

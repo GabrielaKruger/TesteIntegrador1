@@ -1,12 +1,15 @@
 package steps.Financeiro;
 
 import driver.driverManager.DriverManager;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.LoginPage;
@@ -138,5 +141,16 @@ public class FCT007_Step {
     @Então("clicar botão e {string} feature FCT007")
     public void clicarBotãoVoltarFeatureFCT007(String voltar) {
         FCT007_Page.clicarBotãoVoltarFeatureFCT007(voltar);
+    }
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
     }
 }
