@@ -192,6 +192,16 @@ public class ANV052_Step {
         ANV052_Page.clicarBotãoParaFecharFeatureANV052(fechar);
     }
 
+    @E("preencher Programa {string} page Programa feature ANV052")
+    public void preencherProgramaPageProgramaFeatureANV052(String programa) {
+        ANV052_Page.preencherProgramaABT072PageProgramaFeatureANV052(programa);
+    }
+
+    @E("preencher Arquivo {string} page Programa feature ANV052")
+    public void preencherArquivoPageProgramaFeatureANV052(String arquivo) {
+        ANV052_Page.preencherArquivoABT072PageProgramaFeatureANV052(arquivo);
+    }
+
 
  //   @After
  //   public void tearDown() {

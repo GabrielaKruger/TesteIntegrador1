@@ -121,6 +121,16 @@ public class ANV052_Page extends BasePage {
         clicarElementoByXpathNVezesFeatureANV052(btnFecharXpath,1);
     }
 
+
+    public void preencherProgramaABT072PageProgramaFeatureANV052(String programa) {
+        limparElementoByXpath(inputProgramapageXpath);
+        preencherCampoPorXpathFeatureANV052(inputProgramapageXpath, programa);
+    }
+
+    public void preencherArquivoABT072PageProgramaFeatureANV052(String arquivo) {
+        clicarElementoByXpathNVezesFeatureANV052(inputArquivopageXpath,1);
+    }
+
     public void preencherCampoPorXpathFeatureANV052(String campoXpath, String valor) {
         esperarMilissegundos(7000);//espera necessária
         clicarElementoByXpathNVezes(campoXpath, 2);

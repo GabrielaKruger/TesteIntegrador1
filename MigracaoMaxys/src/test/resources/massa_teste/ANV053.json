@@ -1,0 +1,20 @@
+{
+  "empresa":"1",
+  "usuario":"NCS",
+  "programa":"ABT072",
+  "tipoAcesso":"Permitir",
+  "exclusao": "Permitir",
+  "inclusao": "Permitir",
+  "alteracao": "Permitir",
+  "empLogada": "Todos",
+  "empUsuario": "Todos",
+  "empresa2":"1",
+  "usuario2":"NCS",
+  "programa2":"ABT072",
+  "tipoAcesso2":"Permitir",
+  "exclusao2": "Permitir",
+  "inclusao2": "Permitir",
+  "alteracao2": "Permitir",
+  "empLogada2": "Permitir",
+  "empUsuario2": "Permitir"
+}
