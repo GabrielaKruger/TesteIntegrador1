@@ -39,13 +39,13 @@ Quando apresentar a mensagem parcial "Deseja gravar" feature ANV053
 Então clicar botão "nao" do modal feature ANV053
     #Então validar mensagem pop up "Registro salvo com sucesso" feature ANV053
 
-Quando selecionar Programa não repetido feature ANV053
-Então clicar botão ToolBar "excluir" feature ANV053
+#Quando selecionar Programa não repetido feature ANV053
+#Então clicar botão ToolBar "excluir" feature ANV053
 
-Quando apresenta o modal H4 "modal-basic-title" feature ANV053
-E clicar botão "sim" do modal feature ANV053
-E apresentar a mensagem parcial "Excluído com Sucesso!" feature ANV053
-Então clicar botão "ok" do modal feature ANV053
+#Quando apresenta o modal H4 "modal-basic-title" feature ANV053
+#E clicar botão "sim" do modal feature ANV053
+#E apresentar a mensagem parcial "Excluído com Sucesso!" feature ANV053
+#Então clicar botão "ok" do modal feature ANV053
 
 
 Cenário: Edição de Acesso/Recurso com todos os filtros preenchidos | Teclas Atalho

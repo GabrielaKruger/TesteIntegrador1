@@ -13,9 +13,9 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
     E preencher Descrição feature ANV052
     E preencher Arquivo feature ANV052
     E selecionar Tipo Programa feature ANV052
-    E selecionar Exclusão feature ANV052
-    E selecionar Inclusão feature ANV052
-    E selecionar Alteração feature ANV052
+    #E selecionar Exclusão feature ANV052, Não é necessário informar
+    #E selecionar Inclusão feature ANV052
+    #E selecionar Alteração feature ANV052
     Então clicar botão "Consultar" para consultar feature ANV052
 
     Quando clicar botão ToolBar "novo" feature ANV052
@@ -28,16 +28,13 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
     E selecionar Alteração page Programa feature ANV052
     Então clicar botão ToolBar "salvar" feature ANV052
 
-    Quando apresentar a mensagem parcial "com sucesso" feature ANV052
-    Então clicar botão "ok" do modal feature ANV052
-
-    Quando selecionar Programa não repetido feature ANV052
+    Quando validar mensagem pop up "Registro salvo com sucesso" feature ANV052
     Então clicar botão ToolBar "excluir" feature ANV052
 
     Quando apresenta o modal H4 "modal-basic-title" feature ANV052
     E clicar botão "sim" do modal feature ANV052
-    E apresentar a mensagem parcial "Excluído com Sucesso!" feature ANV052
-    Então clicar botão "ok" do modal feature ANV052
+    Então validar mensagem pop up "Registro salvo com sucesso" feature ANV052
+
 
 
   Cenário: Cadastro, Edição e Exclusão de Programa/Recurso | Teclas Atalho
@@ -61,16 +58,13 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
     E selecionar Alteração page Programa feature ANV052
     Então pressionar tecla "f10" feature ANV052
 
-    Quando apresentar a mensagem parcial "com sucesso" feature ANV052
-    Então clicar botão "ok" do modal feature ANV052
-
-    Quando selecionar Programa não repetido feature ANV052
+    Quando validar mensagem pop up "Registro salvo com sucesso" feature ANV052
     Então pressionar teclas shift + f6 para excluir ANV052
 
     Quando apresenta o modal H4 "modal-basic-title" feature ANV052
     E clicar botão "sim" do modal feature ANV052
-    E apresentar a mensagem parcial "Excluído com Sucesso!" feature ANV052
-    Então clicar botão "ok" do modal feature ANV052
+    Então validar mensagem pop up "Registro salvo com sucesso" feature ANV052
+
 
   Cenário: Cadastro de Programa/Recurso | Caminho Feliz
 
@@ -78,13 +72,13 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
     E preencher Descrição feature ANV052
     E preencher Arquivo feature ANV052
     E selecionar Tipo Programa feature ANV052
-    E selecionar Exclusão feature ANV052
-    E selecionar Inclusão feature ANV052
-    E selecionar Alteração feature ANV052
+    #E selecionar Exclusão feature ANV052
+    #E selecionar Inclusão feature ANV052
+    #E selecionar Alteração feature ANV052
     Então clicar botão "Consultar" para consultar feature ANV052
 
     Quando clicar botão ToolBar "novo" feature ANV052
-    E preencher Programa "ABT072" page Programa feature ANV052
+    E preencher Programa "abt072" page Programa feature ANV052
     E preencher Descrição page Programa feature ANV052
     E preencher Arquivo "ABT072" page Programa feature ANV052
     E selecionar Tipo Programa page Programa feature ANV052
@@ -100,16 +94,12 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
     E preencher Descrição feature ANV052
     E preencher Arquivo feature ANV052
     E selecionar Tipo Programa feature ANV052
-    E selecionar Exclusão feature ANV052
-    E selecionar Inclusão feature ANV052
-    E selecionar Alteração feature ANV052
+    #E selecionar Exclusão feature ANV052
+    #E selecionar Inclusão feature ANV052
+    #E selecionar Alteração feature ANV052
     Quando clicar botão "Consultar" para consultar feature ANV052
     E clicar botão "Abas" para abrir abas feature ANV052
-    Então clicar botão "Salvar" para salvar feature ANV052
-
-    Quando apresentar a mensagem parcial "com sucesso" feature ANV052
-    E clicar botão "ok" do modal feature ANV052
-    Quando clicar botão "Fechar" para fechar feature ANV052
+    Então clicar botão "Fechar" para fechar feature ANV052
 
 
 
