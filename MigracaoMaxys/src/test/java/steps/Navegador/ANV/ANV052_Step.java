@@ -167,7 +167,6 @@ public class ANV052_Step {
     public void clicarBotãoToolBarFeatureANV052(String botao) {
         basePage.esperarMilissegundos(5000);// espera necessária
         basePage.clicarBotaoToolBar(botao);
-        basePage.esperarMilissegundos(5000);// espera necessária
     }
 
     @Quando("apresenta o modal H4 {string} feature ANV052")
@@ -202,8 +201,13 @@ public class ANV052_Step {
         ANV052_Page.preencherArquivoABT072PageProgramaFeatureANV052(arquivo);
     }
 
+    @Quando("validar mensagem pop up {string} feature ANV052")
+    public void validarMensagemPopUpFeatureANV052(String validar) {
+        basePage.validarMensagemByToastContainer(validar);
+    }
 
- //   @After
+
+    //   @After
  //   public void tearDown() {
  //       if (driver != null) {
  //           if (scenario != null && scenario.isFailed()) {
