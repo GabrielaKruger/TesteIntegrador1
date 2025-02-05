@@ -7,8 +7,7 @@ Funcionalidade: ANV053 - Pesagens bloqueadas/Peso manual
     Dado inicialize a execução dos cenários do ANV053
     E acessar o programa "ANV053" feature ANV053
 
-@wip #erro ao salvar
-      #erro ao excluir
+@wip #erro: pagina fica em branco para cadastrar acesso
 Cenário: Edição de Acesso/Recurso com todos os filtros preenchidos | Caminho Feliz
 
 Quando preencher Empresa feature ANV053
