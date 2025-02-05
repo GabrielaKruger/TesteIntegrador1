@@ -11,7 +11,7 @@ Funcionalidade: ANV053 - Pesagens bloqueadas/Peso manual
       #erro ao excluir
 Cenário: Edição de Acesso/Recurso com todos os filtros preenchidos | Caminho Feliz
 
-Quando pre encher Empresa feature ANV053
+Quando preencher Empresa feature ANV053
 E preencher Usuário feature ANV053
 E preencher Programa feature ANV053
 E selecionar Tipo de Acesso feature ANV053
