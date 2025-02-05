@@ -1,5 +1,5 @@
 #language: pt
-@wip @ANV052 @dt_ANV052 @chrome
+@test @ANV052 @dt_ANV052 @chrome
 
 Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
 
