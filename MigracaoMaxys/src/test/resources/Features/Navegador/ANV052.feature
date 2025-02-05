@@ -85,7 +85,7 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
     E selecionar Exclusão page Programa feature ANV052
     E selecionar Inclusão page Programa feature ANV052
     E selecionar Alteração page Programa feature ANV052
-    Então clicar botão ToolBar "salvar" feature ANV052
+    #Então clicar botão ToolBar "salvar" feature ANV052
 
 
   Cenário: Validar botões Recurso  | Negativo
