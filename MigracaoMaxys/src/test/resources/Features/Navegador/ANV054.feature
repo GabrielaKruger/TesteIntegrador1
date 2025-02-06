@@ -12,8 +12,12 @@
 
      Quando informar o campo empresa feature ANV054
      E informar o programa feature ANV054
+     E selecionar duplicacao de papel feature ANV054
      Então clicar botao consultar feature ANV054
 
      Quando selecionar Grid feature ANV054
-#     E informar o programa feature ANV054
+     E informar no grid papel feature ANV054
+     E informar no grid programa feature ANV054
+     E informar no grid pagina feature ANV054
+     E selecionar no grid tipo de acesso "C" feature ANV054
 #     Então clicar botao consultar feature ANV054

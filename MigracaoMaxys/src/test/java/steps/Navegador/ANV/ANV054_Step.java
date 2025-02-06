@@ -70,21 +70,45 @@ public class ANV054_Step {
         ANV054_Page.clicarBotaoConsultarFeatureANV054();
     }
 
+    @E("selecionar duplicacao de papel feature ANV054")
+    public void selecionarDuplicacaoDePapelFeatureANV054() {
+        ANV054_Page.selecionarDuplicacaoDePapelFeatureANV054();
+    }
+
     @Quando("selecionar Grid feature ANV054")
     public void selecionarGridFeatureANV054() {
-        ANV054_Page.selecionarGridFeatureANV054();
+        ANV054_Page.selecionarGridFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
+    }
 
+    @E("informar no grid papel feature ANV054")
+    public void informarNoGridPapelFeatureANV054() {
+        ANV054_Page.informarNoGridPapelFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "papel"));
+    }
+
+    @E("informar no grid programa feature ANV054")
+    public void informarNoGridProgramaFeatureANV054() {
+        ANV054_Page.informarNoGridProgramaFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "programa"));
+    }
+
+    @E("informar no grid pagina feature ANV054")
+    public void informarNoGridPaginaFeatureANV054() {
+        ANV054_Page.informarNoGridPaginaFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "pagina"));
+    }
+
+    @E("selecionar no grid tipo de acesso {string} feature ANV054")
+    public void selecionarNoGridTipoDeAcessoFeatureANV054(String tipoAcesso) {
+        ANV054_Page.selecionarNoGridTipoDeAcessoFeatureANV054(tipoAcesso);
     }
 
 
-//    @After
-//    public void tearDown() {
-//        if (driver != null) {
-//            if (scenario != null && scenario.isFailed()) {
-//                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//                scenario.attach(screenshot, "image/png", "Screenshot");
-//            }
-//        }
-//        BasePage.tearDownCloseQuit(driver);
-//    }
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
+    }
 }
