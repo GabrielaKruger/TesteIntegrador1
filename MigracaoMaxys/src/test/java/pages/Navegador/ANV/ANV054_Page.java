@@ -37,8 +37,8 @@ public class ANV054_Page extends BasePage {
     String xpathCompletoPrograma;
     String xpathCompletoPagina;
     String xPathColunaPaginaInicio = "//*[@id='programaempr-dsPage-";
-    String xpathTipoAcesso = "//*[@id='programaempr-stExibir-";
-    String xPathColunaTipoAcessoInicio;
+    String xpathColunaTipoAcessoInicio = "//*[@id='programaempr-stExibir-";
+    String xPathColunaTipoAcessoInicioCompleto;
 
 
     String h4ModalLOVId = "modal-basic-title";
@@ -121,8 +121,9 @@ public class ANV054_Page extends BasePage {
         xpathCompletoPagina = xPathColunaPaginaInicio + primeiraLinhaEmBrancoCodigo + xPathColunaFim;
         clicarElementoByXpath(xpathCompletoPagina);
         encontrarElementoByXpath(xpathCompletoPagina);
-        esperarMilissegundos(2000);
+        esperarMilissegundos(4000);
         pressionarF9ByXpath(xpathCompletoPagina);
+        esperarMilissegundos(4000);
         if (!validarSeContemOElemento(h4ModalLOVId)) {
             pressionarF9ByXpath(xpathCompletoPagina);
         }
@@ -130,21 +131,21 @@ public class ANV054_Page extends BasePage {
         WebElement inputLovXpathElement = driver.findElement(By.xpath(inputLovXpath));
         esperarElementoByXpath(inputLovXpath);
         preencherElementoByXpath(inputLovXpath, pagina);
-        esperarMilissegundos(2000);
+        esperarMilissegundos(4000);
         inputLovXpathElement.sendKeys(Keys.ENTER);
-        esperarMilissegundos(2000); //espera necessaria
+        esperarMilissegundos(4000); //espera necessaria
         encontrarElementoNaTabela(tabelaProgramaXpath, pagina);
-        esperarMilissegundos(2000); //espera necessaria
+        esperarMilissegundos(4000); //espera necessaria
         driver.findElement(By.xpath(xpathCompletoPagina)).sendKeys(Keys.TAB);
     }
 
     public void selecionarNoGridTipoDeAcessoFeatureANV054(String tipoAcesso) {
-        primeiraLinhaEmBrancoCodigo = testEncontraPrimeiraPosicaoEmBrancoLinhaGrid(xPathColunaTipoAcessoInicio, xPathColunaFim);
-        xpathTipoAcesso = xPathColunaTipoAcessoInicio + primeiraLinhaEmBrancoCodigo + xPathColunaFim;
-        encontrarElementoByXpath(xpathTipoAcesso);
-        selecionarListaByXpathValor(xpathTipoAcesso, tipoAcesso);
+        primeiraLinhaEmBrancoCodigo = testEncontraPrimeiraPosicaoEmBrancoLinhaGrid(xpathColunaTipoAcessoInicio, xPathColunaFim);
+        xPathColunaTipoAcessoInicioCompleto = xpathColunaTipoAcessoInicio + primeiraLinhaEmBrancoCodigo + xPathColunaFim;
+        encontrarElementoByXpath(xPathColunaTipoAcessoInicioCompleto);
+        selecionarListaByXpathValor(xPathColunaTipoAcessoInicioCompleto, tipoAcesso);
 
-//        preencherElementoByXpath(xpathTipoAcesso, tipoAcesso);
+//        preencherElementoByXpath(xPathColunaTipoAcessoInicioCompleto, tipoAcesso);
 //        String xpathCompletoLista = "//*[@id='programaempr-stExibir-" + primeiraLinhaEmBranco + "']/div/select";
 
     }
