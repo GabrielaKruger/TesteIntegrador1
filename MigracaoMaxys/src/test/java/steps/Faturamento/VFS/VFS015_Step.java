@@ -100,6 +100,59 @@ public class VFS015_Step {
     public void clicarBotãoParaConsultarFeatureVFS015(String consultar) {
         VFS015_Page.clicarBotãoParaConsultarFeatureVFS015(consultar);
     }
+
+    @Quando("preencher Clifor de Remessas feature VFS015")
+    public void preencherCliforDeRemessasFeatureVFS015() {
+        VFS015_Page.preencherCliforDeRemessasFeatureVFS015(massaTeste.getMassaTestePorPathEChave(tagMassa, "cliforRemessas"));
+    }
+
+    @E("preencher Empresa Clifor de Remessas feature VFS015")
+    public void preencherEmpresaCliforDeRemessasFeatureVFS015() {
+        VFS015_Page.preencherEmpresaCliforDeRemessasFeatureVFS015(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresaRemessas"));
+    }
+
+    @E("clicar botão ToolBar {string} feature VFS015")
+    public void clicarBotãoToolBarFeatureVFS015(String botao) {
+        //espera necessária
+        basePage.clicarBotaoToolBar(botao);
+        //espera necessária
+    }
+
+    @E("preencher Clifor não repetido Clifor de Remessas feature VFS015")
+    public void preencherCliforNãoRepetidoCliforDeRemessasFeatureVFS015() {
+        VFS015_Page.preencherCliforNãoRepetidoCliforDeRemessasFeatureVFS015(massaTeste.getMassaTestePorPathEChave(tagMassa, "cliforNrepetido"));
+    }
+
+    @E("preencher Empresa não repetido Clifor de Remessas feature VFS015")
+    public void preencherEmpresaNãoRepetidoCliforDeRemessasFeatureVFS015() {
+        VFS015_Page.preencherEmpresaNãoRepetidoCliforDeRemessasFeatureVFS015(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresaNrepetido"));
+    }
+
+    @Então("validar mensagem pop up {string} feature VFS015")
+    public void validarMensagemPopUpFeatureVFS015(String validar) {
+        basePage.esperarMilissegundos(2000); //espera necessária
+        basePage.validarMensagemByToastContainer(validar);
+        basePage.esperarMilissegundos(2000); //espera necessária
+    }
+
+    @E("apresenta o modal H4 {string} feature VFS015")
+    public void apresentaOModalH4FeatureVFS015(String title) {
+        basePage.esperarMilissegundos(2000); //espera necessária
+        basePage.validaModalByH4(title);
+        basePage.esperarMilissegundos(2000); //espera necessária
+    }
+
+    @Então("clicar botão {string} do modal feature VFS015")
+    public void clicarBotãoDoModalFeatureVFS015(String acao) {
+        basePage.esperarMilissegundos(2000); //espera necessária
+        basePage.clicarBotaoDoModal(acao);
+        basePage.esperarMilissegundos(2000); //espera necessária
+    }
+
+    @Quando("clicar Clifor de Remessas feature VFS015")
+    public void clicarCliforDeRemessasFeatureVFS015() {
+        VFS015_Page.clicarCliforDeRemessasFeatureVFS015(massaTeste.getMassaTestePorPathEChave(tagMassa, "cliforRemessas"));
+    }
 }
 
 

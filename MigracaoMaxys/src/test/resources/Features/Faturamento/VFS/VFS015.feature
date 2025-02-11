@@ -21,8 +21,9 @@ Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
     E preencher Contrato Grão feature VFS015
     Então clicar botão "Consultar" para consultar feature VFS015
 
-    Quando preencher Clifor de Remessas feature VFS015
-    E preencher Empresa Clifor de Remessas feature VFS015
+    #Quando preencher Clifor de Remessas feature VFS015
+    Quando clicar Clifor de Remessas feature VFS015
+    #E preencher Empresa Clifor de Remessas feature VFS015
     E clicar botão ToolBar "novo" feature VFS015
     E preencher Clifor não repetido Clifor de Remessas feature VFS015
     E preencher Empresa não repetido Clifor de Remessas feature VFS015
