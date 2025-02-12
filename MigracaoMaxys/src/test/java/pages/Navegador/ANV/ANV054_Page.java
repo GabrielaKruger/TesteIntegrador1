@@ -1,9 +1,7 @@
 package pages.Navegador.ANV;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.lang3.math.NumberUtils;
+import org.openqa.selenium.*;
 import pages.BasePage;
 
 public class ANV054_Page extends BasePage {
@@ -14,10 +12,10 @@ public class ANV054_Page extends BasePage {
         this.driver = driver;
     }
 
-//    Botão consultar
+    //    Botão consultar
     String btnConsultar = "//*[@id='controle-btnConsultar']/div/button/div";
 
-//    Radio Button
+    //    Radio Button
     String radioBtnDePapel = "//*[@id='ngx-radio-1']";
     String radioBtnDeEmpresa = "//*[@id='ngx-radio-2']";
     String radioBtnParaTodasEmpresas = "//*[@id='ngx-radio-3']";
@@ -39,6 +37,9 @@ public class ANV054_Page extends BasePage {
     String xPathColunaPaginaInicio = "//*[@id='programaempr-dsPage-";
     String xpathColunaTipoAcessoInicio = "//*[@id='programaempr-stExibir-";
     String xPathColunaTipoAcessoInicioCompleto;
+
+    // Select
+    String selectTipoAcessoXpath = "//*[@id='programaempr-stExibir-1']/div/select";
 
 
     String h4ModalLOVId = "modal-basic-title";
@@ -139,14 +140,54 @@ public class ANV054_Page extends BasePage {
         driver.findElement(By.xpath(xpathCompletoPagina)).sendKeys(Keys.TAB);
     }
 
-    public void selecionarNoGridTipoDeAcessoFeatureANV054(String tipoAcesso) {
-        primeiraLinhaEmBrancoCodigo = testEncontraPrimeiraPosicaoEmBrancoLinhaGrid(xpathColunaTipoAcessoInicio, xPathColunaFim);
-        xPathColunaTipoAcessoInicioCompleto = xpathColunaTipoAcessoInicio + primeiraLinhaEmBrancoCodigo + xPathColunaFim;
-        encontrarElementoByXpath(xPathColunaTipoAcessoInicioCompleto);
-        selecionarListaByXpathValor(xPathColunaTipoAcessoInicioCompleto, tipoAcesso);
+    public void selecionarNoGridTipoDeAcessoConsultaFeatureANV054(String tipoAcesso) {
+        preencherCampoSelectPorXpathFeatureANV052(selectTipoAcessoXpath, tipoAcesso);
+    }
 
-//        preencherElementoByXpath(xPathColunaTipoAcessoInicioCompleto, tipoAcesso);
-//        String xpathCompletoLista = "//*[@id='programaempr-stExibir-" + primeiraLinhaEmBranco + "']/div/select";
+    public void preencherCampoSelectPorXpathFeatureANV052(String campoXpath, String valor) {
+        esperarMilissegundos(7000);//espera necessária
+        clicarElementoByXpathNVezes(campoXpath, 2);
+        preencherElementoByXpath(campoXpath, valor);
+        pressionarENTERByXpath(campoXpath);
+        //pressionaTabActions();
+        esperarMilissegundos(4000);//espera necessária
+    }
 
+    public void selecionarPaginaCadastradaFeatureANV054(String pagina) {
+        esperarMilissegundos(3000);
+        String varNrRecebto = pagina;
+        String xPathColunaTabelaInicio = "//*[@id='programaempr-dsPage-";
+        String xPathColunaTabelaFim = "']/div/input";
+
+        boolean encontrouRegistro = testConsultaRegistroGrid(varNrRecebto, xPathColunaTabelaInicio, xPathColunaTabelaFim);
+
+        if (encontrouRegistro) {
+            System.out.println("Registro encontrado, agora marcando o checkbox.");
+
+            // Chama o método para marcar o checkbox
+            int linhaEncontrada = Integer.parseInt(varPosLinha);
+            selecionarCheckboxDaLinha(linhaEncontrada);
+        }
+    }
+
+    //Selecionar Checkbox da linha com a validaçao do testConsultaRegistroGrid
+    public void selecionarCheckboxDaLinha(int linha) {
+        String xPathCheckbox = getXPathCheckbox(linha);
+        try {
+            WebElement checkbox = driver.findElement(By.xpath(xPathCheckbox));
+            if (!checkbox.isSelected()) {
+                checkbox.click();
+                System.out.println("Checkbox da linha " + linha + " marcado.");
+            } else {
+                System.out.println("Checkbox da linha " + linha + " já estava marcado.");
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println("Checkbox da linha " + linha + " não encontrado.");
+        }
+    }
+
+    //Manter Xpath dinamico do checkbox
+    public String getXPathCheckbox(int linha) {
+        return "//*[@id='programaempr-stSelecionado-" + linha + "']/div/button";
     }
 }
