@@ -13,7 +13,7 @@
 //import org.openqa.selenium.WebDriver;
 //import pages.BasePage;
 //import pages.LoginPage;
-//import pages.Transporte.TTB.TGR025_Page;
+//import pages.Originacao.TGR.TGR025_Page;
 //import utils.MassaTeste;
 //
 //import java.time.Duration;
@@ -22,7 +22,7 @@
 //
 //    private WebDriver driver;
 //    private MassaTeste massaTeste;
-//    private pages.Transporte.TTB.TGR025_Page TGR025_Page;
+//    private pages.Originacao.TGR.TGR025_Page TGR025_Page;
 //    private BasePage basePage;
 //    private LoginPage loginPage;
 //    private String tagMassa;

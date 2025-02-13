@@ -1,0 +1,116 @@
+##language: pt
+#@wip @REC001 @dt_REC001 @chrome
+#
+#Funcionalidade: REC001 - Recebimento de Notas Fiscais
+#
+#  Cenário de Fundo:
+#    Dado inicialize a execução dos cenários do REC001
+#    E acessar o programa "REC001" feature REC001
+#
+#  @1v1 # Refluxo - Tela de Centro de Custo não finalizada
+#  Cenário: Nota de Entrada com Centro de Custo e Moeda 1
+#    Quando acessar a tela REC001 - page Nota Fiscal feature REC001
+#    E clicar botão ToolBar "novo" feature REC001
+#    E preencher Nota Fiscal feature REC001
+#    E preencher Série feature REC001
+#    E preencher Espécie feature REC001=
+#    E preencher Forma de Pagamento feature REC001
+#    E preencher Condição Pagamento feature REC001
+#    E preencher Data Vencimento feature REC001
+#    E preencher Moeda Transação feature REC001
+#    Então preencher Valor Nota feature REC001
+#
+#    Quando encontrar a page "Itens da Nota Fiscal" feature REC001
+#    E preencher Item feature REC001
+#    E preencher Movim. feture REC001
+#    E preencher Negócio feature GPE001
+#    E preencher Quantidade feature GPE001
+#    Então preencher Valor Unit. feature GPE001
+#
+#    Quando acessar a tela "CENTRO DE CUSTO" feature REC001
+#    E preencher primeiro item Empresa feature REC001
+#    E preencher primeiro item Centro Custo featue REC001
+#    E preencher primeiro item Neg. feature REC001
+#    E preencher primeiro item feature REC001
+#    E preencher segundo item Empresa feature REC001
+#    E preencher segundo item Centro Custo featue REC001
+#    E preencher segundo item Neg. feature REC001
+#    E preencher segundo item feature REC001
+#    Então clicar botão Ok em CENTRO DE CUSTO feature REC001
+#
+#    Quando encontrar a page "Itens da Nota Fiscal" feature REC001
+#    E preencher segundo Item feature REC001
+#    E preencher Movim. segundo item feture REC001
+#    E preencher Negócio segundo item feature GPE001
+#    E preencher Quantidade segundo item feature GPE001
+#    Então preencher Valor Unit. segundo item feature GPE001
+#
+#    Quando acessar a tela "CENTRO DE CUSTO" feature REC001
+#    E preencher primeiro item Empresa feature REC001
+#    E preencher primeiro item Centro Custo featue REC001
+#    E preencher primeiro item Neg. feature REC001
+#    E preencher primeiro item feature REC001
+#    E preencher segundo item Empresa feature REC001
+#    E preencher segundo item Centro Custo featue REC001
+#    E preencher segundo item Neg. feature REC001
+#    E preencher segundo item feature REC001
+#    E preencher terceiro item Empresa feature REC001
+#    E preencher terceiro item Centro Custo featue REC001
+#    E preencher terceiro item Neg. feature REC001
+#    E preencher terceiro item feature REC001
+#    Então clicar botão Ok em CENTRO DE CUSTO feature REC001
+#
+#    Quando encontrar a page "Itens da Nota Fiscal" feature REC001
+#    E preencher terceiro Item feature REC001
+#    E preencher Movim. terceiro item feture REC001
+#    E preencher Negócio terceiro item feature GPE001
+#    E preencher Quantidade terceiro item feature GPE001
+#    Então preencher Valor Unit. terceiro item feature GPE001
+#
+#    Quando acessar a tela "CENTRO DE CUSTO" feature REC001
+#    E preencher primeiro item Empresa feature REC001
+#    E preencher primeiro item Centro Custo featue REC001
+#    E preencher primeiro item Neg. feature REC001
+#    E preencher primeiro item feature REC001
+#    Então clicar botão Ok em CENTRO DE CUSTO feature REC001
+#
+#    Quando clicar botão ToolBar "salvar" feature REC001
+#    E apresentar o modal H5 "modal-basic-title" feature REC001
+#    E apresentar a mensagem "gravada com sucesso." feature REC001
+#    Então clicar botão "ok" do modal feature REC001
+#
+#  @2v1
+#  Cenário: Nota de Entrada com Data de Vencimento Digitada (Cond 800)
+#
+#  @2v2
+#  Cenário: Nota de Entrada com Vencimento Parcelado (Cond 900)
+#
+#  @3v1
+#  Cenário: Nota de Entrada Mestra com Moeda 1
+#
+#  @3v3
+#  Cenário: Nota de Entrada Mestra com Despesas Acessórias e Frete
+#
+#  @3v4
+#  Cenário: Nota de Entrada Mestra com Despesas Acessórias
+#
+#  @3v5
+#  Cenário: Nota de Entrada Mestra com Valor de Frete
+#
+#  @4v1
+#  Cenário: Nota de Entrada Remessa com Moeda 1
+#
+#  @4v4
+#  Cenário: Nota de Entrada Remessa com Despesas de Acessórios
+#
+#  @13v1
+#  Cenário: Nota de Entrada com Itens de lote de Semente
+#
+#  @239v1
+#  Cenário: Nota Remessa de Entrada com paramêtro "Atualiza o Valor Unitário da Mestra" Desmarcado
+#
+#  @239v2
+#  Cenário: Nota Remessa de Entrada com paramêtro "Atualiza o Valor Unitário da Mestra" Marcado
+#
+#  @571v1
+#  Cenário: Nota de Entrada com Desconto nos Itens
