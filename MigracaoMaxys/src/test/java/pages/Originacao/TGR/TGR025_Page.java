@@ -13,77 +13,68 @@
 //    }
 //
 //    //Strings Solicitante/Autorizador
-//    String inputEmpresaXpath = "//*[@id='solicitantecontrfrete-cdEmpresa-";
-//    String inputUserXpath = "//*[@id='solicitantecontrfrete-cdUsuario-";
-//    String inputTipoXpath = "//*[@id='solicitantecontrfrete-stSolicitante-";
-//    String inputCodDaAlcadaXpath = "//*[@id='solicitantecontrfrete-cdAlcada-";
-//    String inputDataVencXpath = "//*[@id='solicitantecontrfrete-dtVencimento-";
-//
+//    String inputEmpresaXpath = "//*[@id='autorizgrao-cdEmpresa-";
+//    String inputTipoContratoXpath = "//*[@id='autorizgrao-tpContrato-";
+//    String inputModuloXpath = "//*[@id='autorizgrao-cdModulo-";
+//    String inputProgramaXpath = "//*[@id='autorizgrao-cdPrograma-";
+//    String inputMotivoXpath = "//*[@id='autorizgrao-cdMotivo-";
 //
 //    //Globais
 //    int primeiraLinhaEmBranco;
 //    String inputXpathFim = "']/div/input";
 //    String inputXpatFimDatas = "']/div/div/input";
+//    String xPathColunaTabelaInicio = "";
+//    String xPathColunaTabelaFim = "";
 //
 //
 //    public void preencherEmpresaFeatureTGR025(String empresa) {
-//        //esperarMilissegundos(10000); //espera necessária
-//        verificarOuSetarPrimeiraLinhaEmBranco();
+//        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputEmpresaXpath, inputXpathFim));
 //
 //        String linhaGridEmpresaXpath = inputEmpresaXpath + primeiraLinhaEmBranco + inputXpathFim;
 //
 //        clicarElementoByXpathNVezes(linhaGridEmpresaXpath,2);
-//        esperarMilissegundos(500); // espera necessária
 //        preencherElementoByXpath(linhaGridEmpresaXpath, empresa);
 //        pressionaTabActions();
 //    }
 //
+//    public void preencherTipoDeContratoFeatureTGR025(String tipoContrato) {
+//        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputTipoContratoXpath, inputXpathFim));
 //
-//    public void preencherUsuárioFeatureTGR025(String user) {
-//        verificarOuSetarPrimeiraLinhaEmBranco();
+//        String linhaGridTipoContratoXpath = inputTipoContratoXpath + primeiraLinhaEmBranco + inputXpathFim;
 //
-//        String linhaGridUserXpath = inputUserXpath+ primeiraLinhaEmBranco + inputXpathFim;
-//
-//        clicarElementoByXpathNVezes(linhaGridUserXpath,2);
-//        esperarMilissegundos(500); // espera necessária
-//        preencherElementoByXpath(linhaGridUserXpath, user);
+//        clicarElementoByXpathNVezes(linhaGridTipoContratoXpath,2);
+//        preencherElementoByXpath(linhaGridTipoContratoXpath, tipoContrato);
+//        pressionaTabActions();
 //    }
 //
-//    public void preencherTipoSolicFeatueTGR025(String tipoSolicitante) {
-//        verificarOuSetarPrimeiraLinhaEmBranco();
+//    public void preencherMóduloFeatueTGR025(String modulo) {
+//        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputModuloXpath, inputXpathFim));
 //
-//        // Ajustar para pegar do intervalo
-//        //int codigoSimulatedInt = faker.random().nextInt(1, 16);
-//        //String codigoSimulateAlcada = Integer.toString(codigoSimulatedInt);
+//        String linhaGridModuloXpath = inputModuloXpath + primeiraLinhaEmBranco + inputXpathFim;
 //
-//        String linhaGridTipoSolicXpath = inputTipoXpath + primeiraLinhaEmBranco + inputXpathFim;
-//
-//        clicarElementoByXpathNVezes(linhaGridTipoSolicXpath,2);
-//        esperarMilissegundos(500); // espera necessária
-//        preencherElementoByXpath(linhaGridTipoSolicXpath, tipoSolicitante);
+//        clicarElementoByXpathNVezes(linhaGridModuloXpath,2);
+//        preencherElementoByXpath(linhaGridModuloXpath, modulo);
+//        pressionaTabActions();
 //    }
 //
-//    public void preencherCódDaAlçadaFeatureTGR025() {
-//        verificarOuSetarPrimeiraLinhaEmBranco();
+//    public void preencherProgramaFeatureTGR025(String tipoContrato) {
+//        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputProgramaXpath, inputXpathFim));
 //
-//        int codigoSimulatedInt = faker.random().nextInt(1, 10);
-//        String codigoSimulateAlcada = Integer.toString(codigoSimulatedInt);
+//        String linhaGridProgramaXpath = inputProgramaXpath + primeiraLinhaEmBranco + inputXpathFim;
 //
-//        String linhaGridCodAlcadaXpath = inputCodDaAlcadaXpath + primeiraLinhaEmBranco + inputXpathFim;
-//
-//        clicarElementoByXpathNVezes(linhaGridCodAlcadaXpath,2);
-//        esperarMilissegundos(500); // espera necessária
-//        preencherElementoByXpath(linhaGridCodAlcadaXpath, codigoSimulateAlcada);
+//        clicarElementoByXpathNVezes(linhaGridProgramaXpath,2);
+//        preencherElementoByXpath(linhaGridProgramaXpath, tipoContrato);
+//        pressionaTabActions();
 //    }
 //
-//    public void prencherDataDeVencimentoFeatureTGR025() {
-//        verificarOuSetarPrimeiraLinhaEmBranco();
+//    public void preencherMotivoFeatureTGR025(String tipoContrato) {
+//        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputMotivoXpath, inputXpathFim));
 //
-//        String linhaGridDataVencXpath = inputDataVencXpath + primeiraLinhaEmBranco + inputXpatFimDatas;
+//        String linhaGridMotivoXpath = inputMotivoXpath + primeiraLinhaEmBranco + inputXpathFim;
 //
-//        clicarElementoByXpathNVezes(linhaGridDataVencXpath,2);
-//        esperarMilissegundos(500); // espera necessária
-//        preencherElementoByXpath(linhaGridDataVencXpath, DataUtils.DataAtual());
+//        clicarElementoByXpathNVezes(linhaGridMotivoXpath,2);
+//        preencherElementoByXpath(linhaGridMotivoXpath, tipoContrato);
+//        pressionaTabActions();
 //    }
 //
 //}

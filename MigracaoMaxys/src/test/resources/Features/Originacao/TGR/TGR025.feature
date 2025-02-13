@@ -11,11 +11,11 @@
 #
 #     Quando clicar botão ToolBar "novo" feature TGR025
 #     E preencher Empresa feature TGR025
-##     E preencher Tipo de Contrato feature TGR025
-##     E preencher Módulo featue TGR025
-##     E preencher Programa feature TGR025
-##     E preencher Motivo feature TGR025
-##     Então seleciona se Ativo feature TGR025
+#     E preencher Tipo de Contrato feature TGR025
+#     E preencher Módulo feature TGR025
+#     E preencher Programa feature TGR025
+#     E preencher Motivo feature TGR025
+#     Então selecionar Ativo feature TGR025
 #
 #     Quando clicar botão ToolBar "salvar" feature TGR025
 #     E apresentar o modal H5 "modal-basic-title" feature TGR025

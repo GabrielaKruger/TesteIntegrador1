@@ -101,25 +101,32 @@
 //        TGR025_Page.preencherEmpresaFeatureTGR025(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
 //    }
 //
-//    @E("preencher Usuário feature TGR025")
-//    public void preencherUsuárioFeatureTGR025() {
-//        TGR025_Page.preencherUsuárioFeatureTGR025(massaTeste.getMassaTestePorPathEChave(tagMassa, "user"));
+//    @E("preencher Tipo de Contrato feature TGR025")
+//    public void preencherTipoDeContratoFeatureTGR025() {
+//        TGR025_Page.preencherTipoDeContratoFeatureTGR025(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoContrato"));
 //    }
 //
-//    @E("preencher Tipo Solic featue TGR025")
-//    public void preencherTipoSolicFeatueTGR025() {
-//        TGR025_Page.preencherTipoSolicFeatueTGR025(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoSolicitante"));
+//    @E("preencher Módulo feature TGR025")
+//    public void preencherMóduloFeatueTGR025() {
+//        TGR025_Page.preencherMóduloFeatueTGR025(massaTeste.getMassaTestePorPathEChave(tagMassa, "modulo"));
 //    }
 //
-//    @E("preencher Cód. da Alçada feature TGR025")
-//    public void preencherCódDaAlçadaFeatureTGR025() {
-//        TGR025_Page.preencherCódDaAlçadaFeatureTGR025();
+//    @E("preencher Programa feature TGR025")
+//    public void preencherProgramaFeatureTGR025() {
+//        TGR025_Page.preencherProgramaFeatureTGR025(massaTeste.getMassaTestePorPathEChave(tagMassa, "programa"));
 //    }
 //
-//    @Então("prencher Data de Vencimento feature TGR025")
-//    public void prencherDataDeVencimentoFeatureTGR025() {
-//        TGR025_Page.prencherDataDeVencimentoFeatureTGR025();
+//    @E("preencher Motivo feature TGR025")
+//    public void preencherMotivoFeatureTGR025() {
+//        TGR025_Page.preencherMotivoFeatureTGR025(massaTeste.getMassaTestePorPathEChave(tagMassa, "motivo"));
 //    }
+//
+//    @Então("selecionar Ativo feature TGR025")
+//    public void selecionarAtivoFeatureTGR025() {
+//        //TGR025_Page.selecionarAtivoFeatureTGR025();
+//    }
+//
+//
 //
 //    @After
 //    public void tearDown() {
@@ -131,6 +138,7 @@
 //        }
 //        BasePage.tearDownCloseQuit(driver);
 //    }
+//
 //}
 //
 //
