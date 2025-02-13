@@ -113,7 +113,7 @@ public class ANV052_Step {
     }
 
     @Então("pressionar teclas shift + f6 para excluir ANV052")
-    public void pressionarTeclasShiftFParaExcluirANV() {
+    public void pressionarTeclasShiftFParaExcluirANV052() {
         basePage.esperarMilissegundos(2000);
         basePage.pressionarShiftF6();
     }

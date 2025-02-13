@@ -20,11 +20,14 @@ public class VFS015_Page extends BasePage {
     String inputContratoGraoXpath= "//*[@id='controle-nrContrato']/div/input";
 
     //String Input Clifor de Remessas
-    String inputCliforRemessaXpath ="//*[@id='cliforemessa-cdClifor-']/div/input";
-    String inputEmpresaRemessaXpath ="//*[@id='cliforemessa-cdEmpresamovto-']/div/input";
+    String inputCliforRemessaXpath = "//*[@id='cliforemessa-cdClifor-0']/div/input";
+    String inputEmpresaRemessaXpath ="//*[@id='cliforemessa-cdEmpresamovto-0']/div/input";
 
     //Strings botão
     String btnConsultaXpath= "//*[@id='controle-btnConsulta']/div/button/div";
+
+    String inputCliforRemessa1Xpath = "//*[@id='cliforemessa-cdClifor-1']/div/input";
+    String inputEmpresaRemessa1Xpath ="//*[@id='cliforemessa-cdEmpresamovto-1']/div/input";
 
 
     public VFS015_Page(WebDriver driver) {
@@ -73,7 +76,7 @@ public class VFS015_Page extends BasePage {
     }
 
     public void preencherCliforDeRemessasFeatureVFS015(String cliforRemessas) {
-        preencherCampoPorXpathFeatureVFS015(inputCliforRemessaXpath, cliforRemessas);
+        clicarElementoByXpathNVezesFeatureVFS015(inputCliforRemessaXpath, 1);
     }
 
     public void preencherEmpresaCliforDeRemessasFeatureVFS015(String empresaRemessas) {
@@ -81,21 +84,27 @@ public class VFS015_Page extends BasePage {
     }
 
     public void preencherCliforNãoRepetidoCliforDeRemessasFeatureVFS015(String cliforNrepetido) {
-        preencherCampoPorXpathFeatureVFS015(inputCliforRemessaXpath, cliforNrepetido);
+        preencherCampoPorXpathFeatureVFS015(inputCliforRemessa1Xpath, cliforNrepetido);
     }
 
     public void preencherEmpresaNãoRepetidoCliforDeRemessasFeatureVFS015(String empresaNrepetido) {
-        preencherCampoPorXpathFeatureVFS015(inputEmpresaRemessaXpath, empresaNrepetido);
+        preencherCampoPorXpathFeatureVFS015(inputEmpresaRemessa1Xpath, empresaNrepetido);
     }
 
     public void clicarCliforDeRemessasFeatureVFS015(String cliforRemessas) {
         clicarElementoByXpathNVezesFeatureVFS015(inputCliforRemessaXpath,1);
     }
 
+    public void preencherCliforCliforDeRemessasFeatureVFS015(String clifor) {
+        preencherCampoPorXpathFeatureVFS015(inputCliforRemessa1Xpath, clifor);
+    }
+
     public void preencherCampoPorXpathFeatureVFS015(String campoXpath, String valor) { //método complementar
         esperarMilissegundos(4000);//espera necessária
         clicarElementoByXpathNVezes(campoXpath, 2);
+        esperarMilissegundos(4000);//espera necessária
         preencherElementoByXpath(campoXpath, valor);
+        esperarMilissegundos(4000);//espera necessária
         pressionarENTERByXpath(campoXpath);
         //pressionaTabActions();
         esperarMilissegundos(4000);//espera necessária
@@ -106,5 +115,4 @@ public class VFS015_Page extends BasePage {
         clicarElementoByXpathNVezes(campoXpath, 1);
         esperarMilissegundos(3000);//espera necessária
     }
-
 }

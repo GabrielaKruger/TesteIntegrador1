@@ -153,6 +153,31 @@ public class VFS015_Step {
     public void clicarCliforDeRemessasFeatureVFS015() {
         VFS015_Page.clicarCliforDeRemessasFeatureVFS015(massaTeste.getMassaTestePorPathEChave(tagMassa, "cliforRemessas"));
     }
+
+    @Então("pressionar tecla {string} feature VFS015")
+    public void pressionarTeclaFeatureVFS015(String tecla) {
+        basePage.esperarMilissegundos(2000); //espera necessária
+        basePage.pressionarTecla(tecla);
+    }
+
+    @Então("pressionar teclas shift + f6 para excluir VFS015")
+    public void pressionarTeclasShiftFParaExcluirVFS015() {
+        basePage.esperarMilissegundos(2000); //espera necessária
+        basePage.pressionarShiftF6();
+        basePage.esperarMilissegundos(2000); //espera necessária
+    }
+
+    @E("preencher Clifor {string} Clifor de Remessas feature VFS015")
+    public void preencherCliforCliforDeRemessasFeatureVFS015(String clifor) {
+        VFS015_Page.preencherCliforCliforDeRemessasFeatureVFS015(clifor);
+    }
+
+    @Quando("apresentar a mensagem {string} feature VFS015")
+    public void apresentarAMensagemFeatureVFS(String mensagem) {
+        basePage.esperarMilissegundos(2000);//espera necessária
+        basePage.validaMensagemLabelByContainsText(mensagem);
+        basePage.esperarMilissegundos(2000);//espera necessária
+    }
 }
 
 

@@ -4,12 +4,12 @@
   "notaFiscal": "127110",
   "serie": "1" ,
   "nfFornecedor":"",
-  "dtEmissao": "",
+  "dtEmissao": "18012024",
   "empresa":"5",
   "clifor": "985988",
   "contratoGrao": "",
   "cliforRemessas":"",
-  "empresaRemessas":"",
-  "cliforNrepetido":"",
-  "empresaNrepetido":""
+  "empresaRemessas":"1",
+  "cliforNrepetido":"865672",
+  "empresaNrepetido":"1"
 }
