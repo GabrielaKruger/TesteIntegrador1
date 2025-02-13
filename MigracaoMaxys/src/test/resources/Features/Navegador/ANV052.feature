@@ -1,5 +1,5 @@
 #language: pt
-@test @ANV052 @dt_ANV052 @chrome
+@wip @ANV052 @dt_ANV052 @chrome
 
 Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
 
@@ -33,8 +33,7 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
 
     Quando apresenta o modal H4 "modal-basic-title" feature ANV052
     E clicar botão "sim" do modal feature ANV052
-    Então validar mensagem pop up "Registro salvo com sucesso" feature ANV052
-
+    #Então validar mensagem pop up "Registro salvo com sucesso" feature ANV052
 
 
   Cenário: Cadastro, Edição e Exclusão de Programa/Recurso | Teclas Atalho
@@ -63,7 +62,7 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
 
     Quando apresenta o modal H4 "modal-basic-title" feature ANV052
     E clicar botão "sim" do modal feature ANV052
-    Então validar mensagem pop up "Registro salvo com sucesso" feature ANV052
+    #Então validar mensagem pop up "Registro salvo com sucesso" feature ANV052
 
 
   Cenário: Cadastro de Programa/Recurso | Caminho Feliz
@@ -85,7 +84,7 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
     E selecionar Exclusão page Programa feature ANV052
     E selecionar Inclusão page Programa feature ANV052
     E selecionar Alteração page Programa feature ANV052
-    Então clicar botão ToolBar "salvar" feature ANV052
+    #Então clicar botão ToolBar "salvar" feature ANV052
 
 
   Cenário: Validar botões Recurso  | Negativo

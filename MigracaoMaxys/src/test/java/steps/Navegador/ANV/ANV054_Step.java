@@ -4,10 +4,7 @@ import driver.driverManager.DriverManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
-import io.cucumber.java.pt.Quando;
+import io.cucumber.java.pt.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -70,21 +67,96 @@ public class ANV054_Step {
         ANV054_Page.clicarBotaoConsultarFeatureANV054();
     }
 
+    @E("selecionar duplicacao de papel feature ANV054")
+    public void selecionarDuplicacaoDePapelFeatureANV054() {
+        ANV054_Page.selecionarDuplicacaoDePapelFeatureANV054();
+    }
+
     @Quando("selecionar Grid feature ANV054")
     public void selecionarGridFeatureANV054() {
-        ANV054_Page.selecionarGridFeatureANV054();
+        ANV054_Page.selecionarGridFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
+    }
 
+    @E("informar no grid papel feature ANV054")
+    public void informarNoGridPapelFeatureANV054() {
+        ANV054_Page.informarNoGridPapelFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "papel"));
+    }
+
+    @E("informar no grid programa feature ANV054")
+    public void informarNoGridProgramaFeatureANV054() {
+        ANV054_Page.informarNoGridProgramaFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "programa"));
+    }
+
+    @E("informar no grid pagina feature ANV054")
+    public void informarNoGridPaginaFeatureANV054() {
+        ANV054_Page.informarNoGridPaginaFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "pagina"));
+    }
+
+    @E("selecionar no grid tipo de acesso Consulta feature ANV054")
+    public void selecionarNoGridTipoDeAcessoConsultaFeatureANV054() {
+        ANV054_Page.selecionarNoGridTipoDeAcessoConsultaFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoAcesso"));
+    }
+
+    @E("clicar botão Toolbar {string} feature ANV054")
+    public void clicarBotãoToolbarFeatureANV054(String botao) {
+        basePage.esperarMilissegundos(2000);
+        basePage.clicarBotaoToolBar(botao);
+        basePage.esperarMilissegundos(3000);
+    }
+
+    @Entao("apresentar a mensagem {string} feature ANV054")
+    public void apresentarAMensagemFeatureANV054(String mensagem) {
+        basePage.esperarMilissegundos(2000);
+        basePage.validarMensagemByToastContainer(mensagem);
+        basePage.esperarMilissegundos(2000);
+    }
+
+    @Quando("selecionar pagina cadastrada feature ANV054")
+    public void selecionarPaginaCadastradaFeatureANV054() {
+        ANV054_Page.selecionarPaginaCadastradaFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "pagina"));
+    }
+
+//    @E("marcar checkbox do grid feature ANV054")
+//    public void marcarCheckboxDoGridFeatureANV054() {
+//        ANV054_Page.marcarCheckboxDoGridFeatureANV054();
+//    }
+
+    @E("apresenta o modal H4 {string} feature ANV054")
+    public void apresentaOModalHFeatureANV054(String title) {
+        basePage.esperarMilissegundos(2000);
+        basePage.validaModalByH4(title);
+    }
+
+    @E("clicar botão {string} do modal feature ANV054")
+    public void clicarBotãoDoModalFeatureANV054(String acao) {
+        basePage.esperarMilissegundos(2000);
+        basePage.clicarBotaoDoModal(acao);
+        basePage.esperarMilissegundos(1000);
+    }
+
+    @E("pressionar tecla {string} feature ANV054")
+    public void pressionarTeclaFeatureANV054(String tecla) {
+        basePage.esperarMilissegundos(2000);
+        basePage.pressionarTecla(tecla);
+        basePage.esperarMilissegundos(2000);
+    }
+
+    @E("pressionar teclas shift + f6 para excluir feature ANV054")
+    public void pressionarTeclasShiftF6ParaExcluirFeatureANV054() {
+        basePage.pressionarShiftF6();
+    }
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
     }
 
 
-//    @After
-//    public void tearDown() {
-//        if (driver != null) {
-//            if (scenario != null && scenario.isFailed()) {
-//                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//                scenario.attach(screenshot, "image/png", "Screenshot");
-//            }
-//        }
-//        BasePage.tearDownCloseQuit(driver);
-//    }
+
 }

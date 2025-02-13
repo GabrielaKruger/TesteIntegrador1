@@ -113,7 +113,7 @@ public class ANV052_Step {
     }
 
     @Então("pressionar teclas shift + f6 para excluir ANV052")
-    public void pressionarTeclasShiftFParaExcluirANV() {
+    public void pressionarTeclasShiftFParaExcluirANV052() {
         basePage.esperarMilissegundos(2000);
         basePage.pressionarShiftF6();
     }
@@ -207,16 +207,16 @@ public class ANV052_Step {
     }
 
 
-    //   @After
- //   public void tearDown() {
- //       if (driver != null) {
- //           if (scenario != null && scenario.isFailed()) {
- //               final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
- //               scenario.attach(screenshot, "image/png", "Screenshot");
- //           }
- //       }
- //       BasePage.tearDownCloseQuit(driver);
- //   }
+       @After
+    public void tearDown() {
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
+    }
 }
 
 
