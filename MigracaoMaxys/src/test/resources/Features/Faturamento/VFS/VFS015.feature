@@ -66,7 +66,7 @@ Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
     Então clicar botão "sim" do modal feature VFS015
 
 
-  Cenário: Cadastro, Edição e Exclusão Clifor Remessas | Negativo
+  Cenário: Preencher Clifor já cadastrado | Negativo
 
     Quando selecionar Faturamento feature VFS015
     E preencher Lançamento feature VFS015
