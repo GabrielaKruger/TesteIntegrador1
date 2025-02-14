@@ -1,28 +1,23 @@
 package steps.Originacao.GAC;
 
 import driver.driverManager.DriverManager;
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
-import io.cucumber.java.pt.Quando;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.LoginPage;
-import pages.Originacao.GAC.GAC014_Page;
+import pages.Originacao.GAC.GAC002_Page;
 import utils.MassaTeste;
 
 import java.time.Duration;
 
-public class GAC014_Step {
+public class GAC002_Step {
 
     private WebDriver driver;
     private MassaTeste massaTeste;
-    private pages.Originacao.GAC.GAC014_Page GAC014_Page;
+    private pages.Originacao.GAC.GAC002_Page GAC014_Page;
     private BasePage basePage;
     private LoginPage loginPage;
     private String tagMassa;
@@ -35,8 +30,8 @@ public class GAC014_Step {
         this.scenario = scenario;
     }
 
-    @Dado("inicialize a execução dos cenários do GAC014")
-    public void inicializeAExecuçãoDosCenáriosDoGAC014() {
+    @Dado("inicialize a execução dos cenários do GAC002")
+    public void inicializeAExecuçãoDosCenáriosDoGAC002() {
         massaTeste = new MassaTeste();
         tagMassa = massaTeste.getPathByScenario(this.scenario);
         browser = DriverManager.getBrowserByScenario(this.scenario);
@@ -44,13 +39,13 @@ public class GAC014_Step {
         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         this.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        GAC014_Page = new GAC014_Page(driver);
+        GAC014_Page = new GAC002_Page(driver);
         loginPage = new LoginPage(driver);
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature GAC014")
-    public void acessarOProgramaFeatureGAC014(String programa) {
+    @E("acessar o programa {string} feature GAC002")
+    public void acessarOProgramaFeatureGAC002(String programa) {
         basePage.esperarMilissegundos(5000);// espera necessária
         loginPage.loginNewMaxysNovo(programa);
     }
