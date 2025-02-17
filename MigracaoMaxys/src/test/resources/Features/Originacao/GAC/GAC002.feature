@@ -13,8 +13,11 @@ Cenário: Cadastro, Edição e Exclusão page Preço por Região | Caminho Feliz
   Quando preencher Empresa feature GAC002
   E preencher Produto feature GAC002
   E preencher Data Inicial feature GAC002
-  E preencher Data Final feature GAC002
-  Então clicar botão ToolBar "novo" feature VFS015
+  Então preencher Data Final feature GAC002
+
+  #Quando clicar botão ToolBar "novo" feature GAC002
+
+  #Então clicar botão ToolBar "novo" feature GAC002
 
   Quando preencher Empresa Preço de Grão feature GAC002
   E preencher Item Preço de Grão feature GAC002
@@ -34,14 +37,14 @@ Cenário: Cadastro, Edição e Exclusão page Preço por Região | Caminho Feliz
   Então clicar botão "sim" do modal feature GAC002
 
 
-  Cenário: Cadastro, Edição e Exclusão page Limite por Fixação | Caminho Feliz
+  Cenário: Cadastro, Edição e Exclusão page Preço por Região | Caminho Feliz
 
 
     Quando preencher Empresa feature GAC002
-    E preencher Item feature GAC002
-    E preencher Condt. Pagamento feature GAC002
+    E preencher Produto feature GAC002
+    E preencher Data Inicial feature GAC002
     E preencher Data Final feature GAC002
-    Então clicar botão ToolBar "novo" feature VFS015
+    Então clicar botão ToolBar "novo" feature GAC002
 
     Quando preencher Empresa Preço de Grão feature GAC002
     E preencher Item Preço de Grão feature GAC002
