@@ -76,14 +76,16 @@ public class ANV054_Page extends BasePage {
         clicarElementoByXpathNVezes(btnConsultar, 2);
     }
 
-    public void selecionarGridFeatureANV054(String empresa) {
+    public void preencherCampoEmpresaFeatureANV054(String empresa) {
+        esperarMilissegundos(4000);
+        primeiraLinhaEmBranco = encontrarPrimeiraLinhaEmBrancoNoGrid(driver);
+        String linhaCodigoElement = "//*[@id='programaempr-cdEmpresa-" + primeiraLinhaEmBranco + "']/div/input";
+        clicarElementoByXpath(linhaCodigoElement);
+
+        esperarElementoByXpath(linhaCodigoElement);
         esperarMilissegundos(2000);
-        primeiraLinhaEmBrancoCodigo = testEncontraPrimeiraPosicaoEmBrancoLinhaGrid(xPathColunaEmpresaInicio, xPathColunaFim);
-        xpathCompletoEmpresa = xPathColunaEmpresaInicio + primeiraLinhaEmBrancoCodigo + xPathColunaFim;
-        clicarBotaoToolBar("novo");
-        encontrarElementoByXpath(xpathCompletoEmpresa);
-        preencherElementoByXpath(xpathCompletoEmpresa, empresa);
-        driver.findElement(By.xpath(xpathCompletoEmpresa)).sendKeys(Keys.TAB);
+        preencherElementoByXpath(linhaCodigoElement, empresa);
+        driver.findElement(By.xpath(linhaCodigoElement)).sendKeys(Keys.TAB);
     }
 
     public void informarNoGridPapelFeatureANV054(String papel) {
@@ -190,4 +192,5 @@ public class ANV054_Page extends BasePage {
     public String getXPathCheckbox(int linha) {
         return "//*[@id='programaempr-stSelecionado-" + linha + "']/div/button";
     }
+
 }

@@ -52,7 +52,7 @@ public class ANV054_Step {
         basePage.esperarMilissegundos(5000);//espera necessária
     }
 
-    @Quando("informar o campo empresa feature ANV054")
+    @E("informar o campo empresa feature ANV054")
     public void informarOCampoEmpresaFeatureANV054() {
         ANV054_Page.informarOCampoEmpresaFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
     }
@@ -67,14 +67,14 @@ public class ANV054_Step {
         ANV054_Page.clicarBotaoConsultarFeatureANV054();
     }
 
+    @E("preencher campo empresa feature ANV054")
+    public void preencherCampoEmpresaFeatureANV054() {
+        ANV054_Page.preencherCampoEmpresaFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
+    }
+
     @E("selecionar duplicacao de papel feature ANV054")
     public void selecionarDuplicacaoDePapelFeatureANV054() {
         ANV054_Page.selecionarDuplicacaoDePapelFeatureANV054();
-    }
-
-    @Quando("selecionar Grid feature ANV054")
-    public void selecionarGridFeatureANV054() {
-        ANV054_Page.selecionarGridFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
     }
 
     @E("informar no grid papel feature ANV054")
@@ -97,6 +97,7 @@ public class ANV054_Step {
         ANV054_Page.selecionarNoGridTipoDeAcessoConsultaFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoAcesso"));
     }
 
+
     @E("clicar botão Toolbar {string} feature ANV054")
     public void clicarBotãoToolbarFeatureANV054(String botao) {
         basePage.esperarMilissegundos(2000);
@@ -115,11 +116,6 @@ public class ANV054_Step {
     public void selecionarPaginaCadastradaFeatureANV054() {
         ANV054_Page.selecionarPaginaCadastradaFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "pagina"));
     }
-
-//    @E("marcar checkbox do grid feature ANV054")
-//    public void marcarCheckboxDoGridFeatureANV054() {
-//        ANV054_Page.marcarCheckboxDoGridFeatureANV054();
-//    }
 
     @E("apresenta o modal H4 {string} feature ANV054")
     public void apresentaOModalHFeatureANV054(String title) {
@@ -156,7 +152,5 @@ public class ANV054_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
-
-
 
 }

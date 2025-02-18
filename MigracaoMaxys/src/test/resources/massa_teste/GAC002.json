@@ -1,0 +1,13 @@
+{
+  "empresa":"2",
+  "produto": "11174",
+  "dtInicial": "dataatual",
+  "dtFinal": "dataatual",
+  "empresaPreco": "2",
+  "itemPreco": "11174",
+  "unitario": "1",
+  "tipoCalculo": "Preco x quantidade",
+  "tipoPreco": "Provisão/Mercado",
+  "acima": "1",
+  "abaixo": "1"
+}

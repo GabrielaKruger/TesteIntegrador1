@@ -1,42 +1,37 @@
-package steps.Originacao.GAC;
+package steps.Faturamento.VFS;
 
 import driver.driverManager.DriverManager;
-import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
+import pages.Faturamento.VFS.VFS014_Page;
 import pages.LoginPage;
-import pages.Originacao.GAC.GAC014_Page;
 import utils.MassaTeste;
 
 import java.time.Duration;
 
-public class GAC014_Step {
+public class VFS014_Step {
 
     private WebDriver driver;
     private MassaTeste massaTeste;
-    private pages.Originacao.GAC.GAC014_Page GAC014_Page;
+    private pages.Faturamento.VFS.VFS014_Page VFS014_Page;
     private BasePage basePage;
     private LoginPage loginPage;
     private String tagMassa;
     private String browser;
     Scenario scenario;
 
-
     @Before
     public void before(Scenario scenario) {
         this.scenario = scenario;
     }
 
-    @Dado("inicialize a execução dos cenários do GAC014")
-    public void inicializeAExecuçãoDosCenáriosDoGAC014() {
+    @Dado("inicialize a execução dos cenários do VFS014")
+    public void inicializeAExecuçãoDosCenáriosDoVFS014() {
         massaTeste = new MassaTeste();
         tagMassa = massaTeste.getPathByScenario(this.scenario);
         browser = DriverManager.getBrowserByScenario(this.scenario);
@@ -44,27 +39,20 @@ public class GAC014_Step {
         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         this.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        GAC014_Page = new GAC014_Page(driver);
+        VFS014_Page = new VFS014_Page(driver);
         loginPage = new LoginPage(driver);
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature GAC014")
-    public void acessarOProgramaFeatureGAC014(String programa) {
+    @E("acessar o programa {string} feature VFS014")
+    public void acessarOProgramaFeatureVFS014(String programa) {
         basePage.esperarMilissegundos(5000);// espera necessária
         loginPage.loginNewMaxysNovo(programa);
     }
 
-
-   // @After
-   // public void tearDown() {
-   //     if (driver != null) {
-   //         if (scenario != null && scenario.isFailed()) {
-   //             final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-   //             scenario.attach(screenshot, "image/png", "Screenshot");
-   //         }
-   //     }
-   //     BasePage.tearDownCloseQuit(driver);
-    //}
-
+    @Quando("acessar page {string} feature VFS014")
+    public void acessarPageFeatureVFS014(String nomePage) {
+        VFS014_Page.clicarBotaoTransicao();
+        VFS014_Page.acessarPageFeatureVFS014(nomePage);
+    }
 }
