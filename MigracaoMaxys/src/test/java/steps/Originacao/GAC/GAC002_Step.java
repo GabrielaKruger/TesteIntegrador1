@@ -129,6 +129,72 @@ public class GAC002_Step {
         basePage.clicarBotaoDoModal(acao);
     }
 
+    @Quando("pressionar tecla {string} feature GAC002")
+    public void pressionarTeclaFeatureGAC002(String tecla) {
+        basePage.esperarMilissegundos(2000);
+        basePage.pressionarTecla(tecla);
+    }
+
+    @Quando("pressionar teclas shift + f6 para excluir GAC002")
+    public void pressionarTeclasShiftFParaExcluirGAC002() {
+        basePage.esperarMilissegundos(2000);
+        basePage.pressionarShiftF6();
+    }
+
+    @Quando("preencher Empresa Limite feature GAC{int}")
+    public void preencherEmpresaLimiteFeatureGAC(int arg0) {
+        
+    }
+
+    @E("preencher Item Limite feature GAC{int}")
+    public void preencherItemLimiteFeatureGAC(int arg0) {
+        
+    }
+
+    @E("preencher Condt. Pagamento Limite feature GAC{int}")
+    public void preencherCondtPagamentoLimiteFeatureGAC(int arg0) {
+        
+    }
+
+    @Então("selecionar Tipo Pessoa Limite feature GAC{int}")
+    public void selecionarTipoPessoaLimiteFeatureGAC(int arg0) {
+        
+    }
+
+    @Quando("preencher Empresa Limites Fixação feature GAC{int}")
+    public void preencherEmpresaLimitesFixaçãoFeatureGAC(int arg0) {
+        
+    }
+
+    @E("preencher Item Limites Fixação feature GAC{int}")
+    public void preencherItemLimitesFixaçãoFeatureGAC(int arg0) {
+        
+    }
+
+    @E("preencher Condição de Pagemento Limites Fixação feature GAC{int}")
+    public void preencherCondiçãoDePagementoLimitesFixaçãoFeatureGAC(int arg0) {
+        
+    }
+
+    @E("preencher Peso mínimo Limites Fixação feature GAC{int}")
+    public void preencherPesoMínimoLimitesFixaçãoFeatureGAC(int arg0) {
+        
+    }
+
+    @E("preencher Peso máximo Limites Fixação feature GAC{int}")
+    public void preencherPesoMáximoLimitesFixaçãoFeatureGAC(int arg0) {
+        
+    }
+
+    @E("preencher Valor mínimo feature GAC{int}")
+    public void preencherValorMínimoFeatureGAC(int arg0) {
+        
+    }
+
+    @E("preencher Valor máximo feature GAC{int}")
+    public void preencherValorMáximoFeatureGAC(int arg0) {
+    }
+
 
     // @After
    // public void tearDown() {

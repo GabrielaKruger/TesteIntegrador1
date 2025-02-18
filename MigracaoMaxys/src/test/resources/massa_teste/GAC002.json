@@ -6,7 +6,7 @@
   "empresaPreco": "2",
   "itemPreco": "11174",
   "unitario": "1",
-  "tipoCalculo": "Preco x quantidade",
+  "tipoCalculo": "2 - Preco x quantidade",
   "tipoPreco": "Provisão/Mercado",
   "acima": "1",
   "abaixo": "1"
