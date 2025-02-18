@@ -10,55 +10,55 @@
 #  @1v1 # Refluxo - Tela de Centro de Custo não finalizada
 #  Cenário: Nota de Entrada com Centro de Custo e Moeda 1
 #    Quando acessar a tela REC001 - page Nota Fiscal feature REC001
-#    E clicar botão ToolBar "novo" feature REC001
-#    E preencher Nota Fiscal feature REC001
-#    E preencher Série feature REC001
-#    E preencher Espécie feature REC001=
-#    E preencher Forma de Pagamento feature REC001
-#    E preencher Condição Pagamento feature REC001
-#    E preencher Data Vencimento feature REC001
-#    E preencher Moeda Transação feature REC001
-#    Então preencher Valor Nota feature REC001
+#    E clicar botão ToolBar "novo" - feature REC001
+#    E preencher Nota Fiscal  - feature REC001
+#    E preencher Série feature -  REC001
+#    E preencher Espécie - feature REC001
+#    E preencher Forma de Pagamento - feature REC001
+#    E preencher Condição Pagamento - feature REC001
+#    E preencher Data Vencimento - feature REC001
+#    E preencher Moeda Transação - feature REC001
+#    Então preencher Valor Nota - feature REC001
 #
-#    Quando encontrar a page "Itens da Nota Fiscal" feature REC001
-#    E preencher Item feature REC001
-#    E preencher Movim. feture REC001
-#    E preencher Negócio feature GPE001
-#    E preencher Quantidade feature GPE001
-#    Então preencher Valor Unit. feature GPE001
+#    Quando encontrar a page "Itens da Nota Fiscal" - feature REC001
+#    E preencher Item - feature REC001
+#    E preencher Movim.  -  feture REC001
+#    E preencher Negócio - feature GPE001
+#    E preencher Quantidade  - feature GPE001
+#    Então preencher Valor Unit. - feature GPE001
 #
-#    Quando acessar a tela "CENTRO DE CUSTO" feature REC001
-#    E preencher primeiro item Empresa feature REC001
-#    E preencher primeiro item Centro Custo featue REC001
-#    E preencher primeiro item Neg. feature REC001
-#    E preencher primeiro item feature REC001
-#    E preencher segundo item Empresa feature REC001
-#    E preencher segundo item Centro Custo featue REC001
-#    E preencher segundo item Neg. feature REC001
-#    E preencher segundo item feature REC001
-#    Então clicar botão Ok em CENTRO DE CUSTO feature REC001
+#    Quando acessar a tela "CENTRO DE CUSTO" - feature REC001
+#    E preencher primeiro item Empresa  - feature REC001
+#    E preencher primeiro item Centro Custo  - featue REC001
+#    E preencher primeiro item Neg.  - feature REC001
+#    E preencher primeiro item  - feature REC001
+#    E preencher segundo item Empresa  - feature REC001
+#    E preencher segundo item Centro Custo  - featue REC001
+#    E preencher segundo item Neg.  - feature REC001
+#    E preencher segundo item  - feature REC001
+#    Então clicar botão Ok em CENTRO DE CUSTO  - feature REC001
 #
-#    Quando encontrar a page "Itens da Nota Fiscal" feature REC001
-#    E preencher segundo Item feature REC001
-#    E preencher Movim. segundo item feture REC001
-#    E preencher Negócio segundo item feature GPE001
-#    E preencher Quantidade segundo item feature GPE001
-#    Então preencher Valor Unit. segundo item feature GPE001
+#    Quando encontrar a page "Itens da Nota Fiscal"  - feature REC001
+#    E preencher segundo Item  - feature REC001
+#    E preencher Movim. segundo item  - feture REC001
+#    E preencher Negócio segundo item  - feature GPE001
+#    E preencher Quantidade segundo item  - feature GPE001
+#    Então preencher Valor Unit. segundo item  - feature GPE001
 #
-#    Quando acessar a tela "CENTRO DE CUSTO" feature REC001
-#    E preencher primeiro item Empresa feature REC001
-#    E preencher primeiro item Centro Custo featue REC001
-#    E preencher primeiro item Neg. feature REC001
-#    E preencher primeiro item feature REC001
-#    E preencher segundo item Empresa feature REC001
-#    E preencher segundo item Centro Custo featue REC001
-#    E preencher segundo item Neg. feature REC001
-#    E preencher segundo item feature REC001
-#    E preencher terceiro item Empresa feature REC001
-#    E preencher terceiro item Centro Custo featue REC001
-#    E preencher terceiro item Neg. feature REC001
-#    E preencher terceiro item feature REC001
-#    Então clicar botão Ok em CENTRO DE CUSTO feature REC001
+#    Quando acessar a tela "CENTRO DE CUSTO"  - feature REC001
+#    E preencher primeiro item Empresa  - feature REC001
+#    E preencher primeiro item Centro Custo  - featue REC001
+#    E preencher primeiro item Neg.  - feature REC001
+#    E preencher primeiro item  - feature REC001
+#    E preencher segundo item Empresa  - feature REC001
+#    E preencher segundo item Centro Custo  - featue REC001
+#    E preencher segundo item Neg.  - feature REC001
+#    E preencher segundo item  - feature REC001
+#    E preencher terceiro item Empresa  - feature REC001
+#    E preencher terceiro item Centro Custo - featue REC001
+#    E preencher terceiro item Neg.  - feature REC001
+#    E preencher terceiro item  - feature REC001
+#    Então clicar botão Ok em CENTRO DE CUSTO0  - feature REC001
 #
 #    Quando encontrar a page "Itens da Nota Fiscal" feature REC001
 #    E preencher terceiro Item feature REC001
