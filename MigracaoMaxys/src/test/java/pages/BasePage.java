@@ -1395,6 +1395,19 @@ public class BasePage {
             throw new RuntimeException("Nenhum iframe encontrado!");
         }
     }
+
+
+    public void direcionarAba(int indiceAba) {
+        Set<String> abas = driver.getWindowHandles();
+        List<String> listaAbas = new ArrayList<>(abas);
+
+        if (indiceAba < listaAbas.size()) {
+            driver.switchTo().window(listaAbas.get(indiceAba));
+        } else {
+            throw new IllegalArgumentException("Índice da aba inválido: " + indiceAba);
+        }
+    }
+
 }
 
 

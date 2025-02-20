@@ -182,6 +182,7 @@
      E apresentar a mensagem parcial "Verifique TGR007" feature GPE001
      Então clicar botão "ok" do modal feature GPE001
 
+
    @5717
    Cenário: Validação de Item sem permissão de utilização na empresa do contrato
      #Pedidos/contratos de grão
