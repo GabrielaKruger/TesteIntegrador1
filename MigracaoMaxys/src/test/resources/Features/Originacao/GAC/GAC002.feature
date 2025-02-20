@@ -67,14 +67,12 @@ Cenário: Cadastro, Edição e Exclusão page Preço por Região | Caminho Feliz
 
   Cenário: Cadastro, Edição e Exclusão page Limite Fixação| Caminho Feliz
 
+    Quando selecionar page "Limite Fixação <F7>" feature GAC002
     Quando preencher Empresa Limite feature GAC002
     E preencher Item Limite feature GAC002
     E preencher Condt. Pagamento Limite feature GAC002
     Então selecionar Tipo Pessoa Limite feature GAC002
-
-  #Quando clicar botão ToolBar "novo" feature GAC002
-
-  #Então clicar botão ToolBar "novo" feature GAC002
+    Então clicar botão "Consultar" feature GAC002
 
     Quando preencher Empresa Limites Fixação feature GAC002
     E preencher Item Limites Fixação feature GAC002
@@ -95,6 +93,7 @@ Cenário: Cadastro, Edição e Exclusão page Preço por Região | Caminho Feliz
 @wip #em branco Tipo contrato
   Cenário: Cadastro, Edição e Exclusão page Preço Futuro| Caminho Feliz
 
+  Quando selecionar page "Limite Fixação <F8>" feature GAC002
   Quando preencher Empresa Preço feature GAC002
   E preencher Produto Preço feature GAC002
   E preencher Tipo de Contrato Preçofeature GAC002
@@ -108,7 +107,7 @@ Cenário: Cadastro, Edição e Exclusão page Preço por Região | Caminho Feliz
   E preencher Entrega até page Preço Futuro feature GAC002
   E preencher Unitário page Preço Futuro feature GAC002
   E selecionar Tipo de Cálculo page Preço Futuro feature GAC002
-  Então selecionar Tipo de Contarto page Preço Futuro feature GAC002
+  Então selecionar Tipo de Contrato page Preço Futuro feature GAC002
 
   Quando clicar botão ToolBar "salvar" feature GAC002
   Então validar mensagem pop up "Registro salvo com sucesso" feature GAC002

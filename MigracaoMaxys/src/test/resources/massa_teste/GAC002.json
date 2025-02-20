@@ -9,5 +9,16 @@
   "tipoCalculo": "2 - Preco x quantidade",
   "tipoPreco": "Provisão/Mercado",
   "acima": "1",
-  "abaixo": "1"
+  "abaixo": "1",
+  "empresaLimite": "2",
+  "itemLimite": "11174",
+  "condtPagamento": "1",
+  "tipoPessoa": "Ambas",
+  "empresaLimite2": "2",
+  "itemLimite2": "11174",
+  "condtPagamento2": "F",
+  "pesoMinimo": "1",
+  "pesoMaximo": "1",
+  "valorMinimo": "1",
+  "valorMaximo": "1"
 }
