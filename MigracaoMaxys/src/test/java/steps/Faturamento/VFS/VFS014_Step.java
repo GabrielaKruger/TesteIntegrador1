@@ -55,4 +55,29 @@ public class VFS014_Step {
         VFS014_Page.clicarBotaoTransicao();
         VFS014_Page.acessarPageFeatureVFS014(nomePage);
     }
+
+    @E("informa data emissao inicial feature VFS014")
+    public void informaDataEmissaoInicialFeatureVFS014() {
+        VFS014_Page.informaDataEmissaoInicialFeatureVFS014();
+    }
+
+    @E("informa data emissao final feature VFS014")
+    public void informaDataEmissaoFinalFeatureVFS014() {
+        VFS014_Page.informaDataEmissaoFinalFeatureVFS014();
+    }
+
+    @E("seleciona status de envio feature VFS014")
+    public void selecionaStatusDeEnvioFeatureVFS014() {
+        VFS014_Page.selecionaStatusDeEnvioFeatureVFS014(massaTeste.getMassaTestePorPathEChave(tagMassa, "statusEnvio"));
+    }
+
+    @E("informa usuario feature VFS014")
+    public void informaUsuarioFeatureVFS014() {
+        VFS014_Page.informaUsuarioFeatureVFS014(massaTeste.getMassaTestePorPathEChave(tagMassa, "user"));
+    }
+
+    @E("informa empresa feature VFS014")
+    public void informaEmpresaFeatureVFS014() {
+        VFS014_Page.informaEmpresaFeatureVFS014(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
+    }
 }

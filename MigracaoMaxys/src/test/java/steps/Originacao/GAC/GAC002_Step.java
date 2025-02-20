@@ -129,6 +129,150 @@ public class GAC002_Step {
         basePage.clicarBotaoDoModal(acao);
     }
 
+    @Quando("pressionar tecla {string} feature GAC002")
+    public void pressionarTeclaFeatureGAC002(String tecla) {
+        basePage.esperarMilissegundos(2000);
+        basePage.pressionarTecla(tecla);
+    }
+
+    @Quando("pressionar teclas shift + f6 para excluir GAC002")
+    public void pressionarTeclasShiftFParaExcluirGAC002() {
+        basePage.esperarMilissegundos(2000);
+        basePage.pressionarShiftF6();
+    }
+
+    //Page Limite Fixação
+
+    @Quando("preencher Empresa Limite feature GAC002")
+    public void preencherEmpresaLimiteFeatureGAC002() {
+        GAC002_Page.preencherEmpresaLimiteFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresaLimite"));
+    }
+
+    @E("preencher Item Limite feature GAC002")
+    public void preencherItemLimiteFeatureGAC002() {
+        GAC002_Page.preencherItemLimiteFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "itemLimite"));
+    }
+
+    @E("preencher Condt. Pagamento Limite feature GAC002")
+    public void preencherCondtPagamentoLimiteFeatureGAC002() {
+        GAC002_Page.preencherCondtPagamentoLimiteFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "condtPagamento"));
+    }
+
+    @Então("selecionar Tipo Pessoa Limite feature GAC002")
+    public void selecionarTipoPessoaLimiteFeatureGAC002() {
+        GAC002_Page.selecionarTipoPessoaLimiteFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoPessoa"));
+    }
+
+    @Quando("preencher Empresa Limites Fixação feature GAC002")
+    public void preencherEmpresaLimitesFixaçãoFeatureGAC002() {
+        GAC002_Page.preencherEmpresaLimitesFixaçãoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresaLimite2"));
+    }
+
+    @E("preencher Item Limites Fixação feature GAC002")
+    public void preencherItemLimitesFixaçãoFeatureGAC002() {
+        GAC002_Page.preencherItemLimitesFixaçãoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "itemLimite2"));
+    }
+
+    @E("preencher Condição de Pagemento Limites Fixação feature GAC002")
+    public void preencherCondiçãoDePagementoLimitesFixaçãoFeatureGAC002() {
+        GAC002_Page.preencherCondiçãoDePagementoLimitesFixaçãoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "condtPagamento2"));
+    }
+
+    @E("preencher Peso mínimo Limites Fixação feature GAC002")
+    public void preencherPesoMínimoLimitesFixaçãoFeatureGAC002() {
+        GAC002_Page.preencherPesoMínimoLimitesFixaçãoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "pesoMinimo"));
+    }
+
+    @E("preencher Peso máximo Limites Fixação feature GAC002")
+    public void preencherPesoMáximoLimitesFixaçãoFeatureGAC002() {
+        GAC002_Page.preencherPesoMáximoLimitesFixaçãoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "pesoMaximo"));
+    }
+
+    @E("preencher Valor mínimo feature GAC002")
+    public void preencherValorMínimoFeatureGAC002() {
+        GAC002_Page. preencherValorMínimoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorMinimo"));
+    }
+
+    @E("preencher Valor máximo feature GAC002")
+    public void preencherValorMáximoFeatureGAC002() {
+        GAC002_Page.preencherValorMáximoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorMaximo"));
+    }
+
+    @Quando("selecionar page {string} feature GAC002")
+    public void selecionarPageFeatureGAC002(String botao) {
+        GAC002_Page.selecionarPageFeatureGAC002(botao);
+    }
+
+    @Então("clicar botão {string} feature GAC002")
+    public void clicarBotãoFeatureGAC002(String botao) {
+        GAC002_Page.clicarBotãoConsultarFeatureGAC002(botao);
+    }
+
+    @Quando("preencher Empresa Preço feature GAC002")
+    public void preencherEmpresaPreçoFeatureGAC002() {
+        
+    }
+
+    @E("preencher Produto Preço feature GAC002")
+    public void preencherProdutoPreçoFeatureGAC002() {
+        
+    }
+
+    @E("preencher Tipo de Contrato Preçofeature GAC002")
+    public void preencherTipoDeContratoPreçofeatureGAC002() {
+        
+    }
+
+    @E("preencher Data Inicial Preço feature GAC002")
+    public void preencherDataInicialPreçoFeatureGAC002() {
+        
+    }
+
+    @E("preencher Data Final Preço feature GAC002")
+    public void preencherDataFinalPreçoFeatureGAC002() {
+        
+    }
+
+    @E("preencher Entrega até Preço feature GAC002")
+    public void preencherEntregaAtéPreçoFeatureGAC002() {
+        
+    }
+
+    @Quando("preencher Empresa page Preço Futuro feature GAC002")
+    public void preencherEmpresaPagePreçoFuturoFeatureGAC002() {
+        
+    }
+
+    @E("preencher Item page Preço Futuro feature GAC002")
+    public void preencherItemPagePreçoFuturoFeatureGAC002() {
+        
+    }
+
+    @E("preencher Data page Preço Futuro feature GAC002")
+    public void preencherDataPagePreçoFuturoFeatureGAC002() {
+        
+    }
+
+    @E("preencher Entrega até page Preço Futuro feature GAC002")
+    public void preencherEntregaAtéPagePreçoFuturoFeatureGAC002() {
+        
+    }
+
+    @E("preencher Unitário page Preço Futuro feature GAC002")
+    public void preencherUnitárioPagePreçoFuturoFeatureGAC002() {
+        
+    }
+
+    @E("selecionar Tipo de Cálculo page Preço Futuro feature GAC002")
+    public void selecionarTipoDeCálculoPagePreçoFuturoFeatureGAC002() {
+        
+    }
+
+    @Então("selecionar Tipo de Contrato page Preço Futuro feature GAC002")
+    public void selecionarTipoDeContratoPagePreçoFuturoFeatureGAC002() {
+    }
+
+
 
     // @After
    // public void tearDown() {

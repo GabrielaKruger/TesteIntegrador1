@@ -1,4 +1,7 @@
 {
-  "EmissaoInicial": "17/02/2025",
-  "EmissaoFinal": "17/02/2025"
+  "emissaoInicial": "17/02/2025",
+  "emissaoFinal": "17/02/2025",
+  "statusEnvio": "Aprovado",
+  "empresa": "84",
+  "user": "Max"
 }
