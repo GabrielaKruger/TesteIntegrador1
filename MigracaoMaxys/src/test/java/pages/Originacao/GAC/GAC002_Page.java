@@ -119,6 +119,10 @@ public class GAC002_Page extends BasePage {
         preencherCampoPorXpathFeatureGAC002(inputItemLimiteXpath, itemLimite2);
     }
 
+    public void preencherTipoDePessoaLimitesFixaçãoFeatureGAC002(String tipoPessoa2) {
+        preencherCampoPorXpathFeatureGAC002(inputTipoPessoaLimiteXpath, tipoPessoa2);
+    }
+
     public void preencherCondiçãoDePagementoLimitesFixaçãoFeatureGAC002(String condtPagamento2) {
         preencherCampoPorXpathFeatureGAC002(inputCondtPagamentoLimiteXpath, condtPagamento2);
     }

@@ -173,8 +173,13 @@ public class GAC002_Step {
         GAC002_Page.preencherItemLimitesFixaçãoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "itemLimite2"));
     }
 
-    @E("preencher Condição de Pagemento Limites Fixação feature GAC002")
-    public void preencherCondiçãoDePagementoLimitesFixaçãoFeatureGAC002() {
+    @E("preencher Tipo de Pessoa limites Fixação feature GAC002")
+    public void preencherTipoDePessoaLimitesFixaçãoFeatureGAC002() {
+        GAC002_Page.preencherTipoDePessoaLimitesFixaçãoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoPessoa2"));
+    }
+
+    @E("preencher Condição de Pagamento Limites Fixação feature GAC002")
+    public void preencherCondiçãoDePagamentoLimitesFixaçãoFeatureGAC002() {
         GAC002_Page.preencherCondiçãoDePagementoLimitesFixaçãoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "condtPagamento2"));
     }
 
@@ -210,47 +215,47 @@ public class GAC002_Step {
 
     @Quando("preencher Empresa Preço feature GAC002")
     public void preencherEmpresaPreçoFeatureGAC002() {
-        
+       // GAC002_Page.preencherEmpresaPreçoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa3"));
     }
 
     @E("preencher Produto Preço feature GAC002")
     public void preencherProdutoPreçoFeatureGAC002() {
-        
+        //GAC002_Page.preencherProdutoPreçoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "produto3"));
     }
 
     @E("preencher Tipo de Contrato Preçofeature GAC002")
     public void preencherTipoDeContratoPreçofeatureGAC002() {
-        
+      //  GAC002_Page.preencherTipoDeContratoPreçofeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoContrato3"));
     }
 
     @E("preencher Data Inicial Preço feature GAC002")
     public void preencherDataInicialPreçoFeatureGAC002() {
-        
+      //  GAC002_Page.preencherDataInicialPreçoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "dtInicial3"));
     }
 
     @E("preencher Data Final Preço feature GAC002")
     public void preencherDataFinalPreçoFeatureGAC002() {
-        
+       // GAC002_Page.preencherDataFinalPreçoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "dtFinal3"));
     }
 
     @E("preencher Entrega até Preço feature GAC002")
     public void preencherEntregaAtéPreçoFeatureGAC002() {
-        
+      //  GAC002_Page.preencherEntregaAtéPreçoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "entregaAte"));
     }
 
     @Quando("preencher Empresa page Preço Futuro feature GAC002")
     public void preencherEmpresaPagePreçoFuturoFeatureGAC002() {
-        
+      //  GAC002_Page.preencherEmpresaPagePreçoFuturoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresaPreco"));
     }
 
     @E("preencher Item page Preço Futuro feature GAC002")
     public void preencherItemPagePreçoFuturoFeatureGAC002() {
-        
+      //  GAC002_Page.preencherItemPagePreçoFuturoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "itemPreco"));
     }
 
     @E("preencher Data page Preço Futuro feature GAC002")
     public void preencherDataPagePreçoFuturoFeatureGAC002() {
-        
+       // GAC002_Page.preencherItemPagePreçoFuturoFeatureGAC002(massaTeste.getMassaTestePorPathEChave(tagMassa, "itemPreco"));
     }
 
     @E("preencher Entrega até page Preço Futuro feature GAC002")
@@ -271,7 +276,6 @@ public class GAC002_Step {
     @Então("selecionar Tipo de Contrato page Preço Futuro feature GAC002")
     public void selecionarTipoDeContratoPagePreçoFuturoFeatureGAC002() {
     }
-
 
 
     // @After

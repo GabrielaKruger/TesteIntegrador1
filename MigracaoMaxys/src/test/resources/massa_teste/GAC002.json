@@ -16,9 +16,10 @@
   "tipoPessoa": "Ambas",
   "empresaLimite2": "2",
   "itemLimite2": "11174",
-  "condtPagamento2": "F",
+  "condtPagamento2": "1",
   "pesoMinimo": "1",
   "pesoMaximo": "1",
   "valorMinimo": "1",
-  "valorMaximo": "1"
+  "valorMaximo": "1",
+  "tipoPessoa2": "F"
 }
