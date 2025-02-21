@@ -99,54 +99,9 @@
 //        basePage.pressionarShiftF6();
 //    }
 //
-//    @E("preencher Empresa feature COM004")
-//    public void preencherEmpresaFeatureCOM004() {
-//        COM004_Page.preencherEmpresaFeatureCOM004(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
-//    }
-//
-//    @E("preencher Tipo de Contrato feature COM004")
-//    public void preencherTipoDeContratoFeatureCOM004() {
-//        COM004_Page.preencherTipoDeContratoFeatureCOM004(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoContrato"));
-//    }
-//
-//    @E("preencher Módulo feature COM004")
-//    public void preencherMóduloFeatueCOM004() {
-//        COM004_Page.preencherMóduloFeatueCOM004(massaTeste.getMassaTestePorPathEChave(tagMassa, "modulo"));
-//    }
-//
-//    @Então("{string} Ativo feature COM004")
-//    public void deselecionarAtivoFeatureCOM004(String acao) {
-//        COM004_Page.deselecionarAtivoFeatureCOM004(acao);
-//    }
-//
-//    @E("preencher Programa feature COM004")
-//    public void preencherProgramaFeatureCOM004() {
-//        COM004_Page.preencherProgramaFeatureCOM004(massaTeste.getMassaTestePorPathEChave(tagMassa, "programa"));
-//    }
-//
-//    @E("preencher Motivo feature COM004")
-//    public void preencherMotivoFeatureCOM004() {
-//        COM004_Page.preencherMotivoFeatureCOM004(massaTeste.getMassaTestePorPathEChave(tagMassa, "motivo"));
-//    }
-//
-//    @Quando("selecionar a Autorização feature COM004")
-//    public void selecionarAAutorizaçãoFeatureCOM004() {
-//        COM004_Page.selecionarAAutorizaçãoFeatureCOM004(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
-//    }
-//
-//    @Entao("remover Programa feature COM004")
-//    public void removerProgramaFeatureCOM004() {
-//        COM004_Page.removerProgramaFeatureCOM004();
-//    }
-//
-//    @Então("remover Tipo de Contrato feature COM004")
-//    public void removerTipoDeContratoFeatureCOM004() {
-//        COM004_Page.removerTipoDeContratoFeatureCOM004();
-//    }
-//
-//    @Entao("remover Empresa feature COM004")
-//    public void removerEmpresaFeatureCOM004() {
-//        COM004_Page.removerEmpresaFeatureCOM004();
+//    @E("preencher Clifor feature COM004")
+//    public void preencherCliforFeatureCOM004() {
+//        COM004_Page.preencherCliforFeatureCOM004();
 //    }
 //
 //    @After
@@ -159,6 +114,7 @@
 //        }
 //        BasePage.tearDownCloseQuit(driver);
 //    }
+//
 //
 //}
 //
