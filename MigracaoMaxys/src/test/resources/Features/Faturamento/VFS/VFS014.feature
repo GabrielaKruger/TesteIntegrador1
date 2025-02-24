@@ -14,5 +14,29 @@
      E seleciona status de envio feature VFS014
      E informa empresa feature VFS014
      E informa usuario feature VFS014
-#     E selecionar duplicacao de papel feature VFS014
-#     Então clicar botao consultar feature VFS014
+     E seleciona status da impressao feature VFS014
+     E seleciona status contigencia feature VFS014
+     E seleciona status recolhimento funrural feature VFS014
+     E seleciona tipo faturamento feature VFS014
+     E seleciona tipo impressao feature VFS014
+     E clica em consultar feature VFS014
+     Então validar se possui notas fiscais no grid feature VFS014
+
+
+   Cenário: Movimentacao NFE | Page Inutilizacao | Caminho feliz
+
+     Quando acessar page "Inutilização" feature VFS014
+     E seleciona status de inutilizacão feature VFS014
+     E informa serie nota feature VFS014
+     E informa data inicial feature VFS014
+     E informa data final feature VFS014
+     E clica em consultar inutilizacao feature VFS014
+
+
+   Cenário: Movimentacao NFE | Page Informacoes | Caminho feliz
+
+     Quando acessar page "Informações" feature VFS014
+     E informa periodo data inicial feature VFS014
+     E informa periodo data final feature VFS014
+     E informa empresa na page informacoes feature VFS014
+     E clica em computar estatistica feature VFS014

@@ -3,5 +3,13 @@
   "emissaoFinal": "17/02/2025",
   "statusEnvio": "Aprovado",
   "empresa": "84",
-  "user": "Max"
+  "user": "Max",
+  "stDaImpressao": "Ambos",
+  "statusContingencia": "Todas",
+  "statusRecolhimentoFunrural": "Todos",
+  "statusTpFaturamento": "Ambos",
+  "statusImpressao": "Imprimir Sem Visualizar",
+
+  "statusInutilizacao": "Todos",
+  "serieNota": "1"
 }
