@@ -59,6 +59,10 @@ public class GPE001_Step {
     public void preencherCliforFeatureGPE001() {
         GPE001_Page.preencherCliforFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor1"));
     }
+    @Quando("preencher Clifor {string} page contratos de grao feature GPE001")
+    public void preencherCliforPageContratosDeGraoFeatureGPE001(String clifor) {
+        GPE001_Page.preencherCliforPageFeatureGPE001(clifor);
+    }
 
     @E("seleciona Tipo de Contrato feature GPE001")
     public void selecionaTipoDeContratoFeatureGPE001() {
@@ -224,5 +228,6 @@ public class GPE001_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
+
 
 }

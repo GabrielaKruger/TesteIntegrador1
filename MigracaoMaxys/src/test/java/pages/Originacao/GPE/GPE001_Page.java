@@ -48,6 +48,15 @@ public class GPE001_Page extends BasePage {
         esperarMilissegundos(1000); // espera necessária
     }
 
+    public void preencherCliforPageFeatureGPE001(String clifor) {
+        esperarMilissegundos(5000); // espera para ele terminar de carregar todos as pages
+        clicarElementoByXpathNVezes(inputCliforXpath, 2);
+        preencherElementoByXpath(inputCliforXpath, clifor);
+        pressionarENTERByXpath(inputCliforXpath);
+        pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
+    }
+
     public void acessarPageFeatureGPE001(String botao) {
         esperarMilissegundos(2000); // espera necessária
         selecionarPaginaNoMenu(botao);
@@ -160,6 +169,7 @@ public class GPE001_Page extends BasePage {
         pressionaTabActions();
     }
 
- }
+
+}
 
 

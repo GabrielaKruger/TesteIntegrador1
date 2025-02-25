@@ -6,6 +6,28 @@
      Dado inicialize a execução dos cenários do GPE001
      E acessar o programa "GPE001" feature GPE001
 
+
+   @4933v1
+   Cenário: Contrato de Expedição - Normal- Fixo - Classificação Origem
+     #Pedidos/contratos de grão
+     Quando preencher Clifor "1009273" page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento feature GPE001
+     E preencher Ano safra feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado feature GPE001
+     E preencher Preço Unitário feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
    @5619v1
    Cenário: Contrato Recebimento Normal
 
