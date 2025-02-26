@@ -9,6 +9,7 @@ public class GPE001_Page extends BasePage {
     //Strings Page Pedidos/Contratos de Grão
     String inputCliforXpath = "//*[@id='contratograo-cdClifor']/div/input";
     String selectExportacaoXpath = "//*[@id='ngx-radio-5']";
+    String selectMestraXpath = "//*[@id='ngx-radio-4']";
 
     //Strings Page Dados
     String inputProdutoXpath = "//*[@id='contratograo-cdItem']/div/input";
@@ -40,6 +41,15 @@ public class GPE001_Page extends BasePage {
     }
 
     public void preencherCliforFeatureGPE001(String clifor) {
+        esperarMilissegundos(5000); // espera para ele terminar de carregar todos as pages
+        clicarElementoByXpathNVezes(inputCliforXpath, 2);
+        preencherElementoByXpath(inputCliforXpath, clifor);
+        pressionarENTERByXpath(inputCliforXpath);
+        pressionaTabActions();
+        esperarMilissegundos(1000); // espera necessária
+    }
+
+    public void preencherCliforPageFeatureGPE001(String clifor) {
         esperarMilissegundos(5000); // espera para ele terminar de carregar todos as pages
         clicarElementoByXpathNVezes(inputCliforXpath, 2);
         preencherElementoByXpath(inputCliforXpath, clifor);
@@ -128,6 +138,10 @@ public class GPE001_Page extends BasePage {
         marcarRadioButon(selectExportacaoXpath);
     }
 
+    public void selecionarFaturamentoFeatureGPE001(String mestra) {marcarRadioButon(selectMestraXpath);
+    }
+
+
     public void preencherProdutoSemLovFeatureGPE001(String produto2) {
         esperarMilissegundos(2000); //espera necessária
         clicarElementoByXpathNVezes(inputProdutoXpath, 2);
@@ -160,6 +174,7 @@ public class GPE001_Page extends BasePage {
         pressionaTabActions();
     }
 
- }
+
+}
 
 

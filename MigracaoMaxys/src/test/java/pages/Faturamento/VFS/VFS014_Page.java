@@ -212,6 +212,7 @@ public class VFS014_Page extends BasePage {
     public void clicaEmConsultarInutilizacaoFeatureVFS014() {
         esperarMilissegundos(2000);
         clicarElementoByXpath(btnConsultarInutilizacao);
+        esperarMilissegundos(3000);
     }
 
     public void informaPeriodoDataInicialFeatureVFS014() {
@@ -224,10 +225,10 @@ public class VFS014_Page extends BasePage {
         limparElementoByXpath(inputPeriodoFinal);
         clicarElementoByXpath(inputPeriodoFinal);
         preencherElementoByXpath(inputPeriodoFinal, DataUtils.DataAtual());
+        clicarElementoByXpath(inputPeriodoFinal);
     }
 
     public void informaEmpresaNaPageInformacoesFeatureVFS014(String empresa) {
-        limparElementoByXpath(inputEmpresaPageInformacoes);
         clicarElementoByXpath(inputEmpresaPageInformacoes);
         preencherElementoByXpath(inputEmpresaPageInformacoes, empresa);
 
@@ -236,6 +237,7 @@ public class VFS014_Page extends BasePage {
     public void clicaEmComputarEstatisticaFeatureVFS014() {
         esperarMilissegundos(2000);
         clicarElementoByXpath(btnComputaEstatistica);
+        esperarMilissegundos(2000);
     }
 
 

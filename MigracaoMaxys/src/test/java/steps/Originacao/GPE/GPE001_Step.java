@@ -55,10 +55,14 @@ public class GPE001_Step {
         loginPage.loginNewMaxysNovo(programa);
     }
 
+
+
+    //versão 5619v1
     @Quando("preencher Clifor page contratos de grao feature GPE001")
     public void preencherCliforFeatureGPE001() {
         GPE001_Page.preencherCliforFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor1"));
     }
+
 
     @E("seleciona Tipo de Contrato feature GPE001")
     public void selecionaTipoDeContratoFeatureGPE001() {
@@ -179,6 +183,8 @@ public class GPE001_Step {
         GPE001_Page.preencherValorPagamentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorPagamento3"));
     }
 
+
+    //page5619v4
     @Quando("preencher Clifor3 page contratos de grao feature GPE001")
     public void preencherClifor3PageContratosDeGraoFeatureGPE001() {
         GPE001_Page.preencherCliforFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor3"));
@@ -214,6 +220,63 @@ public class GPE001_Step {
         GPE001_Page.preencherEmprOrigemPageContratosDeGraoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresaOrigem"));
     }
 
+// versão 4933v1
+    @Quando("preencher Clifor4 page contratos de grao feature GPE001")
+    public void preencherCliforPageContratosDeGraoFeatureGPE001() {
+        GPE001_Page.preencherCliforFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor4"));
+    }
+
+    @Quando("seleciona Tipo de Contrato2 feature GPE001")
+    public void selecionaTipoDeContrato2FeatureGPE001() {
+        GPE001_Page.selecionaTipoDeContratoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoContrato2"));
+    }
+
+    @E("preencher Data de Vencimento2 feature GPE001")
+    public void preencherDataDeVencimento2FeatureGPE001() {
+        GPE001_Page.preencherDataDeVencimentoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "dataVencimento2"));
+    }
+
+    @E("preencher Ano safra2 feature GPE001")
+    public void preencherAnoSafra2FeatureGPE001() {
+        GPE001_Page.preencherAnoSafraFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "anoSafra2"));
+    }
+
+    @E("preencher PesoEVolume Contratado2 feature GPE001")
+    public void preencherPesoEVolumeContratadoFeatureGPE() {
+        GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "precoVolume2"));
+    }
+
+    @E("preencher Preço Unitário2 feature GPE001")
+    public void preencherPreçoUnitário2FeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario2"));
+    }
+
+    //versão 4933v2
+    @Quando("preencher Clifor5 page contratos de grao feature GPE001")
+    public void preencherClifor5PageContratosDeGraoFeatureGPE001() {
+        GPE001_Page.preencherCliforFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor5"));
+    }
+
+    @E("preencher Preço Unitário3 feature GPE001")
+    public void preencherPreçoUnitário3FeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario3"));
+    }
+
+    @Quando("preencher Clifor6 page contratos de grao feature GPE001")
+    public void preencherClifor6PageContratosDeGraoFeatureGPE001() {
+        GPE001_Page.preencherCliforFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor6"));
+    }
+
+    @E("selecionar Faturamento {string} feature GPE001")
+    public void selecionarFaturamentoFeatureGPE001(String mestra) {
+        GPE001_Page.selecionarFaturamentoFeatureGPE001(mestra);
+    }
+
+    @E("preencher Preço Unitário4 feature GPE001")
+    public void preencherPreçoUnitário4FeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario4"));
+    }
+
     @After
     public void tearDown() {
         if (driver != null) {
@@ -224,5 +287,6 @@ public class GPE001_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
+
 
 }
