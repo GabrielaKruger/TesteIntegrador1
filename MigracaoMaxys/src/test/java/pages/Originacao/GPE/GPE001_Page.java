@@ -9,6 +9,7 @@ public class GPE001_Page extends BasePage {
     //Strings Page Pedidos/Contratos de Grão
     String inputCliforXpath = "//*[@id='contratograo-cdClifor']/div/input";
     String selectExportacaoXpath = "//*[@id='ngx-radio-5']";
+    String selectMestraXpath = "//*[@id='ngx-radio-4']";
 
     //Strings Page Dados
     String inputProdutoXpath = "//*[@id='contratograo-cdItem']/div/input";
@@ -136,6 +137,10 @@ public class GPE001_Page extends BasePage {
     public void selecionarOperaçãoFeatureGPE001(String exportacao) {
         marcarRadioButon(selectExportacaoXpath);
     }
+
+    public void selecionarFaturamentoFeatureGPE001(String mestra) {marcarRadioButon(selectMestraXpath);
+    }
+
 
     public void preencherProdutoSemLovFeatureGPE001(String produto2) {
         esperarMilissegundos(2000); //espera necessária
