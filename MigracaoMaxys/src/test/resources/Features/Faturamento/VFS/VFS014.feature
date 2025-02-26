@@ -1,5 +1,5 @@
  #language: pt
- @wip @VFS014 @dt_VFS014 @chrome
+ @test @VFS014 @dt_VFS014 @chrome
  Funcionalidade: VFS014 - MOVIMENTAÇAO NFE
 
    Cenário de Fundo:
