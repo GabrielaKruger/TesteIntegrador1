@@ -24,6 +24,8 @@ public class DataUtils {
         return LocalDate.now().minusDays(dias).format(Formato.diaMesAno);
     }
 
+    public static String DataMesAnoAtual() { return LocalDate.now().format(Formato.mesAno); }
+
     public static String getPrimeiroDiaDoMesAtual() {
         LocalDate dataAtual = LocalDate.now();
         LocalDate primeiroDiaDoMes = dataAtual.withDayOfMonth(1);

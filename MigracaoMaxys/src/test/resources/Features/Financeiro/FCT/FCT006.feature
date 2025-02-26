@@ -49,6 +49,7 @@
      E apresenta o modal "modal-basic-title" feature FCT006
      Então clicar botão "ok" do modal feature FCT006
 
+
    Cenário: Autorização e Recusa de Processos| Teclas Atalho
      Quando informar Empresa feature FCT006
      E informa Data Pagamento feature FCT006

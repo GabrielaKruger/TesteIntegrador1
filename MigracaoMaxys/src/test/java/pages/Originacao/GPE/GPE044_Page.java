@@ -2,6 +2,7 @@ package pages.Originacao.GPE;
 
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
+import utils.DataUtils;
 
 public class GPE044_Page extends BasePage {
     WebDriver driver;
@@ -14,13 +15,13 @@ public class GPE044_Page extends BasePage {
     String inputPreContratoXpath = "//*[@id='filtro-nrPrecontrato";
     String inputDataEmissaoInicioXapth = "//*[@id='filtro-dtInicial";
     String inputDataEmissaoFimXpath = "//*[@id='filtro-dtFinal";
-    String btnConsultarXpath = "//*[@id='filtro-btnConsulta']/button";
+    String btnConsultarXpath = "//*[@id='filtro-btnConsulta']/div/button/div";
 
     // Pré-Contratos Bloqueados/Liberados/Recusados
     String inputMotivoXpath = "//*[@id='precontrato-dsMotivo";
-    String btnLiberarXpath = "//*[@id='precontrato-btnLiberar']/button/div";
-    String btnRecusarXpath = "//*[@id='precontrato-btnRecusar']/button/div";
-    String btnConsultarGPE000Xpath = "//*[@id='precontrato-btnConsultar']/button/div";
+    String btnLiberarXpath = "//*[@id='precontrato-btnLiberar']/div/button/div";
+    String btnRecusarXpath = "//*[@id='precontrato-btnRecusar']/div/button/div";
+    String btnConsultarGPE000Xpath = "//*[@id='precontrato-btnConsultar']/div/button/div";
 
 
     // String Globais
@@ -65,11 +66,16 @@ public class GPE044_Page extends BasePage {
         preencherCampoPorXpathFeatureGPE044(inputDataEmissaoFimXpath, xPathColunaTabelaDataCodigoFim, dataEmissaoFim);
     }
 
+    public void preencherDataDeEmissãoAtualFeatureGPE004() {
+        preencherCampoPorXpathFeatureGPE044(inputDataEmissaoInicioXapth, xPathColunaTabelaDataCodigoFim, DataUtils.DataAtual());
+    }
+
     public void realizarAConsultaFeatureGPE044() {
         clicarElementoByXpath(btnConsultarXpath);
     }
 
     public void selecionarNoGridPréContratoFeatureGPE044() {
+        esperarMilissegundos(500); // espera necessária
         String chekBoxPreContratoXpath = "//*[@id='precontrato-chkSeleciona-" + primeiraLinhaEmBranco + "']/div/button";
         testMarcaDesmarcaCheckBox("marcar", chekBoxPreContratoXpath);
     }
@@ -92,13 +98,13 @@ public class GPE044_Page extends BasePage {
 
     public void sairDaTelaGPE000FeatureGPE() {
         clicarElementoByXpath(btnSairXpath);
-        //pressionarAltF4();
     }
 
     // Metodo auxiliar
     public void preencherCampoPorXpathFeatureGPE044(String campoInicioXpath, String campoFimXpath, String valor) {
         String elementoXpath = campoInicioXpath + campoFimXpath;
         clicarElementoByXpathNVezes(elementoXpath, 2);
+        esperarMilissegundos(200); // espera necessária
         preencherElementoByXpath(elementoXpath, valor);
         pressionarENTERByXpath(elementoXpath);
         pressionaTabActions();

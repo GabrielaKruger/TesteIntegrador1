@@ -1,16 +1,14 @@
  #language: pt
- @wip @GPE044 @dt_GPE044 @chrome
+ @test @GPE044 @dt_GPE044 @chrome
  Funcionalidade: GPE044 - Liberção de Pré - Contrato
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do GPE044
      E acessar o programa "GPE044" feature GPE044
 
-      # Não há lançamentos em nossa base - E processo utiliza telas que não foram migradas.
-      # Alinhar com a equipe sobre o caso - Refluxo.
    Cenário: Liberação e Rercusa de Pré - Contrato| Caminho feliz
 
-      #Filtros
+     # Filtros
      Quando preencher Clifor feature GPE044
      E preencher Endereço feature GPE044
      E preencher Empresa feature GPE044
@@ -38,7 +36,7 @@
 
    Cenário: Liberação e Rercusa de Pré - Contrato| Teclas Atalho
 
-      #Filtros - Alterar para Buscar pelas LOVs
+     # Filtros
      Quando preencher Clifor feature GPE044
      E preencher Endereço feature GPE044
      E preencher Empresa feature GPE044
@@ -78,4 +76,18 @@
      Então preencher Motivo feature GPE044
 
      Quando consulta GPE000 feature GPE044
-     Então sair da tela GPE000 feature GPE044
+#     Então sair da tela GPE000 feature
+     Então apresentar a mensagem no pop-up "Não é possivel acessar a tela GPE000" feature GPE044
+
+   Cenário: Liberação de Pré-Contrato| Negativo - Consulta sem Dados
+     Quando preencher Clifor feature GPE044
+     E preencher Endereço feature GPE044
+     E preencher Empresa feature GPE044
+     E preencher Item feature GPE044
+     E preencher Pré-Contrato feature GPE044
+     E preencher Data de Emissão Atual feature GPE044
+     Então realizar a Consulta feature GPE044
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE044
+     E apresentar a mensagem parcial "O relatório não retornou dados." feature GPE044
+     Então clicar botão "ok" do modal feature GPE044

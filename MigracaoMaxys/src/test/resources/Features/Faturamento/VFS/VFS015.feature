@@ -36,6 +36,7 @@ Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
     E apresenta o modal H4 "modal-basic-title" feature VFS015
     Então clicar botão "sim" do modal feature VFS015
 
+
   @wip #refluxo: não filtra  por Data Emissão
   Cenário: Consultar Clientes para Remessa com os filtros preenchidos | Teclas Atalho
 

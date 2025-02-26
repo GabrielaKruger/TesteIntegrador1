@@ -128,6 +128,11 @@ public class GPE044_Step {
         GPE044_Page.preencherDataDeEmissãoFeatureGPE044(massaTeste.getMassaTestePorPathEChave(tagMassa, "dataEmissaoInicio"));
     }
 
+    @E("preencher Data de Emissão Atual feature GPE044")
+    public void preencherDataDeEmissãoAtualFeatureGPE044() {
+        GPE044_Page.preencherDataDeEmissãoAtualFeatureGPE004();
+    }
+
     @E("preencher Até feature GPE044")
     public void preencherAtéFeatureGPE044() {
         GPE044_Page.preencherAtéFeatureGPE044(massaTeste.getMassaTestePorPathEChave(tagMassa, "dataEmissaoFim"));
@@ -169,8 +174,11 @@ public class GPE044_Step {
     }
 
     @Então("sair da tela GPE000 feature GPE044")
-    public void sairDaTelaGPE000FeatureGPE() {
-        GPE044_Page.sairDaTelaGPE000FeatureGPE();
+    public void sairDaTelaGPE000FeatureGPE() { GPE044_Page.sairDaTelaGPE000FeatureGPE(); }
+
+    @Então("apresentar a mensagem no pop-up {string} feature GPE044")
+    public void apresentarAMensagemNoPopUpFeatureGPE044(String mensagem) {
+        basePage.validarMensagemByToastContainerDivDiv(mensagem);
     }
 
     @After
@@ -183,4 +191,5 @@ public class GPE044_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
+
 }
