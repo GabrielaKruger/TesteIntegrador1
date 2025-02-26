@@ -212,6 +212,7 @@ public class VFS014_Page extends BasePage {
     public void clicaEmConsultarInutilizacaoFeatureVFS014() {
         esperarMilissegundos(2000);
         clicarElementoByXpath(btnConsultarInutilizacao);
+        esperarMilissegundos(3000);
     }
 
     public void informaPeriodoDataInicialFeatureVFS014() {

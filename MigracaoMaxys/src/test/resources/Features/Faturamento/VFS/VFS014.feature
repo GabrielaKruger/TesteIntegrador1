@@ -6,10 +6,11 @@
      Dado inicialize a execução dos cenários do VFS014
      E acessar o programa "VFS014" feature VFS014
 
+     # Ao iniciar cenário pela 1º verificar se inicio está apresentando modal de certificado vencido
+
    Cenário: Movimentacao NFE | Page Notas Fiscais Eletronicas | Caminho feliz
 
-     Quando acessar page "Notas Fiscais Eletrônicas" feature VFS014
-     E informa data emissao inicial feature VFS014
+     Quando informa data emissao inicial feature VFS014
      E informa data emissao final feature VFS014
      E seleciona status de envio feature VFS014
      E informa empresa feature VFS014
