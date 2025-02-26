@@ -167,18 +167,15 @@ public class VFS014_Step {
         VFS014_Page.clicaEmComputarEstatisticaFeatureVFS014();
     }
 
-
-
-//    @After
-//    public void tearDown() {
-//        if (driver != null) {
-//            if (scenario != null && scenario.isFailed()) {
-//                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//                scenario.attach(screenshot, "image/png", "Screenshot");
-//            }
-//        }
-//        BasePage.tearDownCloseQuit(driver);
-//    }
-
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
+    }
 
 }
