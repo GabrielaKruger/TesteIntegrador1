@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>MigracaoMaxys</groupId>
-    <artifactId>automatizacao_e2e_ldc</artifactId>
+    <artifactId>automatizacao_e2e_Migracao</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>automatizacao_e2e_ldc</name>
     <!-- FIXME change it to the project's website -->

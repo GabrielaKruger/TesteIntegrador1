@@ -26,12 +26,12 @@
 //
 //    public void preencherCliforFeatureCOM004() {
 //        esperarMilissegundos(500); // espera necessária
-//        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputEmpresaXpath, inputXpathFim));
+//        //primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputEmpresaXpath, inputXpathFim));
 //
-//        String linhaGridEmpresaXpath = inputEmpresaXpath + primeiraLinhaEmBranco + inputXpathFim;
+//        //String linhaGridEmpresaXpath = inputEmpresaXpath + primeiraLinhaEmBranco + inputXpathFim;
 //
-//        clicarElementoByXpathNVezes(linhaGridEmpresaXpath,2);
-//        preencherElementoByXpath(linhaGridEmpresaXpath, empresa);
+//        //clicarElementoByXpathNVezes(linhaGridEmpresaXpath,2);
+//        //preencherElementoByXpath(linhaGridEmpresaXpath, empresa);
 //        pressionaTabActions();
 //    }
 //}
