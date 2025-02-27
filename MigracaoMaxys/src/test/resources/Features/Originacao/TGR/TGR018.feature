@@ -23,7 +23,7 @@
      E clicar botão "sim" do modal feature TGR018
      Então apresentar a mensagem " Registro salvo com sucesso " no pop-up feature TGR018
 
-
+    @TGR018C2
    Cenário: Cadastro de Tipo de Modalidades de Gãos | Teclas Atalho
 
      Quando clicar botão ToolBar "ultimo registro" feature TGR018
