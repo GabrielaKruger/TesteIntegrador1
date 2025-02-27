@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="automatizacao_e2e_ldc" />
+        <module name="automatizacao_e2e_Migracao" />
       </profile>
     </annotationProcessing>
   </component>
