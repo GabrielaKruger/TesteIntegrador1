@@ -277,6 +277,12 @@ public class GPE001_Step {
         GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario4"));
     }
 
+
+    //@5619v1
+    @Quando("seleciona Tipo de Contrato03 feature GPE001")
+    public void selecionaTipoDeContrato3FeatureGPE001() {
+    }
+
     @After
     public void tearDown() {
         if (driver != null) {
