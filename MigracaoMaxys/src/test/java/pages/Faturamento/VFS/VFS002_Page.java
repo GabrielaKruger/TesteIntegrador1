@@ -1,28 +1,28 @@
-package pages.Faturamento.VFS;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-import pages.BasePage;
-import utils.DataUtils;
-
-import java.util.HashMap;
-import java.util.Map;
-
-public class VFS002_Page extends BasePage {
-
-    WebDriver driver;
-
-    public VFS002_Page(WebDriver driver) {
-        super(driver);
-        this.driver = driver;
-    }
-
-    String radioBtnNenhum = "//*[@id='ngx-radio-1']";
-
-    String inputDataEmissao = "//*[@id='movtofaturar-dtEmissao']/div/div/input";
-    String inputCliforNotaFiscal = "//*[@id='movtofaturar-cdClifor']/div/input";
+//package pages.Faturamento.VFS;
+//
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.support.ui.Select;
+//import pages.BasePage;
+//import utils.DataUtils;
+//
+//import java.util.HashMap;
+//import java.util.Map;
+//
+//public class VFS002_Page extends BasePage {
+//
+//    WebDriver driver;
+//
+//    public VFS002_Page(WebDriver driver) {
+//        super(driver);
+//        this.driver = driver;
+//    }
+//
+//    String radioBtnNenhum = "//*[@id='ngx-radio-1']";
+//
+//    String inputDataEmissao = "//*[@id='movtofaturar-dtEmissao']/div/div/input";
+//    String inputCliforNotaFiscal = "//*[@id='movtofaturar-cdClifor']/div/input";
 
 //    public void selecionadoTipoDeVendaFeatureVFS002(String tipoVenda) {
 //
@@ -61,28 +61,28 @@ public class VFS002_Page extends BasePage {
 //        esperarMilissegundos(300); //espera necessaria
 //        pressionaTabActions();
 //    }
-
-    public void selecionaASerieDaNotaFiscalFeatureVFS002(String serieNotaFiscal) {
-        WebElement dropdownTpRegistro = driver.findElement(By.xpath("//*[@id='movtofaturar-cdSerienf']/div/select"));
-
-        // Cria um objeto Select para manipular o dropdown
-        Select select = new Select(dropdownTpRegistro);
-
-        // Seleciona a opção baseada no texto visível
-        select.selectByVisibleText(serieNotaFiscal);
-    }
-
-    public void informaDataEmissaoDaNotaFeatureVFS002() {
-        limparElementoByXpath(inputDataEmissao);
-        clicarElementoByXpath(inputDataEmissao);
-        preencherElementoByXpath(inputDataEmissao, DataUtils.DataAtual());
-    }
-
-    public void preencheOCliforDaNotaFeatureVFS002(String cliforNotaFiscal) {
-        limparElementoByXpath(inputCliforNotaFiscal);
-        clicarElementoByXpath(inputCliforNotaFiscal);
-        preencherElementoByXpath(inputCliforNotaFiscal, cliforNotaFiscal);
-        esperarMilissegundos(2000);
-        pressionaTabActions();
-    }
-}
+//
+//    public void selecionaASerieDaNotaFiscalFeatureVFS002(String serieNotaFiscal) {
+//        WebElement dropdownTpRegistro = driver.findElement(By.xpath("//*[@id='movtofaturar-cdSerienf']/div/select"));
+//
+//        // Cria um objeto Select para manipular o dropdown
+//        Select select = new Select(dropdownTpRegistro);
+//
+//        // Seleciona a opção baseada no texto visível
+//        select.selectByVisibleText(serieNotaFiscal);
+//    }
+//
+//    public void informaDataEmissaoDaNotaFeatureVFS002() {
+//        limparElementoByXpath(inputDataEmissao);
+//        clicarElementoByXpath(inputDataEmissao);
+//        preencherElementoByXpath(inputDataEmissao, DataUtils.DataAtual());
+//    }
+//
+//    public void preencheOCliforDaNotaFeatureVFS002(String cliforNotaFiscal) {
+//        limparElementoByXpath(inputCliforNotaFiscal);
+//        clicarElementoByXpath(inputCliforNotaFiscal);
+//        preencherElementoByXpath(inputCliforNotaFiscal, cliforNotaFiscal);
+//        esperarMilissegundos(2000);
+//        pressionaTabActions();
+//    }
+//}
