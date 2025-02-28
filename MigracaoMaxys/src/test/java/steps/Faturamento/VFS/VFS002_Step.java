@@ -5,6 +5,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
+import io.cucumber.java.pt.Quando;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.Faturamento.VFS.VFS002_Page;
@@ -49,4 +50,44 @@ public class VFS002_Step {
         loginPage.loginNewMaxysNovo(programa);
     }
 
+    @Quando("selecionado tipo de venda feature VFS002")
+    public void selecionadoTipoDeVendaFeatureVFS002() {
+        System.out.println("massaTeste está nulo? " + (massaTeste == null));
+        System.out.println("tagMassa está nulo? " + (tagMassa == null));
+
+        String tipoVenda = massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoVenda");
+        System.out.println("Valor recuperado de tipoVenda: " + tipoVenda);
+
+        VFS002_Page.selecionadoTipoDeVendaFeatureVFS002(tipoVenda);
+    }
+
+    @E("apresenta o modal H4 {string} feature VFS002")
+    public void apresentaOModalH4FeatureVFS002(String title) {
+        basePage.esperarMilissegundos(3000);
+        basePage.validaModalByH5(title);
+    }
+
+
+    @E("clicar botão {string} do modal feature VFS002")
+    public void clicarBotaoDoModalFeatureVFS002(String acao) {
+        basePage.esperarMilissegundos(2000);
+        basePage.clicarBotaoDoModal(acao);
+        basePage.esperarMilissegundos(1000);
+    }
+
+    @E("seleciona a serie da nota fiscal feature VFS002")
+    public void selecionaASerieDaNotaFiscalFeatureVFS002() {
+        VFS002_Page.selecionaASerieDaNotaFiscalFeatureVFS002(massaTeste.getMassaTestePorPathEChave(tagMassa, "serieNotaFiscal"));
+    }
+
+    @E("informa data emissao da nota feature VFS002")
+    public void informaDataEmissaoDaNotaFeatureVFS002() {
+        VFS002_Page.informaDataEmissaoDaNotaFeatureVFS002();
+
+    }
+
+    @E("preenche o clifor da nota feature VFS002")
+    public void preencheOCliforDaNotaFeatureVFS002() {
+        VFS002_Page.preencheOCliforDaNotaFeatureVFS002(massaTeste.getMassaTestePorPathEChave(tagMassa, "serieNotaFiscal"));
+    }
 }
