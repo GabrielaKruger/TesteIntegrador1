@@ -77,15 +77,38 @@
 
 
    @4933v1
+   Cenário: Contrato de Expedição - Normal- A Fixar - Classificação Destino
+    #Pedidos/contratos de grão
+     Quando preencher Clifor6 page contratos de grao feature GPE001
+     E selecionar Faturamento "Expedição" feature GPE001
+     Então selecionar Operação "Mestra" feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato2 feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado2 feature GPE001
+     E preencher Preço Unitário4 feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
 
    @5619v1
    Cenário: Contrato Recebimento Normal
 
      #Pedidos/contratos de grão
-     Quando preencher Clifor page contratos de grao feature GPE001
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+     E selecionar Faturamento "Expedição" feature GPE001
+     Então selecionar Operação "Mestra" feature GPE001
 
      #Page Dados
-     Quando seleciona Tipo de Contrato feature GPE001
+     Quando seleciona Tipo de Contrato3 feature GPE001
      E preencher Produto feature GPE001
      E preencher Tabela de Desconto feature GPE001
      E preencher Negócio feature GPE001
