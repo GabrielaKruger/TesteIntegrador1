@@ -6,9 +6,9 @@ import java.util.List;
 
 
 public class DataBaseConnection {
-    private static final String url = "jdbc:oracle:thin:@192.168.181.199:1521:AUTOLDC";
-    private static final String user = "Features";
-    private static final String pwd = "Features";
+    private static final String url = "jdbc:oracle:thin:@192.168.180.165:1521/tst";
+    private static final String user = "auto";
+    private static final String pwd = "max";
     private Connection conn;
 
     public static void executeQuery(String query) {

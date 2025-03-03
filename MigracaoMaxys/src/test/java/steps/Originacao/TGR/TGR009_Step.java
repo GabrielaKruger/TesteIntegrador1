@@ -55,6 +55,7 @@ public class TGR009_Step {
 
     @Então("clicar botão ToolBar {string} feature TGR009")
     public void clicarBotãoToolBarFeatureTGR009(String botao) {
+        basePage.esperarMilissegundos(2000); // espera necessária
         basePage.clicarBotaoToolBar(botao);
     }
 
@@ -93,6 +94,7 @@ public class TGR009_Step {
     public void pressionarTeclaFeatureFCT(String tecla) {
         basePage.esperarMilissegundos(1000); // espera necessária
         basePage.pressionarTecla(tecla);
+        basePage.esperarMilissegundos(1000); // espera necessária
     }
 
     @Então("pressionar teclas shift + f6 para excluir TGR009")
@@ -145,7 +147,8 @@ public class TGR009_Step {
                 //"DELETE FROM VALORBID WHERE CD_PORTO = '%s' AND CD_ITEM = '%s'",
                 //"SELECT * FROM ITEMSIMILAR WHERE CD_ITEMBAL = '%s' AND CD_ITEM = '%s AND CD_CULTURA = '%s",
                 //"DELETE FROM ITEMSIMILAR WHERE CD_ITEMBAL = '%s' AND CD_ITEM = '%s AND CD_CULTURA = '%s",
-                produtoBalanca, produto, cultura
+                "DELETE FROM ITEMSIMILAR WHERE CD_ITEMBAL = '%s' AND CD_ITEM = '%s'",
+                produtoBalanca, produto
         );
         DataBaseConnection.executeQuery(query);
     }
