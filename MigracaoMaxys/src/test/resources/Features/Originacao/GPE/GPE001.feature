@@ -140,9 +140,195 @@
      E preencher Preço Unitário7 feature GPE001
      Então clicar botão ToolBar "salvar" feature GPE001
 
+     Quando acessar page "Vencimento ICMS" feature GPE001
+     E apresentar a mensagem parcial "Vencimento  do ICMS." feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+     Quando preencher Dia feature GPE001
+     E preencher Condição de pagamento feature GPE001
+     Então clicar botão "Repetir Vencimento" page Vencimento ICMS feature GPE001
+
+     Quando clicar botão ToolBar "salvar" feature GPE001
+     E apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4936v1
+   Cenário: Contrato de Recebimento - Normal- Fixo - Classificação Origem
+    #Pedidos/contratos de grão
+     Quando preencher Clifor4 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado2 feature GPE001
+     E preencher Preço Unitário8 feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
      Quando apresentar o modal H5 "modal-basic-title" feature GPE001
      E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
      Então clicar botão "ok" do modal feature GPE001
+
+
+   @4936v2
+   Cenário: Contrato de Recebimento - Normal- A Fixar - Classificação Destino
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado4 feature GPE001
+     Então preencher Preço Unitário9 feature GPE001
+
+     Quando acessar page "Frete <F5>" feature GPE001
+     E preencher Cliente page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Data de Início page Frete feature GPE001
+     E preencher Tipo de Cálculo page Frete feature GPE001
+     E preencher Valor Unitário page Frete feature GPE001
+     E selecionar Filtro Frete "Ativos" page Frete feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4936v3
+   Cenário: Contrato de Recebimento - Normal- Fixo - Paga Frete
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado4 feature GPE001
+     Então preencher Preço Unitário9 feature GPE001
+
+     Quando acessar page "Frete <F5>" feature GPE001
+     E preencher Cliente page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Data de Início page Frete feature GPE001
+     E preencher Tipo de Cálculo page Frete feature GPE001
+     E preencher Valor Unitário page Frete feature GPE001
+     E selecionar Filtro Frete "Ativos" page Frete feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4936v4
+   Cenário: Contrato de Recebimento - Normal- Fixo - Com Bonificação
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado4 feature GPE001
+     Então preencher Preço Unitário9 feature GPE001
+
+     Quando acessar page "Frete <F5>" feature GPE001
+     E preencher Cliente page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Data de Início page Frete feature GPE001
+     E preencher Tipo de Cálculo page Frete feature GPE001
+     E preencher Valor Unitário page Frete feature GPE001
+     E preencher St.Frete page Frete feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4936v5
+   Cenário: Contrato de Recebimento - Normal- Fixo - Com Serviço Vinculado
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado4 feature GPE001
+     Então preencher Preço Unitário9 feature GPE001
+
+     Quando acessar page "Frete <F5>" feature GPE001
+     E preencher Cliente page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Data de Início page Frete feature GPE001
+     E preencher Tipo de Cálculo page Frete feature GPE001
+     E preencher Valor Unitário page Frete feature GPE001
+     E preencher St.Frete page Frete feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4937v1
+   Cenário: Contrato de Recebimento - Normal- Fixo -
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado4 feature GPE001
+     Então preencher Preço Unitário9 feature GPE001
+
+     Quando acessar page "Frete <F5>" feature GPE001
+     E preencher Cliente page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Data de Início page Frete feature GPE001
+     E preencher Tipo de Cálculo page Frete feature GPE001
+     E preencher Valor Unitário page Frete feature GPE001
+     E preencher St.Frete page Frete feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE00
 
 
    @5619v1

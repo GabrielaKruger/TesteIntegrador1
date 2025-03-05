@@ -320,7 +320,7 @@ public class GPE001_Step {
         GPE001_Page.selecionaTiposDeCálculoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoCalculo2"));
     }
 
-    //@4935v5
+    //@4935v1
     @Quando("seleciona Tipo de Contrato5 feature GPE001")
     public void selecionaTipoDeContrato5FeatureGPE001() {
         GPE001_Page.selecionaTipoDeContratoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoContrato5"));
@@ -336,6 +336,59 @@ public class GPE001_Step {
         GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario7"));
     }
 
+    @Então("clicar botão {string} page Vencimento ICMS feature GPE001")
+    public void clicarBotãoPageVencimentoICMSFeatureGPE001(String repetirVencimento) {
+        GPE001_Page.clicarBotãoPageVencimentoICMSFeatureGPE001(repetirVencimento);
+    }
+
+    //@4936v1
+    @E("preencher Preço Unitário8 feature GPE001")
+    public void preencherPreçoUnitário8FeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario8"));
+    }
+
+    //4936v2
+    @E("preencher PesoEVolume Contratado4 feature GPE001")
+    public void preencherPesoEVolumeContratado4FeatureGPE001() {
+        GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "precoVolume4"));
+    }
+
+    @E("preencher Preço Unitário9 feature GPE001")
+    public void preencherPreçoUnitário9FeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario9"));
+    }
+
+    //4936v3
+    @E("preencher Cliente page Frete feature GPE001")
+    public void preencherClientePageFreteFeatureGPE001() {
+        GPE001_Page.preencherClientePageFreteFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clienteFrete"));
+    }
+
+    @E("preencher Rota page Frete feature GPE001")
+    public void preencherRotaPageFreteFeatureGPE001() {
+        GPE001_Page.preencherRotaPageFreteFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "rotaFrete"));
+    }
+
+    @E("preencher Data de Início page Frete feature GPE001")
+    public void preencherDataDeInícioPageFreteFeatureGPE001() {
+        GPE001_Page.preencherDataDeInícioPageFreteFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "dtinicioFrete"));
+    }
+
+    @E("preencher Tipo de Cálculo page Frete feature GPE001")
+    public void preencherTipoDeCálculoPageFreteFeatureGPE001() {
+        GPE001_Page.preencherTipoDeCálculoPageFreteFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipocalculoFrete"));
+    }
+
+    @E("preencher Valor Unitário page Frete feature GPE001")
+    public void preencherValorUnitárioPageFreteFeatureGPE001() {
+        GPE001_Page.preencherValorUnitárioPageFreteFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorUnitarioFrete"));
+    }
+
+    @E("selecionar Filtro Frete {string} page Frete feature GPE001")
+    public void selecionarFiltroFretePageFreteFeatureGPE001(String stFrete) {
+        GPE001_Page.selecionarFiltroFretePageFreteFeatureGPE001(stFrete);
+    }
+
     @After
     public void tearDown() {
         if (driver != null) {
@@ -346,6 +399,5 @@ public class GPE001_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
-
 
 }

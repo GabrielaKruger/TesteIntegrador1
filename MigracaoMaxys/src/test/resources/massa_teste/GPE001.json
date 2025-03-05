@@ -25,6 +25,7 @@
   "precoVolume": "20000",
   "precoVolume2": "585242",
   "precoVolume3": "258013",
+  "precoVolume4": "584126",
   "preçoUnitario": "60000000",
   "preçoUnitario2": "6759365",
   "preçoUnitario3": "6713306",
@@ -32,6 +33,8 @@
   "preçoUnitario5": "4961887",
   "preçoUnitario6": "61025090",
   "preçoUnitario7": "1823239",
+  "preçoUnitario8": "7970467",
+  "preçoUnitario9": "7529355",
   "dia":"1",
   "condicaoPagamento": "15",
   "valorPagamento": "90000000",
@@ -42,5 +45,12 @@
   "valorPagamento4": "-100",
   "produtoNaocadastrado": "103",
   "produto2": "58",
-  "empresaOrigem": "22"
+  "empresaOrigem": "22",
+  "clienteFrete": "355950",
+  "rotaFrete": "2005",
+  "dtinicioFrete": "24022025dataatual",
+  "tipocalculoFrete": "9",
+  "valorUnitarioFrete": "17839",
+
+
 }
