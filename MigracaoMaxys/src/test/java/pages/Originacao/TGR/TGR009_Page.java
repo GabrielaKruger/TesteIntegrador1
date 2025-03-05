@@ -73,10 +73,6 @@ public class TGR009_Page extends BasePage {
         pressionaTabActions();
     }
 
-    public void removeProdutoFeatureTGR009(String produto) {
-        testConsultaRegistroGrid (produto, inputProdutoXpath, inputXpathFim);
 
-
-    }
 }
 

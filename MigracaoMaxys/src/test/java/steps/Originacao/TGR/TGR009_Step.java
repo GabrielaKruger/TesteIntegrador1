@@ -92,7 +92,9 @@ public class TGR009_Step {
 
     @Então("pressionar tecla {string} feature TGR009")
     public void pressionarTeclaFeatureFCT(String tecla) {
-        basePage.esperarMilissegundos(1000); // espera necessária
+        String primeiraLinhaGrid = "//*[@id='itemsimilar-cdItembal-0']/div/input";
+        basePage.encontrarElementoByXpath(primeiraLinhaGrid);
+        basePage.clicarElementoByXpath(primeiraLinhaGrid);
         basePage.pressionarTecla(tecla);
         basePage.esperarMilissegundos(1000); // espera necessária
     }
