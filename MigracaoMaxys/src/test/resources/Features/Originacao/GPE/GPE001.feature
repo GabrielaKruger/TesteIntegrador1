@@ -29,7 +29,6 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-
    @4933v2
    Cenário: Contrato de Expedição - Normal- A Fixar - Classificação Destino
     #Pedidos/contratos de grão
@@ -53,7 +52,7 @@
 
 
    @4933v3
-   Cenário: Contrato de Expedição - Normal- A Fixar - Classificação Destino
+   Cenário: Contrato de Expedição - Normal- Remessa Formação de Lote
     #Pedidos/contratos de grão
      Quando preencher Clifor6 page contratos de grao feature GPE001
      E selecionar Faturamento "Expedição" feature GPE001
@@ -68,6 +67,30 @@
      E preencher Ano safra2 feature GPE001
      E seleciona Tipos de Cálculo feature GPE001
      E preencher PesoEVolume Contratado2 feature GPE001
+     E preencher Preço Unitário5 feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4934v1
+   Cenário: Contrato de Expedição - Mestra- Fixo - Classificação Origem
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+     E selecionar Faturamento "Expedição" feature GPE001
+     Então selecionar Operação "Mestra" feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato3 feature GPE001
+     E preencher Produto3 feature GPE001
+     E preencher Tabela de Desconto2 feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo2 feature GPE001
+     E preencher PesoEVolume Contratado3 feature GPE001
      E preencher Preço Unitário4 feature GPE001
      Então clicar botão ToolBar "salvar" feature GPE001
 
@@ -76,15 +99,68 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   @4933v1
-   Cenário: Contrato de Expedição - Normal- A Fixar - Classificação Destino
+   @4934v2
+   Cenário: Contrato de Expedição - Mestra- Venda Cta e Ordem - Vda e Rem
     #Pedidos/contratos de grão
      Quando preencher Clifor6 page contratos de grao feature GPE001
      E selecionar Faturamento "Expedição" feature GPE001
-     Então selecionar Operação "Mestra" feature GPE001
+     Então selecionar Operação "Exportação" feature GPE001
 
      #Page Dados
-     Quando seleciona Tipo de Contrato2 feature GPE001
+     Quando seleciona Tipo de Contrato4 feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo2 feature GPE001
+     E preencher PesoEVolume Contratado3 feature GPE001
+     E preencher Preço Unitário6 feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4935v1
+   Cenário: Contrato de Expedição - Exportação- Venda Indireta
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato5 feature GPE001
+     E preencher Produto4 feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado2 feature GPE001
+     E preencher Preço Unitário7 feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando acessar page "Vencimento ICMS" feature GPE001
+     E apresentar a mensagem parcial "Vencimento  do ICMS." feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+     Quando preencher Dia feature GPE001
+     E preencher Condição de pagamento feature GPE001
+     Então clicar botão "Repetir Vencimento" page Vencimento ICMS feature GPE001
+
+     Quando clicar botão ToolBar "salvar" feature GPE001
+     E apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4936v1
+   Cenário: Contrato de Recebimento - Normal- Fixo - Classificação Origem
+    #Pedidos/contratos de grão
+     Quando preencher Clifor4 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
      E preencher Produto feature GPE001
      E preencher Tabela de Desconto feature GPE001
      E preencher Negócio feature GPE001
@@ -92,12 +168,168 @@
      E preencher Ano safra2 feature GPE001
      E seleciona Tipos de Cálculo feature GPE001
      E preencher PesoEVolume Contratado2 feature GPE001
-     E preencher Preço Unitário4 feature GPE001
+     E preencher Preço Unitário8 feature GPE001
      Então clicar botão ToolBar "salvar" feature GPE001
 
      Quando apresentar o modal H5 "modal-basic-title" feature GPE001
      E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
      Então clicar botão "ok" do modal feature GPE001
+
+
+   @4936v2
+   Cenário: Contrato de Recebimento - Normal- A Fixar - Classificação Destino
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado4 feature GPE001
+     Então preencher Preço Unitário9 feature GPE001
+
+     Quando acessar page "Frete <F5>" feature GPE001
+     E preencher Cliente page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Data de Início page Frete feature GPE001
+     E preencher Tipo de Cálculo page Frete feature GPE001
+     E preencher Valor Unitário page Frete feature GPE001
+     E selecionar Filtro Frete "Ativos" page Frete feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4936v3
+   Cenário: Contrato de Recebimento - Normal- Fixo - Paga Frete
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado4 feature GPE001
+     Então preencher Preço Unitário9 feature GPE001
+
+     Quando acessar page "Frete <F5>" feature GPE001
+     E preencher Cliente page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Data de Início page Frete feature GPE001
+     E preencher Tipo de Cálculo page Frete feature GPE001
+     E preencher Valor Unitário page Frete feature GPE001
+     E selecionar Filtro Frete "Ativos" page Frete feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4936v4
+   Cenário: Contrato de Recebimento - Normal- Fixo - Com Bonificação
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado4 feature GPE001
+     Então preencher Preço Unitário9 feature GPE001
+
+     Quando acessar page "Frete <F5>" feature GPE001
+     E preencher Cliente page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Data de Início page Frete feature GPE001
+     E preencher Tipo de Cálculo page Frete feature GPE001
+     E preencher Valor Unitário page Frete feature GPE001
+     E preencher St.Frete page Frete feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4936v5
+   Cenário: Contrato de Recebimento - Normal- Fixo - Com Serviço Vinculado
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado4 feature GPE001
+     Então preencher Preço Unitário9 feature GPE001
+
+     Quando acessar page "Frete <F5>" feature GPE001
+     E preencher Cliente page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Data de Início page Frete feature GPE001
+     E preencher Tipo de Cálculo page Frete feature GPE001
+     E preencher Valor Unitário page Frete feature GPE001
+     E preencher St.Frete page Frete feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+   @4937v1
+   Cenário: Contrato de Recebimento - Normal- Fixo -
+    #Pedidos/contratos de grão
+     Quando preencher Clifor5 page contratos de grao feature GPE001
+
+     #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado4 feature GPE001
+     Então preencher Preço Unitário9 feature GPE001
+
+     Quando acessar page "Frete <F5>" feature GPE001
+     E preencher Cliente page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Rota page Frete feature GPE001
+     E preencher Data de Início page Frete feature GPE001
+     E preencher Tipo de Cálculo page Frete feature GPE001
+     E preencher Valor Unitário page Frete feature GPE001
+     E preencher St.Frete page Frete feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE00
+
 
    @5619v1
    Cenário: Contrato Recebimento Normal
@@ -108,7 +340,7 @@
      Então selecionar Operação "Mestra" feature GPE001
 
      #Page Dados
-     Quando seleciona Tipo de Contrato3 feature GPE001
+     Quando seleciona Tipo de Contrato feature GPE001
      E preencher Produto feature GPE001
      E preencher Tabela de Desconto feature GPE001
      E preencher Negócio feature GPE001

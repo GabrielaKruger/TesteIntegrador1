@@ -242,7 +242,7 @@ public class GPE001_Step {
     }
 
     @E("preencher PesoEVolume Contratado2 feature GPE001")
-    public void preencherPesoEVolumeContratadoFeatureGPE() {
+    public void preencherPesoEVolumeContratadoFeatureGPE001() {
         GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "precoVolume2"));
     }
 
@@ -279,8 +279,114 @@ public class GPE001_Step {
 
 
     //@5619v1
-    @Quando("seleciona Tipo de Contrato03 feature GPE001")
+    @Quando("seleciona Tipo de Contrato3 feature GPE001")
     public void selecionaTipoDeContrato3FeatureGPE001() {
+        GPE001_Page.selecionaTipoDeContratoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoContrato3"));
+    }
+
+    @E("preencher Produto3 feature GPE001")
+    public void preencherProduto3FeatureGPE001() {
+        GPE001_Page.preencherProdutoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "produto3"));
+    }
+
+    @E("preencher Tabela de Desconto2 feature GPE001")
+    public void preencherTabelaDeDesconto2FeatureGPE001() {
+        GPE001_Page.preencherTabelaDeDescontoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tbDesconto2"));
+    }
+
+    @E("preencher PesoEVolume Contratado3 feature GPE001")
+    public void preencherPesoVolumeContratado3FeatureGPE001() {
+        GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "precoVolume3"));
+    }
+
+    @E("preencher Preço Unitário5 feature GPE001")
+    public void preencherPreçoUnitário5FeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario5"));
+    }
+
+    //@4934v2
+    @Quando("seleciona Tipo de Contrato4 feature GPE001")
+    public void selecionaTipoDeContrato4FeatureGPE001() {
+        GPE001_Page.selecionaTipoDeContratoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoContrato4"));
+    }
+
+    @E("preencher Preço Unitário6 feature GPE001")
+    public void preencherPreçoUnitário6FeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario6"));
+    }
+
+    @E("seleciona Tipos de Cálculo2 feature GPE001")
+    public void selecionaTiposDeCálculo2FeatureGPE001() {
+        GPE001_Page.selecionaTiposDeCálculoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoCalculo2"));
+    }
+
+    //@4935v1
+    @Quando("seleciona Tipo de Contrato5 feature GPE001")
+    public void selecionaTipoDeContrato5FeatureGPE001() {
+        GPE001_Page.selecionaTipoDeContratoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoContrato5"));
+    }
+
+    @E("preencher Produto4 feature GPE001")
+    public void preencherProduto4FeatureGPE001() {
+        GPE001_Page.preencherProdutoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "produto4"));
+    }
+
+    @E("preencher Preço Unitário7 feature GPE001")
+    public void preencherPreçoUnitário7FeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario7"));
+    }
+
+    @Então("clicar botão {string} page Vencimento ICMS feature GPE001")
+    public void clicarBotãoPageVencimentoICMSFeatureGPE001(String repetirVencimento) {
+        GPE001_Page.clicarBotãoPageVencimentoICMSFeatureGPE001(repetirVencimento);
+    }
+
+    //@4936v1
+    @E("preencher Preço Unitário8 feature GPE001")
+    public void preencherPreçoUnitário8FeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario8"));
+    }
+
+    //4936v2
+    @E("preencher PesoEVolume Contratado4 feature GPE001")
+    public void preencherPesoEVolumeContratado4FeatureGPE001() {
+        GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "precoVolume4"));
+    }
+
+    @E("preencher Preço Unitário9 feature GPE001")
+    public void preencherPreçoUnitário9FeatureGPE001() {
+        GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "preçoUnitario9"));
+    }
+
+    //4936v3
+    @E("preencher Cliente page Frete feature GPE001")
+    public void preencherClientePageFreteFeatureGPE001() {
+        GPE001_Page.preencherClientePageFreteFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clienteFrete"));
+    }
+
+    @E("preencher Rota page Frete feature GPE001")
+    public void preencherRotaPageFreteFeatureGPE001() {
+        GPE001_Page.preencherRotaPageFreteFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "rotaFrete"));
+    }
+
+    @E("preencher Data de Início page Frete feature GPE001")
+    public void preencherDataDeInícioPageFreteFeatureGPE001() {
+        GPE001_Page.preencherDataDeInícioPageFreteFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "dtinicioFrete"));
+    }
+
+    @E("preencher Tipo de Cálculo page Frete feature GPE001")
+    public void preencherTipoDeCálculoPageFreteFeatureGPE001() {
+        GPE001_Page.preencherTipoDeCálculoPageFreteFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipocalculoFrete"));
+    }
+
+    @E("preencher Valor Unitário page Frete feature GPE001")
+    public void preencherValorUnitárioPageFreteFeatureGPE001() {
+        GPE001_Page.preencherValorUnitárioPageFreteFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorUnitarioFrete"));
+    }
+
+    @E("selecionar Filtro Frete {string} page Frete feature GPE001")
+    public void selecionarFiltroFretePageFreteFeatureGPE001(String stFrete) {
+        GPE001_Page.selecionarFiltroFretePageFreteFeatureGPE001(stFrete);
     }
 
     @After
@@ -293,6 +399,5 @@ public class GPE001_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
-
 
 }

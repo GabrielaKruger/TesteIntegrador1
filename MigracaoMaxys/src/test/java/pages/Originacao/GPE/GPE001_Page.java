@@ -35,6 +35,19 @@ public class GPE001_Page extends BasePage {
     String inputEmpresaOrigemXpath = "//*[@id='contratograo-cdEmprorigem']/div/input";
 
 
+    //Strings Page Frete <F5>
+    String inputClienteXpath= "//*[@id='fretegrao-cdClifor-0']/div/input";
+    String inputRotaXpath= "//*[@id='fretegrao-cdRotafrete-0']/div/input";
+    String inputdtInicioFreteXpath= "//*[@id='fretegrao-dtInivigor-0']/div/div/input";
+    String inputTipoCalculoFreteXpath= "//*[@id='fretegrao-cdTipocalculofrete-0']/div/input";
+    String inputValorUnitarioFreteXpath= "//*[@id='fretegrao-vlUnitfrete-0']/div/input";
+    String inputFreteXpath= "//*[@id='fretegrao-dsSituacaofrete-0']/div/input";
+    String selectFiltroFreteXpath= "//*[@id='fretegrao-tpFiltrofrete']/div/select";
+
+    //Strings botão
+    String btnRepetirVencimentoXpath = "//*[@id='vencicmsgrao-btnRepetir']/div/button/div";
+
+
     public GPE001_Page(WebDriver driver) {
         super(driver);
         this.driver = driver;
@@ -139,6 +152,34 @@ public class GPE001_Page extends BasePage {
     }
 
     public void selecionarFaturamentoFeatureGPE001(String mestra) {marcarRadioButon(selectMestraXpath);
+    }
+
+    public void clicarBotãoPageVencimentoICMSFeatureGPE001(String repetirVencimento) {
+        clicarElementoByXpathNVezes(btnRepetirVencimentoXpath, 2);
+    }
+
+    public void preencherClientePageFreteFeatureGPE001(String clienteFrete) {
+        preencherCampoPorXpathFeatureGPE001(inputClienteXpath, clienteFrete);
+    }
+
+    public void preencherRotaPageFreteFeatureGPE001(String rotaFrete) {
+        preencherCampoPorXpathFeatureGPE001(inputRotaXpath, rotaFrete);
+    }
+
+    public void preencherDataDeInícioPageFreteFeatureGPE001(String dtinicioFrete) {
+        preencherCampoPorXpathFeatureGPE001(inputdtInicioFreteXpath, dtinicioFrete);
+    }
+
+    public void preencherTipoDeCálculoPageFreteFeatureGPE001(String tipocalculoFrete) {
+        preencherCampoPorXpathFeatureGPE001(inputTipoCalculoFreteXpath, tipocalculoFrete);
+    }
+
+    public void preencherValorUnitárioPageFreteFeatureGPE001(String valorUnitarioFrete) {
+        preencherCampoPorXpathFeatureGPE001(inputValorUnitarioFreteXpath, valorUnitarioFrete);
+    }
+
+    public void selecionarFiltroFretePageFreteFeatureGPE001(String stFrete) {
+        preencherCampoPorXpathFeatureGPE001(selectFiltroFreteXpath, stFrete);
     }
 
 
