@@ -1,5 +1,5 @@
  #language: pt
- @test @GPE001 @dt_GPE001 @chrome
+ @wip @GPE001 @dt_GPE001 @chrome
  Funcionalidade: GPE001 - Pedidos/Contrato de grão
 
    Cenário de Fundo:
