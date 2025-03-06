@@ -335,7 +335,7 @@
    Cenário: Contrato Recebimento Normal
 
      #Pedidos/contratos de grão
-     Quando preencher Clifor5 page contratos de grao feature GPE001
+     Quando preencher Clifor page contratos de grao feature GPE001
      E selecionar Faturamento "Expedição" feature GPE001
      Então selecionar Operação "Mestra" feature GPE001
 

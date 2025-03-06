@@ -56,7 +56,6 @@ public class GPE001_Step {
     }
 
 
-
     //versão 5619v1
     @Quando("preencher Clifor page contratos de grao feature GPE001")
     public void preencherCliforFeatureGPE001() {
@@ -387,6 +386,10 @@ public class GPE001_Step {
     @E("selecionar Filtro Frete {string} page Frete feature GPE001")
     public void selecionarFiltroFretePageFreteFeatureGPE001(String stFrete) {
         GPE001_Page.selecionarFiltroFretePageFreteFeatureGPE001(stFrete);
+    }
+
+    @E("preencher St.Frete page Frete feature GPE{int}")
+    public void preencherStFretePageFreteFeatureGPE(int arg0) {
     }
 
     @After
