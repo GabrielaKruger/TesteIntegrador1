@@ -10,6 +10,7 @@ public class GPE001_Page extends BasePage {
     String inputCliforXpath = "//*[@id='contratograo-cdClifor']/div/input";
     String selectExportacaoXpath = "//*[@id='ngx-radio-5']";
     String selectMestraXpath = "//*[@id='ngx-radio-4']";
+    String selectOrigemXpath= "//*[@id='ngx-radio-6']";
 
     //Strings Page Dados
     String inputProdutoXpath = "//*[@id='contratograo-cdItem']/div/input";
@@ -46,6 +47,40 @@ public class GPE001_Page extends BasePage {
 
     //Strings botão
     String btnRepetirVencimentoXpath = "//*[@id='vencicmsgrao-btnRepetir']/div/button/div";
+
+
+    //Strings Page Bonificação
+    String inputEmpresaXpath= "//*[@id='contratograobonif-cdEmprorigem-0']/div/input";
+    String inputQualidadeXpath= "//*[@id='contratograobonif-cdTipoqualidade-0']/div/input";
+    String inputPesoVolumeXpath= "//*[@id='contratograobonif-psComissao-0']/div/input";
+    String inputPesoVolumePagoXpath= "//*[@id='contratograobonif-psBonificado-0']/div/input";
+    String inputDataLimiteXpath= "//*[@id='contratograobonif-dtLimitefixacao-0']/div/div/input";
+    String inputBonifXpath= "//*[@id='contratograobonif-pcBonifnormal-0']/div/input";
+    String inputBonifFamiliarXpath= "//*[@id='contratograobonif-vlComissao-0']/div/input";
+    String inputEmpresa2Xpath= "";
+    String inputQualidade2Xpath= "";
+    String inputPesoVolume2Xpath= "";
+    String inputPesoVolumePago2Xpath= "";
+    String inputDataLimite2Xpath= "";
+    String inputBonifComercial2Xpath= "";
+    String inputBonifFamiliar2Xpath= "";
+
+
+    //Strings Page Serviços
+    String inputServicoXpath= "//*[@id='contratoservicograo-cdServicograo-0']/div/input";
+    String inputTpServicoXpath= "//*[@id='contratoservicograo-nrTabservicograo-0']/div/input";
+    String inputDtInicioXpath= "//*[@id='contratoservicograo-dtInicio-0']/div/div/input";
+    String inputDtFimXpath= "//*[@id='contratoservicograo-dtFim-0']/div/div/input";
+
+
+    //Strings Page Vencimentos
+    String inputPesoVolumeVpath= "";
+    String inputcondPagamamentoVXpath= "";
+    String inputFormaPagamentoXpath= "";
+    String inputPesoVolume2VXpath= "";
+    String inputcondPagamamento2VXpath= "";
+    String inputFormaPagamento2Xpath= "";
+
 
 
     public GPE001_Page(WebDriver driver) {
@@ -180,6 +215,107 @@ public class GPE001_Page extends BasePage {
 
     public void selecionarFiltroFretePageFreteFeatureGPE001(String stFrete) {
         preencherCampoPorXpathFeatureGPE001(selectFiltroFreteXpath, stFrete);
+    }
+
+    public void preencherEmpresaPageBonificaçãoFeatureGPE001(String empresa) {
+        preencherCampoPorXpathFeatureGPE001(inputEmpresaXpath, empresa);
+    }
+
+    public void preencherQualidadePageBonificaçãoFeatureGPE001(String qualidade) {
+        preencherCampoPorXpathFeatureGPE001(inputQualidadeXpath, qualidade);
+    }
+
+    public void preencherPesoEVolumeBonificadoPageBonificaçãoFeatureGPE001(String pesoVolume) {
+        preencherCampoPorXpathFeatureGPE001(inputPesoVolumeXpath, pesoVolume);
+    }
+
+    public void preencherPesoEVolumeJáPagoPageBonificaçãoFeatureGPE001(String pesoVolumePago) {
+        preencherCampoPorXpathFeatureGPE001(inputPesoVolumePagoXpath, pesoVolumePago);
+    }
+
+    public void preencherDataLimitePageBonificaçãoFeatureGPE001(String dataLimite) {
+        clicarElementoByXpathNVezes(inputDataLimiteXpath, 2);
+    }
+
+    public void preencherBonifComercialPageBonificaçãoFeatureGPE001(String bonifComercial) {
+        preencherCampoPorXpathFeatureGPE001(inputBonifXpath, bonifComercial);
+    }
+
+    public void preencherBonifFamiliarPageBonificaçãoFeatureGPE001(String bonifFamiliar) {
+        preencherCampoPorXpathFeatureGPE001(inputBonifFamiliarXpath, bonifFamiliar);
+    }
+
+    public void preencherEmpresa2PageBonificaçãoFeatureGPE001(String empresa2) {
+        preencherCampoPorXpathFeatureGPE001(inputEmpresa2Xpath, empresa2);
+    }
+
+    public void preencherQualidade2PageBonificaçãoFeatureGPE001(String qualidade2) {
+        preencherCampoPorXpathFeatureGPE001(inputQualidade2Xpath, qualidade2);
+    }
+
+    public void preencherPesoEVolume2BonificadoPageBonificaçãoFeatureGPE001(String pesoVolume2) {
+        preencherCampoPorXpathFeatureGPE001(inputPesoVolume2Xpath, pesoVolume2);
+    }
+
+    public void preencherPesoEVolume2JáPagoPageBonificaçãoFeatureGPE001(String pesoVolumePago2) {
+        preencherCampoPorXpathFeatureGPE001(inputPesoVolumePago2Xpath, pesoVolumePago2);
+    }
+
+    public void preencherDataLimite2PageBonificaçãoFeatureGPE001(String dataLimite2) {
+        clicarElementoByXpathNVezes(inputDataLimite2Xpath, 2);
+    }
+
+    public void preencherBonifComercial2PageBonificaçãoFeatureGPE001(String bonifComercial2) {
+        preencherCampoPorXpathFeatureGPE001(inputBonifComercial2Xpath, bonifComercial2);
+    }
+
+    public void preencherBonifFamiliar2PageBonificaçãoFeatureGPE001(String bonifFamiliar2) {
+        preencherCampoPorXpathFeatureGPE001(inputBonifFamiliar2Xpath, bonifFamiliar2);
+    }
+
+    public void preencherServiçoPageServiçosFeatureGPE001(String serviço) {
+        preencherCampoPorXpathFeatureGPE001(inputServicoXpath, serviço);
+    }
+
+    public void preencherTpServiçoPageServiçosFeatureGPE001(String tpServiço) {
+        preencherCampoPorXpathFeatureGPE001(inputTpServicoXpath, tpServiço);
+    }
+
+    public void preencherDtInícioPageServiçosFeatureGPE001(String dtInicio) {
+        preencherCampoPorXpathFeatureGPE001(inputDtInicioXpath, dtInicio);
+    }
+
+    public void preencherDtFimPageServiçosFeatureGPE001(String dtFim) {
+        preencherCampoPorXpathFeatureGPE001(inputDtFimXpath, dtFim);
+    }
+
+    public void selecionarClassificaçãoFeatureGPE001(String origem) {
+        esperarMilissegundos(2000);
+        marcarRadioButon(selectOrigemXpath);
+    }
+
+    public void preencherPesoeVolumePageVencimentosFeatureGPE001(String pesoVolumeV) {
+        preencherCampoPorXpathFeatureGPE001(inputPesoVolumeVpath, pesoVolumeV);
+    }
+
+    public void preencherCondiçãoDePagamentoPageVencimentosFeatureGPE001(String condPagamentoV) {
+        preencherCampoPorXpathFeatureGPE001(inputcondPagamamentoVXpath, condPagamentoV);
+    }
+
+    public void preencherFormaDePagamentoPageVencimentosFeatureGPE001(String formaPagamento) {
+        preencherCampoPorXpathFeatureGPE001(inputFormaPagamentoXpath, formaPagamento);
+    }
+
+    public void preencherPesoeVolume2PageVencimentosFeatureGPE001(String pesoVolume2V) {
+        preencherCampoPorXpathFeatureGPE001(inputPesoVolume2VXpath, pesoVolume2V);
+    }
+
+    public void preencherCondiçãoDePagamento2PageVencimentosFeatureGPE001(String condPagamento2V) {
+        preencherCampoPorXpathFeatureGPE001(inputcondPagamamento2VXpath, condPagamento2V);
+    }
+
+    public void preencherFormaDePagamento2PageVencimentosFeatureGPE001(String formaPagamento2) {
+        preencherCampoPorXpathFeatureGPE001(inputFormaPagamento2Xpath, formaPagamento2);
     }
 
 
