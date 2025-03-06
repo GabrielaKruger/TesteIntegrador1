@@ -24,9 +24,6 @@ public class TGR009_Page extends BasePage {
     String btnXpathFim = "']/div/button";
     String selectXpathFim = "']/div/select";
 
-//    public void selecionarAAutorizaçãoFeatureTGR009(String empresa) {
-//        testConsultaRegistroGrid (empresa, inputEmpresaXpath, inputXpathFim);
-//    }
 
     public void preencherProdutoDaBalancaFeatureTGR009(String prodBalanca) {
         primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputProdBalancaXpath, inputXpathFim));
@@ -73,6 +70,8 @@ public class TGR009_Page extends BasePage {
         pressionaTabActions();
     }
 
-
+    public void selecionarOProdutoSimilarFeatureTGR009(String produtoBalanca, String produto) {
+        testConsultaRegistroGridDuasColunas(produtoBalanca, inputProdBalancaXpath, inputXpathFim, produto, inputProdutoXpath, inputXpathFim);
+    }
 }
 

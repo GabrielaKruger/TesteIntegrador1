@@ -68,7 +68,7 @@
      Quando clicar botão ToolBar "salvar" feature TGR009
      Então apresentar a mensagem " Registro salvo com sucesso " no pop-up feature TGR009
 
-#     Quando selecionar o Produto Similar feature TGR009
+     Quando selecionar o Produto Similar feature TGR009
 #     E clicar botão Tipo de Cálculo feature TGR009
 #     E clicar botão ToolBar "novo" feature TGR009
 #     Então preencher Tp Cálculo feature TGR009

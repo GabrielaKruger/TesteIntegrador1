@@ -140,20 +140,26 @@ public class TGR009_Step {
         basePage.recarregarPaginaComRefresh();
     }
 
+    @Quando("selecionar o Produto Similar feature TGR009")
+    public void selecionarOProdutoSimilarFeatureTGR009() {
+        TGR009_Page.selecionarOProdutoSimilarFeatureTGR009(massaTeste.getMassaTestePorPathEChave(tagMassa, "prodBalanca"), massaTeste.getMassaTestePorPathEChave(tagMassa, "produto"));
+    }
+
+//    @E("clicar botão Tipo de Cálculo feature TGR009")
+//    public void clicarBotãoTipoDeCálculoFeatureTGR009() {
+//    }
+
     @E("excluir os registro cadastrados via Banco de Dados feature TGR009")
     public void excluirOsRegistroCadastradosViaBancoDeDadosFeatureTGR009() {
         String produtoBalanca = massaTeste.getMassaTestePorPathEChave(tagMassa, "prodBalanca");
         String produto = massaTeste.getMassaTestePorPathEChave(tagMassa, "produto");
-        String cultura = massaTeste.getMassaTestePorPathEChave(tagMassa, "cultura");
         String query = String.format(
-                //"DELETE FROM VALORBID WHERE CD_PORTO = '%s' AND CD_ITEM = '%s'",
-                //"SELECT * FROM ITEMSIMILAR WHERE CD_ITEMBAL = '%s' AND CD_ITEM = '%s AND CD_CULTURA = '%s",
-                //"DELETE FROM ITEMSIMILAR WHERE CD_ITEMBAL = '%s' AND CD_ITEM = '%s AND CD_CULTURA = '%s",
                 "DELETE FROM ITEMSIMILAR WHERE CD_ITEMBAL = '%s' AND CD_ITEM = '%s'",
                 produtoBalanca, produto
         );
         DataBaseConnection.executeQuery(query);
     }
+
 
     @After
     public void tearDown() {
