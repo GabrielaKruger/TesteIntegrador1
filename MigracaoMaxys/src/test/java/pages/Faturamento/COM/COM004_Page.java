@@ -13,10 +13,7 @@
 //
 //    //Strings Aba - Pedidos Compra
 //    String inputCliforXpath = "//*[@id='pedido-cdClifor";
-//    String inputCondPagtoXpath = "//*[@id='pedido-cdCondpagto";
-//    String inputMoedaXpath = "//*[@id='pedido-cdMoeda";
-//    String inpuFormaPagtoXpath = "//*[@id='pedido-cdFormapagto";
-//
+//    String inputTpCompra = "//*[@id='pedido-cdTipocompra";
 //
 //    //Globais
 //    int primeiraLinhaEmBranco;
@@ -26,13 +23,14 @@
 //
 //    public void preencherCliforFeatureCOM004() {
 //        esperarMilissegundos(500); // espera necessária
-//        //primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputEmpresaXpath, inputXpathFim));
+////        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputEmpresaXpath, inputXpathFim));
+////
+////        String linhaGridEmpresaXpath = inputEmpresaXpath + primeiraLinhaEmBranco + inputXpathFim;
 //
-//        //String linhaGridEmpresaXpath = inputEmpresaXpath + primeiraLinhaEmBranco + inputXpathFim;
-//
-//        //clicarElementoByXpathNVezes(linhaGridEmpresaXpath,2);
-//        //preencherElementoByXpath(linhaGridEmpresaXpath, empresa);
+//        clicarElementoByXpathNVezes(linhaGridEmpresaXpath,2);
+//        preencherElementoByXpath(linhaGridEmpresaXpath, empresa);
 //        pressionaTabActions();
 //    }
+//
 //}
 //

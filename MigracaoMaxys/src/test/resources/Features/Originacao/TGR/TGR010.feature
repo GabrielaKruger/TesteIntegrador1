@@ -29,7 +29,7 @@
 #     E clicar botão "sim" do modal feature TGR010
 #     Então apresentar a mensagem " Registro salvo com sucesso " no pop-up feature TGR010
 #
-##
+#
 ##   Cenário: Cadastro e Exclusão de Produtos de Balança | Teclas Atalho
 ##
 ##     Quando pressionar tecla "f6" feature TGR010

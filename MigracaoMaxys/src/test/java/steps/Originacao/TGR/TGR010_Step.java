@@ -11,6 +11,7 @@
 //import pages.BasePage;
 //import pages.LoginPage;
 //import pages.Originacao.TGR.TGR010_Page;
+//import com.github.javafaker.Faker;
 //import utils.MassaTeste;
 //
 //import java.time.Duration;
@@ -109,6 +110,49 @@
 //            }
 //        }
 //        BasePage.tearDownCloseQuit(driver);
+//    }
+//
+//
+//    @E("preencher Código feature TGR010")
+//    public void preencherCódigoFeatureTGR010() {
+//        TGR010_Page.preencherCódigoFeatureTGR010(massaTeste.getMassaTestePorPathEChave(tagMassa, "codigo"));
+//    }
+//
+//    @E("preencher Descrição feature TGR010")
+//    public void preencherDescriçãoFeatureTGR010() {
+//        TGR010_Page.preencherDescriçãoFeatureTGR010();
+//    }
+//
+//    @E("preencher Tipo de Pedido feature TGR010")
+//    public void preencherTipoDePedidoFeatureTGR010() {
+//
+//    }
+//
+//    @E("preencher Item Transgênico feature TGR010")
+//    public void preencherItemTransgênicoFeatureTGR010() {
+//
+//    }
+//
+//    @E("{string} Classificar feature TGR010")
+//    public void classificarFeatureTGR010() {
+//
+//    }
+//
+//    @E("{string} Segunda Classificação feature TGR010")
+//    public void segundaClassificaçãoFeatureTGR010() {
+//    }
+//
+//    @E("{string} Produto com restricao no bioma amazônico feature TGR010")
+//    public void produtoComRestricaoNoBiomaAmazônicoFeatureTGR010() {
+//    }
+//
+//    @E("{string} Produto com certificação de qualidade POP 11 feature TGR010")
+//    public void produtoComCertificaçãoDeQualidadePOPFeatureTGR010() {
+//
+//    }
+//
+//    @Então("{string} Ordem de carregamento obrigatória featue TGR010")
+//    public void ordemDeCarregamentoObrigatóriaFeatueTGR010() {
 //    }
 //
 //}
