@@ -18,6 +18,13 @@ public class TGR009_Page extends BasePage {
     String selectSomentGraosXpath = "//*[@id='itemsimilar-stMovtograos-";
     String inputCulturaXpath = "//*[@id='itemsimilar-cdCultura-";
 
+    //String Tipo de Cálculo
+    String btnTpCalculo = "//*[@id='controle-btnCadastratpcalc']/div/button/div";
+    String btnSalvarTipCalculoXpath = "//*[@id='controle-btnSalvar']/div/button/div";
+    String btnFecharXpath = "//*[@id='controle-btnVoltar']/div/button/div";
+    String inputTpCalculoXpath = "//*[@id='tpcalculo-cdTipocalculo-";
+
+
     //Globais
     int primeiraLinhaEmBranco;
     String inputXpathFim = "']/div/input";
@@ -34,7 +41,6 @@ public class TGR009_Page extends BasePage {
         preencherElementoByXpath(linhaGridProdBalancaXpath, prodBalanca);
         pressionaTabActions();
     }
-
 
     public void preencherProdutoFeatureTGR009(String produto) {
         primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputProdutoXpath, inputXpathFim));
@@ -73,5 +79,32 @@ public class TGR009_Page extends BasePage {
     public void selecionarOProdutoSimilarFeatureTGR009(String produtoBalanca, String produto) {
         testConsultaRegistroGridDuasColunas(produtoBalanca, inputProdBalancaXpath, inputXpathFim, produto, inputProdutoXpath, inputXpathFim);
     }
+
+    public void clicarBotãoTipoDeCálculoFeatureTGR009() {
+        clicarElementoByXpath(btnTpCalculo);
+    }
+
+    public void preencherTpCálculoFeatureTGR009(String tpCalculo) {
+        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputTpCalculoXpath, inputXpathFim));
+
+        String linhaGridTipCalculoXpath = inputTpCalculoXpath + primeiraLinhaEmBranco + inputXpathFim;
+
+        clicarElementoByXpathNVezes(linhaGridTipCalculoXpath,2);
+        preencherElementoByXpath(linhaGridTipCalculoXpath, tpCalculo);
+        pressionaTabActions();
+    }
+
+    public void clicarBotãoFecharFeatureTGR009() {
+        clicarElementoByXpathNVezes(btnFecharXpath,1);
+    }
+
+    public void clicarBotãoSalvarTipoCálculoFeatureTGR009() {
+        clicarElementoByXpathNVezes(btnSalvarTipCalculoXpath, 1);
+    }
+
+    public void selecionaTpCálculoFeatureTGR009(String tpCalculo) {
+        testConsultaRegistroGrid(tpCalculo, inputTpCalculoXpath, inputXpathFim);
+    }
+
 }
 

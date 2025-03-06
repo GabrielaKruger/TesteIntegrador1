@@ -56,7 +56,7 @@
      E apresentar a mensagem "O Código do Produtor deve ser informado." feature TGR009
      Então clicar botão "ok" do modal feature TGR009
 
-     @wip
+
    Cenário: Produtos Similares - Tipo de Cálculo| Campo obrigatório | Caminho feliz
 
      Quando clicar botão ToolBar "novo" feature TGR009
@@ -69,22 +69,17 @@
      Então apresentar a mensagem " Registro salvo com sucesso " no pop-up feature TGR009
 
      Quando selecionar o Produto Similar feature TGR009
-#     E clicar botão Tipo de Cálculo feature TGR009
-#     E clicar botão ToolBar "novo" feature TGR009
-#     Então preencher Tp Cálculo feature TGR009
+     E clicar botão Tipo de Cálculo feature TGR009
+     E clicar botão ToolBar "novo" feature TGR009
+     Então preencher Tp Cálculo feature TGR009
 
-     Quando clicar botão ToolBar "salvar" feature TGR009
+     Quando clicar botão Salvar Tipo Cálculo feature TGR009
      E apresentar o modal H5 "modal-basic-title" feature TGR009
      E apresentar a mensagem "Registro salvo com sucesso." feature TGR009
      Então clicar botão "ok" do modal feature TGR009
 
-#     Quando clicar botão Fechar feature TGR009
-#     E selecionar o Produto Similar feature TGR009
-#     E clicar botão Tipo de Cálculo feature TGR009
-#     Então seleciona Tp Cálculo feature TGR009
-
-     Quando clicar botão ToolBar "excluir" feature TGR025
-     E apresenta o modal H4 "modal-basic-title" feature TGR025
-     E clicar botão "sim" do modal feature TGR025
-#     E clicar botão Fechar feature TGR009
+     Quando clicar botão ToolBar "excluir" feature TGR009
+     E apresenta o modal H4 "modal-basic-title" feature TGR009
+     E clicar botão "sim" do modal feature TGR009
+     E clicar botão Fechar feature TGR009
      Então excluir os registro cadastrados via Banco de Dados feature TGR009

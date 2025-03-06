@@ -145,9 +145,30 @@ public class TGR009_Step {
         TGR009_Page.selecionarOProdutoSimilarFeatureTGR009(massaTeste.getMassaTestePorPathEChave(tagMassa, "prodBalanca"), massaTeste.getMassaTestePorPathEChave(tagMassa, "produto"));
     }
 
-//    @E("clicar botão Tipo de Cálculo feature TGR009")
-//    public void clicarBotãoTipoDeCálculoFeatureTGR009() {
-//    }
+    @E("clicar botão Tipo de Cálculo feature TGR009")
+    public void clicarBotãoTipoDeCálculoFeatureTGR009() {
+        TGR009_Page.clicarBotãoTipoDeCálculoFeatureTGR009();
+    }
+
+    @Então("preencher Tp Cálculo feature TGR009")
+    public void preencherTpCálculoFeatureTGR009() {
+        TGR009_Page.preencherTpCálculoFeatureTGR009(massaTeste.getMassaTestePorPathEChave(tagMassa, "tpCalculo"));
+    }
+
+    @Quando("clicar botão Salvar Tipo Cálculo feature TGR009")
+    public void clicarBotãoSalvarTipoCálculoFeatureTGR009() {
+        TGR009_Page.clicarBotãoSalvarTipoCálculoFeatureTGR009();
+    }
+
+    @Quando("clicar botão Fechar feature TGR009")
+    public void clicarBotãoFecharFeatureTGR009() {
+        TGR009_Page.clicarBotãoFecharFeatureTGR009();
+    }
+
+    @Então("seleciona Tp Cálculo feature TGR009")
+    public void selecionaTpCálculoFeatureTGR009() {
+        TGR009_Page.selecionaTpCálculoFeatureTGR009(massaTeste.getMassaTestePorPathEChave(tagMassa, "tpCalculo"));
+    }
 
     @E("excluir os registro cadastrados via Banco de Dados feature TGR009")
     public void excluirOsRegistroCadastradosViaBancoDeDadosFeatureTGR009() {
