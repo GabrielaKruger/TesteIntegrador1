@@ -454,10 +454,10 @@ public class GPE001_Step {
         GPE001_Page.preencherServiçoPageServiçosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "serviço"));
     }
 
-    @E("preencher Tp.Serviço page Serviços feature GPE001")
-    public void preencherTpServiçoPageServiçosFeatureGPE001() {
-        GPE001_Page.preencherTpServiçoPageServiçosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tpServiço"));
-    }
+//    @E("preencher Tp.Serviço page Serviços feature GPE001")
+//    public void preencherTpServiçoPageServiçosFeatureGPE001() {
+//        GPE001_Page.preencherTpServiçoPageServiçosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tpServiço"));
+//    }
 
     @E("preencher Dt.Início page Serviços feature GPE001")
     public void preencherDtInícioPageServiçosFeatureGPE001() {
