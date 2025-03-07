@@ -1,11 +1,13 @@
  #language: pt
- @wip @VFS002 @dt_VFS014 @chrome
+ @wip @VFS002 @dt_VFS002 @chrome
  Funcionalidade: VFS002 - MOVIMENTAÇAO NFE
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do VFS002
-     E acessar o programa "VFS002" feature VFS002
-     E esperar o programa carregar feature VFS002
+#     E acessar o programa "VFS002" feature VFS002
+     E acessa o programa "VFS002" feature VFS002
+#     E esperar o programa carregar feature VFS002
+   # Precisa ajustar bug ja reportado
 
    @8v1 @wip
    Cenário: Nota fiscal de saída MESTRA com moeda 1
@@ -14,6 +16,8 @@
      E seleciona a serie da nota fiscal feature VFS002
      E informa data emissao da nota feature VFS002
      E preenche o clifor da nota feature VFS002
+     E carrega CNJP feature VFS002
+     E fecha sel notas e itens de mestra feature VFS002
 
 
 ##
