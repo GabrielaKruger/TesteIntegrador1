@@ -532,6 +532,11 @@ public class GPE001_Step {
         GPE001_Page.preencherCliforPageFavorecidosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor1"));
     }
 
+    @E("preencher Clifor2 page Favorecidos feature GPE001")
+    public void preencherClifor2PageFavorecidosFeatureGPE001() {
+        GPE001_Page.preencherCliforPageFavorecidosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor2"));
+    }
+
     @After
     public void tearDown() {
         if (driver != null) {
@@ -542,7 +547,6 @@ public class GPE001_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
-
 
 
 }
