@@ -6,7 +6,10 @@ import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Quando;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
 import pages.Faturamento.VFS.VFS002_Page;
 import pages.LoginPage;
@@ -46,10 +49,16 @@ public class VFS002_Step {
 
     @E("acessar o programa {string} feature VFS002")
     public void acessarOProgramaFeatureVFS002(String programa) {
-        basePage.esperarMilissegundos(3000);
+        basePage.esperarMilissegundos(5000);
         loginPage.loginNewMaxysNovo(programa);
         basePage.esperarMilissegundos(10000);
     }
+
+    @E("acessa o programa {string} feature VFS002")
+    public void acessaOProgramaFeatureVFS002(String tela) {
+        VFS002_Page.loginMigracao(tela);
+    }
+
 
     @E("esperar o programa carregar feature VFS002")
     public void esperarOProgramaCarregarFeatureVFS002() {
@@ -61,24 +70,9 @@ public class VFS002_Step {
         VFS002_Page.selecionarTipoDeVenda(tipoVenda);
     }
 
-//    @E("seleciona a serie da nota fiscal feature VFS002")
-//    public void selecionaASerieDaNotaFiscalFeatureVFS002() {
-//        VFS002_Page.selecionaASerieDaNotaFiscalFeatureVFS002(massaTeste.getMassaTestePorPathEChave(tagMassa, "serieNotaFiscal"));
-//    }
-
     @E("seleciona a serie da nota fiscal feature VFS002")
     public void selecionaASerieDaNotaFiscalFeatureVFS002() {
-        System.out.println("Tag Massa: " + tagMassa);
-
-        String serie = massaTeste.getMassaTestePorPathEChave(tagMassa, "serieNotaFiscal");
-
-        if (serie == null) {
-            throw new RuntimeException("Erro: Chave 'serieNotaFiscal' não encontrada na massa de teste.");
-        }
-
-        System.out.println("Série da Nota Fiscal carregada: " + serie);
-
-        VFS002_Page.selecionaASerieDaNotaFiscalFeatureVFS002(serie);
+        VFS002_Page.selecionaASerieDaNotaFiscalFeatureVFS002(massaTeste.getMassaTestePorPathEChave(tagMassa, "serieNotaFiscal"));
     }
 
 
@@ -91,5 +85,16 @@ public class VFS002_Step {
     public void preencheOCliforDaNotaFeatureVFS002() {
         VFS002_Page.preencheOCliforDaNotaFeatureVFS002(massaTeste.getMassaTestePorPathEChave(tagMassa, "cliforNotaFiscal"));
     }
+
+    @E("carrega CNJP feature VFS002")
+    public void carregaCNJPFeatureVFS002() {
+        VFS002_Page.carregaCNJPFeatureVFS002();
+    }
+
+    @E("fecha sel notas e itens de mestra feature VFS002")
+    public void fechaSelNotasEItensDeMestraFeatureVFS002() {
+        VFS002_Page.fechaSelNotasEItensDeMestraFeatureVFS002();
+    }
+
 
 }
