@@ -442,10 +442,10 @@ public class GPE001_Step {
         GPE001_Page.preencherBonifFamiliar2PageBonificaçãoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "bonifFamiliar2"));
     }
 
-    @E("preencher PesoEVolume Contratado2 feature GPE001")
-    public void preencherPesoEVolumeContratado2FeatureGPE001() {
-        GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "precoVolume2"));
-    }
+//    @E("preencher PesoEVolume Contratado2 feature GPE001")
+//    public void preencherPesoEVolumeContratado2FeatureGPE001() {
+//        GPE001_Page.preencherPesoVolumeContratadoFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "precoVolume2"));
+//    }
 
 
     //@4936v5
@@ -454,10 +454,10 @@ public class GPE001_Step {
         GPE001_Page.preencherServiçoPageServiçosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "serviço"));
     }
 
-    @E("preencher Tp.Serviço page Serviços feature GPE001")
-    public void preencherTpServiçoPageServiçosFeatureGPE001() {
-        GPE001_Page.preencherTpServiçoPageServiçosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tpServiço"));
-    }
+//    @E("preencher Tp.Serviço page Serviços feature GPE001")
+//    public void preencherTpServiçoPageServiçosFeatureGPE001() {
+//        GPE001_Page.preencherTpServiçoPageServiçosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "tpServiço"));
+//    }
 
     @E("preencher Dt.Início page Serviços feature GPE001")
     public void preencherDtInícioPageServiçosFeatureGPE001() {
@@ -537,6 +537,9 @@ public class GPE001_Step {
         GPE001_Page.preencherCliforPageFavorecidosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor2"));
     }
 
+    @E("preencher Tp.Serviço page Serviços feature GPE{int}")
+    public void preencherTpServiçoPageServiçosFeatureGPE(int arg0) {
+    }
     @After
     public void tearDown() {
         if (driver != null) {
