@@ -11,6 +11,7 @@ public class GPE001_Page extends BasePage {
     String selectExportacaoXpath = "//*[@id='ngx-radio-5']";
     String selectMestraXpath = "//*[@id='ngx-radio-4']";
     String selectOrigemXpath= "//*[@id='ngx-radio-6']";
+    String selectConfiguracoesXpath= "";
 
     //Strings Page Dados
     String inputProdutoXpath = "//*[@id='contratograo-cdItem']/div/input";
@@ -80,6 +81,12 @@ public class GPE001_Page extends BasePage {
     String inputPesoVolume2VXpath= "";
     String inputcondPagamamento2VXpath= "";
     String inputFormaPagamento2Xpath= "";
+    String inputDataCondicaoXpath= "";
+    String inputDataCondicao2Xpath= "";
+
+
+
+
 
 
 
@@ -318,6 +325,17 @@ public class GPE001_Page extends BasePage {
         preencherCampoPorXpathFeatureGPE001(inputFormaPagamento2Xpath, formaPagamento2);
     }
 
+    public void preencherDataCondiçãoDePagamentoPageVencimentosFeatureGPE001(String dataCondicao) {
+        preencherCampoPorXpathFeatureGPE001(inputDataCondicaoXpath, dataCondicao);
+    }
+
+    public void preencherData2CondiçãoDePagamentoPageVencimentosFeatureGPE001(String dataCondicao2) {
+        preencherCampoPorXpathFeatureGPE001(inputDataCondicao2Xpath, dataCondicao2);
+    }
+
+    public void selecionarConfiguraçõesFeatureGPE001(String configuracoes) {
+        marcarRadioButon(selectConfiguracoesXpath);
+    }
 
     public void preencherProdutoSemLovFeatureGPE001(String produto2) {
         esperarMilissegundos(2000); //espera necessária
@@ -350,8 +368,6 @@ public class GPE001_Page extends BasePage {
         pressionarENTERByXpath(campoXpath);
         pressionaTabActions();
     }
-
-
 }
 
 

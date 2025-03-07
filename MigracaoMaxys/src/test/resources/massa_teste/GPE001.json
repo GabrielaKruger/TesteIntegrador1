@@ -1,5 +1,5 @@
 {
-  "cliforpf": "1005758",
+  "cliforPF": "1005758",
   "cliforPJ": "1009907",
   "tipoContrato": "FIXO",
   "tipoContrato2": "REMESSA PARA DEPÓSITO",
@@ -53,6 +53,7 @@
   "qualidade": "RR",
   "pesoVolume": "292621",
   "pesoVolume2": "150000",
+  "pesoVolume3": "300000",
   "pesoVolumePago": "0",
   "bonifComercial": "7000",
   "bonifFamiliar": "10000",
@@ -65,7 +66,9 @@
   "dtInicio": "05/03/2025dataatual",
   "dtFim": "",
   "pesoVolumeV": "10000",
-  "condPagamentoV": "30000",
+  "condPagamentoV": "30",
   "formaPagamento": "CA",
-  "condPagamento2V": "60"
+  "condPagamento2V": "60",
+  "dataCondicao": "06032025",
+  "dataCondicao2": "09032025"
 }

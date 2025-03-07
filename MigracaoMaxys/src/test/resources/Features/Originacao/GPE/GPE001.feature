@@ -10,7 +10,7 @@
    @4933v1
    Cenário: Contrato de Expedição - Normal- Fixo - Classificação Origem
      #Pedidos/contratos de grão
-     Quando preencher Clifor5 page contratos de grao feature GPE001
+     Quando preencher CliforPF page contratos de grao feature GPE001
 
      #Page Dados
      Quando seleciona Tipo de Contrato2 feature GPE001
@@ -32,7 +32,7 @@
    @4933v2
    Cenário: Contrato de Expedição - Normal- A Fixar - Classificação Destino
     #Pedidos/contratos de grão
-     Quando preencher Clifor5 page contratos de grao feature GPE001
+     Quando preencher CliforPF page contratos de grao feature GPE001
 
      #Page Dados
      Quando seleciona Tipo de Contrato2 feature GPE001
@@ -54,7 +54,7 @@
    @4933v3
    Cenário: Contrato de Expedição - Normal- Remessa Formação de Lote
     #Pedidos/contratos de grão
-     Quando preencher Clifor6 page contratos de grao feature GPE001
+     Quando preencher CliforPJ page contratos de grao feature GPE001
      E selecionar Faturamento "Expedição" feature GPE001
      Então selecionar Operação "Mestra" feature GPE001
 
@@ -78,7 +78,7 @@
    @4934v1
    Cenário: Contrato de Expedição - Mestra- Fixo - Classificação Origem
     #Pedidos/contratos de grão
-     Quando preencher Clifor5 page contratos de grao feature GPE001
+     Quando preencher CliforPF page contratos de grao feature GPE001
      E selecionar Faturamento "Expedição" feature GPE001
      Então selecionar Operação "Mestra" feature GPE001
 
@@ -102,7 +102,7 @@
    @4934v2
    Cenário: Contrato de Expedição - Mestra- Venda Cta e Ordem - Vda e Rem
     #Pedidos/contratos de grão
-     Quando preencher Clifor6 page contratos de grao feature GPE001
+     Quando preencher CliforPJ page contratos de grao feature GPE001
      E selecionar Faturamento "Expedição" feature GPE001
      Então selecionar Operação "Exportação" feature GPE001
 
@@ -126,7 +126,7 @@
    @4935v1
    Cenário: Contrato de Expedição - Exportação- Venda Indireta
     #Pedidos/contratos de grão
-     Quando preencher Clifor5 page contratos de grao feature GPE001
+     Quando preencher CliforPF page contratos de grao feature GPE001
 
      #Page Dados
      Quando seleciona Tipo de Contrato5 feature GPE001
@@ -157,7 +157,7 @@
    @4936v1
    Cenário: Contrato de Recebimento - Normal- Fixo - Classificação Origem
     #Pedidos/contratos de grão
-     Quando preencher Clifor4 page contratos de grao feature GPE001
+     Quando preencher CliforPJ page contratos de grao feature GPE001
 
      #Page Dados
      Quando seleciona Tipo de Contrato feature GPE001
@@ -179,7 +179,7 @@
    @4936v2
    Cenário: Contrato de Recebimento - Normal- A Fixar - Classificação Destino
     #Pedidos/contratos de grão
-     Quando preencher Clifor5 page contratos de grao feature GPE001
+     Quando preencher CliforPF page contratos de grao feature GPE001
 
      #Page Dados
      Quando seleciona Tipo de Contrato feature GPE001
@@ -387,7 +387,7 @@
    @5014v2
    Cenário: Inclusão de Contrato com vários vencimentos- 2 Dt.Pagto p/2 Recebto
      #Pedidos/contratos de grão
-     Quando preencher CliforPF page contratos de grao feature GPE001
+     Quando preencher CliforPJ page contratos de grao feature GPE001
 
      #Page Dados
      Quando seleciona Tipo de Contrato feature GPE001
@@ -399,28 +399,46 @@
      E seleciona Tipos de Cálculo feature GPE001
      E preencher PesoEVolume Contratado feature GPE001
      E preencher Preço Unitário11 feature GPE001
+
+     Quando acessar page "Vencimentos <F4>" feature GPE001
+     E preencher PesoeVolume page Vencimentos feature GPE001
+     E preencher Data Condição de Pagamento page Vencimentos feature GPE001
+     E preencher Forma de Pagamento page Vencimentos feature GPE001
+     E preencher PesoeVolume2 page Vencimentos feature GPE001
+     E preencher Data2 Condição de Pagamento page Vencimentos feature GPE001
+     E preencher Forma de Pagamento2 page Vencimentos feature GPE001
      Então clicar botão ToolBar "salvar" feature GPE001
 
+     Quando apresentar a mensagem parcial "Vencimento  do ICMS." feature GPE001
+     E acessar page "Vencimento ICMS" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
 
-   @5619v1
-   Cenário: Contrato Recebimento Normal
+     Quando preencher Dia feature GPE001
+     E preencher Condição de pagamento feature GPE001
+     E clicar botão "Repetir Vencimento" page Vencimento ICMS feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
 
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+
+
+   @5014v3
+     Cenário: Inclusão de Contrato de com vários vencimentos- 2 Cond Pagto p/ 1 Recebto Total
      #Pedidos/contratos de grão
-     Quando preencher CliforPJ page contratos de grao feature GPE001
-     E selecionar Faturamento "Expedição" feature GPE001
-     Então selecionar Operação "Mestra" feature GPE001
+     Quando preencher CliforPF page contratos de grao feature GPE001
 
-     #Page Dados
+      #Page Dados
      Quando seleciona Tipo de Contrato feature GPE001
-     E preencher Produto feature GPE001
+     E preencher Produto4 feature GPE001
      E preencher Tabela de Desconto feature GPE001
      E preencher Negócio feature GPE001
-     E preencher Data de Vencimento feature GPE001
-     E preencher Ano safra feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
      E seleciona Tipos de Cálculo feature GPE001
      E preencher PesoEVolume Contratado feature GPE001
-     E preencher Preço Unitário feature GPE001
-     Então clicar botão ToolBar "salvar" feature GPE001
+     E preencher Preço Unitário11 feature GPE001
 
      Quando acessar page "Vencimentos <F4>" feature GPE001
      E preencher PesoeVolume page Vencimentos feature GPE001
@@ -431,16 +449,76 @@
      E preencher Forma de Pagamento2 page Vencimentos feature GPE001
      Então clicar botão ToolBar "salvar" feature GPE001
 
+
+   @5014v4
+   Cenário: Inclusão de Contrato com vários vencimentos- 2 Dt.Pagto p/1 Recebto
+     #Pedidos/contratos de grão
+     Quando preencher CliforPJ page contratos de grao feature GPE001
+
+      #Page Dados
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto4 feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado feature GPE001
+     E preencher Preço Unitário11 feature GPE001
+
+     Quando acessar page "Vencimentos <F4>" feature GPE001
+     E preencher PesoeVolume page Vencimentos feature GPE001
+     E preencher Data Condição de Pagamento page Vencimentos feature GPE001
+     E preencher Forma de Pagamento page Vencimentos feature GPE001
+     E preencher PesoeVolume2 page Vencimentos feature GPE001
+     E preencher Data2 Condição de Pagamento page Vencimentos feature GPE001
+     E preencher Forma de Pagamento2 page Vencimentos feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
+     Quando apresentar a mensagem parcial "Vencimento  do ICMS." feature GPE001
+     E acessar page "Vencimento ICMS" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
+
+     Quando preencher Dia feature GPE001
+     E preencher Condição de pagamento feature GPE001
+     E clicar botão "Repetir Vencimento" page Vencimento ICMS feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
+
      Quando apresentar o modal H5 "modal-basic-title" feature GPE001
      E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
      Então clicar botão "ok" do modal feature GPE001
+
+
+     @5532v1(último)
+     Cenário: Lançamento de Pesagem contrato recebimento parâmetro "Monta Processo(Contratos Fixos)"
+       #Pedidos/contratos de grão
+       Quando preencher CliforPF page contratos de grao feature GPE001
+             #Page Dados
+       Quando seleciona Tipo de Contrato feature GPE001
+       E preencher Produto4 feature GPE001
+       E preencher Tabela de Desconto feature GPE001
+       E preencher Negócio feature GPE001
+       E preencher Data de Vencimento2 feature GPE001
+       E preencher Ano safra2 feature GPE001
+       E seleciona Tipos de Cálculo feature GPE001
+       E preencher PesoEVolume Contratado3 feature GPE001
+       E preencher Preço Unitário11 feature GPE001
+       Então selecionar "Monta Processo" Configurações feature GPE001
+
+       E acessar page "Vencimentos <F4>" feature GPE001
+       Então clicar botão ToolBar "salvar" feature GPE001
+
+       Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+       E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+       Então clicar botão "ok" do modal feature GPE001
+
 
 
    @5619v1
    Cenário: Contrato - Page Favorecidos/Impressão- Valor pagamento maior [manual]
 
     #Pedidos/contratos de grão
-     Quando preencher Clifor page contratos de grao feature GPE001
+     Quando preencher CliforPJ page contratos de grao feature GPE001
      #Page dados
      Quando seleciona Tipo de Contrato feature GPE001
      E preencher Produto feature GPE001
@@ -453,7 +531,7 @@
      Então preencher Preço Unitário feature GPE001
 
      Quando acessar page "Favorecidos/Impressão" feature GPE001
-     E preencher Clifor2 page Favorecidos feature GPE001
+     E preencher Clifor1 page Favorecidos feature GPE001
      E preencher Valor pagamento feature GPE001
      Então clicar botão ToolBar "salvar" feature GPE001
 
@@ -574,7 +652,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   @5716
+   @5716v1
    Cenário: Validação de Item sem movimentação cadastrada no TGR007
     #Pedidos/contratos de grão
      Quando preencher Clifor3 page contratos de grao feature GPE001
@@ -590,7 +668,7 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-   @5717
+   @5717v1
    Cenário: Validação de Item sem permissão de utilização na empresa do contrato
      #Pedidos/contratos de grão
 

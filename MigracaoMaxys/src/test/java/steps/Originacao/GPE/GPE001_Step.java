@@ -512,6 +512,26 @@ public class GPE001_Step {
         GPE001_Page.preencherPreçoUnitárioFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "precoUnitario11"));
     }
 
+    @E("preencher Data Condição de Pagamento page Vencimentos feature GPE001")
+    public void preencherDataCondiçãoDePagamentoPageVencimentosFeatureGPE001() {
+        GPE001_Page.preencherDataCondiçãoDePagamentoPageVencimentosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "dataCondicao"));
+    }
+
+    @E("preencher Data2 Condição de Pagamento page Vencimentos feature GPE001")
+    public void preencherData2CondiçãoDePagamentoPageVencimentosFeatureGPE001() {
+        GPE001_Page.preencherData2CondiçãoDePagamentoPageVencimentosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "dataCondicao2"));
+    }
+
+    @Então("selecionar {string} Configurações feature GPE001")
+    public void selecionarConfiguraçõesFeatureGPE001(String configuracoes) {
+        GPE001_Page.selecionarConfiguraçõesFeatureGPE001(configuracoes);
+    }
+
+    @E("preencher Clifor1 page Favorecidos feature GPE001")
+    public void preencherCliforPageFavorecidosFeatureGPE001() {
+        GPE001_Page.preencherCliforPageFavorecidosFeatureGPE001(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor1"));
+    }
+
     @After
     public void tearDown() {
         if (driver != null) {
@@ -522,6 +542,7 @@ public class GPE001_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
+
 
 
 }
