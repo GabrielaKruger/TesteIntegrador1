@@ -37,7 +37,7 @@ Cenário: Cadastro, Edição e Exclusão page Preço por Região | Caminho Feliz
   E apresenta o modal H4 "modal-basic-title" feature GAC002
   Então clicar botão "sim" do modal feature GAC002
 
-
+#solicita informar Empresa?
   Cenário: Cadastro, Edição e Exclusão page Preço por Região | Teclas Atalho
 
 
