@@ -337,6 +337,10 @@ public class GPE001_Page extends BasePage {
         marcarRadioButon(selectConfiguracoesXpath);
     }
 
+    public void preencherCliforPageFavorecidosFeatureGPE001(String clifor1) {
+        preencherCampoPorXpathFeatureGPE001(inputClifor2Xpath, clifor1);
+    }
+
     public void preencherProdutoSemLovFeatureGPE001(String produto2) {
         esperarMilissegundos(2000); //espera necessária
         clicarElementoByXpathNVezes(inputProdutoXpath, 2);
@@ -368,6 +372,7 @@ public class GPE001_Page extends BasePage {
         pressionarENTERByXpath(campoXpath);
         pressionaTabActions();
     }
+
 }
 
 
