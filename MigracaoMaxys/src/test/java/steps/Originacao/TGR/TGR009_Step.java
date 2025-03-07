@@ -63,6 +63,7 @@ public class TGR009_Step {
     public void apresentarAMensagemNoPopUpFeatureTGR009(String mensagem) {
         basePage.esperarMilissegundos(500); // espera necessária
         basePage.validarMensagemByToastContainerDivDiv(mensagem);
+        basePage.esperarMilissegundos(500); // espera necessária
     }
 
     @Quando("apresentar o modal H5 {string} feature TGR009")
@@ -181,7 +182,6 @@ public class TGR009_Step {
         DataBaseConnection.executeQuery(query);
     }
 
-
     @After
     public void tearDown() {
         if (driver != null) {
@@ -191,6 +191,7 @@ public class TGR009_Step {
             }
         }
         BasePage.tearDownCloseQuit(driver);
+//        driver = null;
     }
 
 }

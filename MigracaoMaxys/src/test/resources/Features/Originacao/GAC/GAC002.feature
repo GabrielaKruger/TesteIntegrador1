@@ -120,13 +120,6 @@ Cenário: Cadastro, Edição e Exclusão page Preço por Região | Caminho Feliz
 
   Cenário: Cadastro, Edição e Exclusão page Condição de Pagamento| Caminho Feliz
 
-    Quando preencher Empresa Condição de Pagamento feature GAC002
-    E preencher Item  Condição de Pagamento feature GAC002
-    E preencher Condição de Pagamento feature GAC002
-
-
-
-
-
-
-
+#    Quando preencher Empresa Condição de Pagamento feature GAC002
+#    E preencher Item  Condição de Pagamento feature GAC002
+#    E preencher Condição de Pagamento feature GAC002

@@ -947,7 +947,7 @@ public class BasePage {
 
                 // Verifica se o campo está vazio
                 if (valorAtual == null || valorAtual.isEmpty()) {
-                    System.out.println("O primeiro registro em branco foi encontrado na posição: " + contador);
+                    //System.out.println("O primeiro registro em branco foi encontrado na posição: " + contador);
                     return String.valueOf(contador);
                 }
 
