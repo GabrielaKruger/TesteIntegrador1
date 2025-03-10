@@ -86,7 +86,7 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
     E selecionar Alteração page Programa feature ANV052
     #Então clicar botão ToolBar "salvar" feature ANV052
 
-@wip #ao pressioanr f7 aparece uma mensagem diferenge
+  @wip #ao pressioanr f7 aparece uma mensagem diferenge
   Cenário: Validar botões Recurso  | Negativo
 
     Quando preencher Programa feature ANV052
@@ -100,8 +100,4 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
     E clicar botão "Abas" para abrir abas feature ANV052
     Então clicar botão "Fechar" para fechar feature ANV052
 
-  Quando pressionar tecla "f7" feature ANV052
-
-
-
-
+    Quando pressionar tecla "f7" feature ANV052

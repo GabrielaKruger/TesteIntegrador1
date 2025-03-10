@@ -682,5 +682,3 @@
      Quando apresentar o modal H5 "modal-basic-title" feature GPE001
      E apresentar a mensagem parcial "não está cadastrado" feature GPE001
      Então clicar botão "ok" do modal feature GPE001
-
-

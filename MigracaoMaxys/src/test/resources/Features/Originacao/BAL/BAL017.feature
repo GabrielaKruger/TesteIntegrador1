@@ -54,4 +54,3 @@ Funcionalidade: BAL017 - Pesagens bloqueadas/Peso manual
     E preencher Período inicial feature BAL017
     E preencher Período final feature BAL017
     Então clicar botão para filtrar "Filtrar" BAL017
-
