@@ -46,17 +46,21 @@ public class LoginPage extends BasePage {
         if (!jaLogado) {
             // Caso não esteja logado, realiza o processo de login
 
-            WebElement emailField = driver.findElement(By.xpath("//*[@id='email']"));
+            //WebElement emailField = driver.findElement(By.xpath("//*[@id='email']")); // Ajuste dia 11/03 - Login Novo
+            WebElement emailField = driver.findElement(By.xpath("//*[@id='username']"));
             emailField.sendKeys("MAX");
 
 
             WebElement passwordField = driver.findElement(By.xpath("//*[@id='password']"));
             passwordField.sendKeys("123456");
 
-            WebElement loginButton = driver.findElement(By.xpath("/html/body/app-root/app-login/div/div[1]/div/form/div[3]/button"));
+            //WebElement loginButton = driver.findElement(By.xpath("/html/body/app-root/app-login/div/div[1]/div/form/div[3]/button"));
+            WebElement loginButton = driver.findElement(By.xpath("//*[@id='kc-login']"));
             pressionaTabActions();
             esperarMilissegundos(2000); // espera necessária
             loginButton.click();
+
+            /// Acrescentar aqui a seleção da empresa que será logada
 
             // Aguarda até ser redirecionado para o Home
             wait.until(ExpectedConditions.urlContains("/#/home"));

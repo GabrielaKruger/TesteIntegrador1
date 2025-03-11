@@ -1,5 +1,9 @@
 {
-  "clifor": "41142736466",
-  "condicaoPagamento": 45,
+  "clifor": "60715678",
+  "notaFiscal": "157163",
+  "série": "1",
+  "especie": "NFE",
+  "formaPagamento": "CA",
+  "condicaoPagamento": "45",
   "valorNota": "1409,23"
 }

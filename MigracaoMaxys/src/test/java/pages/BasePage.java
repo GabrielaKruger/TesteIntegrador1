@@ -328,6 +328,7 @@ public class BasePage {
         String h4ModalLOVId = "modal-basic-title";
         String inputLovXpath = "//*[@id='input-search-lov']";
         String tabelaXpath = "//tbody/tr[contains(@id, '" + elementoTabela + "-')]";
+        //*[@id="input-search-lov"]
 
         esperarMilissegundos(500); //espera necessaria
         encontrarElementoByXpath(elementoCampo);
@@ -1297,6 +1298,16 @@ public class BasePage {
         esperarMilissegundos(200);//espera necessária
         preencherElementoByXpath(elemento, valor);
         esperarMilissegundos(300); //espera necessária
+        pressionaTabActions();
+    }
+
+    // para preencher um elemento com um valor - função completa - com esperas
+    public void encontrarEPreencherElementos(String campoInicioXpath, String campoFimXpath, String valor) {
+        String elementoXpath = campoInicioXpath + campoFimXpath;
+        clicarElementoByXpathNVezes(elementoXpath, 2);
+        esperarMilissegundos(200); // espera necessária
+        preencherElementoByXpath(elementoXpath, valor);
+        pressionarENTERByXpath(elementoXpath);
         pressionaTabActions();
     }
 

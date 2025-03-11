@@ -1,23 +1,113 @@
-//package pages.Faturamento.REC;
-//
-//import org.openqa.selenium.WebDriver;
-//import pages.BasePage;
-//
-//public class REC001_Page extends BasePage {
-//    WebDriver driver;
-//
-//    //Declaração de variáveis
-//    String primeiraLinhaEmBranco;
-//    String codigoSimulated;
-//    String linhaDescricaoElement;
-//    String descricaoFaker = "Teste automacao -";
-//    String idColunaCadastrada = "msTipocertificado-cdTipocertificado";
-//
-//    public REC001_Page(WebDriver driver) {
-//        super(driver);
-//        this.driver = driver;
-//    }
-//
+package pages.Faturamento.REC;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import pages.BasePage;
+import utils.DataUtils;
+
+
+public class REC001_Page extends BasePage {
+    WebDriver driver;
+
+
+    // String Page Notas
+    String btnCanelarNotaMestraXpath = "//*[@id='esttransmestraAux-btnCancelar";
+    String inputCNPJCPFXpath = "//*[@id='esttrans-nrCgcclifor";
+    String inputNotaFiscalXpath = "//*[@id='esttrans-nrNffornec";
+    String inputSerieXpath = "//*[@id='esttrans-cdSeriefornec";
+    String inputEspecieXpath = "//*[@id='esttrans-cdEspecfornec";
+    String inputDataEmissaoXpath = "//*[@id='esttrans-dtEmissaofornec";
+    String inputDataVenciXpath = "//*[@id='esttrans-dtVencimento";
+    String inputFormaPagXpath = "//*[@id='esttrans-cdFormapagto";
+    String inputCondPagXpath = "//*[@id='esttrans-cdCondpagto";
+    String inputMoedaXpath = "//*[@id='esttrans-cdMoedatrans";
+    String inputValorNotaXpath = "//*[@id='esttrans-vlNfcontabil";
+
+
+    // String Globais
+    String primeiraLinhaEmBranco;
+    String codigoSimulated;
+    String linhaDescricaoElement;
+    String descricaoFaker = "Teste automacao -";
+    String inputXpathFim = "']/div/input";
+    String btnXpathFim = "']/div/button/div";
+    String inputDataXpath = "']/div/div/input";
+
+
+    public REC001_Page(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+    }
+
+    public void preencheNCNPJCPFFeatureREC001(String clifor) {
+        encontrarEPreencherElementos(inputCNPJCPFXpath, inputXpathFim, clifor);
+    }
+
+    public void clicarEmCancelarNaTelaDeSeleçãoDeNotasMestrasFeatureREC001() {
+        String btnCancelar = btnCanelarNotaMestraXpath + btnXpathFim;
+        //String btnCancelar = "//*[@id='esttransmestraAux-btnCancelar']/div/button/div";
+        esperarMilissegundos(5000); // espera necessária
+        clicarElementoByXpathNVezes(btnCancelar,1);
+    }
+
+    public void preencherNotaFiscalFeatureREC001(String notaFiscal) {
+        encontrarEPreencherElementos(inputNotaFiscalXpath, inputXpathFim,notaFiscal);
+    }
+
+    public void preencherSérieFeatureREC001(String serie) {
+
+        String inputLOVSerie = "//*[@id=\"input-search-lov\"]";
+        encontrarEPreencherElementos(inputSerieXpath, inputXpathFim, serie);
+    }
+
+    public void preencherEspecieFeatureREC001(String especie) {
+
+        String elementoTabela = "lovEspecie-5";
+        selecionarPeloF9REC001(elementoTabela, especie);
+    }
+
+    public void preencherDataEmissãoFeatureREC001() {
+        encontrarEPreencherElementos(inputDataEmissaoXpath,inputDataXpath,DataUtils.DataAtual() );
+    }
+
+    public void preencherFormaDePagamentoFeatureREC001(String formaPagamento) {
+        encontrarEPreencherElementos(inputFormaPagXpath,inputXpathFim,formaPagamento);
+    }
+
+    public void preencherCondiçãoPagamentoFeatureREC001(String condicaoPagamento) {
+        encontrarEPreencherElementos(inputCondPagXpath,inputXpathFim,condicaoPagamento);
+    }
+
+    public void preencherDataVencimentoFeatureREC001() {
+        encontrarEPreencherElementos(inputDataVenciXpath,inputDataXpath,DataUtils.DataAtual() );
+    }
+
+    public void preencherMoedaTransaçãoFeatureREC001(String moedaTransacao) {
+        encontrarEPreencherElementos(inputMoedaXpath,inputXpathFim, moedaTransacao);
+    }
+
+    public void preencherValorNotaFeatureREC001(String valorNota) {
+        encontrarEPreencherElementos(inputValorNotaXpath, inputXpathFim, valorNota);
+    }
+
+
+
+    public void selecionarPeloF9REC001(String elementoTabela, String valor) {
+        //*[@id="lovEspecie-5"]/td[1]/div
+
+        String inputLovXpath = "//*[@id='input-search-lov']";
+        String tabelaXpath = "//tbody/tr[contains(@id, '" + elementoTabela + "-')]";
+
+        WebElement inputLovXpathElement = driver.findElement(By.xpath(inputLovXpath));
+        esperarElementoByXpath(inputLovXpath);
+        preencherElementoByXpath(inputLovXpath, valor);
+        inputLovXpathElement.sendKeys(Keys.ENTER);
+        esperarMilissegundos(5000); //espera necessaria
+        encontrarElementoNaTabela(tabelaXpath, valor);
+    }
+
 //    // Meteodo para preencher código
 //    public void preencherCodigoRepetidoFeatureREC001(String repetido) {
 //        primeiraLinhaEmBranco = testEncontraPrimeiraPosicaoEmBrancoLinhaGrid("//*[@id='msTipocertificado-cdTipocertificado-", "']/div/input");
@@ -60,12 +150,14 @@
 //
 //        }
 //    }
-//}
-//
-//
-//
-//
-//
-//
-//
-//
+
+
+}
+
+
+
+
+
+
+
+
