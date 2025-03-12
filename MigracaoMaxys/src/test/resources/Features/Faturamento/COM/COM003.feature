@@ -8,7 +8,7 @@
      E acessar o programa "COM003" pela empresa "84" feature COM003
 
    @910v2
-   Cenário: Pedido avulso - Moeda Dolar - Taxa Abertura
+   Cenário: Consulta Solicitaão de Compras | Caminho Feliz
 
      # Pedido de Compra
      Quando clicar botão ToolBar "novo" feature COM003
