@@ -5,5 +5,6 @@
   "especie": "NFE",
   "formaPagamento": "CA",
   "condicaoPagamento": "45",
+  "moeda": "1",
   "valorNota": "1409,23"
 }

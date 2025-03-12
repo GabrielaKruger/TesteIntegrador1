@@ -56,8 +56,13 @@ public class REC001_Step {
 
     @Quando("clicar botão ToolBar {string} feature REC001")
     public void clicarBotãoNovoRegistroFeatureREC001(String botao) {
-        basePage.esperarMilissegundos(15000); // espera necessária
+        basePage.esperarMilissegundos(2000); // espera necessária
         basePage.clicarBotaoToolBar(botao);
+    }
+
+    @Então("clicar botão {string} do modal feature REC001")
+    public void clicarBotãoDoModalFeatureREC001(String acao) {
+        basePage.clicarBotaoDoModal(acao);
     }
 
     @Quando("apresentar o modal H5 {string} feature REC001")
@@ -74,11 +79,6 @@ public class REC001_Step {
     public void apresentarAMensagemFeatureREC001(String mensagem) {
         basePage.esperarMilissegundos(5000); // espera necessária
         basePage.validaMensagemLabelByContainsText(mensagem);
-    }
-
-    @Então("clicar botão {string} do modal feature REC001")
-    public void clicarBotãoDoModalFeatureREC001(String acao) {
-        basePage.clicarBotaoDoModal(acao);
     }
 
     @Quando("pressionar tecla {string} feature REC001")
@@ -99,23 +99,9 @@ public class REC001_Step {
         basePage.validaModalByH4(title);
     }
 
-    @Quando("acessar a tela REC001 - page Nota Fiscal feature REC001")
-    public void acessarATelaRECPageNotaFiscalFeatureREC() {
-        // tempo de espera apenas - esse é o padrão
-    }
-
     @Quando("encontrar a page {string} feature REC001")
     public void encontrarAPageFeatureREC(String page) {
         basePage.selecionarPaginaNoMenu(page);
-    }
-
-    @After
-    public void tearDown() {
-        if (driver != null && scenario != null && scenario.isFailed()) {
-            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-            scenario.attach(screenshot, "image/png", "Screenshot");
-        }
-        BasePage.tearDownCloseQuit(driver);
     }
 
     @E("preenche N CNPJ CPF feature REC001")
@@ -148,6 +134,11 @@ public class REC001_Step {
         REC001_Page.preencherDataEmissãoFeatureREC001();
     }
 
+    @E("clicar em Desembarque feature REC001")
+    public void clicarEmDesembarqueFeatureREC001() {
+        REC001_Page.clicarEmDesembarqueFeatureREC001();
+    }
+
     @E("preencher Forma de Pagamento feature REC001")
     public void preencherFormaDePagamentoFeatureREC001() {
         REC001_Page.preencherFormaDePagamentoFeatureREC001(massaTeste.getMassaTestePorPathEChave(tagMassa,"formaPagamento"));
@@ -165,12 +156,17 @@ public class REC001_Step {
 
     @E("preencher Moeda Transação feature REC001")
     public void preencherMoedaTransaçãoFeatureREC001() {
-        REC001_Page.preencherMoedaTransaçãoFeatureREC001(massaTeste.getMassaTestePorPathEChave(tagMassa,""));
+        REC001_Page.preencherMoedaTransaçãoFeatureREC001(massaTeste.getMassaTestePorPathEChave(tagMassa,"moeda"));
     }
 
     @Então("preencher Valor Nota feature REC001")
     public void preencherValorNotaFeatureREC001() {
         REC001_Page.preencherValorNotaFeatureREC001(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorNota"));
+    }
+
+    @Então("clicar em Departamento feature REC001")
+    public void clicarEmDepartamentoFeatureREC001() {
+        REC001_Page.clicarEmDepartamentoFeatureREC001();
     }
 
     @E("preencher Item feature REC{int}")
@@ -205,6 +201,15 @@ public class REC001_Step {
 
     @E("preencher primeiro item Centro Custo featue REC{int}")
     public void preencherPrimeiroItemCentroCustoFeatueREC(int arg0) {
+    }
+
+    @After
+    public void tearDown() {
+        if (driver != null && scenario != null && scenario.isFailed()) {
+            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", "Screenshot");
+        }
+        BasePage.tearDownCloseQuit(driver);
     }
 
 }

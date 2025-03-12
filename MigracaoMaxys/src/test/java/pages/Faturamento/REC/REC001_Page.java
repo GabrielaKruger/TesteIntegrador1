@@ -23,11 +23,13 @@ public class REC001_Page extends BasePage {
     String inputSerieXpath = "//*[@id='esttrans-cdSeriefornec";
     String inputEspecieXpath = "//*[@id='esttrans-cdEspecfornec";
     String inputDataEmissaoXpath = "//*[@id='esttrans-dtEmissaofornec";
+    String inputDesembarqueXpath = "//*[@id='esttrans-nrEmbarque";
     String inputDataVenciXpath = "//*[@id='esttrans-dtVencimento";
     String inputFormaPagXpath = "//*[@id='esttrans-cdFormapagto";
     String inputCondPagXpath = "//*[@id='esttrans-cdCondpagto";
     String inputMoedaXpath = "//*[@id='esttrans-cdMoedatrans";
     String inputValorNotaXpath = "//*[@id='esttrans-vlNfcontabil";
+    String inputDepartamentoXpath = "//*[@id='esttranscompl-cdDepartamento";
 
 
     // String Globais
@@ -64,12 +66,18 @@ public class REC001_Page extends BasePage {
     }
 
     public void preencherEspecieFeatureREC001(String especie) {
-        String elementoTabela = "lovEspecie-5";
+        String elementoTabela = "lovEspecie";
         selecionarPeloF9REC001(elementoTabela, especie);
     }
 
     public void preencherDataEmissãoFeatureREC001() {
         encontrarEPreencherElementos(inputDataEmissaoXpath,inputDataXpath,DataUtils.DataAtual() );
+        pressionaTabActions();
+    }
+
+    public void clicarEmDesembarqueFeatureREC001() {
+        clicarElementoByXpathNVezes(inputDesembarqueXpath + inputXpathFim, 1 );
+        pressionaTabActions();
     }
 
     public void preencherFormaDePagamentoFeatureREC001(String formaPagamento) {
@@ -85,6 +93,7 @@ public class REC001_Page extends BasePage {
     }
 
     public void preencherMoedaTransaçãoFeatureREC001(String moedaTransacao) {
+        limparCampoDeTextoPorXpath(inputMoedaXpath + inputXpathFim);
         encontrarEPreencherElementos(inputMoedaXpath,inputXpathFim, moedaTransacao);
     }
 
@@ -93,9 +102,14 @@ public class REC001_Page extends BasePage {
     }
 
 
+    public void clicarEmDepartamentoFeatureREC001() {
+        clicarElementoByXpathNVezes(inputDepartamentoXpath + inputXpathFim, 1);
+        pressionaTabActions();
+    }
 
+
+    // Método auxiliar para Seleção da Espécie
     public void selecionarPeloF9REC001(String elementoTabela, String valor) {
-        //*[@id="lovEspecie-5"]/td[1]/div
 
         String inputLovXpath = "//*[@id='input-search-lov']";
         String tabelaXpath = "//tbody/tr[contains(@id, '" + elementoTabela + "-')]";
@@ -104,9 +118,11 @@ public class REC001_Page extends BasePage {
         esperarElementoByXpath(inputLovXpath);
         preencherElementoByXpath(inputLovXpath, valor);
         inputLovXpathElement.sendKeys(Keys.ENTER);
-        esperarMilissegundos(5000); //espera necessaria
         encontrarElementoNaTabela(tabelaXpath, valor);
+        pressionaTabActions();
     }
+
+
 
 //    // Meteodo para preencher código
 //    public void preencherCodigoRepetidoFeatureREC001(String repetido) {

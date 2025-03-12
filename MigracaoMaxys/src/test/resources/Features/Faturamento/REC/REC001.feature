@@ -17,11 +17,13 @@ Funcionalidade: REC001 - Recebimento de Notas Fiscais
     E preencher Série feature REC001
     E preencher Espécie feature REC001
     E preencher Data Emissão feature REC001
+    E clicar em Desembarque feature REC001
     E preencher Forma de Pagamento feature REC001
     E preencher Condição Pagamento feature REC001
     E preencher Data Vencimento feature REC001
     E preencher Moeda Transação feature REC001
-    Então preencher Valor Nota feature REC001
+    E preencher Valor Nota feature REC001
+    Então clicar em Departamento feature REC001
 
     Quando encontrar a page "Itens da Nota Fiscal" feature REC001
     E preencher Item feature REC001

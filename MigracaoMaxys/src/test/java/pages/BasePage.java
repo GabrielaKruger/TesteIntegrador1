@@ -1394,18 +1394,6 @@ public class BasePage {
         }
     }
 
-//
-//    // método que verifica se existe mais de um iframe, se sim ele entra no 0
-//    public void encontrarIframe() {
-//        List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
-//        if (!iframes.isEmpty()) {
-//            driver.switchTo().frame(iframes.get(0));
-//        } else {
-//            driver.switchTo().frame(iframes.get(0));
-//            throw new RuntimeException("Nenhum iframe encontrado!");
-//        }
-//    }
-
     // método que verifica se existe mais de um iframe, se sim ele entra no 0
     public void encontrarIframe() {
         List<WebElement> iframes = driver.findElements(By.tagName("iframe"));
