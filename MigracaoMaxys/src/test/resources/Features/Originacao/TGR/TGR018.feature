@@ -5,7 +5,7 @@
    # Refluxo - Campos obrigatórios - Mensagem pop-up - Validar com Tailon sexta (28/02/2025)
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TGR018
-     E acessar o programa "TGR018" feature TGR018
+     E acessar o programa "TGR018" pela empresa "84" feature TGR018
 
    Cenário: Cadastro de Tipo de Modalidades de Grãos| Caminho feliz
 

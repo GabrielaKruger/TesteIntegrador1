@@ -5,7 +5,7 @@
    # Exclusão é realizada via banco. - Refluxo Forms - Exclusão está salvando.
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TGR009
-     E acessar o programa "TGR009" feature TGR009
+     E acessar o programa "TGR009" pela empresa "84" feature TGR009
 
    Cenário: Cadastro e Exclusão de Produtos de Balança | Caminho feliz
 

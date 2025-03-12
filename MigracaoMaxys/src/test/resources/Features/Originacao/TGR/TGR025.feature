@@ -5,7 +5,7 @@
    # Refluxo - Elementos faltando em tela: Duplicar e Todos
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TGR025
-     E acessar o programa "TGR025" feature TGR025
+     E acessar o programa "TGR025" pela empresa "84" feature TGR025
 
    Cenário: Autorização de Grãos (Bloqueio por tipo de contrato)| Caminho feliz
 

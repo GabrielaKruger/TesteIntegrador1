@@ -4,7 +4,7 @@
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TCO035
-     E acessar o programa "TCO035" feature TCO035
+     E acessar o programa "TCO035" pela empresa "84" feature TCO035
 
    Cenário: Cadastro, edição e exclusão de Autorizador Restrito| Caminho feliz
 

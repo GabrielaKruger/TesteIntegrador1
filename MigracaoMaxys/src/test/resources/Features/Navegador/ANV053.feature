@@ -5,7 +5,7 @@ Funcionalidade: ANV053 - Pesagens bloqueadas/Peso manual
 
   Cenário de Fundo:
     Dado inicialize a execução dos cenários do ANV053
-    E acessar o programa "ANV053" feature ANV053
+    E acessar o programa "ANV053" pela empresa "84" feature ANV053
 
   @wip #erro: pagina fica em branco para cadastrar acesso
   Cenário: Edição de Acesso/Recurso com todos os filtros preenchidos | Caminho Feliz

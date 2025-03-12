@@ -4,8 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
 import utils.DataUtils;
+
+import java.time.Duration;
 
 
 public class REC001_Page extends BasePage {
@@ -47,7 +51,6 @@ public class REC001_Page extends BasePage {
 
     public void clicarEmCancelarNaTelaDeSeleçãoDeNotasMestrasFeatureREC001() {
         String btnCancelar = btnCanelarNotaMestraXpath + btnXpathFim;
-        //String btnCancelar = "//*[@id='esttransmestraAux-btnCancelar']/div/button/div";
         esperarMilissegundos(5000); // espera necessária
         clicarElementoByXpathNVezes(btnCancelar,1);
     }
@@ -57,13 +60,10 @@ public class REC001_Page extends BasePage {
     }
 
     public void preencherSérieFeatureREC001(String serie) {
-
-        String inputLOVSerie = "//*[@id=\"input-search-lov\"]";
         encontrarEPreencherElementos(inputSerieXpath, inputXpathFim, serie);
     }
 
     public void preencherEspecieFeatureREC001(String especie) {
-
         String elementoTabela = "lovEspecie-5";
         selecionarPeloF9REC001(elementoTabela, especie);
     }

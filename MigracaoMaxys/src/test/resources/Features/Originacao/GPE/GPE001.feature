@@ -4,8 +4,7 @@
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do GPE001
-     E acessar o programa "GPE001" feature GPE001
-
+     E acessar o programa "GPE001" pela empresa "84" feature GPE001
 
    @4933v1
    Cenário: Contrato de Expedição - Normal- Fixo - Classificação Origem

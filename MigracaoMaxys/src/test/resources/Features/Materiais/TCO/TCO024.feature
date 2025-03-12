@@ -5,7 +5,7 @@
     # Refluxo: Erro ORA - Reportado card.
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TCO024
-     E acessar o programa "TCO024" feature TCO024
+     E acessar o programa "TCO024" pela empresa "84" feature TCO024
 
    # Autorizador Por Departamento:
    Cenário: Consultar Departamento, cadastrar e excluir Solicitante| Caminho feliz

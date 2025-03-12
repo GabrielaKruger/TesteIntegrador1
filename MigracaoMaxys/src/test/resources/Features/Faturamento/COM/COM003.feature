@@ -5,7 +5,7 @@
    # Refluxo Angular - Tp Compra Carregar automaticamente
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do COM003
-     E acessar o programa "COM003" feature COM003
+     E acessar o programa "COM003" pela empresa "84" feature COM003
 
    @910v2
    Cenário: Pedido avulso - Moeda Dolar - Taxa Abertura

@@ -5,7 +5,7 @@ Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
 
   Cenário de Fundo:
     Dado inicialize a execução dos cenários do VFS015
-    E acessar o programa "VFS015" feature VFS015
+    E acessar o programa "VFS015" pela empresa "84" feature VFS015
 
 @wip #refluxo: não filtra  por Data Emissão
   Cenário: Consultar Clientes para Remessa com os filtros preenchidos | Caminho Feliz

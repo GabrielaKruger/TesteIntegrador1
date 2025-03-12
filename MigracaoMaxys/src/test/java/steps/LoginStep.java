@@ -12,9 +12,10 @@ public class LoginStep {
         loginPage = new LoginPage(driver);
     }
 
-    @E("acessa o programa {string}")
-    public void acessarPrograma(String programa) {
-        loginPage.loginNewMaxysNovo(programa);
-    }
+//    @E("acessa o programa {string}")
+//    public void acessarPrograma(String programa) {
+//        loginPage.loginNewMaxysNovo(programa);
+//    }
+
 }
 

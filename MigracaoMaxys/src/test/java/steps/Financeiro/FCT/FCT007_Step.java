@@ -49,10 +49,10 @@ public class FCT007_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature FCT007")
-    public void acessarOProgramaFeatureFCT007(String programa) {
+    @E("acessar o programa {string} pela empresa {string} feature FCT007")
+    public void acessarOProgramaFeatureFCT007(String programa, String empresa) {
         basePage.esperarMilissegundos(5000);// espera necessária
-        loginPage.loginNewMaxysNovo(programa);
+        loginPage.loginNewMaxysNovo(programa, empresa);
         basePage.esperarMilissegundos(5000);// espera necessária
     }
 

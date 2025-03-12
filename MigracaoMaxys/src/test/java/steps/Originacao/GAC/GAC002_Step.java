@@ -46,10 +46,10 @@ public class GAC002_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature GAC002")
-    public void acessarOProgramaFeatureGAC002(String programa) {
+    @E("acessar o programa {string} pela empresa {string} feature GAC002")
+    public void acessarOProgramaFeatureGAC002(String programa, String empresa) {
         basePage.esperarMilissegundos(5000);// espera necessária
-        loginPage.loginNewMaxysNovo(programa);
+        loginPage.loginNewMaxysNovo(programa, empresa);
     }
 
     @Quando("preencher Empresa feature GAC002")

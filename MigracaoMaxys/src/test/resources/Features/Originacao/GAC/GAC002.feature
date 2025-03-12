@@ -5,7 +5,7 @@ Funcionalidade: GAC002 - Preço por Região
 
   Cenário de Fundo:
     Dado inicialize a execução dos cenários do GAC002
-    E acessar o programa "GAC002" feature GAC002
+    E acessar o programa "GAC002" pela empresa "84" feature GAC002
 
     @wip #Não faz pesquisa em campos de select,q aundo digita o nome solicitado
 Cenário: Cadastro, Edição e Exclusão page Preço por Região | Caminho Feliz

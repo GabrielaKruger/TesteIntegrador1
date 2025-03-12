@@ -4,7 +4,7 @@
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do VFS014
-     E acessar o programa "VFS014" feature VFS014
+     E acessar o programa "VFS014" pela empresa "84" feature VFS014
 
      # Ao iniciar cenário pela 1º verificar se inicio está apresentando modal de certificado vencido
 

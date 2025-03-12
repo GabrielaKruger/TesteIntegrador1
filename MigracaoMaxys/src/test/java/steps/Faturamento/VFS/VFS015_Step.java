@@ -45,10 +45,10 @@ public class VFS015_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature VFS015")
-    public void acessarOProgramaFeatureVFS015(String programa) {
+    @E("acessar o programa {string} pela empresa {string} feature VFS015")
+    public void acessarOProgramaFeatureVFS015(String programa, String empresa) {
         basePage.esperarMilissegundos(5000);// espera necessária
-        loginPage.loginNewMaxysNovo(programa);
+        loginPage.loginNewMaxysNovo(programa, empresa);
     }
 
     @Quando("selecionar Faturamento feature VFS015")

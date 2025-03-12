@@ -4,7 +4,7 @@ Funcionalidade: FCT007 - Aprovação Comercial
 
   Cenário de Fundo:
     Dado inicialize a execução dos cenários do FCT007
-    E acessar o programa "FCT007" feature FCT007
+    E acessar o programa "FCT007" pela empresa "84" feature FCT007
 
   @wip #Refluxo- botãos Toolbar não habilitados
   Cenário: Cadastro e edição de Aprovação Comercial| Caminho feliz

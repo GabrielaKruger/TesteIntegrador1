@@ -48,10 +48,10 @@ public class REC001_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature REC001")
-    public void acessarOProgramaFeatureREC(String programa) {
-        basePage.esperarMilissegundos(5000);// espera necessária
-        loginPage.loginNewMaxysNovo(programa);
+    @E("acessar o programa {string} pela empresa {string} feature REC001")
+    public void acessarOProgramaFeatureREC001(String programa, String empresa) {
+        basePage.esperarMilissegundos(5000); // espera necessária
+        loginPage.loginNewMaxysNovo(programa, empresa);
     }
 
     @Quando("clicar botão ToolBar {string} feature REC001")
@@ -117,7 +117,6 @@ public class REC001_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
-
 
     @E("preenche N CNPJ CPF feature REC001")
     public void preencheNCNPJCPFFeatureREC001() {

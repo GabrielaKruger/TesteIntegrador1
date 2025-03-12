@@ -5,7 +5,7 @@ Funcionalidade: REC001 - Recebimento de Notas Fiscais
 
   Cenário de Fundo:
     Dado inicialize a execução dos cenários do REC001
-    E acessar o programa "REC001" feature REC001
+    E acessar o programa "REC001" pela empresa "84" feature REC001
 
   @1v1 # Refluxo - Tela de Centro de Custo não finalizada
   Cenário: Nota de Entrada com Centro de Custo e Moeda 1

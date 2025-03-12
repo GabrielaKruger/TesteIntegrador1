@@ -48,15 +48,15 @@ public class VFS014_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature VFS014")
-    public void acessarOProgramaFeatureVFS014(String programa) {
+    @E("acessar o programa {string} pela empresa {string} feature VFS014")
+    public void acessarOProgramaFeatureVFS014(String programa, String empresa) {
         basePage.esperarMilissegundos(5000);// espera necessária
-        loginPage.loginNewMaxysNovo(programa);
+        loginPage.loginNewMaxysNovo(programa, empresa);
     }
 
     @Quando("acessar page {string} feature VFS014")
     public void acessarPageFeatureVFS014(String nomePage) {
-        basePage.esperarMilissegundos(12000);
+        basePage.esperarMilissegundos(12000); // espera necessária
         VFS014_Page.clicarBotaoTransicao();
         VFS014_Page.acessarPageFeatureVFS014(nomePage);
     }

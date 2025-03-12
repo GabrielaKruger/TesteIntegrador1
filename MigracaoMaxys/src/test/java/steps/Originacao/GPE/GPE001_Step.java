@@ -49,10 +49,10 @@ public class GPE001_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature GPE001")
-    public void acessarOProgramaFeatureGPE001(String programa) {
+    @E("acessar o programa {string} pela empresa {string} feature GPE001")
+    public void acessarOProgramaFeatureGPE001(String programa, String empresa) {
         basePage.esperarMilissegundos(5000);// espera necessária
-        loginPage.loginNewMaxysNovo(programa);
+        loginPage.loginNewMaxysNovo(programa, empresa);
     }
 
 

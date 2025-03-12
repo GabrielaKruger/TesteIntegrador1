@@ -4,8 +4,8 @@
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do VFS002
-#     E acessar o programa "VFS002" feature VFS002
-     E acessa o programa "VFS002" feature VFS002
+     E acessar o programa "VFS002" pela empresa "84" feature VFS002
+#     E acessa o programa "VFS002" feature VFS002
 #     E esperar o programa carregar feature VFS002
    # Precisa ajustar bug ja reportado
 

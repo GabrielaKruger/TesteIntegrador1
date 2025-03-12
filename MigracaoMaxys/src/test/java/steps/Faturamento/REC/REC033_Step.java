@@ -48,10 +48,10 @@ public class REC033_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature REC033")
-    public void acessarOProgramaFeatureREC(String programa) {
+    @E("acessar o programa {string} pela empresa {string} feature REC033")
+    public void acessarOProgramaFeatureREC(String programa, String empresa) {
         basePage.esperarMilissegundos(5000);// espera necessária
-        loginPage.loginNewMaxysNovo(programa);
+        loginPage.loginNewMaxysNovo(programa, empresa);
     }
 }
 

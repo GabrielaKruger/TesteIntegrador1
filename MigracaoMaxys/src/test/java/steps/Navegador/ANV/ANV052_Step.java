@@ -49,10 +49,10 @@ public class ANV052_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature ANV052")
-    public void acessarOProgramaFeatureANV052(String programa) {
+    @E("acessar o programa {string} pela empresa {string} feature ANV052")
+    public void acessarOProgramaFeatureANV052(String programa, String empresa) {
         basePage.esperarMilissegundos(5000);// espera necessária
-        loginPage.loginNewMaxysNovo(programa);
+        loginPage.loginNewMaxysNovo(programa, empresa);
         basePage.esperarMilissegundos(5000);// espera necessária
     }
 

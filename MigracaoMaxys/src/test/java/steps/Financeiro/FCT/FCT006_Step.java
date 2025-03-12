@@ -49,9 +49,9 @@ public class FCT006_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature FCT006")
-    public void acessarOProgramaFeatureFCT006(String programa) {
-        loginPage.loginNewMaxysNovo(programa);
+    @E("acessar o programa {string} pela empresa {string} feature FCT006")
+    public void acessarOProgramaFeatureFCT006(String programa,String empresa) {
+        loginPage.loginNewMaxysNovo(programa, empresa);
     }
 
     @Quando("recarregar o programa feature FCT006")

@@ -49,9 +49,9 @@ public class TCO024_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature TCO024")
-    public void acessarOProgramaFeatureTCO024(String programa) {
-        loginPage.loginNewMaxysNovo(programa);
+    @E("acessar o programa {string} pela empresa {string} feature TCO024")
+    public void acessarOProgramaFeatureTCO024(String programa, String empresa) {
+        loginPage.loginNewMaxysNovo(programa, empresa);
         basePage.esperarMilissegundos(4000); // espera necessária
     }
 

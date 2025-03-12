@@ -4,7 +4,7 @@
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TTB163
-     E acessar o programa "TTB163" feature TTB163
+     E acessar o programa "TTB163" pela empresa "84" feature TTB163
 
      # Refluxo - Pages não apresentam massa de dados
    Cenário: Cadastro Alçada de Cadastro de Frete| Caminho feliz

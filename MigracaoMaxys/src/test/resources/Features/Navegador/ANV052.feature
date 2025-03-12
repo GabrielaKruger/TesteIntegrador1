@@ -5,7 +5,7 @@ Funcionalidade: ANV052 - Pesagens bloqueadas/Peso manual
 
   Cenário de Fundo:
     Dado inicialize a execução dos cenários do ANV052
-    E acessar o programa "ANV052" feature ANV052
+    E acessar o programa "ANV052" pela empresa "84" feature ANV052
 
   Cenário: Cadastro, Edição e Exclusão de Programa/Recurso | Caminho Feliz
 

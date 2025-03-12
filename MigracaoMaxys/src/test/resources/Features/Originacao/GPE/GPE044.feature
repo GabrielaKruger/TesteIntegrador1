@@ -4,7 +4,7 @@
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do GPE044
-     E acessar o programa "GPE044" feature GPE044
+     E acessar o programa "GPE044" pela empresa "84" feature GPE044
 
    Cenário: Liberação e Rercusa de Pré - Contrato| Caminho feliz
 

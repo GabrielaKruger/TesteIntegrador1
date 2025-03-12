@@ -48,9 +48,9 @@ public class GPE044_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature GPE044")
-    public void acessarOProgramaFeatureGPE044(String programa) {
-        loginPage.loginNewMaxysNovo(programa);
+    @E("acessar o programa {string} pela empresa {string} feature GPE044")
+    public void acessarOProgramaFeatureGPE044(String programa, String empresa) {
+        loginPage.loginNewMaxysNovo(programa, empresa);
     }
 
     @Então("clicar botão ToolBar {string} feature GPE044")

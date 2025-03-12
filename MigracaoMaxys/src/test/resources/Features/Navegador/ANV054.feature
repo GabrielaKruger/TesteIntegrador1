@@ -5,7 +5,7 @@
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do ANV054
-     E acessar o programa "ANV054" feature ANV054
+     E acessar o programa "ANV054" pela empresa "84" feature ANV054
 
    Cenário: Cadastro de Acessos Por Page | Caminho feliz
 

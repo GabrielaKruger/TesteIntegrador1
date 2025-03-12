@@ -47,10 +47,10 @@ public class VFS002_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature VFS002")
-    public void acessarOProgramaFeatureVFS002(String programa) {
+    @E("acessar o programa {string} pela empresa {string} feature VFS002")
+    public void acessarOProgramaFeatureVFS002(String programa, String empresa) {
         basePage.esperarMilissegundos(5000);
-        loginPage.loginNewMaxysNovo(programa);
+        loginPage.loginNewMaxysNovo(programa, empresa);
         basePage.esperarMilissegundos(10000);
     }
 
