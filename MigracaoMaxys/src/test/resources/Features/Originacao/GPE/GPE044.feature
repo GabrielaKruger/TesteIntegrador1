@@ -18,6 +18,7 @@
      E preencher Até feature GPE044
      Então realizar a Consulta feature GPE044
 
+
      Quando selecionar no grid Pré-Contrato feature GPE044
      E preencher Motivo feature GPE044
      Então realizar Liberação feature GPE044

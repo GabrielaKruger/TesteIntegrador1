@@ -16,6 +16,7 @@ import pages.BasePage;
 import pages.LoginPage;
 import utils.MassaTeste;
 
+import java.io.IOException;
 import java.time.Duration;
 
 public class GPE044_Step {
@@ -139,7 +140,8 @@ public class GPE044_Step {
     }
 
     @Então("realizar a Consulta feature GPE044")
-    public void realizarAConsultaFeatureGPE044() {
+    public void realizarAConsultaFeatureGPE044() throws IOException {
+        BasePage.takeScreenshot(driver, "GPE044 - Dados da consulta");
         GPE044_Page.realizarAConsultaFeatureGPE044();
     }
 

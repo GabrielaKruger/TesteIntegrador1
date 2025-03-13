@@ -14,6 +14,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 import util.faker.MaxiconFaker;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import io.cucumber.java.en.And;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
+
 import java.time.Duration;
 import java.util.*;
 import java.util.List;
@@ -646,6 +657,31 @@ public class BasePage {
 //----------------------------------------------------------------------------------
 //    //OUTRAS Funções
 //----------------------------------------------------------------------------------
+
+    // Método para capiturar a tela (Print da tela)
+    public static void takeScreenshot(WebDriver driver, String stepName) throws IOException {
+        // Faz a captura da tela
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+        // Gera time do momento da capitura. Exemplo: 20250313_140509
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
+        // Define o caminho onde o print será salvo
+        String filePath = "screenshots/" + stepName + "_" + timestamp + ".png";
+
+        // Verifica se o diretório existe, caso não, cria um
+        File screenshotDir = new File("screenshots");
+        if (!screenshotDir.exists()) {
+            screenshotDir.mkdir();
+        }
+
+        // Move o arquivo gerado para o local definido
+        FileUtils.copyFile(srcFile, new File(filePath));
+
+        // Exibe no console o caminho do print salvo
+        System.out.println("📸 Screenshot salvo em: " + filePath);
+    }
+
 
     // metódo para recarregar pagina com refresh e clicar em um elemento para carregar corretamente a pagina
     public void recarregarPaginaComRefresh() {

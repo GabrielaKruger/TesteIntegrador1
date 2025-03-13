@@ -7,8 +7,16 @@
      Dado inicialize a execução dos cenários do COM003
      E acessar o programa "COM003" pela empresa "84" feature COM003
 
-   @910v2
-   Cenário: Consulta Solicitaão de Compras | Caminho Feliz
+   Cenário: Consulta Solitação de Compras | Filtros consulta
+#   Consulta Solitação de Compras | Caminho Feliz
+#   Consulta Solitação de Compras | Orçamento botão e F5
+#   Consulta Solitação de Compras | Solitação botão e F7
+#   Consulta Solitação de Compras | Centro Custo botão e F8
+#   Consulta Solitação de Compras | Consulta Dados botão e F4
+#   Consulta Solitação de Compras | Opções botão e F3
+#   Consulta Solitação de Compras | Nova Consulta
+#   Consulta Solitação de Compras | Gerar Planilha
+#   Consulta Solitação de Compras | Anexo
 
      # Pedido de Compra
      Quando clicar botão ToolBar "novo" feature COM003
