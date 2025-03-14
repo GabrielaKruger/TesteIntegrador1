@@ -658,28 +658,67 @@ public class BasePage {
 //    //OUTRAS Funções
 //----------------------------------------------------------------------------------
 
-    // Método para capiturar a tela (Print da tela)
-    public static void takeScreenshot(WebDriver driver, String stepName) throws IOException {
+    // Método para capturar a tela (Print da tela)
+    public static void takeScreenshot(WebDriver driver, String tela, String stepName) throws IOException {
         // Faz a captura da tela
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-        // Gera time do momento da capitura. Exemplo: 20250313_140509
+        // Gera timestamp do momento da captura. Exemplo: 20250313_140509
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 
-        // Define o caminho onde o print será salvo
-        String filePath = "screenshots/" + stepName + "_" + timestamp + ".png";
+        // Define o diretório específico para a tela dentro de "screenshots/"
+        String directoryPath = "screenshots/" + tela;
+        File screenshotDir = new File(directoryPath);
 
         // Verifica se o diretório existe, caso não, cria um
-        File screenshotDir = new File("screenshots");
         if (!screenshotDir.exists()) {
-            screenshotDir.mkdir();
+            screenshotDir.mkdirs();
         }
+
+        // Define o caminho completo onde o print será salvo
+        String filePath = directoryPath + "/" + stepName + "_" + timestamp + ".png";
 
         // Move o arquivo gerado para o local definido
         FileUtils.copyFile(srcFile, new File(filePath));
 
         // Exibe no console o caminho do print salvo
         System.out.println("📸 Screenshot salvo em: " + filePath);
+    }
+
+    // Método para limpar o diretório de prints após 14 dias
+    public static void limparCapturasdeTelaAntigas() {
+        File screenshotsDir = new File("screenshots");
+
+        if (screenshotsDir.exists() && screenshotsDir.isDirectory()) {
+            File[] files = screenshotsDir.listFiles();
+
+            if (files != null) {
+                long now = System.currentTimeMillis();
+                long duasSemanasMillis = 14L * 24 * 60 * 60 * 1000; // 14 dias em milissegundos
+
+                for (File file : files) {
+                    // Verifica se é um diretório (pasta de uma tela específica)
+                    if (file.isDirectory()) {
+                        File[] subFiles = file.listFiles(); // Obtém os arquivos dentro do diretório
+
+                        if (subFiles != null) {
+                            for (File subFile : subFiles) {
+                                if (subFile.isFile() && (now - subFile.lastModified() > duasSemanasMillis)) {
+                                    subFile.delete();
+                                    System.out.println("🗑 Arquivo deletado: " + subFile.getAbsolutePath());
+                                }
+                            }
+                        }
+
+                        // Após apagar os arquivos, verifica se a pasta está vazia e remove
+                        if (file.list().length == 0) {
+                            file.delete();
+                            System.out.println("🗑 Diretório removido: " + file.getAbsolutePath());
+                        }
+                    }
+                }
+            }
+        }
     }
 
 

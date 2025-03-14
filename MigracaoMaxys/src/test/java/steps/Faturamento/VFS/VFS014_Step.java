@@ -1,6 +1,7 @@
 package steps.Faturamento.VFS;
 
 import driver.driverManager.DriverManager;
+import io.cucumber.core.internal.com.fasterxml.jackson.databind.ser.Serializers;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -16,6 +17,7 @@ import pages.Faturamento.VFS.VFS014_Page;
 import pages.LoginPage;
 import utils.MassaTeste;
 
+import java.io.IOException;
 import java.time.Duration;
 
 public class VFS014_Step {
@@ -118,8 +120,9 @@ public class VFS014_Step {
     }
 
     @Então("validar se possui notas fiscais no grid feature VFS014")
-    public void validarSePossuiNotasFiscaisNoGridFeatureVFS014() {
+    public void validarSePossuiNotasFiscaisNoGridFeatureVFS014()throws IOException {
         VFS014_Page.validarSePossuiNotasFiscaisNoGridFeatureVFS014();
+        BasePage.takeScreenshot(driver, "VFS014", "Validacao Notas Grid");
     }
 
     @E("seleciona status de inutilizacão feature VFS014")
@@ -143,8 +146,9 @@ public class VFS014_Step {
     }
 
     @E("clica em consultar inutilizacao feature VFS014")
-    public void clicaEmConsultarInutilizacaoFeatureVFS014() {
+    public void clicaEmConsultarInutilizacaoFeatureVFS014() throws IOException{
         VFS014_Page.clicaEmConsultarInutilizacaoFeatureVFS014();
+        BasePage.takeScreenshot(driver, "VFS014", "Inutilizacao");
     }
 
     @E("informa periodo data inicial feature VFS014")
@@ -163,12 +167,15 @@ public class VFS014_Step {
     }
 
     @E("clica em computar estatistica feature VFS014")
-    public void clicaEmComputarEstatisticaFeatureVFS014() {
+    public void clicaEmComputarEstatisticaFeatureVFS014() throws IOException {
         VFS014_Page.clicaEmComputarEstatisticaFeatureVFS014();
+        BasePage.takeScreenshot(driver, "VFS014", "Computar estatistica");
     }
 
     @After
     public void tearDown() {
+        BasePage.limparCapturasdeTelaAntigas();
+
         if (driver != null) {
             if (scenario != null && scenario.isFailed()) {
                 final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);

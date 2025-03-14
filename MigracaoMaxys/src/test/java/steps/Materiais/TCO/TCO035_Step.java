@@ -17,6 +17,7 @@ import pages.Materiais.TCO.TCO035_Page;
 import utils.MassaTeste;
 
 import java.time.Duration;
+import java.io.IOException;
 
 public class TCO035_Step {
 
@@ -65,13 +66,15 @@ public class TCO035_Step {
     }
 
     @E("apresentar a mensagem {string} feature TCO035")
-    public void apresentarAMensagemFeatureTCO035(String mensagem) {
+    public void apresentarAMensagemFeatureTCO035(String mensagem) throws IOException{
+        BasePage.takeScreenshot( driver, "TCO035", "Registro Salvo Com Sucesso");
         basePage.validaMensagemLabelByText(mensagem);
     }
 
     @E("clicar botão {string} do modal feature TCO035")
-    public void clicarBotãoDoModalFeatureTCO035(String acao) {
+    public void clicarBotãoDoModalFeatureTCO035(String acao) throws IOException{
         basePage.clicarBotaoDoModal(acao);
+        BasePage.takeScreenshot(driver, "TCO035", "Validação Modal Realizada");
     }
 
     @Quando("recarregar o programa feature TCO035")
@@ -162,6 +165,8 @@ public class TCO035_Step {
 
     @After
     public void tearDown() {
+        BasePage.limparCapturasdeTelaAntigas();
+
         if (driver != null) {
             if (scenario != null && scenario.isFailed()) {
                 final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);

@@ -6,7 +6,7 @@
      Dado inicialize a execução dos cenários do GPE044
      E acessar o programa "GPE044" pela empresa "84" feature GPE044
 
-   Cenário: Liberação e Rercusa de Pré - Contrato| Caminho feliz
+   Cenário: Liberação e Recusa de Pré - Contrato| Caminho feliz
 
      # Filtros
      Quando preencher Clifor feature GPE044
@@ -17,7 +17,6 @@
      E preencher Data de Emissão feature GPE044
      E preencher Até feature GPE044
      Então realizar a Consulta feature GPE044
-
 
      Quando selecionar no grid Pré-Contrato feature GPE044
      E preencher Motivo feature GPE044
@@ -35,7 +34,7 @@
      E apresentar a mensagem parcial "recusada com sucesso." feature GPE044
      Então clicar botão "ok" do modal feature GPE044
 
-   Cenário: Liberação e Rercusa de Pré - Contrato| Teclas Atalho
+   Cenário: Liberação e Recusa de Pré - Contrato| Teclas Atalho
 
      # Filtros
      Quando preencher Clifor feature GPE044
@@ -63,7 +62,7 @@
      E apresentar a mensagem parcial "recusada com sucesso." feature GPE044
      Então clicar botão "ok" do modal feature GPE044
 
-   Cenário: Liberação e Rercusa de Pré - Contrato| Consultar GPE000
+   Cenário: Liberação e Recusa de Pré - Contrato| Consultar GPE000
      Quando preencher Clifor feature GPE044
      E preencher Endereço feature GPE044
      E preencher Empresa feature GPE044

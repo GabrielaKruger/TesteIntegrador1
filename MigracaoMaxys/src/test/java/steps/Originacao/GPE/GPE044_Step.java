@@ -70,8 +70,9 @@ public class GPE044_Step {
     }
 
     @E("apresentar a mensagem parcial {string} feature GPE044")
-    public void apresentarAMensagemParcialFeatureGPE044(String mensagem) {
+    public void apresentarAMensagemParcialFeatureGPE044(String mensagem) throws IOException{
         basePage.validaMensagemLabelByContainsText(mensagem);
+        BasePage.takeScreenshot(driver, "GPE044", mensagem);
     }
 
     @Então("clicar botão {string} do modal feature GPE044")
@@ -140,8 +141,7 @@ public class GPE044_Step {
     }
 
     @Então("realizar a Consulta feature GPE044")
-    public void realizarAConsultaFeatureGPE044() throws IOException {
-        BasePage.takeScreenshot(driver, "GPE044 - Dados da consulta");
+    public void realizarAConsultaFeatureGPE044() {
         GPE044_Page.realizarAConsultaFeatureGPE044();
     }
 
@@ -179,12 +179,15 @@ public class GPE044_Step {
     public void sairDaTelaGPE000FeatureGPE() { GPE044_Page.sairDaTelaGPE000FeatureGPE(); }
 
     @Então("apresentar a mensagem no pop-up {string} feature GPE044")
-    public void apresentarAMensagemNoPopUpFeatureGPE044(String mensagem) {
+    public void apresentarAMensagemNoPopUpFeatureGPE044(String mensagem) throws IOException{
         basePage.validarMensagemByToastContainerDivDiv(mensagem);
+        BasePage.takeScreenshot(driver, "GPE044", mensagem);
     }
 
     @After
     public void tearDown() {
+        BasePage.limparCapturasdeTelaAntigas();
+
         if (driver != null) {
             if (scenario != null && scenario.isFailed()) {
                 final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);

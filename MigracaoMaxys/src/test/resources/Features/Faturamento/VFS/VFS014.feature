@@ -23,7 +23,7 @@
      E clica em consultar feature VFS014
      Então validar se possui notas fiscais no grid feature VFS014
 
-
+  @wip #Refluxo versão Web - Automação - Versão forms: 0.370.0 - Erro ORA-06550
    Cenário: Movimentacao NFE | Page Inutilizacao | Caminho feliz
 
      Quando acessar page "Inutilização" feature VFS014
