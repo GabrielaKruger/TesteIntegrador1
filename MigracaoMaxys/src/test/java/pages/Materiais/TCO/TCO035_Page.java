@@ -13,7 +13,8 @@ public class TCO035_Page extends BasePage {
     String inputEmpresaXpath = "//*[@id='controlerestrito-cdEmpresa']/div/input";
     String inputAutorizadorXpath = "//*[@id='controlerestrito-cdAutorizador']/div/input";
     String inputCCustoXpath = "//*[@id='controlerestrito-cdCentrocusto']/div/input";
-    String btnConsultarXpath = "//*[@id='controle-btnConsulta']/button/div";
+    String btnConsultarXpath = " //*[@id='controle-btnConsulta']/div/button/div";
+
 
     // Grid Autorizadores
     String inputEmpresaGridXpathInicio = "//*[@id='carregaDados-cdEmpresa-";

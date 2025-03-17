@@ -75,7 +75,7 @@
      E apresenta o modal H4 "modal-basic-title" feature TCO035
      Então clicar botão "sim" do modal feature TCO035
 
-    @wip # Não se comporta como o Forms - Campo Automatizador
+   @wip # Não se comporta como o Forms - Campo Automatizador
    Cenário: Consulta, cadastro e exclusão| Negativo - Validação Campos obrigatórios Consulta
 
      Quando clicar botão ToolBar "novo" feature TCO035

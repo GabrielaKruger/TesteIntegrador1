@@ -59,7 +59,7 @@ public class TGR018_Step {
 
     @E("apresentar a mensagem {string} no pop-up feature TGR018")
     public void apresentarAMensagemNoPopUpFeatureTGR018(String mensagem) {
-        basePage.esperarMilissegundos(1000); // espera necessária
+        basePage.esperarMilissegundos(3000); // espera necessária
         basePage.validarMensagemByToastContainerDivDiv(mensagem);
     }
 

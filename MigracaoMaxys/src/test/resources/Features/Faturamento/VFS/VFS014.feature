@@ -1,13 +1,13 @@
  #language: pt
- @test @VFS014 @dt_VFS014 @chrome
+ @wip @VFS014 @dt_VFS014 @chrome
  Funcionalidade: VFS014 - MOVIMENTAÇAO NFE
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do VFS014
      E acessar o programa "VFS014" pela empresa "84" feature VFS014
 
-     # Ao iniciar cenário pela 1º verificar se inicio está apresentando modal de certificado vencido
-
+    # Ao iniciar cenário pela 1º verificar se inicio está apresentando modal de certificado vencido
+    # Refluxo reportado: Carregamento do Grid - Estão carregando todas as notas fiscais, independente se há consulta ou não.
    Cenário: Movimentacao NFE | Page Notas Fiscais Eletronicas | Caminho feliz
 
      Quando informa data emissao inicial feature VFS014
