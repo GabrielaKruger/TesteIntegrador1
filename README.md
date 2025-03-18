@@ -10,11 +10,15 @@ Atualmente, o <b>Maxys</b> está em processo de <i>migração da tecnologia FMB 
 
 🖥️ Linguagens e Frameworks: 
 
-    ☕ Java | 🗄️ Oracle PL/SQL | 🥒 Cucumber | 🖹 Selenium 
+    ☕ Java | 🗄️ Oracle PL/SQL | 🥒 Cucumber | ✍️ Gherkin |  🖹 Selenium WebDriver | 🌐 Selenium Grid | ✅ JUnit 
 
 💾 Banco de Dados:
 
     🛢️Oracle Database
+
+🛠️ Build e Gerenciamento de Dependências:
+
+    🏗️ Maven (gerenciador de dependências e build automation)
 
 🛠️ IDE e Desenvolvimento:
 

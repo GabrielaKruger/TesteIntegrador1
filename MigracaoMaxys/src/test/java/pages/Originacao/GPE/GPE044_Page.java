@@ -26,8 +26,6 @@ public class GPE044_Page extends BasePage {
 
     // String Globais
     int primeiraLinhaEmBranco;
-    String codigoSimulated;
-    String descricaoFaker;
     String xPathColunaTabelaCodigoFim = "']/div/input";
     String xPathColunaTabelaDataCodigoFim = "']/div/div/input";
     String btnSairXpath = "//*[@id='btn-close-templateModalCanDetalhe']";
@@ -39,35 +37,35 @@ public class GPE044_Page extends BasePage {
     }
 
     public void preencherCliforFeatureGPE044(String clifor) {
-        preencherCampoPorXpathFeatureGPE044(inputCliforXpath, xPathColunaTabelaCodigoFim, clifor);
+        encontrarEPreencherElementos(inputCliforXpath, xPathColunaTabelaCodigoFim, clifor);
     }
 
     public void preencherEndereçoFeatureGPE044(String endereco) {
-        preencherCampoPorXpathFeatureGPE044(inputEnderecoXpath, xPathColunaTabelaCodigoFim, endereco);
+        encontrarEPreencherElementos(inputEnderecoXpath, xPathColunaTabelaCodigoFim, endereco);
     }
 
     public void preencherEmpresaFeatureGPE044(String empresa) {
-        preencherCampoPorXpathFeatureGPE044(inputEmpresaXpath, xPathColunaTabelaCodigoFim, empresa);
+        encontrarEPreencherElementos(inputEmpresaXpath, xPathColunaTabelaCodigoFim, empresa);
     }
 
     public void preencherItemFeatureGPE044(String item) {
-        preencherCampoPorXpathFeatureGPE044(inputItemXpath, xPathColunaTabelaCodigoFim, item);
+        encontrarEPreencherElementos(inputItemXpath, xPathColunaTabelaCodigoFim, item);
     }
 
     public void preencherPréContratoFeatureGPE044(String contrato) {
-        preencherCampoPorXpathFeatureGPE044(inputPreContratoXpath, xPathColunaTabelaCodigoFim, contrato);
+        encontrarEPreencherElementos(inputPreContratoXpath, xPathColunaTabelaCodigoFim, contrato);
     }
 
     public void preencherDataDeEmissãoFeatureGPE044(String dataEmissaoInicio) {
-        preencherCampoPorXpathFeatureGPE044(inputDataEmissaoInicioXapth, xPathColunaTabelaDataCodigoFim, dataEmissaoInicio);
+        encontrarEPreencherElementos(inputDataEmissaoInicioXapth, xPathColunaTabelaDataCodigoFim, dataEmissaoInicio);
     }
 
     public void preencherAtéFeatureGPE044(String dataEmissaoFim) {
-        preencherCampoPorXpathFeatureGPE044(inputDataEmissaoFimXpath, xPathColunaTabelaDataCodigoFim, dataEmissaoFim);
+        encontrarEPreencherElementos(inputDataEmissaoFimXpath, xPathColunaTabelaDataCodigoFim, dataEmissaoFim);
     }
 
     public void preencherDataDeEmissãoAtualFeatureGPE004() {
-        preencherCampoPorXpathFeatureGPE044(inputDataEmissaoInicioXapth, xPathColunaTabelaDataCodigoFim, DataUtils.DataAtual());
+        encontrarEPreencherElementos(inputDataEmissaoInicioXapth, xPathColunaTabelaDataCodigoFim, DataUtils.DataAtual());
     }
 
     public void realizarAConsultaFeatureGPE044() {
@@ -81,7 +79,7 @@ public class GPE044_Page extends BasePage {
     }
 
     public void preencherMotivoFeatureGPE044(String motivoBloqueio) {
-        preencherCampoPorXpathFeatureGPE044(inputMotivoXpath, xPathColunaTabelaCodigoFim, motivoBloqueio);
+        encontrarEPreencherElementos(inputMotivoXpath, xPathColunaTabelaCodigoFim, motivoBloqueio);
     }
 
     public void realizarLiberaçãoFeatureGPE044() {
