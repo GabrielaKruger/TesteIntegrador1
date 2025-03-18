@@ -1,10 +1,37 @@
 <h1 style="font-size: 40px; font-weight: bold; color: blue; text-align: center;"> Migracao Maxys </h1>
 
-<p align="center"><i>Repository for versioning and project documentation used during the series of articles on GitHub.</i></p>
+<p align="center"><i>Bem-vindo ao melhor projeto da Maxicon!</i></p>
 
-<p style="text-align: justify;"><b>Descrição do Projeto:</b>  O que é o projeto de migração Maxys? Quais os objetivos e principais funcionalidades? </p>
+<p style="text-align: justify;"> <b>Maxys é um ERP</b> modular e completo, desenvolvido para oferecer uma gestão integrada e eficiente de diversas áreas empresariais. Ele suporta setores como Contábil, Faturamento, Originação, Transporte, Financeiro, Compras, Estoque, Controladoria, Fiscal, RH e Comercial, garantindo suporte especializado por meio de squads dedicados. Construído com tecnologia Oracle, o sistema assegura escalabilidade, segurança e alto desempenho.
 
-<p style="text-align: justify;"><b>Tecnologias e Ferramentas:</b> Quais tecnologias e ferramentas estão sendo utilizadas? (Por exemplo, além do IntelliJ, você utiliza frameworks como Cucumber, Selenium, etc.?)</p>
+Atualmente, o <b>Maxys</b> está em processo de <i>migração da tecnologia FMB para uma versão Web</i>, com o objetivo de modernizar a interface, melhorar a experiência do usuário e ampliar a integração com novas tecnologias. Essa transição busca oferecer maior flexibilidade, acessibilidade e padronização dos processos, garantindo continuidade operacional e alinhamento entre as equipes sem impactos negativos.</p>
+
+<p style="text-align: justify;"><b> 🚀 Tecnologias e Ferramentas:</b> </p>
+
+🖥️ Linguagens e Frameworks: 
+
+    ☕ Java | 🗄️ Oracle PL/SQL | 🥒 Cucumber | 🖹 Selenium 
+
+💾 Banco de Dados:
+
+    🛢️Oracle Database
+
+🛠️ IDE e Desenvolvimento:
+
+    🏗️ IntelliJ IDEA
+
+🔄 Controle de Versão:
+
+    🔀 Git | 🦊 GitLab 
+
+⚙️ Integração e Deploy:
+
+    🤖 Jenkins 
+
+📌 Metodologias e Gestão:
+
+    📝 BDD | 📊 Página de Solicitações
+
 
 <p style="text-align: justify;"><b>Estrutura do Projeto:</b> Como o projeto está organizado dentro do IntelliJ? Quais são as pastas e arquivos principais que devem ser destacados?</p>
 
