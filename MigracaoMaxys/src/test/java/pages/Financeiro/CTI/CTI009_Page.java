@@ -38,9 +38,40 @@ public class CTI009_Page extends BasePage {
         this.driver = driver;
     }
 
-
+    
     public void preencherEmpresaFeatureCTI009(String empresa) {
         encontrarEPreencherElementos(inputEmpresaXpath, inputFimXpath, empresa);
     }
 
+    public void selecionarOrdemSendoFeatureCTI009(String ordem) {
+        selecionarListaGridByXpathText(selectOrdemXpath + selectFimXpath, ordem);
+    }
+
+    public void realizarAConsultaFeatureCTI009() {
+        clicarElementoByXpath(btnConsultaXpath + butttonFimXpath );
+    }
+
+    public void selecionarVariaçãoFinanceiraNaFeatureCTI009() {
+        marcarRadioButon(radioValiFinanceiraXpath);
+    }
+
+    public void selecionarVariaçãoContabilNaFeatureCTI009() {
+        marcarRadioButon(radioValiContabilXpath);
+    }
+
+    public void preencherAEmpresaFeatureCTI009(String empresa) {
+        encontrarEPreencherElementos(inoputEmpresaAltXpath, inputFimXpath, empresa); 
+    }
+
+    public void preencherMêsFeatureCTI009(String mes) {
+        encontrarEPreencherElementos(inputMesAltXpath, dataFimXpath, mes);
+    }
+
+    public void realizarOFechamentoReaberturaFinanceiroFatureCTI009() {
+        clicarElementoByXpath(btnAlteracaoXpath+butttonFimXpath);
+    }
+
+    public void removerMesInformadoFeatureCTI009() {
+        limparCampoDeTextoPorXpath(inputMesAltXpath+dataFimXpath);
+    }
 }

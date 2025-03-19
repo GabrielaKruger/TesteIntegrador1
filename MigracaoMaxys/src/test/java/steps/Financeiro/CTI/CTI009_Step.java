@@ -73,7 +73,7 @@ public class CTI009_Step {
     @E("apresentar a mensagem parcial {string} feature CTI009")
     public void apresentarAMensagemParcialFeatureCTI009(String mensagem) throws IOException{
         basePage.validaMensagemLabelByContainsText(mensagem);
-        BasePage.takeScreenshot(driver, "CTI009", mensagem);
+//        BasePage.takeScreenshot(driver, "CTI009", mensagem);
     }
 
     @Então("clicar botão {string} do modal feature CTI009")
@@ -81,7 +81,7 @@ public class CTI009_Step {
         basePage.clicarBotaoDoModal(acao);
     }
 
-    @Quando("apresenta o modal H4 {string} feature CTI009")
+    @Quando("apresentar o modal H4 {string} feature CTI009")
     public void apresentaOModalHFeatureCTI009(String title) {
         basePage.validaModalByH4(title);
     }
@@ -112,29 +112,49 @@ public class CTI009_Step {
         CTI009_Page.preencherEmpresaFeatureCTI009(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
     }
 
-    @E("selecionar Ordem feature CTI009")
-    public void selecionarOrdemFeatureCTI009() {
-//        CTI009_Page.selecionarOrdemFeatureCTI009();
+    @E("selecionar Ordem sendo {string} feature CTI009")
+    public void selecionarOrdemSendoFeatureCTI009(String ordem) {
+        CTI009_Page.selecionarOrdemSendoFeatureCTI009(ordem);
     }
 
     @Então("realizar a Consulta feature CTI009")
     public void realizarAConsultaFeatureCTI009() {
-//        CTI009_Page.realizarAConsultaFeatureCTI009();
+        CTI009_Page.realizarAConsultaFeatureCTI009();
     }
 
     @Quando("selecionar Variação Financeira na feature CTI009")
     public void selecionarVariaçãoFinanceiraNaFeatureCTI009() {
-//        CTI009_Page.selecionarVariaçãoFinanceiraNaFeatureCTI009();
+        CTI009_Page.selecionarVariaçãoFinanceiraNaFeatureCTI009();
+    }
+
+    @Quando("selecionar Variação Contábil na feature CTI009")
+    public void selecionarVariaçãoContabilaNaFeatureCTI009() {
+        CTI009_Page.selecionarVariaçãoContabilNaFeatureCTI009();
     }
 
     @E("preencher a Empresa feature CTI009")
     public void preencherAEmpresaFeatureCTI009() {
-//        CTI009_Page.preencherAEmpresaFeatureCTI009();
+        CTI009_Page.preencherAEmpresaFeatureCTI009(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
     }
 
     @Então("preencher Mês feature CTI009")
     public void preencherMêsFeatureCTI009() {
-//        CTI009_Page.preencherMêsFeatureCTI009();
+        CTI009_Page.preencherMêsFeatureCTI009(massaTeste.getMassaTestePorPathEChave(tagMassa, "mes"));
+    }
+
+    @Então("realizar o Fechamento ou Reabertura Financeiro fature CTI009")
+    public void realizarOFechamentoOuReaberturaFinanceiroFatureCTI009() {
+        CTI009_Page.realizarOFechamentoReaberturaFinanceiroFatureCTI009();
+    }
+
+    @Então("realizar o Fechamento Financeiro por {string} fature CTI009")
+    public void realizarOFechamentoFinanceiroPorFatureCTI(String tecla) {
+        basePage.pressionarTecla(tecla);
+    }
+
+    @E("remover Mes informado feature CTI009")
+    public void removerMesInformadoFeatureCTI009() {
+        CTI009_Page.removerMesInformadoFeatureCTI009();
     }
 
     @After
