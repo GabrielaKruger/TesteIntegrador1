@@ -122,7 +122,7 @@ public class VFS014_Step {
     @Então("validar se possui notas fiscais no grid feature VFS014")
     public void validarSePossuiNotasFiscaisNoGridFeatureVFS014()throws IOException {
         VFS014_Page.validarSePossuiNotasFiscaisNoGridFeatureVFS014();
-        BasePage.takeScreenshot(driver, "VFS014", "Validacao Notas Grid");
+//        BasePage.takeScreenshot(driver, "VFS014", "Validacao Notas Grid");
     }
 
     @E("seleciona status de inutilizacão feature VFS014")

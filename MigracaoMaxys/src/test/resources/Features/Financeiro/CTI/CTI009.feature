@@ -60,7 +60,7 @@
 
 
    # Validação apenas negativa pois o ambiente de teste não apresenta Variação Cambial
-   Cenário: Cálculo da Variação Cambial - Fechar/Reabrir Contábil
+   Cenário: Cálculo da Variação Cambial - Fechar/Reabrir Contábil | Negativo
 
      Quando preencher Empresa feature CTI009
      E selecionar Ordem sendo "Data" feature CTI009
