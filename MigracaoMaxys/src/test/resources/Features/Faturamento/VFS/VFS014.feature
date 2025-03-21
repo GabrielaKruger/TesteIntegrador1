@@ -6,8 +6,9 @@
      Dado inicialize a execução dos cenários do VFS014
      E acessar o programa "VFS014" pela empresa "84" feature VFS014
 
-    # Ao iniciar cenário pela 1º verificar se inicio está apresentando modal de certificado vencido
-    # Refluxo reportado: Carregamento do Grid - Estão carregando todas as notas fiscais, independente se há consulta ou não.
+    # Henrique - Quando possivel seria bom criar o caso de teste que valida a apresentadação dos dados da nota.
+   # Duplo clique na nota que é apresentada no grid. Para isso o filtro tem que ser com data de 2024
+
    Cenário: Movimentacao NFE | Page Notas Fiscais Eletronicas | Caminho feliz
 
      Quando informa data emissao inicial feature VFS014
