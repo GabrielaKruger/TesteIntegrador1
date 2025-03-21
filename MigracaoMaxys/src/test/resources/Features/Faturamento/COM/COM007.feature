@@ -2,10 +2,6 @@
  @test @COM007 @dt_COM007 @chrome
  Funcionalidade: COM007 - Aprovação de Pedidos de Compra
 
-   Cenário de Fundo:
-     Dado inicialize a execução dos cenários do COM007
-     E acessar o programa "COM007" pela empresa "84" feature COM007
-
 #   Aprovar Negociação de Compra - Uma Negociação
 #   Aprovar Negociação de Compra - Lote de Compras
 #   Aprovar Negociação de Compra - Detalhes Item da Negociação
@@ -15,6 +11,9 @@
 #   Aprovar Negociação de Compra - Detalhes - Últimas Compras
 #   Aprovar Negociação de Compra - Detalhes - Últimas Cotações
 
+   Cenário de Fundo:
+     Dado inicialize a execução dos cenários do COM007
+     E acessar o programa "COM007" pela empresa "84" feature COM007
 
    Cenário: Aprovar Negociação de Compra - Uma Negociação
 
@@ -67,7 +66,7 @@
       E apresentar a mensagem parcial "aprovado(s) com sucesso." feature COM007
       Então clicar botão "Ok" do modal feature COM007
 
-   @wip
+
 #   Cenário: Aprovar Negociação de Compra - Detalhes Item da Negociação
 #
 #     Quando confirmar mensagem SQL de Consulta feature COM007
@@ -76,7 +75,7 @@
 ##     E acessar detalhes do Item da Negociação feature COM007
 ##     Então fechar tela de Item da Negociação feature COM007
 
-   @wip
+
 #   Cenário:  Aprovar Negociação de Compra - Anexo | Negativo
 #
 #     Quando confirmar mensagem SQL de Consulta feature COM007
@@ -88,7 +87,7 @@
 ##     E apresentar a mensagem "MENSAGEM DE ALERTA POR MOTIVO FALTANDO" feature COM007
 #     Então clicar botão "ok" do modal feature COM007
 
-   @wip
+
 #    Cenário: Aprovar Negociação de Compra - Validar - Renegociar
 
 #     # Pedido de Compra
