@@ -41,41 +41,55 @@
      E apresentar a mensagem parcial "aprovado(s) com sucesso." feature COM007
      Então clicar botão "Ok" do modal feature COM007
 
-    @wip
+
    Cenário: Aprovar Negociação de Compra - Lote de Compras
 
-     Quando confirmar mensagem SQL de Consulta feature COM007
-     E fechar janela de Solicitações em Aberto feature COM007
-     E selecionar Negociação feature COM007
-#     Então confirmar seleção de lote feature COM007
+      Quando confirmar mensagem SQL de Consulta feature COM007
+      E fechar janela de Solicitações em Aberto feature COM007
+      Então selecionar Negociação feature COM007
 
-     Quando acessar page "Validar" feature COM007
-     E preencher Observação da Renegociação Cancelamento feature COM007
-#     E aprovar feature COM007
-#     Então confirmar aprovação feaure COM007
+     # Uma única Negociação
+      Quando apresentar o modal H4 "modal-basic-title" feature COM007
+      E apresentar a mensagem parcial "Selecionar todo o lote de compras número" feature COM007
+      Então clicar botão "sim" do modal feature COM007
 
-      @wip
-   Cenário: Aprovar Negociação de Compra - Detalhes Item da Negociação
+      Quando acessar page "Validar" feature COM007
+      E preencher Observação da Renegociação Cancelamento feature COM007
+      Então aprovar Negociacao feature COM007
 
-     Quando confirmar mensagem SQL de Consulta feature COM007
-     E fechar janela de Solicitações em Aberto feature COM007
-     E selecionar Negociação feature COM007
-#     E acessar detalhes do Item da Negociação feature COM007
-#     Então fechar tela de Item da Negociação feature COM007
+     # Confirmar Aprovação
+      Quando apresentar o modal H4 "modal-basic-title" feature COM007
+      E apresentar a mensagem parcial "Tem certeza que deseja Aprovar?" feature COM007
+      Então clicar botão "sim" do modal feature COM007
+
+     # Aprovação Realizada
+      Quando apresentar o modal H5 "modal-basic-title" feature COM007
+      E apresentar a mensagem parcial "aprovado(s) com sucesso." feature COM007
+      Então clicar botão "Ok" do modal feature COM007
 
    @wip
-   Cenário:  Aprovar Negociação de Compra - Anexo | Negativo
-
-     Quando confirmar mensagem SQL de Consulta feature COM007
-     E fechar janela de Solicitações em Aberto feature COM007
-     Então selecionar Negociação feature COM007
+#   Cenário: Aprovar Negociação de Compra - Detalhes Item da Negociação
 #
-#     Quando clicar botão Anexo feature COM007
-     E apresentar o modal H5 "modal-basic-title" feature COM007
-#     E apresentar a mensagem "MENSAGEM DE ALERTA POR MOTIVO FALTANDO" feature COM007
-     Então clicar botão "ok" do modal feature COM007
+#     Quando confirmar mensagem SQL de Consulta feature COM007
+#     E fechar janela de Solicitações em Aberto feature COM007
+#     E selecionar Negociação feature COM007
+##     E acessar detalhes do Item da Negociação feature COM007
+##     Então fechar tela de Item da Negociação feature COM007
 
-    Cenário: Aprovar Negociação de Compra - Validar - Renegociar
+   @wip
+#   Cenário:  Aprovar Negociação de Compra - Anexo | Negativo
+#
+#     Quando confirmar mensagem SQL de Consulta feature COM007
+#     E fechar janela de Solicitações em Aberto feature COM007
+#     Então selecionar Negociação feature COM007
+##
+##     Quando clicar botão Anexo feature COM007
+#     E apresentar o modal H5 "modal-basic-title" feature COM007
+##     E apresentar a mensagem "MENSAGEM DE ALERTA POR MOTIVO FALTANDO" feature COM007
+#     Então clicar botão "ok" do modal feature COM007
+
+   @wip
+#    Cenário: Aprovar Negociação de Compra - Validar - Renegociar
 
 #     # Pedido de Compra
 #     Quando clicar botão ToolBar "novo" feature COM007
