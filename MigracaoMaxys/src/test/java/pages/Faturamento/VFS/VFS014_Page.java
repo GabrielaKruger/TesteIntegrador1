@@ -46,10 +46,13 @@ public class VFS014_Page extends BasePage {
         clicarElementoById(BTN_TRANSICAO_ID);
     }
 
+
+    // Se você quiser há o método selecionarPaginaNoMenu na BasePage que pode ser utilizado aqui
     public void acessarPageFeatureVFS014(String nomePage) {
         clicarElementoByText(nomePage);
     }
 
+    // Moço Henrique, há outras telas com pages, tente manter esse código na BasePage, se possivel :)
     // Clica em um elemento localizado pelo texto.
     public void clicarElementoByText(String text) {
         String texto = "//*[text()='" + text + "']";

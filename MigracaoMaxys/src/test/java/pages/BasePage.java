@@ -370,13 +370,13 @@ public class BasePage {
         String botaoEncontrarTodasAsPages = "//*[@id='button-basic']";
         encontrarElementoByXpath(botaoEncontrarTodasAsPages);
         clicarElementoByXpath(botaoEncontrarTodasAsPages);
-        esperarMilissegundos(200);
+        esperarMilissegundos(400); // espera necessária
 
         String pageSelecionada = "//ul[@id='dropdown-basic']//span[text()='" + page + "']";
-        encontrarElementoByXpath(pageSelecionada);
-        esperarMilissegundos(200);
+        encontrarElementoByXpath(pageSelecionada); // espera necessária
+        esperarMilissegundos(200); // espera necessária
         clicarElementoByXpath(pageSelecionada);
-        esperarMilissegundos(200);
+        esperarMilissegundos(200); // espera necessária
     }
 
 

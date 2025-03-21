@@ -16,6 +16,7 @@ import pages.Faturamento.COM.COM007_Page;
 import pages.LoginPage;
 import utils.MassaTeste;
 
+import java.io.IOException;
 import java.time.Duration;
 
 public class COM007_Step {
@@ -68,12 +69,8 @@ public class COM007_Step {
 
     @Quando("apresentar o modal H5 {string} feature COM007")
     public void apresentarOModalH5FeatureCOM007(String title) {
+        basePage.esperarMilissegundos(500); // espera necessária
         basePage.validaModalByH5(title);
-    }
-
-    @E("apresentar a mensagem {string} feature COM007")
-    public void apresentarAMensagemFeatureCOM007(String mensagem) {
-        basePage.validaMensagemLabelByText(mensagem);
     }
 
     @Então("clicar botão {string} do modal feature COM007")
@@ -81,7 +78,23 @@ public class COM007_Step {
         basePage.clicarBotaoDoModal(acao);
     }
 
-    @Quando("apresenta o modal H4 {string} feature COM007")
+    // Estrutura mudou, se houverem outras telas remover e alterar o clicarBotaoDoModal
+    @Então("clicar botão novo {string} do modal feature COM007")
+    public void clicarBotãoNovoDoModalFeatureCOM007(String acao) {
+        COM007_Page.clicarBotãoNovoDoModalFeatureCOM007();
+    }
+
+    @E("apresentar a mensagem {string} feature COM007")
+    public void apresentarAMensagemFeatureCOM007(String mensagem) {
+        basePage.validaMensagemLabelByText(mensagem);
+    }
+
+    @E("apresentar a mensagem parcial {string} feature COM007")
+    public void apresentarAMensagemParcialFeatureCOM007(String mensagem) {
+        basePage.validaMensagemLabelByContainsText(mensagem);
+    }
+
+    @Quando("apresentar o modal H4 {string} feature COM007")
     public void apresentaOModalHFeatureCOM007(String title) {
         basePage.validaModalByH4(title);
     }
@@ -124,28 +137,18 @@ public class COM007_Step {
     }
 
     @Quando("acessar page {string} feature COM007")
-    public void acessarPageFeatureCOM007(String arg0) {
-//        COM007_Page.acessarPageFeatureCOM();
+    public void acessarPageFeatureCOM007(String page){
+        COM007_Page.acessarPageFeatureCOM007(page);
     }
 
     @E("preencher Observação da Renegociação Cancelamento feature COM007")
     public void preencherObservaçãoDaRenegociaçãoCancelamentoFeatureCOM007() {
-
+        COM007_Page.preencherObservaçãoDaRenegociaçãoCancelamentoFeatureCOM007();
     }
 
-    @E("aprovar feature COM007")
-    public void aprovarFeatureCOM007() {
-
-    }
-
-    @Então("confirmar aprovação feaure COM007")
-    public void confirmarAprovaçãoFeaureCOM007() {
-
-    }
-
-    @Então("confirmar seleção de lote feature COM007")
-    public void confirmarSeleçãoDeLoteFeatureCOM007() {
-
+    @E("aprovar Negociacao feature COM007")
+    public void aprovarNegociacaoFeatureCOM007() {
+        COM007_Page.aprovarNegociacaoFeatureCOM007();
     }
 
     @After
