@@ -21,6 +21,9 @@ public class COM007_Page extends BasePage {
     // String Grid - Aprovação das Negociações
     String btnNegociacaoXapth = "//*[@id='aprovanegoc-verificaAprovanegoc-";
 
+    // String Grid - Page Itens
+    String linhaGridItensXpath = "//*[@id='viewNegociacao-cdItem-0']/div/input";
+
     // String Page Validar
     String textObservacaoXpath = "//*[@id='aprovanegoc-dsObsrenegociacao";
     String btnAprovarXpath = "//*[@id='aprovanegoc-btnAprovar";
@@ -45,16 +48,12 @@ public class COM007_Page extends BasePage {
     }
 
     public void selecionarNegociaçãoFeatureCOM007() {
-        esperarMilissegundos(10000); // espera necessária por conta do carregamento do grid
+        esperarMilissegundos(8000); // espera necessária por conta do carregamento do grid
         primeiraLinhaEmBranco = testEncontraPrimeiraPosicaoEmBrancoLinhaGrid(btnNegociacaoXapth, btnGridFimXpath);
         String negociacao = btnNegociacaoXapth + primeiraLinhaEmBranco + btnGridFimXpath ;
 
         marcarRadioButon(negociacao);
         pressionaTabActions();
-    }
-
-    public void nãoConfirmarSeleçãoDeLoteFeatureCOM007() {
-        // Ajustar para o segundo caso
     }
 
     public void acessarPageFeatureCOM007(String page) {
@@ -74,6 +73,21 @@ public class COM007_Page extends BasePage {
         String nao = "/html/body/modal-container/div[2]/div/lib-mx-maxys-alert/div[3]/button[2]";
 
        clicarElementoByXpath(nao);
+    }
+
+    public void darDuploCliqueNoPrimeiroItemFeatureCOM007() {
+        clicarElementoByXpathNVezes(linhaGridItensXpath, 8); // Necessário duplo clique
+    }
+
+    public void verificaSeAModalComAMensagemFoiApresentadaFeatureCOM007(String mensagem) {
+        String modalItemNegociacao = "//*[@id='mh-templateModalCanDetalhestoque']";
+        esperarElementoVisivelByXpath(modalItemNegociacao);
+        validaMensagemLabelByContainsText(mensagem);
+    }
+
+    public void fechaAModalFeatureCOM007() {
+        String fecharXpath = "//*[@id='detalhestoque-btnFechar" + btnFinalXpath;
+        clicarElementoByXpathNVezes(fecharXpath, 1);
     }
 }
 

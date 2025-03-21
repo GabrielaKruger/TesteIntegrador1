@@ -131,10 +131,6 @@ public class COM007_Step {
         COM007_Page.selecionarNegociaçãoFeatureCOM007();
     }
 
-    @Então("não confirmar seleção de lote feature COM007")
-    public void nãoConfirmarSeleçãoDeLoteFeatureCOM007() {
-        COM007_Page.nãoConfirmarSeleçãoDeLoteFeatureCOM007();
-    }
 
     @Quando("acessar page {string} feature COM007")
     public void acessarPageFeatureCOM007(String page){
@@ -151,6 +147,21 @@ public class COM007_Step {
         COM007_Page.aprovarNegociacaoFeatureCOM007();
     }
 
+    @Quando("dar duplo clique no primeiro Item feature COM007")
+    public void darDuploCliqueNoPrimeiroItemFeatureCOM007() {
+        COM007_Page.darDuploCliqueNoPrimeiroItemFeatureCOM007();
+    }
+
+    @E("verifica se a modal com a mensagem {string} foi apresentada feature COM007")
+    public void verificaSeAModalComAMensagemFoiApresentadaFeatureCOM007(String mensagem) {
+        COM007_Page.verificaSeAModalComAMensagemFoiApresentadaFeatureCOM007(mensagem);
+    }
+
+    @Então("fecha a modal feature COM007")
+    public void fechaAModalFeatureCOM007() {
+        COM007_Page.fechaAModalFeatureCOM007();
+    }
+
     @After
     public void tearDown() {
         if (driver != null) {
@@ -161,6 +172,8 @@ public class COM007_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
+
+
 
 }
 
