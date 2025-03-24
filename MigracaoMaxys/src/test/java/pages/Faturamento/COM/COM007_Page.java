@@ -77,6 +77,7 @@ public class COM007_Page extends BasePage {
 
     public void darDuploCliqueNoPrimeiroItemFeatureCOM007() {
         clicarElementoByXpathNVezes(linhaGridItensXpath, 8); // Necessário duplo clique
+        esperarMilissegundos(10000); // espera necessária
     }
 
     public void verificaSeAModalComAMensagemFoiApresentadaFeatureCOM007(String mensagem) {

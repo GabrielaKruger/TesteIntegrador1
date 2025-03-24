@@ -129,11 +129,25 @@ public class COM007_Step {
     @E("selecionar Negociação feature COM007")
     public void selecionarNegociaçãoFeatureCOM007() {
         COM007_Page.selecionarNegociaçãoFeatureCOM007();
+        basePage.esperarMilissegundos(8000); // espera necesária
     }
 
+    @Quando("verificar se o modal H4 {string} é apresentado e selecionar {string} feature COM007")
+    public void verificarSeOModalHÉApresentadoFeatureCOM(String title) {
+        String mensagem = "Selecionar todo o lote de compras número";
+        basePage.validaModalByH4(title);
+        basePage.validaMensagemLabelByContainsText(mensagem);
+
+        //if negocição selecionar penas uma
+//            String acao = "Sim";
+        // else lote
+//            String acao = "nao";
+
+//        basePage.clicarBotaoDoModal(acao);
+    }
 
     @Quando("acessar page {string} feature COM007")
-    public void acessarPageFeatureCOM007(String page){
+    public void acessarPageFeatureCOM007(String page) {
         COM007_Page.acessarPageFeatureCOM007(page);
     }
 
@@ -172,8 +186,6 @@ public class COM007_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
-
-
 
 }
 
