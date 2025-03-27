@@ -102,9 +102,10 @@ public class VFS002_Page extends BasePage {
     }
 
     public void selecionarTipoDeVenda(String tipoVenda) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
-        WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/modal-container/div[2]/div")));
+        //WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/modal-container/div[2]/div")));
+        WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("    /html/body/modal-container/div/div")));
 
         // Monta o XPath dinâmico baseado na label do radio button
         String xpathInput = "//mx-maxys-radio-group/mx-maxys-radio-button[label[contains(text(),'" + tipoVenda + "')]]/label/input";
