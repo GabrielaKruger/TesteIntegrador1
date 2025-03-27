@@ -3,6 +3,6 @@
   "programa": "GPE001",
   "papel": "ORI",
   "pagina": "DADOS DO CONTRATO",
-  "tipoAcesso": "Consulta"
-
+  "tipoAcesso": "Consulta",
+  "paginaDuplicada": "CADASTRO DE ROYALTIES"
 }

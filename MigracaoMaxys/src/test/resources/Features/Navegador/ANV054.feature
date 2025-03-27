@@ -52,3 +52,20 @@
      E apresenta o modal H4 "modal-basic-title" feature ANV054
      E clicar botão "sim" do modal feature ANV054
 #     Entao apresentar a mensagem "Registro salvo com sucesso" feature ANV054
+
+   Cenário: Cadastro de Acessos Por Page | Pagina Duplicada | Caminho Negativo
+
+     Quando informar o campo empresa feature ANV054
+     E informar o programa feature ANV054
+     E selecionar duplicacao de papel feature ANV054
+     Então clicar botao consultar feature ANV054
+
+     Quando clicar botão Toolbar "novo" feature ANV054
+     E preencher campo empresa feature ANV054
+     E informar no grid papel feature ANV054
+     E informar no grid programa feature ANV054
+     E informar no grid pagina em duplicidade feature ANV054
+     E selecionar no grid tipo de acesso Consulta feature ANV054
+     E clicar botão Toolbar "salvar" feature ANV054
+     E clicar botão "OK" do modal feature ANV054
+#     Entao apresentar a mensagem "Registro salvo com sucesso" feature ANV054

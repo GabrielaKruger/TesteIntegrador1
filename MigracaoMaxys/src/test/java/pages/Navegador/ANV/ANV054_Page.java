@@ -1,6 +1,5 @@
 package pages.Navegador.ANV;
 
-import org.apache.commons.lang3.math.NumberUtils;
 import org.openqa.selenium.*;
 import pages.BasePage;
 
@@ -193,4 +192,26 @@ public class ANV054_Page extends BasePage {
         return "//*[@id='programaempr-stSelecionado-" + linha + "']/div/button";
     }
 
+    public void informarNoGridPaginaEmDuplicidadeFeatureANV054(String paginaDuplicada) {
+        primeiraLinhaEmBrancoCodigo = testEncontraPrimeiraPosicaoEmBrancoLinhaGrid(xPathColunaPaginaInicio, xPathColunaFim);
+        xpathCompletoPagina = xPathColunaPaginaInicio + primeiraLinhaEmBrancoCodigo + xPathColunaFim;
+        clicarElementoByXpath(xpathCompletoPagina);
+        encontrarElementoByXpath(xpathCompletoPagina);
+        esperarMilissegundos(4000);
+        pressionarF9ByXpath(xpathCompletoPagina);
+        esperarMilissegundos(4000);
+        if (!validarSeContemOElemento(h4ModalLOVId)) {
+            pressionarF9ByXpath(xpathCompletoPagina);
+        }
+        validaModalByH4(h4ModalLOVId);
+        WebElement inputLovXpathElement = driver.findElement(By.xpath(inputLovXpath));
+        esperarElementoByXpath(inputLovXpath);
+        preencherElementoByXpath(inputLovXpath, paginaDuplicada);
+        esperarMilissegundos(4000);
+        inputLovXpathElement.sendKeys(Keys.ENTER);
+        esperarMilissegundos(4000); //espera necessaria
+        encontrarElementoNaTabela(tabelaProgramaXpath, paginaDuplicada);
+        esperarMilissegundos(4000); //espera necessaria
+        driver.findElement(By.xpath(xpathCompletoPagina)).sendKeys(Keys.TAB);
+    }
 }

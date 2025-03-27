@@ -142,6 +142,13 @@ public class ANV054_Step {
         basePage.pressionarShiftF6();
     }
 
+    @E("informar no grid pagina em duplicidade feature ANV054")
+    public void informarNoGridPaginaEmDuplicidadeFeatureANV054() {
+        ANV054_Page.informarNoGridPaginaEmDuplicidadeFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "paginaDuplicada"));
+
+
+    }
+
     @After
     public void tearDown() {
         if (driver != null) {
@@ -152,5 +159,6 @@ public class ANV054_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
+
 
 }
