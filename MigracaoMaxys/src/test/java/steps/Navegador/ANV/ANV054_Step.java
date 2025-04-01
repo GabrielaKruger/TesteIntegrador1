@@ -146,7 +146,6 @@ public class ANV054_Step {
     public void informarNoGridPaginaEmDuplicidadeFeatureANV054() {
         ANV054_Page.informarNoGridPaginaEmDuplicidadeFeatureANV054(massaTeste.getMassaTestePorPathEChave(tagMassa, "paginaDuplicada"));
 
-
     }
 
     @After
