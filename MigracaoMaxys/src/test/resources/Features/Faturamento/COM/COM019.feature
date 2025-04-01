@@ -2,6 +2,8 @@
  @wip @COM019 @dt_COM019 @chrome
  Funcionalidade: COM019 - Aprovação de Pedidos de Compra
 
+
+   # Refluxos reportados na solicitação da tela.
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do COM019
      E acessar o programa "COM019" pela empresa "84" feature COM019

@@ -137,13 +137,6 @@ public class COM007_Step {
         String mensagem = "Selecionar todo o lote de compras número";
         basePage.validaModalByH4(title);
         basePage.validaMensagemLabelByContainsText(mensagem);
-
-        //if negocição selecionar penas uma
-//            String acao = "Sim";
-        // else lote
-//            String acao = "nao";
-
-//        basePage.clicarBotaoDoModal(acao);
     }
 
     @Quando("acessar page {string} feature COM007")

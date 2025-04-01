@@ -50,7 +50,7 @@ public class COM007_Page extends BasePage {
     public void selecionarNegociaçãoFeatureCOM007() {
         esperarMilissegundos(8000); // espera necessária por conta do carregamento do grid
         primeiraLinhaEmBranco = testEncontraPrimeiraPosicaoEmBrancoLinhaGrid(btnNegociacaoXapth, btnGridFimXpath);
-        String negociacao = btnNegociacaoXapth + primeiraLinhaEmBranco + btnGridFimXpath ;
+        String negociacao = btnNegociacaoXapth + primeiraLinhaEmBranco + btnGridFimXpath;
 
         marcarRadioButon(negociacao);
         pressionaTabActions();
@@ -66,13 +66,13 @@ public class COM007_Page extends BasePage {
     }
 
     public void aprovarNegociacaoFeatureCOM007() {
-        clicarElementoByXpath(btnAprovarXpath+btnFinalXpath);
+        clicarElementoByXpath(btnAprovarXpath + btnFinalXpath);
     }
 
     public void clicarBotãoNovoDoModalFeatureCOM007() {
         String nao = "/html/body/modal-container/div[2]/div/lib-mx-maxys-alert/div[3]/button[2]";
 
-       clicarElementoByXpath(nao);
+        clicarElementoByXpath(nao);
     }
 
     public void darDuploCliqueNoPrimeiroItemFeatureCOM007() {

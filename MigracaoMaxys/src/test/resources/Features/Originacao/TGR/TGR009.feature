@@ -2,7 +2,7 @@
  @test @TGR009 @dt_TGR009 @chrome
  Funcionalidade: TGR009 - Produtos de Balança
 
-   # Exclusão é realizada via banco. - Refluxo Forms - Exclusão está salvando.
+  # Exclusão é realizada via Banco.
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TGR009
      E acessar o programa "TGR009" pela empresa "84" feature TGR009

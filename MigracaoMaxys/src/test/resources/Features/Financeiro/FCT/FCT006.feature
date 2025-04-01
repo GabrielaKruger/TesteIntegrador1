@@ -2,11 +2,11 @@
  @wip @FCT006 @dt_FCT006 @chrome
  Funcionalidade: FCT006 - Autorização de Processos
 
+   # Refluxos informados na solicitação.
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do FCT006
      E acessar o programa "FCT006" pela empresa "84" feature FCT006
 
-    #Refluxo Forms - Mensagem: "A consulta retornou mais de um contrato nos itens de processo." não deve ser exibida
    Cenário: Autorização e Recusa de Processos| Caminho feliz - Autorização
      Quando informar Empresa feature FCT006
      # E informa Data Pagamento feature FCT006

@@ -38,7 +38,6 @@ public class FCT006_Page extends BasePage {
     public void informarEmpresaFeatureFCT006(String empresa) {
         clicarElementoByXpathNVezes(inputEmpresaXpath,2);
         preencherElementoByXpath(inputEmpresaXpath, empresa);
-        //*[@id="controle-cdEmpresa"]/div/input
     }
 
     public void realizarAConsultaFeatureFCT006() {

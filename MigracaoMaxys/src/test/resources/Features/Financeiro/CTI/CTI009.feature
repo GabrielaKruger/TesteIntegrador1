@@ -2,12 +2,12 @@
  @test @CTI009 @dt_CTI009 @chrome
  Funcionalidade: CTI009 - Cálculo da Variação Cambial
 
+   # Refluxos reportados na solicitação.
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do CTI009
      E acessar o programa "CTI009" pela empresa "84" feature CTI009
 
-
-   @wip  # Aguardando correção Bug - Fechamento não é realizado
+   @wip
    Cenário: Cálculo da Variação Cambial - Fechar/Reabrir Financeiro
 
      #Filtros
@@ -39,7 +39,7 @@
 #     Então apresentar a mensagem parcial "Reabertura realizada com sucesso." feature CTI009
 #     E clicar botão "ok" do modal feature CTI009
 
-   @wip  # Aguardando correção Bug - Fechamento não é realizado
+    @wip
    Cenário: Cálculo da Variação Cambial - Fechar/Reabrir Financeiro | Teclas Atalho
 
      Quando preencher Empresa feature CTI009
@@ -59,7 +59,6 @@
 #     E clicar botão "ok" do modal feature CTI009
 
 
-   # Validação apenas negativa pois o ambiente de teste não apresenta Variação Cambial
    Cenário: Cálculo da Variação Cambial - Fechar/Reabrir Contábil | Negativo
 
      Quando preencher Empresa feature CTI009
@@ -75,6 +74,7 @@
      Quando apresentar o modal H5 "modal-basic-title" feature CTI009
      E apresentar a mensagem parcial "Não é possivel efetuar o Cálculo de Variação Cambial Contábil para a data 31/03/2015" feature CTI009
      E clicar botão "ok" do modal feature CTI009
+
 
    Cenário: Cálculo da Variação Cambial - Campos Obrigatórios | Negativo
 

@@ -23,11 +23,8 @@ public class COM004_Page extends BasePage {
 
 
     //Globais
-    int primeiraLinhaEmBranco;
     String inputXpathFim = "']/div/input";
     String inputXpatDataFim = "']/div/div/input";
-    String btnXpathFim = "']/div/button";
-
 
     public void preencherCliforFeatureCOM004(String clifor) {
         esperarMilissegundos(500); // espera necessária

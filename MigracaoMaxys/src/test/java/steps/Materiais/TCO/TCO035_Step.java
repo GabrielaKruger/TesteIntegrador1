@@ -66,13 +66,13 @@ public class TCO035_Step {
     }
 
     @E("apresentar a mensagem {string} feature TCO035")
-    public void apresentarAMensagemFeatureTCO035(String mensagem) throws IOException{
-        BasePage.takeScreenshot( driver, "TCO035", "Registro Salvo Com Sucesso");
+    public void apresentarAMensagemFeatureTCO035(String mensagem) throws IOException {
+        BasePage.takeScreenshot(driver, "TCO035", "Registro Salvo Com Sucesso");
         basePage.validaMensagemLabelByText(mensagem);
     }
 
     @E("clicar botão {string} do modal feature TCO035")
-    public void clicarBotãoDoModalFeatureTCO035(String acao) throws IOException{
+    public void clicarBotãoDoModalFeatureTCO035(String acao) throws IOException {
         basePage.clicarBotaoDoModal(acao);
         BasePage.takeScreenshot(driver, "TCO035", "Validação Modal Realizada");
     }
@@ -94,7 +94,7 @@ public class TCO035_Step {
 
     @E("preencher Autorizador feature TCO035")
     public void preencherAutorizadorFeatureTCO035() {
-      TCO035_Page.preencherAutorizadorFeatureTCO035( massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
+        TCO035_Page.preencherAutorizadorFeatureTCO035(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
     }
 
     @E("preencher C.Custo feature TCO035")
@@ -104,12 +104,12 @@ public class TCO035_Step {
 
     @Então("seleciona Status {string} feature TCO035")
     public void selecionaStatusFeatureTCO035(String status) {
-        TCO035_Page.selecionaStatusFeatureTCO035 (status);
+        TCO035_Page.selecionaStatusFeatureTCO035(status);
     }
 
     @E("informa Autorizador feature TCO035")
     public void informaAutorizadorFeatureTCO035() {
-        TCO035_Page.informaAutorizadorFeatureTCO035( massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
+        TCO035_Page.informaAutorizadorFeatureTCO035(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
     }
 
     @E("realizar consulta feature TCO035")

@@ -104,7 +104,6 @@ public class COM004_Step {
         COM004_Page.preencherCliforFeatureCOM004(massaTeste.getMassaTestePorPathEChave(tagMassa, "clifor"));
     }
 
-
     @E("preencher Condição Pagto feature COM004")
     public void preencherCondiçãoPagtoFeatureCOM004() {
         COM004_Page.preencherCondiçãoPagtoFeatureCOM004(massaTeste.getMassaTestePorPathEChave(tagMassa, "condicaoPagamento"));
@@ -135,10 +134,6 @@ public class COM004_Step {
         COM004_Page.preencherTaxaFeatureCOM004(massaTeste.getMassaTestePorPathEChave(tagMassa, "valorTaxa"));
     }
 
-    @Quando("preencher os {string} Itens de Pedido de Compra feature COM004")
-    public void preencherOsItensDePedidoDeCompraFeatureCOM(String arg0) {
-
-    }
 
     @After
     public void tearDown() {

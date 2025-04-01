@@ -50,7 +50,7 @@ public class FCT006_Step {
     }
 
     @E("acessar o programa {string} pela empresa {string} feature FCT006")
-    public void acessarOProgramaFeatureFCT006(String programa,String empresa) {
+    public void acessarOProgramaFeatureFCT006(String programa, String empresa) {
         loginPage.loginNewMaxysNovo(programa, empresa);
     }
 
@@ -63,8 +63,6 @@ public class FCT006_Step {
     public void apresentaOModalFeatureFCT006(String title) {
         basePage.validaModalByH5(title);
     }
-
-
 
     @E("clicar botão {string} do modal feature FCT006")
     public void clicarBotãoDoModalFeatureFCT006(String acao) {
@@ -142,36 +140,36 @@ public class FCT006_Step {
         FCT006_Page.rescusaProcessoFeatureFCT006();
     }
 
+    @E("informar Empresa novamente feature FCT006")
+    public void informarEmpresaNovamenteFeatureFCT006() {
+        FCT006_Page.informarEmpresaNovamenteFeatureFCT006();
+    }
+
     @Então("clicar botão {string} feature FCT006")
     public void clicarBotãoFeatureFCT(String botao) {
 
         switch (botao.toLowerCase()) {
             case "dossie":
-            //    FCT006_Page.selecionaTipoFeatureEXP088(1);
+                //    FCT006_Page.selecionaTipoFeatureEXP088(1);
                 break;
             case "contas":
-            //    FCT006_Page.selecionaTipoFeatureEXP088(2);
+                //    FCT006_Page.selecionaTipoFeatureEXP088(2);
                 break;
             case "credito em conta ":
-            // FCT006_Page.selecionaTipoFeatureEXP088(2);
+                // FCT006_Page.selecionaTipoFeatureEXP088(2);
                 break;
             case "credito":
-             //   FCT006_Page.selecionaTipoFeatureEXP088(3);
+                //   FCT006_Page.selecionaTipoFeatureEXP088(3);
                 break;
             case "perfil":
-             //   FCT006_Page.selecionaTipoFeatureEXP088(3);
+                //   FCT006_Page.selecionaTipoFeatureEXP088(3);
                 break;
             case "detalhes":
-            // FCT006_Page.selecionaTipoFeatureEXP088(3);
+                // FCT006_Page.selecionaTipoFeatureEXP088(3);
                 break;
             default:
                 throw new IllegalArgumentException("Elemento não reconhecido: " + botao);
         }
-    }
-
-    @E("informar Empresa novamente feature FCT006")
-    public void informarEmpresaNovamenteFeatureFCT006() {
-        FCT006_Page.informarEmpresaNovamenteFeatureFCT006();
     }
 
     @After

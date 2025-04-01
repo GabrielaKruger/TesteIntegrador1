@@ -2,6 +2,7 @@
  @test @GPE044 @dt_GPE044 @chrome
  Funcionalidade: GPE044 - Liberção de Pré - Contrato
 
+   # Futuramente validar integração com GPE00
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do GPE044
      E acessar o programa "GPE044" pela empresa "84" feature GPE044
@@ -76,7 +77,6 @@
      Então preencher Motivo feature GPE044
 
      Quando consulta GPE000 feature GPE044
-#     Então sair da tela GPE000 feature
      Então apresentar a mensagem no pop-up "Não é possivel acessar a tela GPE000" feature GPE044
 
    Cenário: Liberação de Pré-Contrato| Negativo - Consulta sem Dados

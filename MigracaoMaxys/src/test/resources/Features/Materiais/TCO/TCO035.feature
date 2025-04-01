@@ -2,6 +2,8 @@
  @test @TCO035 @dt_TCO035 @chrome
  Funcionalidade: TCO035 - Autorizador Restrito
 
+
+   # Refluxos reportados na solicitação
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TCO035
      E acessar o programa "TCO035" pela empresa "84" feature TCO035
@@ -39,7 +41,7 @@
      E apresenta o modal H4 "modal-basic-title" feature TCO035
      Então clicar botão "sim" do modal feature TCO035
 
-   @wip #Valores não são apresentados na LOV - Repassado para o desenvolvedor Guilherme
+   @wip
    Cenario: Cadastro, edição e exclusão de Autorizador Restrito | Teclas Atalho
 
      Quando pressionar tecla "f6" feature TCO035
@@ -75,7 +77,7 @@
      E apresenta o modal H4 "modal-basic-title" feature TCO035
      Então clicar botão "sim" do modal feature TCO035
 
-   @wip # Não se comporta como o Forms - Campo Automatizador
+   @wip
    Cenário: Consulta, cadastro e exclusão| Negativo - Validação Campos obrigatórios Consulta
 
      Quando clicar botão ToolBar "novo" feature TCO035

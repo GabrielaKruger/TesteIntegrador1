@@ -28,17 +28,12 @@ public class CTI009_Page extends BasePage {
     String dataFimXpath = "']/div/div/input";
 
 
-    //Opções de Ordem
-    //*[@id="controle-lstOrdem"]/div/select/option[1]
-    //*[@id="controle-lstOrdem"]/div/select/option[2]
-
-
     public CTI009_Page(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }
 
-    
+
     public void preencherEmpresaFeatureCTI009(String empresa) {
         encontrarEPreencherElementos(inputEmpresaXpath, inputFimXpath, empresa);
     }
@@ -48,7 +43,7 @@ public class CTI009_Page extends BasePage {
     }
 
     public void realizarAConsultaFeatureCTI009() {
-        clicarElementoByXpath(btnConsultaXpath + butttonFimXpath );
+        clicarElementoByXpath(btnConsultaXpath + butttonFimXpath);
     }
 
     public void selecionarVariaçãoFinanceiraNaFeatureCTI009() {
@@ -60,7 +55,7 @@ public class CTI009_Page extends BasePage {
     }
 
     public void preencherAEmpresaFeatureCTI009(String empresa) {
-        encontrarEPreencherElementos(inoputEmpresaAltXpath, inputFimXpath, empresa); 
+        encontrarEPreencherElementos(inoputEmpresaAltXpath, inputFimXpath, empresa);
     }
 
     public void preencherMêsFeatureCTI009(String mes) {
@@ -68,10 +63,10 @@ public class CTI009_Page extends BasePage {
     }
 
     public void realizarOFechamentoReaberturaFinanceiroFatureCTI009() {
-        clicarElementoByXpath(btnAlteracaoXpath+butttonFimXpath);
+        clicarElementoByXpath(btnAlteracaoXpath + butttonFimXpath);
     }
 
     public void removerMesInformadoFeatureCTI009() {
-        limparCampoDeTextoPorXpath(inputMesAltXpath+dataFimXpath);
+        limparCampoDeTextoPorXpath(inputMesAltXpath + dataFimXpath);
     }
 }

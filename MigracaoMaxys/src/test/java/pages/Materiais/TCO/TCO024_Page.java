@@ -11,7 +11,6 @@ public class TCO024_Page extends BasePage {
 
     String inputDepartamentoXpath = "//*[@id='controle-cdDepartamento']/div/input";
     String btnConsultaXpath = "//*[@id='controle-btnConsulta']/button/div";
-    String inputSolicitanteXpath = "";
 
     // Globais
     String codigoSimulateTipoCargo;
@@ -27,9 +26,6 @@ public class TCO024_Page extends BasePage {
 
 
     public void informarDepartamentoFeatureTCO024(String departamento) {
-        //int codigoSimulatedInt = faker.random().nextInt(1, 7);
-        //String codigoSimulateDepartamento = Integer.toString(codigoSimulatedInt);
-
         clicarElementoByXpathNVezes(inputDepartamentoXpath, 2);
         preencherElementoByXpath(inputDepartamentoXpath, departamento);
     }
@@ -43,8 +39,8 @@ public class TCO024_Page extends BasePage {
         verificarOuSetarPrimeiraLinhaEmBranco();
 
         String linhaGridSolicitante = "//*[@id='solicdepartcompra-cdSolicitante-" + primeiraLinhaEmBranco + "']/div/input";
-                                                                                                                                                    //*[@id="solicdepartcompra-cdSolicitante-1"]/div/input
-        clicarElementoByXpathNVezes(linhaGridSolicitante,2);
+        //*[@id="solicdepartcompra-cdSolicitante-1"]/div/input
+        clicarElementoByXpathNVezes(linhaGridSolicitante, 2);
         preencherElementoByXpath(linhaGridSolicitante, solicitante);
         pressionaTabActions();
     }
@@ -74,7 +70,7 @@ public class TCO024_Page extends BasePage {
 
     public void informarAlcadaFeatureTCO024() {
         verificarOuSetarPrimeiraLinhaEmBranco();
-        String inputAutorizadorXpath = "//*[@id='autorizdepartcompra-cdAlcada-" + primeiraLinhaEmBranco+ "']/div/input";
+        String inputAutorizadorXpath = "//*[@id='autorizdepartcompra-cdAlcada-" + primeiraLinhaEmBranco + "']/div/input";
 
         int codigoSimulatedInt = faker.random().nextInt(1, 16);
         String codigoSimulateAlcada = Integer.toString(codigoSimulatedInt);
@@ -124,7 +120,7 @@ public class TCO024_Page extends BasePage {
         int codigoSimulatedInt = faker.random().nextInt(4, 100);
         String codigoSimulateTipoCargo = Integer.toString(codigoSimulatedInt);
 
-        clicarElementoByXpathNVezes(inputCodigoTCXpath, 2 );
+        clicarElementoByXpathNVezes(inputCodigoTCXpath, 2);
         preencherElementoByXpath(inputCodigoTCXpath, codigoSimulateTipoCargo);
     }
 
@@ -133,7 +129,7 @@ public class TCO024_Page extends BasePage {
         String inputDescricaoTCXpath = "//*[@id='cargocompra-dsCargo" + primeiraLinhaEmBranco + "']/div/input";
         descricaoFaker = faker.color().name() + " teste";
 
-        clicarElementoByXpathNVezes(inputDescricaoTCXpath, 2 );
+        clicarElementoByXpathNVezes(inputDescricaoTCXpath, 2);
         preencherElementoByXpath(inputDescricaoTCXpath, descricaoFaker);
     }
 
@@ -151,7 +147,7 @@ public class TCO024_Page extends BasePage {
         verificarOuSetarPrimeiraLinhaEmBranco();
         String inputDescricaoTCXpath = "//*[@id='cargocompra-dsCargo" + primeiraLinhaEmBranco + "']/div/input";
 
-        clicarElementoByXpathNVezes(inputDescricaoTCXpath,2);
+        clicarElementoByXpathNVezes(inputDescricaoTCXpath, 2);
         limparCampoDeTextoPorXpath(inputDescricaoTCXpath);
     }
 
@@ -159,11 +155,11 @@ public class TCO024_Page extends BasePage {
         verificarOuSetarPrimeiraLinhaEmBranco();
         String inputCodigoDepartXpath = "//*[@id='departamentocompra-cdDepartamento" + primeiraLinhaEmBranco + "7']/div/input";
 
-        clicarElementoByXpathNVezes(inputCodigoDepartXpath,2);
+        clicarElementoByXpathNVezes(inputCodigoDepartXpath, 2);
         int codigoSimulatedInt = faker.random().nextInt(7, 100);
         String codigoSimulateDepartamento = Integer.toString(codigoSimulatedInt);
 
-        clicarElementoByXpathNVezes(inputCodigoDepartXpath, 2 );
+        clicarElementoByXpathNVezes(inputCodigoDepartXpath, 2);
         preencherElementoByXpath(inputCodigoDepartXpath, codigoSimulateDepartamento);
     }
 
@@ -172,12 +168,8 @@ public class TCO024_Page extends BasePage {
         String inputDescricaoDepartamentoXpath = "//*[@id='departamentocompra-dsDepartamento" + primeiraLinhaEmBranco + "']/div/input";
         descricaoFaker = faker.color().name() + " teste";
 
-        clicarElementoByXpathNVezes(inputDescricaoDepartamentoXpath, 2 );
+        clicarElementoByXpathNVezes(inputDescricaoDepartamentoXpath, 2);
         preencherElementoByXpath(inputDescricaoDepartamentoXpath, descricaoFaker);
-    }
-
-    public void informarDescriçãoDeDepartamentoTCO024() {
-
     }
 
 }

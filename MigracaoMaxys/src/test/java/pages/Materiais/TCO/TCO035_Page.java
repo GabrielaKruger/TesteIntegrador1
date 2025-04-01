@@ -66,7 +66,7 @@ public class TCO035_Page extends BasePage {
 
     // Informar Centro de Custo no Gride Autorizador
     public void preencherCCustoFeatureTCO035() {
-        int[] centrosDeCusto = {1, 6, 20, 23, 100, 403, 404, 501, 700, 800 }; // Código dos centros de custo. Limitado em 10 valores
+        int[] centrosDeCusto = {1, 6, 20, 23, 100, 403, 404, 501, 700, 800}; // Código dos centros de custo. Limitado em 10 valores
         int indiceCCAleatorio = faker.random().nextInt(0, centrosDeCusto.length - 1); // Gera um índice aleatório conforme o tamanho do array
         int centroCustoSelecionado = centrosDeCusto[indiceCCAleatorio]; // Seleciona o valor no índice aleatório
         String centroCustoAutorizador = Integer.toString(centroCustoSelecionado); // Converte o valor selecionado para String
@@ -96,7 +96,8 @@ public class TCO035_Page extends BasePage {
             select.selectByVisibleText("Ativo");
         } else if ("Inativo".equalsIgnoreCase(status)) {
             select.selectByVisibleText("Inativo");
-        }    }
+        }
+    }
 
     public void selecionarAutorizadorFeatureTCO035(String autorizador) {
         esperarMilissegundos(5000); // espera necessária
@@ -119,13 +120,13 @@ public class TCO035_Page extends BasePage {
     }
 
     public void selecionarOCCustoConsultaFeatureTCO035() {
-        int[] centrosDeCusto = {1, 6, 20, 23, 100, 403, 404, 501, 700, 800 }; // Código dos centros de custo. Limitado em 10 valores
+        int[] centrosDeCusto = {1, 6, 20, 23, 100, 403, 404, 501, 700, 800}; // Código dos centros de custo. Limitado em 10 valores
         int indiceCCAleatorio = faker.random().nextInt(0, centrosDeCusto.length - 1); // Gera um índice aleatório conforme o tamanho do array
         int centroCustoSelecionado = centrosDeCusto[indiceCCAleatorio]; // Seleciona o valor no índice aleatório
         String centroCustoAutorizador = Integer.toString(centroCustoSelecionado); // Converte o valor selecionado para String
         String elementoTabelaCCusto = "lovCentrocusto1";
 
-        esperarClicarESelecionarF9(inputCCustoXpath,centroCustoAutorizador, elementoTabelaCCusto);
+        esperarClicarESelecionarF9(inputCCustoXpath, centroCustoAutorizador, elementoTabelaCCusto);
     }
 
     public void selecionarAEmpresaGridFeatureTCO035() {
@@ -138,7 +139,7 @@ public class TCO035_Page extends BasePage {
         verificarOuSetarPrimeiraLinhaEmBranco();
         String inputEmpresaGridXpath = inputEmpresaGridXpathInicio + primeiraLinhaEmBranco + inputXpathFim;
 
-        esperarClicarESelecionarF9(inputEmpresaGridXpath,empresaAutorizador, elementoTabelaEmpresa);
+        esperarClicarESelecionarF9(inputEmpresaGridXpath, empresaAutorizador, elementoTabelaEmpresa);
     }
 
     public void selecionarOAutorizadorGridFeatureTCO035(String autorizador) {
@@ -146,11 +147,11 @@ public class TCO035_Page extends BasePage {
         String inputAutorizadorGridXpath = inputAutorizadorGridXpathInicio + primeiraLinhaEmBranco + inputXpathFim;
         String elementoTabelaAutorizador = "lovSol";
 
-        esperarClicarESelecionarF9(inputAutorizadorGridXpath,autorizador, elementoTabelaAutorizador );
+        esperarClicarESelecionarF9(inputAutorizadorGridXpath, autorizador, elementoTabelaAutorizador);
     }
 
     public void selecionarOCCustoGridFeatureTCO035() {
-        int[] centrosDeCusto = {1, 6, 20, 23, 100, 403, 404, 501, 700, 800 }; // Código dos centros de custo. Limitado em 10 valores
+        int[] centrosDeCusto = {1, 6, 20, 23, 100, 403, 404, 501, 700, 800}; // Código dos centros de custo. Limitado em 10 valores
         int indiceCCAleatorio = faker.random().nextInt(0, centrosDeCusto.length - 1); // Gera um índice aleatório conforme o tamanho do array
         int centroCustoSelecionado = centrosDeCusto[indiceCCAleatorio]; // Seleciona o valor no índice aleatório
         String centroCustoAutorizador = Integer.toString(centroCustoSelecionado); // Converte o valor selecionado para String
@@ -159,6 +160,6 @@ public class TCO035_Page extends BasePage {
         verificarOuSetarPrimeiraLinhaEmBranco();
         String inputCentroCustoGridXpath = inputCCustoGridXpathInicio + primeiraLinhaEmBranco + inputXpathFim;
 
-        esperarClicarESelecionarF9(inputCentroCustoGridXpath,centroCustoAutorizador, elementoTabelaCCusto);
+        esperarClicarESelecionarF9(inputCentroCustoGridXpath, centroCustoAutorizador, elementoTabelaCCusto);
     }
 }

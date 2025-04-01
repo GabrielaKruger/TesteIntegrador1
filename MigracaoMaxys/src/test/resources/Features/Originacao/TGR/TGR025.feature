@@ -2,7 +2,7 @@
  @test @TGR025 @dt_TGR025 @chrome
  Funcionalidade: TGR025 - Bloqueio Avulso
 
-   # Refluxo - Elementos faltando em tela: Duplicar e Todos
+   # Refluxos reportados na solicitação.
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TGR025
      E acessar o programa "TGR025" pela empresa "84" feature TGR025
