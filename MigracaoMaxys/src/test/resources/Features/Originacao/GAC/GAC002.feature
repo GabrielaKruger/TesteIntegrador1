@@ -5,7 +5,7 @@ Funcionalidade: GAC002 - Preço por Região
 
   Cenário de Fundo:
     Dado inicialize a execução dos cenários do GAC002
-    E acessar o programa "GAC002" feature GAC002
+    E acessar o programa "GAC002" pela empresa "84" feature GAC002
 
 
   @wip #Não faz pesquisa em campos de select,quando digita o nome solicitado
@@ -65,7 +65,7 @@ Funcionalidade: GAC002 - Preço por Região
     Então clicar botão "sim" do modal feature GAC002
 
 
-  Cenário: Cadastro, Edição e Exclusão page | Caminho Feliz
+  Cenário: Cadastro, Edição e Exclusão page Limite Fixação | Caminho Feliz
 
     Quando selecionar page "Limite Fixação <F7>" feature GAC002
     E preencher Empresa Limite feature GAC002

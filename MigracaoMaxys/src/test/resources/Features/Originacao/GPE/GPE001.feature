@@ -345,42 +345,42 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-     @5014v1
-     Cenário: Inclusão de Contrato com vários vencimentos- 2 Cond Pagto p/2 Recebto
+   @5014v1
+   Cenário: Inclusão de Contrato com vários vencimentos- 2 Cond Pagto p/2 Recebto
        #Pedidos/contratos de grão
-       Quando preencher CliforPF page contratos de grao feature GPE001
+     Quando preencher CliforPF page contratos de grao feature GPE001
 
        #Page Dados
-       Quando seleciona Tipo de Contrato feature GPE001
-       E preencher Produto4 feature GPE001
-       E preencher Tabela de Desconto feature GPE001
-       E preencher Negócio feature GPE001
-       E preencher Data de Vencimento2 feature GPE001
-       E preencher Ano safra2 feature GPE001
-       E seleciona Tipos de Cálculo feature GPE001
-       Então preencher PesoEVolume Contratado feature GPE001
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto4 feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     Então preencher PesoEVolume Contratado feature GPE001
 
-       Quando acessar page "Vencimentos <F4>" feature GPE001
-       E preencher PesoeVolume page Vencimentos feature GPE001
-       E preencher Condição de Pagamento page Vencimentos feature GPE001
-       E preencher Forma de Pagamento page Vencimentos feature GPE001
-       E preencher PesoeVolume2 page Vencimentos feature GPE001
-       E preencher Condição de Pagamento2 page Vencimentos feature GPE001
-       E preencher Forma de Pagamento2 page Vencimentos feature GPE001
-       Então clicar botão ToolBar "salvar" feature GPE001
+     Quando acessar page "Vencimentos <F4>" feature GPE001
+     E preencher PesoeVolume page Vencimentos feature GPE001
+     E preencher Condição de Pagamento page Vencimentos feature GPE001
+     E preencher Forma de Pagamento page Vencimentos feature GPE001
+     E preencher PesoeVolume2 page Vencimentos feature GPE001
+     E preencher Condição de Pagamento2 page Vencimentos feature GPE001
+     E preencher Forma de Pagamento2 page Vencimentos feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
 
-       Quando apresentar a mensagem parcial "Vencimento  do ICMS." feature GPE001
-       E acessar page "Vencimento ICMS" feature GPE001
-       Então clicar botão "ok" do modal feature GPE001
+     Quando apresentar a mensagem parcial "Vencimento  do ICMS." feature GPE001
+     E acessar page "Vencimento ICMS" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
 
-       Quando preencher Dia feature GPE001
-       E preencher Condição de pagamento feature GPE001
-       E clicar botão "Repetir Vencimento" page Vencimento ICMS feature GPE001
-       Então clicar botão ToolBar "salvar" feature GPE001
+     Quando preencher Dia feature GPE001
+     E preencher Condição de pagamento feature GPE001
+     E clicar botão "Repetir Vencimento" page Vencimento ICMS feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
 
-       Quando apresentar o modal H5 "modal-basic-title" feature GPE001
-       E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
-       Então clicar botão "ok" do modal feature GPE001
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
 
 
    @5014v2
@@ -422,9 +422,8 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-
    @5014v3
-     Cenário: Inclusão de Contrato de com vários vencimentos- 2 Cond Pagto p/ 1 Recebto Total
+   Cenário: Inclusão de Contrato de com vários vencimentos- 2 Cond Pagto p/ 1 Recebto Total
      #Pedidos/contratos de grão
      Quando preencher CliforPF page contratos de grao feature GPE001
 
@@ -488,29 +487,28 @@
      Então clicar botão "ok" do modal feature GPE001
 
 
-     @5532v1(último)
-     Cenário: Lançamento de Pesagem contrato recebimento parâmetro "Monta Processo(Contratos Fixos)"
+   @5532v1(último)
+   Cenário: Lançamento de Pesagem contrato recebimento parâmetro "Monta Processo(Contratos Fixos)"
        #Pedidos/contratos de grão
-       Quando preencher CliforPF page contratos de grao feature GPE001
+     Quando preencher CliforPF page contratos de grao feature GPE001
              #Page Dados
-       Quando seleciona Tipo de Contrato feature GPE001
-       E preencher Produto4 feature GPE001
-       E preencher Tabela de Desconto feature GPE001
-       E preencher Negócio feature GPE001
-       E preencher Data de Vencimento2 feature GPE001
-       E preencher Ano safra2 feature GPE001
-       E seleciona Tipos de Cálculo feature GPE001
-       E preencher PesoEVolume Contratado3 feature GPE001
-       E preencher Preço Unitário11 feature GPE001
-       Então selecionar "Monta Processo" Configurações feature GPE001
+     Quando seleciona Tipo de Contrato feature GPE001
+     E preencher Produto4 feature GPE001
+     E preencher Tabela de Desconto feature GPE001
+     E preencher Negócio feature GPE001
+     E preencher Data de Vencimento2 feature GPE001
+     E preencher Ano safra2 feature GPE001
+     E seleciona Tipos de Cálculo feature GPE001
+     E preencher PesoEVolume Contratado3 feature GPE001
+     E preencher Preço Unitário11 feature GPE001
+     Então selecionar "Monta Processo" Configurações feature GPE001
 
-       E acessar page "Vencimentos <F4>" feature GPE001
-       Então clicar botão ToolBar "salvar" feature GPE001
+     E acessar page "Vencimentos <F4>" feature GPE001
+     Então clicar botão ToolBar "salvar" feature GPE001
 
-       Quando apresentar o modal H5 "modal-basic-title" feature GPE001
-       E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
-       Então clicar botão "ok" do modal feature GPE001
-
+     Quando apresentar o modal H5 "modal-basic-title" feature GPE001
+     E apresentar a mensagem parcial "salvo com sucesso" feature GPE001
+     Então clicar botão "ok" do modal feature GPE001
 
 
    @5619v1

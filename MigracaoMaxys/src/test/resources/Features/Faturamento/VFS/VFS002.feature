@@ -17,6 +17,10 @@
      E preenche o clifor da nota feature VFS002
      E carrega CNJP feature VFS002
      E fecha sel notas e itens de mestra feature VFS002
+     E preenche condicao pagamento feature VFS002
+     E preencher forma de pagamento feature VFS002
+     E preencher moeda transação feature VFS002
+     E clica na page "Itens" feature VFS002
 
 
 ##

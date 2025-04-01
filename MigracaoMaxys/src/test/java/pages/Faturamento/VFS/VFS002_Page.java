@@ -9,6 +9,7 @@ import utils.DataUtils;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Map;
 
 public class VFS002_Page extends BasePage {
 
@@ -22,6 +23,9 @@ public class VFS002_Page extends BasePage {
     String inputDataEmissao = "//*[@id='movtofaturar-dtEmissao']/div/div/input";
     String inputCliforNotaFiscal = "//*[@id='movtofaturar-cdClifor']/div/input";
     String fecharSelNotasEItensDeMestra = "//*[@id='mestra-btnFechar']/div/button/div";
+    String inputCondicaoPagto = "//*[@id='movtofaturar-cdCondpagto']/div/input";
+    String inputformaDePagto = "//*[@id='movtofaturar-cdFormapagto']/div/input";
+    String inputMoedaTransacao = "//*[@id='movtofaturar-cdMoedatrans']/div/input";
 
     public void loginMigracao(String tela) {
         //Metodo teste precisa-se adequa-lo
@@ -188,8 +192,65 @@ public class VFS002_Page extends BasePage {
 
             esperarMilissegundos(5000);
             clicarElementoByXpath(fecharSelNotasEItensDeMestra);
+            esperarMilissegundos(7000);
         });
     }
 
+    public void preencheCondicaoPagamentoFeatureVFS002(String condicaoPagamento) {
+        esperarMilissegundos(2000);
+        clicarElementoByXpath(inputCondicaoPagto);
+        limparElementoByXpath(inputCondicaoPagto);
+        esperarMilissegundos(2000);
+        preencherElementoByXpath(inputCondicaoPagto, condicaoPagamento);
+        pressionaTabActions();
+        esperarMilissegundos(500);
+        pressionaTabActions();
+    }
+
+    public void preencherFormaDePagamentoFeatureVFS002(String formaDePagamento) {
+        limparElementoByXpath(inputformaDePagto);
+        clicarElementoByXpath(inputformaDePagto);
+        esperarMilissegundos(2000);
+        preencherElementoByXpath(inputformaDePagto, formaDePagamento);
+    }
+
+    public void preencherMoedaTransacaoFeatureVFS002(String moedaTransacao) {
+        clicarElementoByXpath(inputMoedaTransacao);
+        limparElementoByXpath(inputMoedaTransacao);
+        esperarMilissegundos(2000);
+        preencherElementoByXpath(inputMoedaTransacao, moedaTransacao);
+
+    }
+
+    public String acessoPagesXpath(String nomePagina) {
+        Map<String, String> paginas = Map.of(
+                "Itens", "//*[@id='PAG_ITENS']",
+                "Dados", "//*[@id='PAG_DADOS']]",
+                "Embarque", "//*[@id='PAG_EMBARQUE']",
+                "Cálculo com tabela frete", "//*[@id='PAG_CALCULO_FRETE']",
+                "Impostos", "//*[@id='PAG_IMPOSTO']"
+        );
+
+        return paginas.getOrDefault(nomePagina, ""); // Retorna o XPath ou uma string vazia se não encontrar
+    }
+
+
+    public void clicaNaPageFeatureVFS002(String nomePagina) {
+        String xpathListaAbas = "//*[@id='WIN_NFSAIDA']/mx-maxys-tab-group/ul/li";
+        String xpathPagina = acessoPagesXpath(nomePagina); // Obtém o XPath da página
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        List<WebElement> abas = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(xpathListaAbas)));
+
+        for (WebElement aba : abas) {
+            if (aba.getText().trim().equalsIgnoreCase(nomePagina)) {
+                aba.click();
+                if (!xpathPagina.isEmpty()) { // Se tiver XPath associado, aguarda carregar
+                    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathPagina)));
+                }
+                break;
+            }
+        }
+    }
 
 }

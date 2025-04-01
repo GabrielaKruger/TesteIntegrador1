@@ -22,7 +22,6 @@ Funcionalidade: BAL017 - Pesagens bloqueadas/Peso manual
     E apresentar a mensagem parcial do botão autorizar "autorizada!" feature BAL017
     Então clicar botão "ok" do modal feature BAL017
 
-
   Cenário: Recusar pesagens manuais bloqueadas |  Caminho feliz
     Quando preencher Empresa feature BAL017
     E preencher Depósito feature BAL017

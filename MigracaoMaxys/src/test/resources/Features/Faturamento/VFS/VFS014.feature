@@ -6,8 +6,9 @@
      Dado inicialize a execução dos cenários do VFS014
      E acessar o programa "VFS014" pela empresa "84" feature VFS014
 
-    # Henrique - Quando possivel seria bom criar o caso de teste que valida a apresentadação dos dados da nota.
+    # Henrique - Quando possivel seria bom criar o caso de teste que valida a apresentadação dos dados da nota.(Duplo cliqye)
    # Duplo clique na nota que é apresentada no grid. Para isso o filtro tem que ser com data de 2024
+
 
    Cenário: Movimentacao NFE | Page Notas Fiscais Eletronicas | Caminho feliz
 
@@ -42,3 +43,6 @@
      E informa periodo data final feature VFS014
      E informa empresa na page informacoes feature VFS014
      E clica em computar estatistica feature VFS014
+
+   @wip
+   Cenário: Movimentacao NFE | Validação Dados da Nota (VFT003) | Caminho feliz

@@ -59,7 +59,6 @@ public class VFS002_Step {
         VFS002_Page.loginMigracao(tela);
     }
 
-
     @E("esperar o programa carregar feature VFS002")
     public void esperarOProgramaCarregarFeatureVFS002() {
         VFS002_Page.esperarOProgramaCarregarFeatureVFS002();
@@ -74,7 +73,6 @@ public class VFS002_Step {
     public void selecionaASerieDaNotaFiscalFeatureVFS002() {
         VFS002_Page.selecionaASerieDaNotaFiscalFeatureVFS002(massaTeste.getMassaTestePorPathEChave(tagMassa, "serieNotaFiscal"));
     }
-
 
     @E("informa data emissao da nota feature VFS002")
     public void informaDataEmissaoDaNotaFeatureVFS002() {
@@ -96,5 +94,23 @@ public class VFS002_Step {
         VFS002_Page.fechaSelNotasEItensDeMestraFeatureVFS002();
     }
 
+    @E("preenche condicao pagamento feature VFS002")
+    public void preencheCondicaoPagamentoFeatureVFS002() {
+        VFS002_Page.preencheCondicaoPagamentoFeatureVFS002(massaTeste.getMassaTestePorPathEChave(tagMassa, "condicaoPagamento"));
+    }
 
+    @E("preencher forma de pagamento feature VFS002")
+    public void preencherFormaDePagamentoFeatureVFS002() {
+        VFS002_Page.preencherFormaDePagamentoFeatureVFS002(massaTeste.getMassaTestePorPathEChave(tagMassa, "formaDePagamento"));
+    }
+
+    @E("preencher moeda transação feature VFS002")
+    public void preencherMoedaTransacaoFeatureVFS002() {
+        VFS002_Page.preencherMoedaTransacaoFeatureVFS002(massaTeste.getMassaTestePorPathEChave(tagMassa, "moedaTransacao"));
+    }
+
+    @E("clica na page {string} feature VFS002")
+    public void clicaNaPageFeatureVFS002(String Itens) {
+        VFS002_Page.clicaNaPageFeatureVFS002(Itens);
+    }
 }
