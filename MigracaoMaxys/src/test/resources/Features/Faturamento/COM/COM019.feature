@@ -8,12 +8,9 @@
      Dado inicialize a execução dos cenários do COM019
      E acessar o programa "COM019" pela empresa "84" feature COM019
 
-
    Cenário: Pedidos Pendentes de Compra - Liberação
 
 #     Quando validar mensagem de consulta SQL feature COM019
-
-
      Quando clicar botão ToolBar "novo" feature COM019
      E preencher Clifor feature COM019
      E preencher Condição Pagto feature COM019

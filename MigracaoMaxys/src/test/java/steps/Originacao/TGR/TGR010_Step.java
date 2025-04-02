@@ -48,8 +48,8 @@ public class TGR010_Step {
     }
 
     @E("acessar o programa {string} feature TGR010")
-    public void acessarOProgramaFeatureTGR010(String programa) {
-        loginPage.loginNewMaxysNovo(programa);
+    public void acessarOProgramaFeatureTGR010(String programa, String empresa ) {
+        loginPage.loginNewMaxysNovo(programa, empresa );
         basePage.esperarMilissegundos(1000); // espera necessária
     }
 

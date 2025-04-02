@@ -120,7 +120,6 @@ public class COM007_Step {
         COM007_Page.confirmarMensagemSQLDeConsultaFeatureCOM007();
     }
 
-
     @E("fechar janela de Solicitações em Aberto feature COM007")
     public void fecharJanelaDeSolicitaçõesEmAbertoFeatureCOM007() {
         COM007_Page.fecharJanelaDeSolicitaçõesEmAbertoFeatureCOM007();
