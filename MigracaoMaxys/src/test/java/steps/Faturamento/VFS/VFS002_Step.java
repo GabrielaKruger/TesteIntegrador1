@@ -49,9 +49,9 @@ public class VFS002_Step {
 
     @E("acessar o programa {string} pela empresa {string} feature VFS002")
     public void acessarOProgramaFeatureVFS002(String programa, String empresa) {
-        basePage.esperarMilissegundos(5000);
-        loginPage.loginNewMaxysNovo(programa, empresa);
         basePage.esperarMilissegundos(10000);
+        loginPage.loginNewMaxysNovo(programa, empresa);
+        basePage.esperarMilissegundos(20000);
     }
 
     @E("acessa o programa {string} feature VFS002")
@@ -82,11 +82,6 @@ public class VFS002_Step {
     @E("preenche o clifor da nota feature VFS002")
     public void preencheOCliforDaNotaFeatureVFS002() {
         VFS002_Page.preencheOCliforDaNotaFeatureVFS002(massaTeste.getMassaTestePorPathEChave(tagMassa, "cliforNotaFiscal"));
-    }
-
-    @E("carrega CNJP feature VFS002")
-    public void carregaCNJPFeatureVFS002() {
-        VFS002_Page.carregaCNJPFeatureVFS002();
     }
 
     @E("fecha sel notas e itens de mestra feature VFS002")
