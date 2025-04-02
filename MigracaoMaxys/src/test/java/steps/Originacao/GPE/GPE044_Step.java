@@ -72,7 +72,7 @@ public class GPE044_Step {
     @E("apresentar a mensagem parcial {string} feature GPE044")
     public void apresentarAMensagemParcialFeatureGPE044(String mensagem) throws IOException{
         basePage.validaMensagemLabelByContainsText(mensagem);
-        BasePage.takeScreenshot(driver, "GPE044", mensagem);
+//        BasePage.takeScreenshot(driver, "GPE044", mensagem);
     }
 
     @Então("clicar botão {string} do modal feature GPE044")
@@ -181,12 +181,12 @@ public class GPE044_Step {
     @Então("apresentar a mensagem no pop-up {string} feature GPE044")
     public void apresentarAMensagemNoPopUpFeatureGPE044(String mensagem) throws IOException{
         basePage.validarMensagemByToastContainerDivDiv(mensagem);
-        BasePage.takeScreenshot(driver, "GPE044", mensagem);
+//        BasePage.takeScreenshot(driver, "GPE044", mensagem);
     }
 
     @After
     public void tearDown() {
-        BasePage.limparCapturasdeTelaAntigas();
+//        BasePage.limparCapturasdeTelaAntigas();
 
         if (driver != null) {
             if (scenario != null && scenario.isFailed()) {
