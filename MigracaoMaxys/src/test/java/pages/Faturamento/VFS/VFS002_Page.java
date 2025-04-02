@@ -106,7 +106,7 @@ public class VFS002_Page extends BasePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 
         //WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/modal-container/div[2]/div")));
-        WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("    /html/body/modal-container/div/div")));
+        WebElement modal = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/modal-container/div/div")));
 
         // Monta o XPath dinâmico baseado na label do radio button
         String xpathInput = "//mx-maxys-radio-group/mx-maxys-radio-button[label[contains(text(),'" + tipoVenda + "')]]/label/input";
@@ -162,10 +162,10 @@ public class VFS002_Page extends BasePage {
     public void informaDataEmissaoDaNotaFeatureVFS002() {
         executarNoIframe(() -> {
 
-        limparElementoByXpath(inputDataEmissao);
-        clicarElementoByXpath(inputDataEmissao);
-        preencherElementoByXpath(inputDataEmissao, DataUtils.DataAtual());
-        clicarElementoByXpath(inputDataEmissao);
+            limparElementoByXpath(inputDataEmissao);
+            clicarElementoByXpath(inputDataEmissao);
+            preencherElementoByXpath(inputDataEmissao, DataUtils.DataAtual());
+            clicarElementoByXpath(inputDataEmissao);
         });
     }
 
@@ -175,17 +175,14 @@ public class VFS002_Page extends BasePage {
             clicarElementoByXpath(inputCliforNotaFiscal);
             preencherElementoByXpath(inputCliforNotaFiscal, cliforNotaFiscal);
             esperarMilissegundos(2000);
-            pressionaTabActions();
+
+            //Clicar no footer para trazer o modal ser carregada
+            WebElement outroElemento = driver.findElement(By.xpath("/html/body/app-root/div/section/lib-vfs002/footer"));
+            outroElemento.click();
+            esperarMilissegundos(4000);
         });
     }
 
-    public void carregaCNJPFeatureVFS002() {
-        executarNoIframe(() -> {
-
-            pressionarENTERByXpath("//*[@id='input-search-lov']");
-            pressionarENTERByXpath("//*[@id='input-search-lov']");
-        });
-    }
 
     public void fechaSelNotasEItensDeMestraFeatureVFS002() {
         executarNoIframe(() -> {
@@ -198,28 +195,36 @@ public class VFS002_Page extends BasePage {
 
     public void preencheCondicaoPagamentoFeatureVFS002(String condicaoPagamento) {
         esperarMilissegundos(2000);
-        clicarElementoByXpath(inputCondicaoPagto);
-        limparElementoByXpath(inputCondicaoPagto);
-        esperarMilissegundos(2000);
-        preencherElementoByXpath(inputCondicaoPagto, condicaoPagamento);
-        pressionaTabActions();
-        esperarMilissegundos(500);
-        pressionaTabActions();
+        executarNoIframe(() -> {
+
+            clicarElementoByXpath(inputCondicaoPagto);
+            limparElementoByXpath(inputCondicaoPagto);
+            esperarMilissegundos(2000);
+            preencherElementoByXpath(inputCondicaoPagto, condicaoPagamento);
+            pressionaTabActions();
+            esperarMilissegundos(500);
+            pressionaTabActions();
+        });
     }
 
     public void preencherFormaDePagamentoFeatureVFS002(String formaDePagamento) {
-        limparElementoByXpath(inputformaDePagto);
-        clicarElementoByXpath(inputformaDePagto);
-        esperarMilissegundos(2000);
-        preencherElementoByXpath(inputformaDePagto, formaDePagamento);
+        executarNoIframe(() -> {
+
+            limparElementoByXpath(inputformaDePagto);
+            clicarElementoByXpath(inputformaDePagto);
+            esperarMilissegundos(2000);
+            preencherElementoByXpath(inputformaDePagto, formaDePagamento);
+        });
     }
 
     public void preencherMoedaTransacaoFeatureVFS002(String moedaTransacao) {
-        clicarElementoByXpath(inputMoedaTransacao);
-        limparElementoByXpath(inputMoedaTransacao);
-        esperarMilissegundos(2000);
-        preencherElementoByXpath(inputMoedaTransacao, moedaTransacao);
+        executarNoIframe(() -> {
 
+            clicarElementoByXpath(inputMoedaTransacao);
+            limparElementoByXpath(inputMoedaTransacao);
+            esperarMilissegundos(2000);
+            preencherElementoByXpath(inputMoedaTransacao, moedaTransacao);
+        });
     }
 
     public String acessoPagesXpath(String nomePagina) {
@@ -234,23 +239,25 @@ public class VFS002_Page extends BasePage {
         return paginas.getOrDefault(nomePagina, ""); // Retorna o XPath ou uma string vazia se não encontrar
     }
 
-
     public void clicaNaPageFeatureVFS002(String nomePagina) {
-        String xpathListaAbas = "//*[@id='WIN_NFSAIDA']/mx-maxys-tab-group/ul/li";
-        String xpathPagina = acessoPagesXpath(nomePagina); // Obtém o XPath da página
+        executarNoIframe(() -> {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        List<WebElement> abas = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(xpathListaAbas)));
+            String xpathListaAbas = "//*[@id='WIN_NFSAIDA']/mx-maxys-tab-group/ul/li";
+            String xpathPagina = acessoPagesXpath(nomePagina); // Obtém o XPath da página
 
-        for (WebElement aba : abas) {
-            if (aba.getText().trim().equalsIgnoreCase(nomePagina)) {
-                aba.click();
-                if (!xpathPagina.isEmpty()) { // Se tiver XPath associado, aguarda carregar
-                    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathPagina)));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+            List<WebElement> abas = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(xpathListaAbas)));
+
+            for (WebElement aba : abas) {
+                if (aba.getText().trim().equalsIgnoreCase(nomePagina)) {
+                    aba.click();
+                    if (!xpathPagina.isEmpty()) { // Se tiver XPath associado, aguarda carregar
+                        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpathPagina)));
+                    }
+                    break;
                 }
-                break;
             }
-        }
+        });
     }
-
 }
+

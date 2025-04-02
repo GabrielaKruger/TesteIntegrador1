@@ -15,7 +15,6 @@
      E seleciona a serie da nota fiscal feature VFS002
      E informa data emissao da nota feature VFS002
      E preenche o clifor da nota feature VFS002
-     E carrega CNJP feature VFS002
      E fecha sel notas e itens de mestra feature VFS002
      E preenche condicao pagamento feature VFS002
      E preencher forma de pagamento feature VFS002
