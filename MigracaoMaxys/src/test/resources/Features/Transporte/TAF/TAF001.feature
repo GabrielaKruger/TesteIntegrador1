@@ -27,3 +27,5 @@
    @843v1
    Cenário: Lançamento de pré conhecimento préCT-e
 
+   @843v1
+   Cenário: Lançamento de pré conhecimento préCT-e
