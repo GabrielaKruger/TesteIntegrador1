@@ -24,6 +24,17 @@ Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
 
   Cenário: Cadastro, Edição e Exclusão Clifor Remessas | Caminho Feliz
 
+    Quando selecionar Faturamento feature VFS015
+    E preencher Lançamento feature VFS015
+    E preencher Nota Fiscal feature VFS015
+    E preencher Série feature VFS015
+    E preencher NF Fornecedor feature VFS015
+    E preencher Data Emissão feature VFS015
+    E preencher Empresa feature VFS015
+    E preencher Clifor feature VFS015
+    E preencher Contrato Grão feature VFS015
+    Então clicar botão "Consultar" para consultar feature VFS015
+
     Quando clicar Clifor de Remessas feature VFS015
     E preencher Empresa Clifor de Remessas feature VFS015
     E clicar botão ToolBar "novo" feature VFS015
@@ -35,6 +46,10 @@ Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
     Quando clicar botão ToolBar "excluir" feature VFS015
     E apresenta o modal H4 "modal-basic-title" feature VFS015
     Então clicar botão "sim" do modal feature VFS015
+
+
+  Cenário: Validar Notas Fiscais Mestras| Caminho Feliz
+#TODO: realizar teste
 
 
   @wip #refluxo: não filtra  por Data Emissão

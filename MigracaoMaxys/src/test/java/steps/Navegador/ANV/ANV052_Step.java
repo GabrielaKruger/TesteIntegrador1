@@ -207,16 +207,16 @@ public class ANV052_Step {
     }
 
 
-       @After
-    public void tearDown() {
-        if (driver != null) {
-            if (scenario != null && scenario.isFailed()) {
-                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-                scenario.attach(screenshot, "image/png", "Screenshot");
-            }
-        }
-        BasePage.tearDownCloseQuit(driver);
-    }
+//       @After
+//    public void tearDown() {
+//        if (driver != null) {
+//            if (scenario != null && scenario.isFailed()) {
+//                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+//                scenario.attach(screenshot, "image/png", "Screenshot");
+//            }
+//        }
+//        BasePage.tearDownCloseQuit(driver);
+//    }
 }
 
 
