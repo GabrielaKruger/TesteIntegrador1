@@ -4,6 +4,7 @@
 Funcionalidade: REC001 - Recebimento de Notas Fiscais
 
   # Refluxo reportados na solicitação.
+  # Tem que decidir como será a escrita para mais de um item com massa de teste diferente
   Cenário de Fundo:
     Dado inicialize a execução dos cenários do REC001
     E acessar o programa "REC001" pela empresa "84" feature REC001
@@ -92,6 +93,12 @@ Funcionalidade: REC001 - Recebimento de Notas Fiscais
   @2v2
   Cenário: Nota de Entrada com Vencimento Parcelado (Cond 900)
 
+  @2v3
+  Cenário: Nota de Entrada com Pedido de Compra (COM004)
+
+  @2v5
+  Cenário: Nota de Entrada com Pedido e alteração de parcelamento digitado
+
   @3v1
   Cenário: Nota de Entrada Mestra com Moeda 1
 
@@ -110,6 +117,9 @@ Funcionalidade: REC001 - Recebimento de Notas Fiscais
   @4v4
   Cenário: Nota de Entrada Remessa com Despesas de Acessórios
 
+  @4v5
+  Cenário: Nota de Entrada Remessa com Valor de Frete
+
   @13v1
   Cenário: Nota de Entrada com Itens de lote de Semente
 
@@ -121,6 +131,12 @@ Funcionalidade: REC001 - Recebimento de Notas Fiscais
 
   @571v1
   Cenário: Nota de Entrada com Desconto nos Itens
+
+  @803v1
+  Cenário: Nota de Entrada com Adiantamento
+
+  @804v2
+  Cenário: Emissão de nota fiscal de CTRC não obrigando informar os estados origem do frete
 
   @1228v1
   Cenário: Norta normal caindo em bloqueio no REC017 com a emissão no REC019
@@ -136,3 +152,9 @@ Funcionalidade: REC001 - Recebimento de Notas Fiscais
 
   @1218v5
   Cenário: Nota normal atendendo pedido caindo em bloqueio no REC017 com a emissão no REC019
+
+  @5369v1
+  Cenário: Recebimento de pedido com clifor diferente porém com mesma raiz de CNPJ do clifor do pedido
+
+  @6324v1
+  Cenário: Não permitir alteração de movimentação atendendo pedido

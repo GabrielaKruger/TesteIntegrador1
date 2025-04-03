@@ -1,4 +1,4 @@
-package steps.Faturamento.REC;
+package steps.Transporte.TAF;
 
 import driver.driverManager.DriverManager;
 import io.cucumber.java.After;
@@ -13,29 +13,30 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.LoginPage;
-import pages.Faturamento.REC.REC033_Page;
+import pages.Transporte.TTB.TTB163_Page;
 import utils.MassaTeste;
 
 import java.time.Duration;
 
-public class REC033_Step {
+public class TAF001_Step {
 
     private WebDriver driver;
     private MassaTeste massaTeste;
-    private pages.Faturamento.REC.REC033_Page REC033_Page;
+    private TTB163_Page TTB163_Page;
     private BasePage basePage;
     private LoginPage loginPage;
     private String tagMassa;
     private String browser;
     Scenario scenario;
 
+
     @Before
     public void before(Scenario scenario) {
         this.scenario = scenario;
     }
 
-    @Dado("inicialize a execução dos cenários do REC033")
-    public void inicializeAExecuçãoDosCenáriosDoREC033() {
+    @Dado("inicialize a execução dos cenários do TTB163")
+    public void inicializeAExecuçãoDosCenáriosDoTTB163() {
         massaTeste = new MassaTeste();
         tagMassa = massaTeste.getPathByScenario(this.scenario);
         browser = DriverManager.getBrowserByScenario(this.scenario);
@@ -43,30 +44,29 @@ public class REC033_Step {
         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         this.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        REC033_Page = new REC033_Page(driver);
+        TTB163_Page = new TTB163_Page(driver);
         loginPage = new LoginPage(driver);
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} pela empresa {string} feature REC033")
-    public void acessarOProgramaFeatureREC(String programa, String empresa) {
-        basePage.esperarMilissegundos(5000);// espera necessária
+    @E("acessar o programa {string} pela empresa {string} feature TTB163")
+    public void acessarOProgramaFeatureTTB163(String programa, String empresa) {
         loginPage.loginNewMaxysNovo(programa, empresa);
+        basePage.esperarMilissegundos(1000); // espera necessária
+    }
+
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
     }
 }
 
 
-  //  @After
-   // public void tearDown() {
-   //     if (driver != null) {
-   //         if (scenario != null && scenario.isFailed()) {
-    //            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-    //            scenario.attach(screenshot, "image/png", "Screenshot");
-    //        }
-    //    }
-    //    BasePage.tearDownCloseQuit(driver);
-    //}
-
-
-//}
 

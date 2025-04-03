@@ -27,3 +27,24 @@
      E apresentar o modal H5 "modal-basic-title" feature COM004
      E apresentar a mensagem "MENSAGEM DE ALERTA POR MOTIVO FALTANDO" feature COM004
      Então clicar botão "ok" do modal feature COM004
+
+   @910v3
+   Cenário: Pedido avulso - Moeda Dolar - Taxa Média
+
+   @910v4
+   Cenário: Pedido avulso - Moeda Dolar - Taxa Média
+
+   @910v5
+   Cenário: Pedido avulso - Moeda Dolar - Taxa Fechamento
+
+   @910v6
+   Cenário: Pedido avulso - Moeda Dolar - Taxa Negociada
+
+   @910v6
+   Cenário: Pedido avulso - Moeda Dolar - Taxa Recebimento
+
+   @5669v1
+   Cenário: Pedido de compra - centro de custo - c/planilha
+
+   @8198v4
+   Cenário: Aprovação Contábil de Pedido de Compra com CheckBox Adiantamento
