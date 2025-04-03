@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class )
 @CucumberOptions(
         features = "classpath:features",
-        tags = "@COM007 and not @wip",
+        tags = "@vfs015Refluxo and not @wip",
         publish = true, plugin = {"json:target/cucumber.json"})
 public class Runner {
 

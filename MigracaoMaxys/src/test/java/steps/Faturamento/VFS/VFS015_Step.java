@@ -1,12 +1,15 @@
 package steps.Faturamento.VFS;
 
 import driver.driverManager.DriverManager;
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.E;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.Faturamento.VFS.VFS015_Page;
@@ -178,20 +181,20 @@ public class VFS015_Step {
         basePage.validaMensagemLabelByContainsText(mensagem);
         basePage.esperarMilissegundos(2000);//espera necessária
     }
+
+    @After
+    public void tearDown() {
+        BasePage.limparCapturasdeTelaAntigas();
+
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
+    }
 }
 
 
-//  @After
-// public void tearDown() {
-//     if (driver != null) {
-//         if (scenario != null && scenario.isFailed()) {
-//            final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-//            scenario.attach(screenshot, "image/png", "Screenshot");
-//        }
-//    }
-//    BasePage.tearDownCloseQuit(driver);
-//}
-
-
-//}
 
