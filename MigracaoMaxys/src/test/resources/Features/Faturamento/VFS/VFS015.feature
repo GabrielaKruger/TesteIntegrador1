@@ -48,8 +48,8 @@ Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
     Então clicar botão "sim" do modal feature VFS015
 
 
-  Cenário: Validar Notas Fiscais Mestras| Caminho Feliz
-#TODO: realizar teste
+#  Cenário: Validar Notas Fiscais Mestras| Caminho Feliz
+##TODO: realizar teste
 
 
   @wip #refluxo: não filtra  por Data Emissão
