@@ -3,11 +3,13 @@
 
 Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
 
+
+  # Refluxo reportado na solicitação - Ajuste de mensagem.
   Cenário de Fundo:
     Dado inicialize a execução dos cenários do VFS015
     E acessar o programa "VFS015" pela empresa "84" feature VFS015
 
-@wip #refluxo: não filtra  por Data Emissão
+
   Cenário: Consultar Clientes para Remessa com os filtros preenchidos | Caminho Feliz
 
     Quando selecionar Faturamento feature VFS015
@@ -40,7 +42,6 @@ Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
   #  Cenário: Validar Notas Fiscais Mestras| Caminho Feliz
   # TODO: realizar teste
 
-  @wip #refluxo: não filtra  por Data Emissão
   Cenário: Consultar Clientes para Remessa com os filtros preenchidos | Teclas Atalho
 
     Quando selecionar Faturamento feature VFS015
@@ -77,7 +78,7 @@ Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
     E preencher Nota Fiscal feature VFS015
     E preencher Série feature VFS015
     E preencher NF Fornecedor feature VFS015
-    #E preencher Data Emissão feature VFS015
+    E preencher Data Emissão feature VFS015
     E preencher Empresa feature VFS015
     E preencher Clifor feature VFS015
     E preencher Contrato Grão feature VFS015
@@ -90,12 +91,3 @@ Funcionalidade: VFS015 - Clientes para Remessa contra Ordem
 
     Quando apresentar a mensagem "está cadastrado!" feature VFS015
     Então clicar botão "ok" do modal feature VFS015
-
-
-
-
-
-
-
-
-
