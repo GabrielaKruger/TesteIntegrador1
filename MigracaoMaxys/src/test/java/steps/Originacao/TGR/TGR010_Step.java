@@ -47,7 +47,7 @@ public class TGR010_Step {
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} feature TGR010")
+    @E("acessar o programa {string} pela empresa {string} feature TGR010")
     public void acessarOProgramaFeatureTGR010(String programa, String empresa ) {
         loginPage.loginNewMaxysNovo(programa, empresa );
         basePage.esperarMilissegundos(1000); // espera necessária

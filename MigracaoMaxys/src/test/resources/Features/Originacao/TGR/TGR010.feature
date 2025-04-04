@@ -6,7 +6,7 @@
    # Refluxos reportados na solicitação.
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TGR010
-     E acessar o programa "TGR010" pela empresa "84" feature VFS002
+     E acessar o programa "TGR010" pela empresa "84" feature TGR010
 
    Cenário: Cadastro e Exclusão de Produtos de Balança | Caminho feliz
 
