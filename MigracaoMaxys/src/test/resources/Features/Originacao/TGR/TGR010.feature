@@ -10,20 +10,20 @@
 
    Cenário: Cadastro e Exclusão de Produtos de Balança | Caminho feliz
 
-#     Quando clicar botão ToolBar "ultimo registro" feature TGR010
-#     E clicar botão ToolBar "novo" feature TGR010
-#     E preencher Código feature TGR010
-#     E preencher Descrição feature TGR010
-#     E preencher Tipo de Pedido feature TGR010
-#     E preencher Item Transgênico feature TGR010
-#     E "marcar" Classificar feature TGR010
-#     E "marcar" Segunda Classificação feature TGR010
-#     E "marcar" Produto com restricao no bioma amazônico feature TGR010
-#     E "marcar" Produto com certificação de qualidade POP 11 feature TGR010
-#     Então "marcar" Ordem de carregamento obrigatória featue TGR010
+     # Ordem invertida por causa do refluxo
+     Quando clicar botão ToolBar "novo" feature TGR010
+     E preencher Código feature TGR010
+     E preencher Tipo de Pedido feature TGR010
+     E preencher Descrição feature TGR010
+     E preencher Item Transgênico feature TGR010
+     E "marcar" Classificar feature TGR010
+     E "marcar" Segunda Classificação feature TGR010
+     E "marcar" Produto com restricao no bioma amazônico feature TGR010
+     E "marcar" Produto com certificação de qualidade POP 11 feature TGR010
+     Então "marcar" Ordem de carregamento obrigatória featue TGR010
 
      Quando clicar botão ToolBar "salvar" feature TGR010
-     Então apresentar a mensagem " Registro salvo com sucesso " no pop-up feature TGR010
+     Então apresentar a mensagem "Registro salvo com sucesso" no pop-up feature TGR010
 
      Quando clicar botão ToolBar "ultimo registro" feature TGR010
      E clicar botão ToolBar "excluir" feature TGR010

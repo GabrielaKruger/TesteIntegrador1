@@ -56,6 +56,7 @@ public class TGR010_Step {
     @Então("clicar botão ToolBar {string} feature TGR010")
     public void clicarBotãoToolBarFeatureTGR010(String botao) {
         basePage.clicarBotaoToolBar(botao);
+        basePage.esperarMilissegundos(6000); // espera necessária
     }
 
     @E("apresentar a mensagem {string} no pop-up feature TGR010")
@@ -106,6 +107,46 @@ public class TGR010_Step {
         TGR010_Page.preencherCódigoFeatureTGR010(massaTeste.getMassaTestePorPathEChave(tagMassa, "codigo"));
     }
 
+    @E("preencher Tipo de Pedido feature TGR010")
+    public void preencherTipoDePedidoFeatureTGR010() {
+        TGR010_Page.preencherTipoDePedidoFeatureTGR010(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoPerido"));
+    }
+
+    @E("preencher Descrição feature TGR010")
+    public void preencherDescriçãoFeatureTGR010() {
+        TGR010_Page.preencherDescriçãoFeatureTGR010();
+    }
+
+    @E("preencher Item Transgênico feature TGR010")
+    public void preencherItemTransgênicoFeatureTGR010() {
+        TGR010_Page.preencherItemTransgênicoFeatureTGR010(massaTeste.getMassaTestePorPathEChave(tagMassa, "itemTransfenico"));
+    }
+
+    @E("{string} Classificar feature TGR010")
+    public void classificarFeatureTGR010(String acao) {
+        TGR010_Page.classificarFeatureTGR010(acao);
+    }
+
+    @E("{string} Segunda Classificação feature TGR010")
+    public void segundaClassificaçãoFeatureTGR010(String acao) {
+        TGR010_Page.segurnaClassificacaoFeatureTGR010(acao);
+    }
+
+    @E("{string} Produto com restricao no bioma amazônico feature TGR010")
+    public void produtoComRestricaoNoBiomaAmazônicoFeatureTGR010(String aco) {
+        TGR010_Page.produtoComRestricaoNoBiomaAmazônicoFeatureTGR010();
+    }
+
+    @E("{string} Produto com certificação de qualidade POP 11 feature TGR010")
+    public void produtoComCertificaçãoDeQualidadePOPFeatureTGR010(String arg0) {
+        TGR010_Page.produtoComCertificaçãoDeQualidadePOPFeatureTGR010();
+    }
+
+    @Então("{string} Ordem de carregamento obrigatória featue TGR010")
+    public void ordemDeCarregamentoObrigatóriaFeatueTGR010(String arg0) {
+        TGR010_Page.ordemDeCarregamentoObrigatóriaFeatueTGR010();
+    }
+
 
     @After
     public void tearDown() {
@@ -117,5 +158,4 @@ public class TGR010_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
-
 }
