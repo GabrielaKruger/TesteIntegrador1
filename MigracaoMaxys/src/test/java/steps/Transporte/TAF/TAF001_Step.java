@@ -13,7 +13,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import pages.LoginPage;
-import pages.Transporte.TTB.TTB163_Page;
+import pages.Transporte.TAF.TAF001_Page;
 import utils.MassaTeste;
 
 import java.time.Duration;
@@ -22,7 +22,7 @@ public class TAF001_Step {
 
     private WebDriver driver;
     private MassaTeste massaTeste;
-    private TTB163_Page TTB163_Page;
+    private TAF001_Page TAF001_Page;
     private BasePage basePage;
     private LoginPage loginPage;
     private String tagMassa;
@@ -35,8 +35,8 @@ public class TAF001_Step {
         this.scenario = scenario;
     }
 
-    @Dado("inicialize a execução dos cenários do TTB163")
-    public void inicializeAExecuçãoDosCenáriosDoTTB163() {
+    @Dado("inicialize a execução dos cenários do TAF001")
+    public void inicializeAExecuçãoDosCenáriosDoTAF001() {
         massaTeste = new MassaTeste();
         tagMassa = massaTeste.getPathByScenario(this.scenario);
         browser = DriverManager.getBrowserByScenario(this.scenario);
@@ -44,13 +44,13 @@ public class TAF001_Step {
         this.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         this.driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        TTB163_Page = new TTB163_Page(driver);
+        TAF001_Page = new TAF001_Page(driver);
         loginPage = new LoginPage(driver);
         basePage = new BasePage(driver);
     }
 
-    @E("acessar o programa {string} pela empresa {string} feature TTB163")
-    public void acessarOProgramaFeatureTTB163(String programa, String empresa) {
+    @E("acessar o programa {string} pela empresa {string} feature TAF001")
+    public void acessarOProgramaFeatureTAF001(String programa, String empresa) {
         loginPage.loginNewMaxysNovo(programa, empresa);
         basePage.esperarMilissegundos(1000); // espera necessária
     }

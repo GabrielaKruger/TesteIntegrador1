@@ -1,10 +1,10 @@
  #language: pt
- @test @TTB163 @dt_TTB163 @chrome
- Funcionalidade: TTB163 - Cadastro Alçada de Cadastro de Frete
+ @test @TAF001 @dt_TAF001 @chrome
+ Funcionalidade: TAF001 - Cadastro Alçada de Cadastro de Frete
 
    Cenário de Fundo:
-     Dado inicialize a execução dos cenários do TTB163
-     E acessar o programa "TTB163" pela empresa "84" feature TTB163
+     Dado inicialize a execução dos cenários do TAF001
+     E acessar o programa "TAF001" pela empresa "84" feature TAF001
 
    @102V1
    Cenário: Emissão de frete com carta frete avulsa
