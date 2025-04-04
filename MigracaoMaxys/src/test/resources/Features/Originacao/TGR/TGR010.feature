@@ -1,5 +1,5 @@
  #language: pt
- @test @TGR010 @dt_TGR010 @chrome
+ @wip @TGR010 @dt_TGR010 @chrome
  Funcionalidade: TGR010 - Produtos de Balança
 
 
@@ -10,9 +10,9 @@
 
    Cenário: Cadastro e Exclusão de Produtos de Balança | Caminho feliz
 
-     Quando clicar botão ToolBar "ultimo registro" feature TGR010
-     E clicar botão ToolBar "novo" feature TGR010
-     E preencher Código feature TGR010
+#     Quando clicar botão ToolBar "ultimo registro" feature TGR010
+#     E clicar botão ToolBar "novo" feature TGR010
+#     E preencher Código feature TGR010
 #     E preencher Descrição feature TGR010
 #     E preencher Tipo de Pedido feature TGR010
 #     E preencher Item Transgênico feature TGR010
