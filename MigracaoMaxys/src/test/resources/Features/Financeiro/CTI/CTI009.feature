@@ -7,7 +7,7 @@
      Dado inicialize a execução dos cenários do CTI009
      E acessar o programa "CTI009" pela empresa "84" feature CTI009
 
-   @wip
+   @wip # Não está realizando o fechamento, avisando que há um mês que precisa ser fechado. Isso não ocorre no Forms.
    Cenário: Cálculo da Variação Cambial - Fechar/Reabrir Financeiro
 
      #Filtros
