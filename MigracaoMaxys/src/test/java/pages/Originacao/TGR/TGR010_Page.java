@@ -94,4 +94,22 @@ public class TGR010_Page extends BasePage {
         String radioOrdemCXpath = radioOrdemXpath + checkBoxFim;
         testMarcaDesmarcaCheckBox("marcar", radioOrdemCXpath);
     }
+
+    public void nãoPreencherCódigoFeatureTGR010() {
+        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputCodigoXpath, inputXpathFim));
+
+        String linhaGridCodigoXpath = inputCodigoXpath + primeiraLinhaEmBranco + inputXpathFim;
+
+        clicarElementoByXpathNVezes(linhaGridCodigoXpath,2);
+        pressionaTabActions();
+    }
+
+    public void nãoPreencherTipoDePedidoFeatureTGR010() {
+        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputTipoPedidoXpath, inputXpathFim));
+
+        String linhaGridTipoPedidoXpath = inputTipoPedidoXpath + primeiraLinhaEmBranco + inputXpathFim;
+
+        clicarElementoByXpathNVezes(linhaGridTipoPedidoXpath,2);
+        pressionaTabActions();
+    }
 }

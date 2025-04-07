@@ -56,13 +56,11 @@ public class TGR010_Step {
     @Então("clicar botão ToolBar {string} feature TGR010")
     public void clicarBotãoToolBarFeatureTGR010(String botao) {
         basePage.clicarBotaoToolBar(botao);
-        basePage.esperarMilissegundos(6000); // espera necessária
     }
 
     @E("apresentar a mensagem {string} no pop-up feature TGR010")
     public void apresentarAMensagemNoPopUpFeatureTGR010(String mensagem) {
-        basePage.esperarMilissegundos(500); // espera necessária
-        basePage.validarMensagemByToastContainerDivDiv(mensagem);
+        basePage.validarMensagemByToastContainer(mensagem);
     }
 
     @Quando("apresentar o modal H5 {string} feature TGR010")
@@ -104,6 +102,7 @@ public class TGR010_Step {
 
     @E("preencher Código feature TGR010")
     public void preencherCódigoFeatureTGR010() {
+        basePage.esperarMilissegundos(7000); // espera necessária
         TGR010_Page.preencherCódigoFeatureTGR010(massaTeste.getMassaTestePorPathEChave(tagMassa, "codigo"));
     }
 
@@ -147,6 +146,20 @@ public class TGR010_Step {
         TGR010_Page.ordemDeCarregamentoObrigatóriaFeatueTGR010();
     }
 
+    @E("aguarda os dados serem carregados feature TGR010")
+    public void aguardaOsDadosSeremCarregadosFeatureTGR010() {
+        basePage.esperarMilissegundos(6000); // espera necessária
+    }
+
+    @Então("não preencher Código feature TGR010")
+    public void nãoPreencherCódigoFeatureTGR010() {
+        TGR010_Page.nãoPreencherCódigoFeatureTGR010();
+    }
+
+    @E("não preencher Tipo de Pedido feature TGR010")
+    public void nãoPreencherTipoDePedidoFeatureTGR010() {
+        TGR010_Page.nãoPreencherTipoDePedidoFeatureTGR010();
+    }
 
     @After
     public void tearDown() {
@@ -158,4 +171,6 @@ public class TGR010_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
+
+
 }
