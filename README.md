@@ -37,9 +37,28 @@ Atualmente, o <b>Maxys</b> está em processo de <i>migração da tecnologia FMB 
     📝 BDD | 📊 Página de Solicitações
 
 
-<p style="text-align: justify;"><b>Estrutura do Projeto:</b> Como o projeto está organizado dentro do IntelliJ? Quais são as pastas e arquivos principais que devem ser destacados?</p>
+<p style="text-align: justify;"><b>Estrutura do Projeto:
 
-<p style="text-align: justify;"><b>Configuração e Pré-requisitos:</b> Como configurar o ambiente para rodar o projeto? Quais dependências precisam ser instaladas?</p>
+```
+📂 MigracaoMaxys
+├── 📂 idea 
+├── 📂 src
+│   ├── 📂 main
+│   │   ├── 📂 java          # Classes de apoio e utilitários
+│   ├── 📂 test
+│   │   ├── 📂 java
+│   │   │   ├── 📂 steps     # Definição dos passos (Step Definitions)
+│   │   │   ├── 📂 runners   # Configuração dos runners (TestRunner)
+│   │   │   ├── 📂 utils     # Classes de suporte e configuração
+│   │   ├── 📂 resources
+│   │   │   ├── 📂 features     # Cenários Gherkin (.feature)
+│   │   │   ├── 📂 massa_teste  # json das massas dos cenarios(.json)
+├── pom.xml                  # Configuração do Maven
+├── .gitignore               # Arquivos ignorados pelo Git
+└── README.md                # Documentação do projeto
+
+<p style="text-align: justify;"><b>Configuração e Pré-requisitos:</b> </p>
+
 
 <p style="text-align: justify;"><b>Execução de Testes:</b> Como os testes são executados? Existe alguma configuração especial no IntelliJ ou Jenkins?</p>
 
