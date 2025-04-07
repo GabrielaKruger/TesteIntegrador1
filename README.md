@@ -57,16 +57,56 @@ Atualmente, o <b>Maxys</b> está em processo de <i>migração da tecnologia FMB 
 ├── .gitignore               # Arquivos ignorados pelo Git
 └── README.md                # Documentação do projeto
 
-<p style="text-align: justify;"><b>Configuração e Pré-requisitos:</b> </p>
+## Configuração do Ambiente
+Manual para instalações mais detalhado: https://confluence.maxiconsystems.com.br/pages/viewpage.action?pageId=95719001
 
+1. Instalar o **Java 11 ou superior**
+2. Instalar o **Maven**
+3. Instalar o **IntelliJ IDEA** e adicionar plugins:
+   * Cucumber for java
+   * Gherkin
+   * Docker
+   * GitLab
+4. Clonar este repositório:
+   ```bash
+   git clone https://gitlab.maxiconsystems.com.br/automacao/ldc
+   ```
+5. Abrir o projeto no IntelliJ e importar como projeto Maven
+6. Atualizar dependências do Maven:
+   ```bash
+   mvn clean install
+   ```
+ou ainda ir no pom.xml do projeto e encontrar opção add maven e/ou reload project
 
-<p style="text-align: justify;"><b>Execução de Testes:</b> Como os testes são executados? Existe alguma configuração especial no IntelliJ ou Jenkins?</p>
+## Como Executar os Testes
+Para executar os testes via linha de comando:
+```bash
+mvn test
+```
+Ou, no IntelliJ:
+1. Navegue até a classe Runner na pasta `runners`
+2. Execute como **JUnit Test**
 
-<p style="text-align: justify;"><b>Fluxo de Trabalho:</b> Quais são os principais processos ou etapas seguidas durante o desenvolvimento e execução dos testes automatizados?</p>
+Ou, na Feature:
+1. Navegue até a feature e encontre o cenário que deseja executar
+2. Execute com o Run ou debug
 
-<p style="text-align: justify;"><b>Padrões de Nomeação e Contribuições:</b> Quais são as convenções de nomeação para arquivos e commits, e como os colaboradores devem contribuir com o projeto?</p>
+## Exemplo de Cenário Gherkin
+```gherkin
+Funcionalidade: Login no sistema
+  Cenario de Fundo:
+    Dado inicialize a execução dos cenários
+    
+Cenario: Login válido | Caminho Feliz
+    Quando acessar página de login
+    E digitar um usuário e senha válidos
+    Então deve logar com sucesso
 
-<p style="text-align: justify;"><b>Problemas Conhecidos:</b> Há algum problema ou limitação que os usuários ou desenvolvedores devem estar cientes?</p>
+Cenario: Login inválido |  Caso Negativo
+    Quando acessar página de login
+    E digitar um usuário e senha inválidos
+    Então deve gerar mensagem de "Usuário ou senha inválidos" e não logar
+```
 
-
-
+## Contato
+Caso tenha dúvidas ou sugestões, entre em contato pelo e-mail: [henrique.silva@maxiconsystems.com.br](mailto:henrique.silva@maxiconsystems.com.br).

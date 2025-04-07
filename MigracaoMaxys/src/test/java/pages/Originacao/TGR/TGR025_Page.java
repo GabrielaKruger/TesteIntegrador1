@@ -106,5 +106,46 @@ public class TGR025_Page extends BasePage {
 
     }
 
+    public void nãoPreencheEmpreaFeatureTGR025() {
+        esperarMilissegundos(500); // espera necessária
+        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputEmpresaXpath, inputXpathFim));
+
+        String linhaGridEmpresaXpath = inputEmpresaXpath + primeiraLinhaEmBranco + inputXpathFim;
+
+        clicarElementoByXpathNVezes(linhaGridEmpresaXpath,2);
+        pressionaTabActions();
+    }
+
+    public void nãoPreencherTipoDeContratoFeatureTGR025() {
+        String linhaGridTipoContratoXpath = inputTipoContratoXpath + primeiraLinhaEmBranco + inputXpathFim;
+
+        clicarElementoByXpathNVezes(linhaGridTipoContratoXpath,2);
+        pressionaTabActions();
+    }
+
+    public void nãoPreencherProgramaFeatureTGR025() {
+        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputProgramaXpath, inputXpathFim));
+
+        String linhaGridProgramaXpath = inputProgramaXpath + primeiraLinhaEmBranco + inputXpathFim;
+
+        clicarElementoByXpathNVezes(linhaGridProgramaXpath,2);
+        pressionaTabActions();
+    }
+
+    public void nãoPreencherMóduloFeatureTGR025() {
+        String linhaGridModuloXpath = inputModuloXpath + primeiraLinhaEmBranco + inputXpathFim;
+
+        clicarElementoByXpathNVezes(linhaGridModuloXpath,2);
+        pressionaTabActions();
+    }
+
+    public void nãoPreencherMotivoFeatureTGR025() {
+        primeiraLinhaEmBranco = Integer.parseInt(testEncontraPrimeiraPosicaoEmBrancoLinhaGrid1(inputMotivoXpath, inputXpathFim));
+
+        String linhaGridMotivoXpath = inputMotivoXpath + primeiraLinhaEmBranco + inputXpathFim;
+
+        clicarElementoByXpathNVezes(linhaGridMotivoXpath,2);
+        pressionaTabActions();
+    }
 }
 

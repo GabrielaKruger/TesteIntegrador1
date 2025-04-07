@@ -75,6 +75,7 @@ public class TGR025_Step {
 
     @Então("clicar botão {string} do modal feature TGR025")
     public void clicarBotãoDoModalFeatureTGR025(String acao) {
+        basePage.esperarMilissegundos(1000); // espera necessária
         basePage.clicarBotaoDoModal(acao);
     }
 
@@ -144,10 +145,36 @@ public class TGR025_Step {
         TGR025_Page.removerTipoDeContratoFeatureTGR025();
     }
 
+    @Então("não preenche Emprea feature TGR025")
+    public void nãoPreencheEmpreaFeatureTGR025() {
+        TGR025_Page.nãoPreencheEmpreaFeatureTGR025();
+    }
+
     @Entao("remover Empresa feature TGR025")
     public void removerEmpresaFeatureTGR025() {
         TGR025_Page.removerEmpresaFeatureTGR025();
     }
+
+    @Então("não preencher Tipo de Contrato feature TGR025")
+    public void nãoPreencherTipoDeContratoFeatureTGR025() {
+        TGR025_Page.nãoPreencherTipoDeContratoFeatureTGR025();
+    }
+
+    @Então("não preencher Programa feature TGR025")
+    public void nãoPreencherProgramaFeatureTGR025() {
+        TGR025_Page.nãoPreencherProgramaFeatureTGR025();
+    }
+
+    @Então("não preencher Módulo feature TGR025")
+    public void nãoPreencherMóduloFeatureTGR025() {
+        TGR025_Page.nãoPreencherMóduloFeatureTGR025();
+    }
+
+    @Então("não preencher Motivo feature TGR025")
+    public void nãoPreencherMotivoFeatureTGR025() {
+        TGR025_Page.nãoPreencherMotivoFeatureTGR025();
+    }
+
 
     @After
     public void tearDown() {
