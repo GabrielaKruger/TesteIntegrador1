@@ -155,12 +155,17 @@ public class TCO035_Step {
 
     @E("selecionar o Autorizador Grid feature TCO035")
     public void selecionarOAutorizadorGridFeatureTCO035() {
-        TCO035_Page.selecionarOAutorizadorGridFeatureTCO035(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador"));
+        TCO035_Page.selecionarOAutorizadorGridFeatureTCO035(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador02"));
     }
 
     @E("selecionar o C.Custo Grid feature TCO035")
     public void selecionarOCCustoGridFeatureTCO035() {
         TCO035_Page.selecionarOCCustoGridFeatureTCO035();
+    }
+
+    @E("informa o Autorizador feature TCO035")
+    public void informaOAutorizadorFeatureTCO035() {
+        TCO035_Page.informaOAutorizadorFeatureTCO035(massaTeste.getMassaTestePorPathEChave(tagMassa, "autorizador02"));
     }
 
     @After
@@ -175,5 +180,6 @@ public class TCO035_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
+
 
 }

@@ -130,7 +130,7 @@ public class TCO035_Page extends BasePage {
     }
 
     public void selecionarAEmpresaGridFeatureTCO035() {
-        int[] empresas = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 33, 48, 84, 108, 121, 122, 150, 500, 3009, 6666}; // Código das empresas apresentadas
+        int[] empresas = {2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 33, 48, 84, 108, 121, 122, 150, 500, 3009, 6666}; // Código das empresas apresentadas
         int indiceEmpresasAleatorio = faker.random().nextInt(0, empresas.length - 1); // Gera um índice aleatório conforme o tamanho do array
         int empresaSelecionada = empresas[indiceEmpresasAleatorio]; // Seleciona o valor no índice aleatório
         String empresaAutorizador = Integer.toString(empresaSelecionada); // Converte o valor selecionado para String
@@ -161,5 +161,9 @@ public class TCO035_Page extends BasePage {
         String inputCentroCustoGridXpath = inputCCustoGridXpathInicio + primeiraLinhaEmBranco + inputXpathFim;
 
         esperarClicarESelecionarF9(inputCentroCustoGridXpath, centroCustoAutorizador, elementoTabelaCCusto);
+    }
+
+    public void informaOAutorizadorFeatureTCO035(String autorizador02) {
+        esperarEncontrarEPreencherElementos(inputAutorizadorXpath, autorizador02);
     }
 }

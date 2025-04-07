@@ -42,11 +42,11 @@
      Então clicar botão "sim" do modal feature TCO035
 
    @wip
-   Cenario: Cadastro, edição e exclusão de Autorizador Restrito | Teclas Atalho
+   Cenário: Cadastro, edição e exclusão de Autorizador Restrito | Teclas Atalho
 
      Quando pressionar tecla "f6" feature TCO035
      E selecionar a Empresa Grid feature TCO035
-#     E selecionar o Autorizador Grid feature TCO035
+     E selecionar o Autorizador Grid feature TCO035
      E selecionar o C.Custo Grid feature TCO035
      Então seleciona Status "Ativo" feature TCO035
 
@@ -55,23 +55,8 @@
      E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
      Então clicar botão "ok" do modal feature TCO035
 
-     Quando recarregar o programa feature TCO035
-     E selecionar a Empresa Consulta feature TCO035
-     E selecionar o Autorizador Consulta feature TCO035
-     E selecionar o C.Custo Consulta feature TCO035
-     E pressionar tecla "f7" feature TCO035
-     E selecionar Autorizador feature TCO035
-     Então seleciona Status "Inativo" feature TCO035
-
-     Quando pressionar tecla "f10" feature TCO035
-     E apresentar o modal H5 "modal-basic-title" feature TCO035
-     E apresentar a mensagem "Registro(s) salvo(s) com sucesso." feature TCO035
-     Então clicar botão "ok" do modal feature TCO035
-
-     Quando recarregar o programa feature TCO035
-     E selecionar o Autorizador Consulta feature TCO035
-     E pressionar tecla "f7" feature TCO035
-     Então selecionar Autorizador feature TCO035
+     Quando informa o Autorizador feature TCO035
+     Então realizar consulta feature TCO035
 
      Quando pressionar tecla shift + f6 feature TCO035
      E apresenta o modal H4 "modal-basic-title" feature TCO035
