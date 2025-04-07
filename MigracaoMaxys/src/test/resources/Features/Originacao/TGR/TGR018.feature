@@ -3,7 +3,8 @@
  Funcionalidade: TGR018 - Tipo de Modalidade Gão
 
 
-    # Refluxos reportados na solicitação.
+   # Refluxos reportados na solicitação.
+   # Sem a correção do refluxo do forms não é possivel criar caso negativo.
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TGR018
      E acessar o programa "TGR018" pela empresa "84" feature TGR018
