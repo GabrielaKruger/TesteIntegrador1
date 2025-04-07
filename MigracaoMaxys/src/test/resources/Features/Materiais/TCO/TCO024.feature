@@ -17,7 +17,7 @@
      Então informar Solicitante feature TCO024
 
      Quando selecionar o Grid Autorizador feature TCO024
-     E clicar botão ToolBar "novo" feature TCO024
+#     E clicar botão ToolBar "novo" feature TCO024
      E informar Autorizador feature TCO024
      E informar Alcada feature TCO024
      E informar Tipo Cargo feature TCO024
