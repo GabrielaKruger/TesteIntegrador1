@@ -1,5 +1,5 @@
  #language: pt
- @wip @ANV054 @dt_ANV054 @chrome
+ @test @ANV054 @dt_ANV054 @chrome
  Funcionalidade: ANV054 - CADASTRO DE ACESSOS POR PAGE
 
 
