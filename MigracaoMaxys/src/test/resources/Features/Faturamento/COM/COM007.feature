@@ -1,5 +1,5 @@
  #language: pt
- @wip @COM007 @dt_COM007 @chrome
+ @test @COM007 @dt_COM007 @chrome
  Funcionalidade: COM007 - Aprovação de Pedidos de Compra
 
    # Refluxos reportados na solicitação.
@@ -64,7 +64,7 @@
      E apresentar a mensagem parcial "aprovado(s) com sucesso." feature COM007
      Então clicar botão "Ok" do modal feature COM007
 
-   @wip # Finalizar - Duplo Clique não está acionando a modal
+      # Finalizar - Duplo Clique não está acionando a modal
    Cenário: Aprovar Negociação de Compra - Detalhes Item da Negociação
 
      Quando confirmar mensagem SQL de Consulta feature COM007
@@ -142,7 +142,6 @@
 
    @wip    # Refluxo Forms - Entra em loop ao não informar valores
    Cenário: Autorização de Grãos (Bloqueio por tipo de contrato)|  Negativo - Campos obrigatórios
-
 
      Quando confirmar mensagem SQL de Consulta feature COM007
      E fechar janela de Solicitações em Aberto feature COM007
