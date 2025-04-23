@@ -21,6 +21,7 @@ public class ChromeManager implements BrowserManager {
         options.addArguments("--disable-extensions");
         options.addArguments("--dns-prefetch-disab");
         options.addArguments("--force-device-scale-factor=0.9"); //para alterar o zoom da pagina chrome
+//        options.addArguments("--incognito"); //Executar em guia anonima
 
         if (System.getenv("JENKINS_URL") != null) {
             WebDriver driver = null;

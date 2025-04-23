@@ -143,7 +143,10 @@
    @wip    # Refluxo Forms - Entra em loop ao não informar valores
    Cenário: Autorização de Grãos (Bloqueio por tipo de contrato)|  Negativo - Campos obrigatórios
 
-     Quando clicar botão ToolBar "novo" feature COM007
+
+     Quando confirmar mensagem SQL de Consulta feature COM007
+     E fechar janela de Solicitações em Aberto feature COM007
+     E clicar botão ToolBar "novo" feature COM007
 #     E preencher Empresa feature COM007
 #     E preencher Tipo de Contrato feature COM007
 #     E preencher Módulo feature COM007

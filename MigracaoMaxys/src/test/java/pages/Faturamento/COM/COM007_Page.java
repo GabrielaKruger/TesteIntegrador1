@@ -38,12 +38,13 @@ public class COM007_Page extends BasePage {
     String textFimXpath = "']/div/textarea";
 
     public void confirmarMensagemSQLDeConsultaFeatureCOM007() {
+        esperarMilissegundos(8000);
         clicarElementoByXpath(btnOkXpath);
         esperarMilissegundos(8000); // espera necessária
     }
 
     public void fecharJanelaDeSolicitaçõesEmAbertoFeatureCOM007() {
-        esperarMilissegundos(12000); // espera necessária por conta do carregamento do grid
+        esperarMilissegundos(15000); // espera necessária por conta do carregamento do grid
         clicarElementoByXpath(btnFecharXpath + btnFinalXpath);
     }
 
@@ -76,7 +77,7 @@ public class COM007_Page extends BasePage {
     }
 
     public void darDuploCliqueNoPrimeiroItemFeatureCOM007() {
-        clicarElementoByXpathNVezes(linhaGridItensXpath, 8); // Necessário duplo clique
+        clicarElementoByXpathNVezes(linhaGridItensXpath, 2); // Necessário duplo clique
         esperarMilissegundos(10000); // espera necessária
     }
 
