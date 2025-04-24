@@ -6,6 +6,10 @@
      Dado inicialize a execução dos cenários do TTB113
      E acessar o programa "TTB113" pela empresa "84" feature TTB113
 
+#     Page liberação clifor pagador é necessário para a utilização na tela
+#     TTB026 acessando na page TCF001
+#     Primeiro parâmetro - não bloquear clifor tipo "cliente pagador" em cadastros/alteração
+
      # Refluxo - Pages não apresentam massa de dados
    Cenário: Cadastro Alçada de Cadastro de Frete| Caminho feliz
 
@@ -77,3 +81,10 @@
      E clicar botão "sim" do modal feature TTB113
      E apresenta o modal "modal-basic-title" feature TTB113
      Então clicar botão "ok" do modal feature TTB113
+
+
+   Cenario: Liberação clifor pagador | Caminho feliz
+
+     Quando acessar page "Liberação Clifor Pagador" feature TTB113
+     E marcar checkbox do clifor pagador feature TTB113
+     Então clicar botão Desbloqueia Selecionados feature TTB113

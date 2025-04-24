@@ -1,5 +1,6 @@
 package pages.Transporte.TTB;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import utils.DataUtils;
@@ -18,6 +19,8 @@ public class TTB113_Page extends BasePage {
     String inputTipoXpath = "//*[@id='solicitantecontrfrete-stSolicitante-";
     String inputCodDaAlcadaXpath = "//*[@id='solicitantecontrfrete-cdAlcada-";
     String inputDataVencXpath = "//*[@id='solicitantecontrfrete-dtVencimento-";
+    String btn_liberacaoCliforPagadores = "//*[@id='PAG_LIBERACAO']/a/span";
+    String btn_desbloqueiaSelecionados = "//*[@id='controle-btDesbloq']/div/button";
 
 
     //Globais
@@ -86,4 +89,25 @@ public class TTB113_Page extends BasePage {
         preencherElementoByXpath(linhaGridDataVencXpath, DataUtils.DataAtual());
     }
 
+    public void acessarPageCliforPagadorFeatureTTB113(String nomePage) {
+        clicarElementoByText(nomePage);
+    }
+
+    public void clicarElementoByText(String text) {
+        String texto = "//*[text()='" + text + "']";
+        driver.findElement(By.xpath(texto)).click();
+    }
+
+    public void clicarBotaoTransicao() {
+        clicarElementoByXpath(btn_liberacaoCliforPagadores);
+    }
+
+    public void marcarCheckboxDoCliforPagadorFeatureTTB113() {
+        String chkCliforXpath = "//*[@id='clifortransporte-stSelecao-" + primeiraLinhaEmBranco + "']/div/button";
+        testMarcaDesmarcaCheckBox("marcar", chkCliforXpath);
+    }
+
+    public void clicarDesbloqueiaSelecionadosFeatureTTB113() {
+        clicarElementoByXpath(btn_desbloqueiaSelecionados);
+    }
 }

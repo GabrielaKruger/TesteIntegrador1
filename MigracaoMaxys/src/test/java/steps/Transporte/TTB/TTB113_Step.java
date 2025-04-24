@@ -131,6 +131,23 @@ public class TTB113_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
+
+    @Quando("acessar page {string} feature TTB113")
+    public void acessarPageCliforPagadorFeatureTTB113 (String nomePage) {
+        TTB113_Page.clicarBotaoTransicao();
+        TTB113_Page.acessarPageCliforPagadorFeatureTTB113(nomePage);
+    }
+
+    @E("marcar checkbox do clifor pagador feature TTB113")
+    public void marcarCheckboxDoCliforPagadorFeatureTTB113() {
+        TTB113_Page.marcarCheckboxDoCliforPagadorFeatureTTB113();
+
+    }
+
+    @Então("clicar botão Desbloqueia Selecionados feature TTB113")
+    public void clicarBotaoDesbloqueiaSelecionadosFeatureTTB113() {
+        TTB113_Page.clicarDesbloqueiaSelecionadosFeatureTTB113();
+    }
 }
 
 
