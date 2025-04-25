@@ -87,4 +87,6 @@
 
      Quando acessar page "Liberação Clifor Pagador" feature TTB113
      E marcar checkbox do clifor pagador feature TTB113
-     Então clicar botão Desbloqueia Selecionados feature TTB113
+     E clicar botão Desbloqueia Selecionados feature TTB113
+     E apresenta o modal H4 "modal-basic-title" feature TTB113
+     Então clicar botão "ok" do modall feature TTB113

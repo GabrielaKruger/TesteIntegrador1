@@ -2,8 +2,13 @@ package pages.Transporte.TTB;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
 import utils.DataUtils;
+
+import java.time.Duration;
 
 public class TTB113_Page extends BasePage {
     WebDriver driver;
@@ -89,13 +94,20 @@ public class TTB113_Page extends BasePage {
         preencherElementoByXpath(linhaGridDataVencXpath, DataUtils.DataAtual());
     }
 
-    public void acessarPageCliforPagadorFeatureTTB113(String nomePage) {
-        clicarElementoByText(nomePage);
-    }
+//    public void acessarPageCliforPagadorFeatureTTB113(String nomePage) {
+//        clicarElementoByText(nomePage);
+//    }
+//
+//    public void clicarElementoByText(String text) {
+//        String texto = "//*[text()='" + text + "']";
+//        driver.findElement(By.xpath(texto)).click();
+//    }
 
-    public void clicarElementoByText(String text) {
-        String texto = "//*[text()='" + text + "']";
-        driver.findElement(By.xpath(texto)).click();
+    public void acessarPageCliforPagadorFeatureTTB113(String text) {
+        String xpath = "//*[contains(text(),'" + text + "')]";
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement elemento = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+        elemento.click();
     }
 
     public void clicarBotaoTransicao() {
@@ -109,5 +121,15 @@ public class TTB113_Page extends BasePage {
 
     public void clicarDesbloqueiaSelecionadosFeatureTTB113() {
         clicarElementoByXpath(btn_desbloqueiaSelecionados);
+        esperarMilissegundos(2000);
+    }
+
+    public void clicarBotaoDoModal(String nomeBotao) {
+        String xpathBotao = "//modal-container//button[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZÁÉÍÓÚÂÊÎÔÛÃÕÇ', 'abcdefghijklmnopqrstuvwxyzáéíóúâêîôûãõç') = '"
+                + nomeBotao.toLowerCase() + "']";
+
+        encontrarElementoByXpath(xpathBotao);
+        esperarMilissegundos(200);
+        clicarElementoByXpath(xpathBotao);
     }
 }

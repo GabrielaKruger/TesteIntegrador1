@@ -121,17 +121,6 @@ public class TTB113_Step {
         TTB113_Page.prencherDataDeVencimentoFeatureTTB113();
     }
 
-    @After
-    public void tearDown() {
-        if (driver != null) {
-            if (scenario != null && scenario.isFailed()) {
-                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-                scenario.attach(screenshot, "image/png", "Screenshot");
-            }
-        }
-        BasePage.tearDownCloseQuit(driver);
-    }
-
     @Quando("acessar page {string} feature TTB113")
     public void acessarPageCliforPagadorFeatureTTB113 (String nomePage) {
         TTB113_Page.clicarBotaoTransicao();
@@ -147,6 +136,24 @@ public class TTB113_Step {
     @Então("clicar botão Desbloqueia Selecionados feature TTB113")
     public void clicarBotaoDesbloqueiaSelecionadosFeatureTTB113() {
         TTB113_Page.clicarDesbloqueiaSelecionadosFeatureTTB113();
+    }
+
+
+
+    @After
+    public void tearDown() {
+        if (driver != null) {
+            if (scenario != null && scenario.isFailed()) {
+                final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.attach(screenshot, "image/png", "Screenshot");
+            }
+        }
+        BasePage.tearDownCloseQuit(driver);
+    }
+
+    @Então("clicar botão {string} do modall feature TTB113")
+    public void clicarBotãoDoModallFeatureTTB113(String acao) {
+        TTB113_Page.clicarBotaoDoModal(acao);
     }
 }
 
