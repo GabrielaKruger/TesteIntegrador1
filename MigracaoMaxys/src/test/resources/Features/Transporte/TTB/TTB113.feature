@@ -1,5 +1,5 @@
  #language: pt
- @test @TTB113 @dt_TTB113 @chrome
+ @test @TTB113 @dyeni @dt_TTB113 @chrome
  Funcionalidade: TTB113 - Cadastro Alçada de Cadastro de Frete
 
    Cenário de Fundo:
