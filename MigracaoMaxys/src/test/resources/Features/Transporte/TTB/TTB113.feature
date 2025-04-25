@@ -1,5 +1,5 @@
  #language: pt
- @wip @TTB113 @dt_TTB113 @chrome
+ @test @TTB113 @dt_TTB113 @chrome
  Funcionalidade: TTB113 - Cadastro Alçada de Cadastro de Frete
 
    Cenário de Fundo:
@@ -82,7 +82,7 @@
      E apresenta o modal "modal-basic-title" feature TTB113
      Então clicar botão "ok" do modal feature TTB113
 
-
+     @dyeni
    Cenario: Liberação clifor pagador | Caminho feliz
 
      Quando acessar page "Liberação Clifor Pagador" feature TTB113
