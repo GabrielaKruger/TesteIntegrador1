@@ -52,37 +52,15 @@
      E apresenta o modal "modal-basic-title" feature TTB113
      Então clicar botão "ok" do modal feature TTB113
 
-   Cenário: Cadastro, edição e exclusão de Autorizador Restrito| Negativo - Campos Obrigatórios
-     Quando clicar botão ToolBar "salvar" feature TTB113
-     E apresentar o modal H5 "modal-basic-title" feature TTB113
-     E apresentar a mensagem "É obrigatório informar o código da empresa!" feature TTB113
-     Então clicar botão "ok" do modal feature TTB113
+   Cenário: Liberação de clifor pagador| Caminho Negativo
 
-     Quando preencher Empresa feature TTB113
+     Quando clicar botão ToolBar "novo" feature TTB113
      E clicar botão ToolBar "salvar" feature TTB113
-     E apresentar o modal H5 "modal-basic-title" feature TTB113
-     E apresentar a mensagem "É obrigatório informar o código do Usuário." feature TTB113
-     Então clicar botão "ok" do modal feature TTB113
-
-     Quando preencher Usuário feature TTB113
-     E clicar botão ToolBar "salvar" feature TTB113
-     E apresentar o modal H5 "modal-basic-title" feature TTB113
-     E apresentar a mensagem "É obrigatório informar o código da alçada." feature TTB113
-     Então clicar botão "ok" do modal feature TTB113
-
-     Quando preencher Cód. da Alçada feature TTB113
-     E clicar botão ToolBar "salvar" feature TTB113
-     E apresentar o modal H5 "modal-basic-title" feature TTB113
-     E apresentar a mensagem "Registros salvos com sucesso." feature TTB113
-     Então clicar botão "ok" do modal feature TTB113
-
-     Quando clicar botão ToolBar "excluir" feature TTB113
      E apresenta o modal H4 "modal-basic-title" feature TTB113
-     E clicar botão "sim" do modal feature TTB113
-     E apresenta o modal "modal-basic-title" feature TTB113
-     Então clicar botão "ok" do modal feature TTB113
+     E apresentar a mensagem "Confirma o desbloqueio dos clifors selecionados?" feature TTB113
+     Então clicar botão "ok" do modall feature TTB113
 
-     @dyeni
+
    Cenario: Liberação clifor pagador | Caminho feliz
 
      Quando acessar page "Liberação Clifor Pagador" feature TTB113
@@ -90,3 +68,5 @@
      E clicar botão Desbloqueia Selecionados feature TTB113
      E apresenta o modal H4 "modal-basic-title" feature TTB113
      Então clicar botão "ok" do modall feature TTB113
+
+

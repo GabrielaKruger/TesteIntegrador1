@@ -138,6 +138,10 @@ public class TTB113_Step {
         TTB113_Page.clicarDesbloqueiaSelecionadosFeatureTTB113();
     }
 
+    @Então("clicar botão {string} do modall feature TTB113")
+    public void clicarBotaoDoModallFeatureTTB113(String acao) {
+        TTB113_Page.clicarBotaoDoModal(acao);
+    }
 
 
     @After
@@ -151,10 +155,6 @@ public class TTB113_Step {
         BasePage.tearDownCloseQuit(driver);
     }
 
-    @Então("clicar botão {string} do modall feature TTB113")
-    public void clicarBotãoDoModallFeatureTTB113(String acao) {
-        TTB113_Page.clicarBotaoDoModal(acao);
-    }
 }
 
 
