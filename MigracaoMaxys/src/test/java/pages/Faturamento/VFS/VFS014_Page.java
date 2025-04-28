@@ -19,8 +19,6 @@ public class VFS014_Page extends BasePage {
         this.driver = driver;
     }
 
-    String BTN_TRANSICAO_ID = "button-basic";
-
     //Page Nota Fiscal Eletronica
     String inputEmissaoInicial = "//*[@id='controle-dtInicial']/div/div/input";
     String inputEmissaoFinal = "//*[@id='controle-dtFinal']/div/div/input";
@@ -41,22 +39,9 @@ public class VFS014_Page extends BasePage {
     String btnComputaEstatistica = "//*[@id='infonfe-btnComputar']/div/button/div";
     String inputEmpresaPageInformacoes = "//*[@id='infonfe-cdEmpresa']/div/input";
 
-
-    public void clicarBotaoTransicao() {
-        clicarElementoById(BTN_TRANSICAO_ID);
-    }
-
-
-    // Se você quiser há o método selecionarPaginaNoMenu na BasePage que pode ser utilizado aqui
     public void acessarPageFeatureVFS014(String nomePage) {
-        clicarElementoByText(nomePage);
-    }
-
-    // Moço Henrique, há outras telas com pages, tente manter esse código na BasePage, se possivel :)
-    // Clica em um elemento localizado pelo texto.
-    public void clicarElementoByText(String text) {
-        String texto = "//*[text()='" + text + "']";
-        driver.findElement(By.xpath(texto)).click();
+        esperarMilissegundos(2000);
+        selecionarPaginaNoMenu(nomePage);
     }
 
     public void informaDataEmissaoInicialFeatureVFS014() {

@@ -59,7 +59,6 @@ public class VFS014_Step {
     @Quando("acessar page {string} feature VFS014")
     public void acessarPageFeatureVFS014(String nomePage) {
         basePage.esperarMilissegundos(12000); // espera necessária
-        VFS014_Page.clicarBotaoTransicao();
         VFS014_Page.acessarPageFeatureVFS014(nomePage);
     }
 
