@@ -26,6 +26,8 @@ public class TTB113_Page extends BasePage {
     String inputDataVencXpath = "//*[@id='solicitantecontrfrete-dtVencimento-";
     String btn_liberacaoCliforPagadores = "//*[@id='PAG_LIBERACAO']/a/span";
     String btn_desbloqueiaSelecionados = "//*[@id='controle-btDesbloq']/div/button";
+    String selecionarOpcaoVazia = "//*[@id='filtro-stLibcredclifor']/div/select";
+    String btn_cliforPagadorCredito = "//*[@id='PAG_LIBERACAOCREDITO']/a/span";
 
 
     //Globais
@@ -110,8 +112,10 @@ public class TTB113_Page extends BasePage {
         elemento.click();
     }
 
+
     public void clicarBotaoTransicao() {
         clicarElementoByXpath(btn_liberacaoCliforPagadores);
+        clicarElementoByXpath(btn_cliforPagadorCredito);
     }
 
     public void marcarCheckboxDoCliforPagadorFeatureTTB113() {
@@ -131,5 +135,17 @@ public class TTB113_Page extends BasePage {
         encontrarElementoByXpath(xpathBotao);
         esperarMilissegundos(200);
         clicarElementoByXpath(xpathBotao);
+    }
+
+//    public void clicarBotaoTransicao() {
+//        clicarElementoByXpath(btn_cliforPagadorCredito);
+//    }
+
+    public void selecionarOpcaoVazia() {
+        clicarElementoByXpath(selecionarOpcaoVazia);
+    }
+
+    public void acessarPageCliforPagadorCreditoFeatureTTB113(String credito) {
+        clicarElementoByXpath(btn_cliforPagadorCredito);
     }
 }

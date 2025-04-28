@@ -121,12 +121,6 @@ public class TTB113_Step {
         TTB113_Page.prencherDataDeVencimentoFeatureTTB113();
     }
 
-    @Quando("acessar page {string} feature TTB113")
-    public void acessarPageCliforPagadorFeatureTTB113 (String nomePage) {
-        TTB113_Page.clicarBotaoTransicao();
-        TTB113_Page.acessarPageCliforPagadorFeatureTTB113(nomePage);
-    }
-
     @E("marcar checkbox do clifor pagador feature TTB113")
     public void marcarCheckboxDoCliforPagadorFeatureTTB113() {
         TTB113_Page.marcarCheckboxDoCliforPagadorFeatureTTB113();
@@ -143,6 +137,17 @@ public class TTB113_Step {
         TTB113_Page.clicarBotaoDoModal(acao);
     }
 
+    @Quando("acessar page {string} feature TTB113")
+    public void acessarPageCliforPagadorCreditoFeatureTTB113 (String credito) {
+        TTB113_Page.clicarBotaoTransicao();
+        TTB113_Page.acessarPageCliforPagadorCreditoFeatureTTB113(credito);
+    }
+
+    @E("selecionar opção vazia dropdown Status de Liberação feature TTB113")
+    public void selecionarOpcaoVaziaDropdownStatusDeLiberacaoFeatureTTB113() {
+        TTB113_Page.selecionarOpcaoVazia ();
+    }
+
 
     @After
     public void tearDown() {
@@ -154,7 +159,6 @@ public class TTB113_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
-
 }
 
 

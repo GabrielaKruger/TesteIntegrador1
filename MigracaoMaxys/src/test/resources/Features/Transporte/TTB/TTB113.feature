@@ -61,12 +61,28 @@
      Então clicar botão "ok" do modall feature TTB113
 
 
-   Cenario: Liberação clifor pagador | Caminho feliz
+   Cenário: Liberação clifor pagador | Caminho feliz
 
      Quando acessar page "Liberação Clifor Pagador" feature TTB113
      E marcar checkbox do clifor pagador feature TTB113
      E clicar botão Desbloqueia Selecionados feature TTB113
      E apresenta o modal H4 "modal-basic-title" feature TTB113
      Então clicar botão "ok" do modall feature TTB113
+
+   Cenário: Liberação clifor pagador (crédito) | Caminho feliz
+
+     Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
+     E selecionar opção vazia dropdown Status de Liberação feature TTB113
+     E clicar botão "Consultar" feature TTB113
+     E marcar checkbox do clifor pagador feature TTB113
+     E selecionar "Alterar limite" no campo "Status de liberação" feature TTB113
+     E preencher o "Motivo de Recusa/Autorização" feature TTB113
+     Então clicar botão ToolBar "Gravar Registro Atual" feature TTB113
+
+
+
+
+
+
 
 
