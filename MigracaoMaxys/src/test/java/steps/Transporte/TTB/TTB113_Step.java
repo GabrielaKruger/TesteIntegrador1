@@ -150,17 +150,20 @@ public class TTB113_Step {
         TTB113_Page.abrirDropdown ();
     }
 
-
-
     @E("clicar opção vazia feature TTB113")
     public void clicarOpcaoFeatureTTB113() {
         TTB113_Page.clicarOpcaoVazia();
     }
 
+    @E("clicar botão consultar feature TTB113")
+    public void clicarBotaoConsultarFeatureTTB113() {
+        TTB113_Page.clicarBotaoConsultar ();
+    }
 
-
-
-
+    @E("clicar opção vazia teste {string} feature TTB113")
+    public void clicarOpcaoVaziaTesteFeatureTTB113(String statusOperacao) {
+        TTB113_Page.selecionarOperacaoFeatureTFN011(statusOperacao);
+    }
 
     @After
     public void tearDown() {

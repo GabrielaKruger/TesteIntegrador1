@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasePage;
 import utils.DataUtils;
@@ -28,7 +29,8 @@ public class TTB113_Page extends BasePage {
     String btn_desbloqueiaSelecionados = "//*[@id='controle-btDesbloq']/div/button";
     String btn_cliforPagadorCredito = "//*[@id='PAG_LIBERACAOCREDITO']";
     String abrirDropdown = "//*[@id='filtro-stLibcredclifor']/div/select";
-    String clicarOpcaoVazia = "//*[@id='filtro-stLibcredclifor']/div/select";
+    String btn_clicarOpcaoVazia = "//*[@id='filtro-stLibcredclifor']/div/select";
+    String btn_clicarBotaoConsultar = "//*[@id='filtro-btConsultar']/div/button/div";
 
 
     //Globais
@@ -131,23 +133,64 @@ public class TTB113_Page extends BasePage {
 
 
 
+
     public void acessarPageCliforPagadorCreditoFeatureTTB113(String credito) {
-        esperarMilissegundos(4000);
+        esperarMilissegundos(2000);
         clicarElementoByXpath(btn_cliforPagadorCredito);
     }
 
     public void abrirDropdown() {
-        //esperarMilissegundos(5000);
+        esperarMilissegundos(2000);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         clicarElementoByXpath(abrirDropdown);
     }
 
     public void clicarOpcaoVazia() {
         String xpathBotao = "//*[@id='filtro-stLibcredclifor']/div/select"
-                + clicarOpcaoVazia.toLowerCase() + "']";
+                + btn_clicarOpcaoVazia.toLowerCase() + "']";
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         encontrarElementoByXpath(xpathBotao);
-        esperarMilissegundos(6000);
+        esperarMilissegundos(2000);
         clicarElementoByXpath(xpathBotao);
+    }
+
+    public void clicarBotaoConsultar() {
+        clicarElementoByXpath(btn_clicarBotaoConsultar);
+    }
+
+    public void selecionarOperacaoFeatureTFN011(String statusOperacao) {
+        // Localiza o dropdown usando o xpath do elemento pai
+        WebElement dropdown = driver.findElement(By.xpath( "//*[@id='filtro-stLibcredclifor']/div/select"));
+        //*[@id="filtro-stLibcredclifor"]/div/select
+        // Cria um objeto WebDriverWait de espera
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
+
+        // Espera até que o dropdown esteja visível e clicável
+        wait.until(ExpectedConditions.elementToBeClickable(dropdown));
+
+        // Clica no dropdown para abrir a lista de opções
+        dropdown.click();
+
+        esperarMilissegundos(2000);
+
+        // Cria uma instância de Select para interagir com o dropdown
+        Select select = new Select(dropdown);
+
+        // Seleciona a opção com base no parâmetro fornecido na feature
+        if ("Pendente".equalsIgnoreCase(statusOperacao)) {
+            select.selectByVisibleText("Pendente");
+        } else if ("Próximo Lançamento".equalsIgnoreCase(statusOperacao)) {
+            select.selectByVisibleText("Próximo Lançamento");
+        } else if ("Alterar Limite".equalsIgnoreCase(statusOperacao)) {
+            select.selectByVisibleText("Alterar Limite");
+        } else if ("Não Autorizado".equalsIgnoreCase(statusOperacao)) {
+            select.selectByVisibleText("Não Autorizado");
+        }else if (" ".equalsIgnoreCase(statusOperacao)) {
+            select.selectByVisibleText(" ");
+        }
+        // Fecha o dropdown clicando fora dele
+        WebElement outroElemento = driver.findElement(By.xpath("/html/body/app-root/div/section/lib-ttb113/footer"));
+        outroElemento.click();
+        esperarMilissegundos(2000);
     }
 }
