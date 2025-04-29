@@ -137,16 +137,29 @@ public class TTB113_Step {
         TTB113_Page.clicarBotaoDoModal(acao);
     }
 
+
+
     @Quando("acessar page {string} feature TTB113")
     public void acessarPageCliforPagadorCreditoFeatureTTB113 (String credito) {
         TTB113_Page.clicarBotaoTransicao();
         TTB113_Page.acessarPageCliforPagadorCreditoFeatureTTB113(credito);
     }
 
-    @E("selecionar opção vazia dropdown Status de Liberação feature TTB113")
-    public void selecionarOpcaoVaziaDropdownStatusDeLiberacaoFeatureTTB113() {
-        TTB113_Page.selecionarOpcaoVazia ();
+    @E("abrir dropdown do Status de Liberação feature TTB113")
+    public void abrirDropdownDoStatusDeLiberacaoFeatureTTB113() {
+        TTB113_Page.abrirDropdown ();
     }
+
+
+
+    @E("clicar opção vazia feature TTB113")
+    public void clicarOpcaoFeatureTTB113() {
+        TTB113_Page.clicarOpcaoVazia();
+    }
+
+
+
+
 
 
     @After

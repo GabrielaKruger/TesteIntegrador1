@@ -26,8 +26,9 @@ public class TTB113_Page extends BasePage {
     String inputDataVencXpath = "//*[@id='solicitantecontrfrete-dtVencimento-";
     String btn_liberacaoCliforPagadores = "//*[@id='PAG_LIBERACAO']/a/span";
     String btn_desbloqueiaSelecionados = "//*[@id='controle-btDesbloq']/div/button";
-    String selecionarOpcaoVazia = "//*[@id='filtro-stLibcredclifor']/div/select";
-    String btn_cliforPagadorCredito = "//*[@id='PAG_LIBERACAOCREDITO']/a/span";
+    String btn_cliforPagadorCredito = "//*[@id='PAG_LIBERACAOCREDITO']";
+    String abrirDropdown = "//*[@id='filtro-stLibcredclifor']/div/select";
+    String clicarOpcaoVazia = "//*[@id='filtro-stLibcredclifor']/div/select";
 
 
     //Globais
@@ -96,15 +97,6 @@ public class TTB113_Page extends BasePage {
         preencherElementoByXpath(linhaGridDataVencXpath, DataUtils.DataAtual());
     }
 
-//    public void acessarPageCliforPagadorFeatureTTB113(String nomePage) {
-//        clicarElementoByText(nomePage);
-//    }
-//
-//    public void clicarElementoByText(String text) {
-//        String texto = "//*[text()='" + text + "']";
-//        driver.findElement(By.xpath(texto)).click();
-//    }
-
     public void acessarPageCliforPagadorFeatureTTB113(String text) {
         String xpath = "//*[contains(text(),'" + text + "')]";
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -137,15 +129,25 @@ public class TTB113_Page extends BasePage {
         clicarElementoByXpath(xpathBotao);
     }
 
-//    public void clicarBotaoTransicao() {
-//        clicarElementoByXpath(btn_cliforPagadorCredito);
-//    }
 
-    public void selecionarOpcaoVazia() {
-        clicarElementoByXpath(selecionarOpcaoVazia);
-    }
 
     public void acessarPageCliforPagadorCreditoFeatureTTB113(String credito) {
+        esperarMilissegundos(4000);
         clicarElementoByXpath(btn_cliforPagadorCredito);
+    }
+
+    public void abrirDropdown() {
+        //esperarMilissegundos(5000);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        clicarElementoByXpath(abrirDropdown);
+    }
+
+    public void clicarOpcaoVazia() {
+        String xpathBotao = "//*[@id='filtro-stLibcredclifor']/div/select"
+                + clicarOpcaoVazia.toLowerCase() + "']";
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        encontrarElementoByXpath(xpathBotao);
+        esperarMilissegundos(6000);
+        clicarElementoByXpath(xpathBotao);
     }
 }

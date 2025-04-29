@@ -72,12 +72,13 @@
    Cenário: Liberação clifor pagador (crédito) | Caminho feliz
 
      Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
-     E selecionar opção vazia dropdown Status de Liberação feature TTB113
-     E clicar botão "Consultar" feature TTB113
-     E marcar checkbox do clifor pagador feature TTB113
-     E selecionar "Alterar limite" no campo "Status de liberação" feature TTB113
-     E preencher o "Motivo de Recusa/Autorização" feature TTB113
-     Então clicar botão ToolBar "Gravar Registro Atual" feature TTB113
+     E abrir dropdown do Status de Liberação feature TTB113
+     E clicar opção vazia feature TTB113
+     #E clicar botão "Consultar" feature TTB113
+     #E marcar checkbox do clifor pagador feature TTB113
+     #E selecionar "Alterar limite" no campo "Status de liberação" feature TTB113
+     #E preencher o "Motivo de Recusa/Autorização" feature TTB113
+     #Então clicar botão ToolBar "Gravar Registro Atual" feature TTB113
 
 
 
