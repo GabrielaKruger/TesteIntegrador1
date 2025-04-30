@@ -10,8 +10,9 @@
 
    Cenário: Pedidos Pendentes de Compra - Liberação
 
-#     Quando validar mensagem de consulta SQL feature COM019
-     Quando clicar botão ToolBar "novo" feature COM019
+     Quando confirmar mensagem SQL de Consulta feature COM019
+
+     E clicar botão ToolBar "novo" feature COM019
      E preencher Clifor feature COM019
      E preencher Condição Pagto feature COM019
      E preencher Moeda feature COM019

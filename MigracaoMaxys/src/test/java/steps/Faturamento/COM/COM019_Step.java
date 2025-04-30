@@ -49,6 +49,11 @@ public class COM019_Step {
         basePage = new BasePage(driver);
     }
 
+    @Quando("confirmar mensagem SQL de Consulta feature COM019")
+    public void confirmarMensagemSQLDeConsultaFeatureCOM019() {
+        basePage.confirmarMensagemSQLDeConsultaFeature();
+    }
+
     @E("acessar o programa {string} pela empresa {string} feature COM019")
     public void acessarOProgramaFeatureCOM019(String programa, String empresa) {
         loginPage.loginNewMaxysNovo(programa, empresa);
