@@ -1,5 +1,5 @@
  #language: pt
- @test @TTB113 @dyeni @dt_TTB113 @chrome
+ @test @TTB113 @1403 @dt_TTB113 @chrome
  Funcionalidade: TTB113 - Cadastro Alçada de Cadastro de Frete
 
    Cenário de Fundo:
@@ -11,6 +11,8 @@
 #     Primeiro parâmetro - não bloquear clifor tipo "cliente pagador" em cadastros/alteração
 
      # Refluxo - Pages não apresentam massa de dados
+
+   @wip
    Cenário: Cadastro Alçada de Cadastro de Frete| Caminho feliz
 
      Quando clicar botão ToolBar "novo" feature TTB113
@@ -52,6 +54,7 @@
      E apresenta o modal "modal-basic-title" feature TTB113
      Então clicar botão "ok" do modal feature TTB113
 
+   @wip
    Cenário: Liberação de clifor pagador| Caminho Negativo
 
      Quando clicar botão ToolBar "novo" feature TTB113
@@ -60,7 +63,7 @@
      E apresentar a mensagem "Confirma o desbloqueio dos clifors selecionados?" feature TTB113
      Então clicar botão "ok" do modall feature TTB113
 
-
+   @wip
    Cenário: Liberação clifor pagador | Caminho feliz
 
      Quando acessar page "Liberação Clifor Pagador" feature TTB113
@@ -69,15 +72,18 @@
      E apresenta o modal H4 "modal-basic-title" feature TTB113
      Então clicar botão "ok" do modall feature TTB113
 
+
+   @1403
    Cenário: Liberação clifor pagador (crédito) | Caminho feliz
 
      Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
      E clicar opção vazia teste " " feature TTB113
      E clicar botão consultar feature TTB113
      E marcar checkbox do clifor feature TTB113
-     E selecionar "Alterar limite" no campo Status de liberação feature TTB113
-     E preencher "Teste Dyeni" no motivo de recusa feature TTB113
-     #Então clicar botão ToolBar "Gravar Registro Atual" feature TTB113
+     E selecionar "Alterar Limite" no campo Status de liberação feature TTB113
+     E preencher o "Motivo de Recusa" feature TTB113
+     E clicar botão ToolBar "salvar" feature TTB113
+     Então clicar botão "ok" do modall feature TTB113
 
 
 

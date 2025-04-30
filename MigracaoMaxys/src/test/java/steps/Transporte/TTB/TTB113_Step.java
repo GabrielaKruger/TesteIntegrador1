@@ -167,10 +167,20 @@ public class TTB113_Step {
         TTB113_Page.marcarCheckboxCliforFeatureTTB113();
     }
 
-    @E("preencher {string} no motivo de recusa feature TTB113")
-    public void preencherNoMotivoDeRecusaFeatureTTB113(String preencherMotivo) {
-        TTB113_Page.preencherNoMotivoDeRecusaTTB113();
+//    @E("preencher {string} no motivo de recusa feature TTB113")
+//    public void preencherNoMotivoDeRecusaFeatureTTB113(String preencherMotivo) {
+//        TTB113_Page.preencherNoMotivoDeRecusaTTB113();
+//    }
+
+    @E("preencher o {string} feature TTB113")
+    public void preencherOCampoFeatureTTB113(String campo) {
+        if (campo.equalsIgnoreCase("Motivo de Recusa")) {
+            TTB113_Page.preencherMotivoDeRecusa(" dyeni");
+        } else {
+            throw new IllegalArgumentException("Campo não reconhecido: " + campo);
+        }
     }
+
 
 
     @After
@@ -182,6 +192,21 @@ public class TTB113_Step {
             }
         }
         BasePage.tearDownCloseQuit(driver);
+    }
+
+    @After
+    public void finalizarTeste() {
+        try {
+            // Aguarda 5 segundos antes de fechar o navegador
+            Thread.sleep(5000);
+            System.out.println("Teste finalizado. Fechando o navegador...");
+        } catch (InterruptedException e) {
+            System.err.println("Erro ao esperar: " + e.getMessage());
+        } finally {
+            if (driver != null) {
+                driver.quit(); // Fecha o navegador
+            }
+        }
     }
 }
 

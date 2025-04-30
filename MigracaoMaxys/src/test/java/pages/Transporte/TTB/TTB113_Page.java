@@ -135,24 +135,9 @@ public class TTB113_Page extends BasePage {
 
 
     public void acessarPageCliforPagadorCreditoFeatureTTB113(String credito) {
-        esperarMilissegundos(2000);
+        esperarMilissegundos(5000);
         clicarElementoByXpath(btn_cliforPagadorCredito);
     }
-
-//    public void abrirDropdown() {
-//        esperarMilissegundos(2000);
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        clicarElementoByXpath(abrirDropdown);
-//    }
-//
-//    public void clicarOpcaoVazia() {
-//        String xpathBotao = "//*[@id='filtro-stLibcredclifor']/div/select"
-//                + btn_clicarOpcaoVazia.toLowerCase() + "']";
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-//        encontrarElementoByXpath(xpathBotao);
-//        esperarMilissegundos(2000);
-//        clicarElementoByXpath(xpathBotao);
-//    }
 
     public void clicarBotaoConsultar() {
         clicarElementoByXpath(btn_clicarBotaoConsultar);
@@ -171,7 +156,7 @@ public class TTB113_Page extends BasePage {
         // Clica no dropdown para abrir a lista de opções
         dropdown.click();
 
-        esperarMilissegundos(1000);
+        esperarMilissegundos(5000);
 
         // Cria uma instância de Select para interagir com o dropdown
         Select select = new Select(dropdown);
@@ -191,14 +176,14 @@ public class TTB113_Page extends BasePage {
         // Fecha o dropdown clicando fora dele
         WebElement outroElemento = driver.findElement(By.xpath("/html/body/app-root/div/section/lib-ttb113/footer"));
         outroElemento.click();
-        esperarMilissegundos(1000);
+        esperarMilissegundos(5000);
     }
 
 
     public void marcarCheckboxCliforFeatureTTB113() {
         String chkCliforXpath = "//*[@id='clifortranspcred-stSelecao-1']/div/button";
         testMarcaDesmarcaCheckBox("marcar", chkCliforXpath);
-        esperarMilissegundos(4000);
+        esperarMilissegundos(5000);
     }
 
 
@@ -211,7 +196,7 @@ public class TTB113_Page extends BasePage {
 
         dropdown.click();
 
-        esperarMilissegundos(1000);
+        esperarMilissegundos(5000);
 
         Select select = new Select(dropdown);
 
@@ -229,11 +214,17 @@ public class TTB113_Page extends BasePage {
 
         WebElement outroElemento = driver.findElement(By.xpath("/html/body/app-root/div/section/lib-ttb113/footer"));
         outroElemento.click();
-        esperarMilissegundos(1000);
+        esperarMilissegundos(5000);
     }
 
-    public void preencherNoMotivoDeRecusaTTB113() {
-        driver.findElement(By.xpath("//*[@id='clifortranspcred-dsMotcredclifor']/div/textarea"));
-        esperarMilissegundos(4000);
+    String campoMotivoDeRecusa = "motivo-recusa";
+
+    public void preencherMotivoDeRecusa(String texto) {
+        esperarMilissegundos(5000);
+        //campoMotivoDeRecusa.clear();
+        WebElement campo = driver.findElement(By.xpath("//*[@id='clifortranspcred-dsMotcredclifor']/div/textarea"));
+        campo.sendKeys(texto);
     }
+
+
 }
