@@ -139,26 +139,26 @@ public class TTB113_Page extends BasePage {
         clicarElementoByXpath(btn_cliforPagadorCredito);
     }
 
-    public void abrirDropdown() {
-        esperarMilissegundos(2000);
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        clicarElementoByXpath(abrirDropdown);
-    }
-
-    public void clicarOpcaoVazia() {
-        String xpathBotao = "//*[@id='filtro-stLibcredclifor']/div/select"
-                + btn_clicarOpcaoVazia.toLowerCase() + "']";
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-        encontrarElementoByXpath(xpathBotao);
-        esperarMilissegundos(2000);
-        clicarElementoByXpath(xpathBotao);
-    }
+//    public void abrirDropdown() {
+//        esperarMilissegundos(2000);
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        clicarElementoByXpath(abrirDropdown);
+//    }
+//
+//    public void clicarOpcaoVazia() {
+//        String xpathBotao = "//*[@id='filtro-stLibcredclifor']/div/select"
+//                + btn_clicarOpcaoVazia.toLowerCase() + "']";
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+//        encontrarElementoByXpath(xpathBotao);
+//        esperarMilissegundos(2000);
+//        clicarElementoByXpath(xpathBotao);
+//    }
 
     public void clicarBotaoConsultar() {
         clicarElementoByXpath(btn_clicarBotaoConsultar);
     }
 
-    public void selecionarOperacaoFeatureTFN011(String statusOperacao) {
+    public void selecionarOperacaoFeatureTTB113(String statusOperacao) {
         // Localiza o dropdown usando o xpath do elemento pai
         WebElement dropdown = driver.findElement(By.xpath( "//*[@id='filtro-stLibcredclifor']/div/select"));
         //*[@id="filtro-stLibcredclifor"]/div/select
@@ -171,7 +171,7 @@ public class TTB113_Page extends BasePage {
         // Clica no dropdown para abrir a lista de opções
         dropdown.click();
 
-        esperarMilissegundos(2000);
+        esperarMilissegundos(1000);
 
         // Cria uma instância de Select para interagir com o dropdown
         Select select = new Select(dropdown);
@@ -191,6 +191,49 @@ public class TTB113_Page extends BasePage {
         // Fecha o dropdown clicando fora dele
         WebElement outroElemento = driver.findElement(By.xpath("/html/body/app-root/div/section/lib-ttb113/footer"));
         outroElemento.click();
-        esperarMilissegundos(2000);
+        esperarMilissegundos(1000);
+    }
+
+
+    public void marcarCheckboxCliforFeatureTTB113() {
+        String chkCliforXpath = "//*[@id='clifortranspcred-stSelecao-1']/div/button";
+        testMarcaDesmarcaCheckBox("marcar", chkCliforXpath);
+        esperarMilissegundos(4000);
+    }
+
+
+    public void selecionarCampoStatusDeLiberacaoFeatureTTB113(String statusLiberacao) {
+        WebElement dropdown = driver.findElement(By.xpath( "//*[@id='clifortranspcred-stLibcredclifor-1']/div/select"));
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
+
+        wait.until(ExpectedConditions.elementToBeClickable(dropdown));
+
+        dropdown.click();
+
+        esperarMilissegundos(1000);
+
+        Select select = new Select(dropdown);
+
+        if ("Pendente".equalsIgnoreCase(statusLiberacao)) {
+            select.selectByVisibleText("Pendente");
+        } else if ("Próximo Lançamento".equalsIgnoreCase(statusLiberacao)) {
+            select.selectByVisibleText("Próximo Lançamento");
+        } else if ("Alterar Limite".equalsIgnoreCase(statusLiberacao)) {
+            select.selectByVisibleText("Alterar Limite");
+        } else if ("Não Autorizado".equalsIgnoreCase(statusLiberacao)) {
+            select.selectByVisibleText("Não Autorizado");
+        }else if (" ".equalsIgnoreCase(statusLiberacao)) {
+            select.selectByVisibleText(" ");
+        }
+
+        WebElement outroElemento = driver.findElement(By.xpath("/html/body/app-root/div/section/lib-ttb113/footer"));
+        outroElemento.click();
+        esperarMilissegundos(1000);
+    }
+
+    public void preencherNoMotivoDeRecusaTTB113() {
+        driver.findElement(By.xpath("//*[@id='clifortranspcred-dsMotcredclifor']/div/textarea"));
+        esperarMilissegundos(4000);
     }
 }

@@ -139,20 +139,22 @@ public class TTB113_Step {
 
 
 
+
+
     @Quando("acessar page {string} feature TTB113")
     public void acessarPageCliforPagadorCreditoFeatureTTB113 (String credito) {
         TTB113_Page.clicarBotaoTransicao();
         TTB113_Page.acessarPageCliforPagadorCreditoFeatureTTB113(credito);
     }
 
-    @E("abrir dropdown do Status de Liberação feature TTB113")
-    public void abrirDropdownDoStatusDeLiberacaoFeatureTTB113() {
-        TTB113_Page.abrirDropdown ();
+    @E("clicar opção vazia teste {string} feature TTB113")
+    public void clicarOpcaoVaziaTesteFeatureTTB113(String statusOperacao) {
+        TTB113_Page.selecionarOperacaoFeatureTTB113(statusOperacao);
     }
 
-    @E("clicar opção vazia feature TTB113")
-    public void clicarOpcaoFeatureTTB113() {
-        TTB113_Page.clicarOpcaoVazia();
+    @E("selecionar {string} no campo Status de liberação feature TTB113")
+    public void selecionarCampoStatusDeLiberacaoFeatureTTB113(String statusLiberacao) {
+        TTB113_Page.selecionarCampoStatusDeLiberacaoFeatureTTB113(statusLiberacao);
     }
 
     @E("clicar botão consultar feature TTB113")
@@ -160,10 +162,16 @@ public class TTB113_Step {
         TTB113_Page.clicarBotaoConsultar ();
     }
 
-    @E("clicar opção vazia teste {string} feature TTB113")
-    public void clicarOpcaoVaziaTesteFeatureTTB113(String statusOperacao) {
-        TTB113_Page.selecionarOperacaoFeatureTFN011(statusOperacao);
+    @E("marcar checkbox do clifor feature TTB113")
+    public void marcarCheckboxDoCliforFeatureTTB133() {
+        TTB113_Page.marcarCheckboxCliforFeatureTTB113();
     }
+
+    @E("preencher {string} no motivo de recusa feature TTB113")
+    public void preencherNoMotivoDeRecusaFeatureTTB113(String preencherMotivo) {
+        TTB113_Page.preencherNoMotivoDeRecusaTTB113();
+    }
+
 
     @After
     public void tearDown() {
