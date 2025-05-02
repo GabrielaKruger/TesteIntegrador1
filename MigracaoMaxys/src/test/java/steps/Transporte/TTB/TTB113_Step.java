@@ -4,10 +4,7 @@ import driver.driverManager.DriverManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import io.cucumber.java.pt.Dado;
-import io.cucumber.java.pt.E;
-import io.cucumber.java.pt.Então;
-import io.cucumber.java.pt.Quando;
+import io.cucumber.java.pt.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -138,7 +135,7 @@ public class TTB113_Step {
     }
 
 
-
+    //Segunda page começa aqui
 
 
     @Quando("acessar page {string} feature TTB113")
@@ -167,19 +164,21 @@ public class TTB113_Step {
         TTB113_Page.marcarCheckboxCliforFeatureTTB113();
     }
 
-//    @E("preencher {string} no motivo de recusa feature TTB113")
-//    public void preencherNoMotivoDeRecusaFeatureTTB113(String preencherMotivo) {
-//        TTB113_Page.preencherNoMotivoDeRecusaTTB113();
-//    }
-
     @E("preencher o {string} feature TTB113")
     public void preencherOCampoFeatureTTB113(String campo) {
         if (campo.equalsIgnoreCase("Motivo de Recusa")) {
-            TTB113_Page.preencherMotivoDeRecusa(" dyeni");
+            TTB113_Page.preencherMotivoDeRecusa(" Observação");
         } else {
             throw new IllegalArgumentException("Campo não reconhecido: " + campo);
         }
     }
+
+
+//    @E("preenche campo de observação feature TTB113")
+//    public void preencherNoMotivoDeRecusaFeatureTTB113(String observacao) {
+//        TTB113_Page.preencherNoMotivoDeRecusaTTB113((massaTeste.getMassaTestePorPathEChave(tagMassa, "observacao")));
+//    }
+
 
 
 

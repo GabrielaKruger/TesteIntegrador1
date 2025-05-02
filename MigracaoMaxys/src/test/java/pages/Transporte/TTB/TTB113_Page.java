@@ -28,8 +28,6 @@ public class TTB113_Page extends BasePage {
     String btn_liberacaoCliforPagadores = "//*[@id='PAG_LIBERACAO']/a/span";
     String btn_desbloqueiaSelecionados = "//*[@id='controle-btDesbloq']/div/button";
     String btn_cliforPagadorCredito = "//*[@id='PAG_LIBERACAOCREDITO']";
-    String abrirDropdown = "//*[@id='filtro-stLibcredclifor']/div/select";
-    String btn_clicarOpcaoVazia = "//*[@id='filtro-stLibcredclifor']/div/select";
     String btn_clicarBotaoConsultar = "//*[@id='filtro-btConsultar']/div/button/div";
 
 
@@ -50,7 +48,6 @@ public class TTB113_Page extends BasePage {
         preencherElementoByXpath(linhaGridEmpresaXpath, empresa);
         pressionaTabActions();
     }
-
 
     public void preencherUsuárioFeatureTTB113(String user) {
         verificarOuSetarPrimeiraLinhaEmBranco();
@@ -99,14 +96,6 @@ public class TTB113_Page extends BasePage {
         preencherElementoByXpath(linhaGridDataVencXpath, DataUtils.DataAtual());
     }
 
-    public void acessarPageCliforPagadorFeatureTTB113(String text) {
-        String xpath = "//*[contains(text(),'" + text + "')]";
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        WebElement elemento = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
-        elemento.click();
-    }
-
-
     public void clicarBotaoTransicao() {
         clicarElementoByXpath(btn_liberacaoCliforPagadores);
         clicarElementoByXpath(btn_cliforPagadorCredito);
@@ -132,6 +121,7 @@ public class TTB113_Page extends BasePage {
     }
 
 
+    //Segunda page começa aqui
 
 
     public void acessarPageCliforPagadorCreditoFeatureTTB113(String credito) {
@@ -176,19 +166,18 @@ public class TTB113_Page extends BasePage {
         // Fecha o dropdown clicando fora dele
         WebElement outroElemento = driver.findElement(By.xpath("/html/body/app-root/div/section/lib-ttb113/footer"));
         outroElemento.click();
-        esperarMilissegundos(5000);
+        esperarMilissegundos(2000);
     }
 
-
     public void marcarCheckboxCliforFeatureTTB113() {
-        String chkCliforXpath = "//*[@id='clifortranspcred-stSelecao-1']/div/button";
+        String chkCliforXpath = "//*[@id='clifortranspcred-stSelecao-2']/div/button";
         testMarcaDesmarcaCheckBox("marcar", chkCliforXpath);
         esperarMilissegundos(5000);
     }
 
-
     public void selecionarCampoStatusDeLiberacaoFeatureTTB113(String statusLiberacao) {
-        WebElement dropdown = driver.findElement(By.xpath( "//*[@id='clifortranspcred-stLibcredclifor-1']/div/select"));
+        WebElement dropdown = driver.findElement(By.xpath( "//*[@id='clifortranspcred-stLibcredclifor-2']/div/select"));
+        //*[@id='clifortranspcred-stLibcredclifor-2']/div/select/option[4]
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
 
@@ -225,6 +214,4 @@ public class TTB113_Page extends BasePage {
         WebElement campo = driver.findElement(By.xpath("//*[@id='clifortranspcred-dsMotcredclifor']/div/textarea"));
         campo.sendKeys(texto);
     }
-
-
 }
