@@ -29,6 +29,7 @@ public class TTB113_Page extends BasePage {
     String btn_desbloqueiaSelecionados = "//*[@id='controle-btDesbloq']/div/button";
     String btn_cliforPagadorCredito = "//*[@id='PAG_LIBERACAOCREDITO']";
     String btn_clicarBotaoConsultar = "//*[@id='filtro-btConsultar']/div/button/div";
+    String inputMotivoRecusaAutorizacao = "//*[@id='clifortranspcred-dsMotcredclifor']/div/textarea";
 
 
     //Globais
@@ -208,10 +209,17 @@ public class TTB113_Page extends BasePage {
 
     String campoMotivoDeRecusa = "motivo-recusa";
 
-    public void preencherMotivoDeRecusa(String texto) {
-        esperarMilissegundos(5000);
-        //campoMotivoDeRecusa.clear();
-        WebElement campo = driver.findElement(By.xpath("//*[@id='clifortranspcred-dsMotcredclifor']/div/textarea"));
-        campo.sendKeys(texto);
+//    public void preencherMotivoDeRecusa(String texto) {
+//        esperarMilissegundos(5000);
+//        //campoMotivoDeRecusa.clear();
+//        WebElement campo = driver.findElement(By.xpath("//*[@id='clifortranspcred-dsMotcredclifor']/div/textarea"));
+//        campo.sendKeys(texto);
+//    }
+
+    public void preencherOMotivoDeRecusaAutorizacaoFeatureTTB113(String observacao) {
+        clicarElementoByXpath(inputMotivoRecusaAutorizacao);
+        esperarElementoVisivelByXpath(inputMotivoRecusaAutorizacao);
+        preencherElementoByXpath(inputMotivoRecusaAutorizacao, observacao);
     }
+
 }

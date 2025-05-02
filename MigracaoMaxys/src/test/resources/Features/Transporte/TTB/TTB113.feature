@@ -81,8 +81,8 @@
      E clicar botão consultar feature TTB113
      E marcar checkbox do clifor feature TTB113
      E selecionar "Não Autorizado" no campo Status de liberação feature TTB113
-     #E preenche campo de observação feature TTB113
-     E preencher o "Motivo de Recusa" feature TTB113
+#     E preencher o "Motivo de Recusa" feature TTB113
+     E preencher o motivo de recusa autorizacao feature TTB113
      E clicar botão ToolBar "salvar" feature TTB113
      Então clicar botão "ok" do modall feature TTB113
 
