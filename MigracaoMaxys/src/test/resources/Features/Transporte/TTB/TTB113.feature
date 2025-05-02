@@ -95,6 +95,14 @@
      Então clicar botão "ok" do modal feature TTB113
 
 
+   Cenário: Liberação clifor pagador (crédito) | Caminho Negativo
+
+     Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
+     E preencher clifor feature TTB113
+
+
+
+
 
 
 
