@@ -73,7 +73,7 @@
      Então clicar botão "ok" do modall feature TTB113
 
 
-   @1403
+   @wip
    Cenário: Liberação clifor pagador (crédito) | Caminho feliz
 
      Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
@@ -81,10 +81,24 @@
      E clicar botão consultar feature TTB113
      E marcar checkbox do clifor feature TTB113
      E selecionar "Não Autorizado" no campo Status de liberação feature TTB113
-#     E preencher o "Motivo de Recusa" feature TTB113
      E preencher o motivo de recusa autorizacao feature TTB113
      E clicar botão ToolBar "salvar" feature TTB113
      Então clicar botão "ok" do modall feature TTB113
+
+
+   @1403
+   Cenário: Liberação clifor pagador (crédito) | Caminho Negativo
+
+     Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
+     E clicar botão consultar feature TTB113
+     E clicar botão ToolBar "salvar" feature TTB113
+     Então clicar botão "ok" do modal feature TTB113
+
+
+
+
+
+
 
 
 

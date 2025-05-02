@@ -44,7 +44,7 @@ public class TTB113_Page extends BasePage {
 
         String linhaGridEmpresaXpath = inputEmpresaXpath + primeiraLinhaEmBranco + inputXpathFim;
 
-        clicarElementoByXpathNVezes(linhaGridEmpresaXpath,2);
+        clicarElementoByXpathNVezes(linhaGridEmpresaXpath, 2);
         esperarMilissegundos(500); // espera necessária
         preencherElementoByXpath(linhaGridEmpresaXpath, empresa);
         pressionaTabActions();
@@ -53,9 +53,9 @@ public class TTB113_Page extends BasePage {
     public void preencherUsuárioFeatureTTB113(String user) {
         verificarOuSetarPrimeiraLinhaEmBranco();
 
-        String linhaGridUserXpath = inputUserXpath+ primeiraLinhaEmBranco + inputXpathFim;
+        String linhaGridUserXpath = inputUserXpath + primeiraLinhaEmBranco + inputXpathFim;
 
-        clicarElementoByXpathNVezes(linhaGridUserXpath,2);
+        clicarElementoByXpathNVezes(linhaGridUserXpath, 2);
         esperarMilissegundos(500); // espera necessária
         preencherElementoByXpath(linhaGridUserXpath, user);
     }
@@ -69,7 +69,7 @@ public class TTB113_Page extends BasePage {
 
         String linhaGridTipoSolicXpath = inputTipoXpath + primeiraLinhaEmBranco + inputXpathFim;
 
-        clicarElementoByXpathNVezes(linhaGridTipoSolicXpath,2);
+        clicarElementoByXpathNVezes(linhaGridTipoSolicXpath, 2);
         esperarMilissegundos(500); // espera necessária
         preencherElementoByXpath(linhaGridTipoSolicXpath, tipoSolicitante);
     }
@@ -82,7 +82,7 @@ public class TTB113_Page extends BasePage {
 
         String linhaGridCodAlcadaXpath = inputCodDaAlcadaXpath + primeiraLinhaEmBranco + inputXpathFim;
 
-        clicarElementoByXpathNVezes(linhaGridCodAlcadaXpath,2);
+        clicarElementoByXpathNVezes(linhaGridCodAlcadaXpath, 2);
         esperarMilissegundos(500); // espera necessária
         preencherElementoByXpath(linhaGridCodAlcadaXpath, codigoSimulateAlcada);
     }
@@ -92,7 +92,7 @@ public class TTB113_Page extends BasePage {
 
         String linhaGridDataVencXpath = inputDataVencXpath + primeiraLinhaEmBranco + inputXpatFimDatas;
 
-        clicarElementoByXpathNVezes(linhaGridDataVencXpath,2);
+        clicarElementoByXpathNVezes(linhaGridDataVencXpath, 2);
         esperarMilissegundos(500); // espera necessária
         preencherElementoByXpath(linhaGridDataVencXpath, DataUtils.DataAtual());
     }
@@ -136,7 +136,7 @@ public class TTB113_Page extends BasePage {
 
     public void selecionarOperacaoFeatureTTB113(String statusOperacao) {
         // Localiza o dropdown usando o xpath do elemento pai
-        WebElement dropdown = driver.findElement(By.xpath( "//*[@id='filtro-stLibcredclifor']/div/select"));
+        WebElement dropdown = driver.findElement(By.xpath("//*[@id='filtro-stLibcredclifor']/div/select"));
         //*[@id="filtro-stLibcredclifor"]/div/select
         // Cria um objeto WebDriverWait de espera
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
@@ -161,7 +161,7 @@ public class TTB113_Page extends BasePage {
             select.selectByVisibleText("Alterar Limite");
         } else if ("Não Autorizado".equalsIgnoreCase(statusOperacao)) {
             select.selectByVisibleText("Não Autorizado");
-        }else if (" ".equalsIgnoreCase(statusOperacao)) {
+        } else if (" ".equalsIgnoreCase(statusOperacao)) {
             select.selectByVisibleText(" ");
         }
         // Fecha o dropdown clicando fora dele
@@ -171,14 +171,13 @@ public class TTB113_Page extends BasePage {
     }
 
     public void marcarCheckboxCliforFeatureTTB113() {
-        String chkCliforXpath = "//*[@id='clifortranspcred-stSelecao-2']/div/button";
+        String chkCliforXpath = "//*[@id='clifortranspcred-stSelecao-3']/div/button";
         testMarcaDesmarcaCheckBox("marcar", chkCliforXpath);
         esperarMilissegundos(5000);
     }
 
     public void selecionarCampoStatusDeLiberacaoFeatureTTB113(String statusLiberacao) {
-        WebElement dropdown = driver.findElement(By.xpath( "//*[@id='clifortranspcred-stLibcredclifor-2']/div/select"));
-        //*[@id='clifortranspcred-stLibcredclifor-2']/div/select/option[4]
+        WebElement dropdown = driver.findElement(By.xpath("//*[@id='clifortranspcred-stLibcredclifor-3']/div/select"));
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
 
@@ -198,7 +197,7 @@ public class TTB113_Page extends BasePage {
             select.selectByVisibleText("Alterar Limite");
         } else if ("Não Autorizado".equalsIgnoreCase(statusLiberacao)) {
             select.selectByVisibleText("Não Autorizado");
-        }else if (" ".equalsIgnoreCase(statusLiberacao)) {
+        } else if (" ".equalsIgnoreCase(statusLiberacao)) {
             select.selectByVisibleText(" ");
         }
 
@@ -207,19 +206,14 @@ public class TTB113_Page extends BasePage {
         esperarMilissegundos(5000);
     }
 
-    String campoMotivoDeRecusa = "motivo-recusa";
-
-//    public void preencherMotivoDeRecusa(String texto) {
-//        esperarMilissegundos(5000);
-//        //campoMotivoDeRecusa.clear();
-//        WebElement campo = driver.findElement(By.xpath("//*[@id='clifortranspcred-dsMotcredclifor']/div/textarea"));
-//        campo.sendKeys(texto);
-//    }
-
     public void preencherOMotivoDeRecusaAutorizacaoFeatureTTB113(String observacao) {
         clicarElementoByXpath(inputMotivoRecusaAutorizacao);
         esperarElementoVisivelByXpath(inputMotivoRecusaAutorizacao);
         preencherElementoByXpath(inputMotivoRecusaAutorizacao, observacao);
     }
+
+
+    //Cenário triste
+
 
 }

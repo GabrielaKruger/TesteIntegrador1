@@ -68,7 +68,7 @@ public class TTB113_Step {
     }
 
     @Então("clicar botão {string} do modal feature TTB113")
-    public void clicarBotãoDoModalFeatureTTB113(String acao) {
+    public void clicarBotaoDoModalFeatureTTB113(String acao) {
         basePage.clicarBotaoDoModal(acao);
     }
 
@@ -164,41 +164,21 @@ public class TTB113_Step {
         TTB113_Page.marcarCheckboxCliforFeatureTTB113();
     }
 
-//    @E("preencher o {string} feature TTB113")
-//    public void preencherOCampoFeatureTTB113(String campo) {
-//        if (campo.equalsIgnoreCase("Motivo de Recusa")) {
-//            TTB113_Page.preencherMotivoDeRecusa(" Observação");
-//        } else {
-//            throw new IllegalArgumentException("Campo não reconhecido: " + campo);
-//        }
-//    }
-
-
-//    @E("preenche campo de observação feature TTB113")
-//    public void preencherNoMotivoDeRecusaFeatureTTB113(String observacao) {
-//        TTB113_Page.preencherNoMotivoDeRecusaTTB113((massaTeste.getMassaTestePorPathEChave(tagMassa, "observacao")));
-//    }
-
     @E("preencher o motivo de recusa autorizacao feature TTB113")
     public void preencherOMotivoDeRecusaAutorizacaoFeatureTTB113() {
         TTB113_Page.preencherOMotivoDeRecusaAutorizacaoFeatureTTB113(massaTeste.getMassaTestePorPathEChave(tagMassa, "observacao"));
     }
 
-    //Avaliar necessidade deste método ja que utilizamos TEARDOWN
-//    @After
-//    public void finalizarTeste() {
-//        try {
-//            // Aguarda 5 segundos antes de fechar o navegador
-//            Thread.sleep(5000);
-//            System.out.println("Teste finalizado. Fechando o navegador...");
-//        } catch (InterruptedException e) {
-//            System.err.println("Erro ao esperar: " + e.getMessage());
-//        } finally {
-//            if (driver != null) {
-//                driver.quit(); // Fecha o navegador
-//            }
-//        }
-//    }
+
+    //Cenário triste
+
+
+
+
+
+
+
+
 
 
 
@@ -212,7 +192,6 @@ public class TTB113_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
-
 }
 
 
