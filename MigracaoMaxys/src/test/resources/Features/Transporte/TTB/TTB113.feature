@@ -1,6 +1,6 @@
  #language: pt
  @test @TTB113 @1403 @dt_TTB113 @chrome
- Funcionalidade: TTB113 - Cadastro Alçada de Cadastro de Frete
+ Funcionalidade: TTB113 - Liberação clifor pagador
 
    Cenário de Fundo:
      Dado inicialize a execução dos cenários do TTB113
@@ -13,7 +13,7 @@
 
    Cenário: Liberação clifor pagador | Caminho feliz
 
-     Quando acessar page "Liberação Clifor Pagador" feature TTB113
+     Quando acessar primeira page "Liberação Clifor Pagador" feature TTB113
      E marcar checkbox do clifor pagador feature TTB113
      E clicar botão Desbloqueia Selecionados feature TTB113
      E apresenta o modal H4 "modal-basic-title" feature TTB113

@@ -21,7 +21,7 @@ public class TTB113_Page extends BasePage {
     }
 
     //Strings Solicitante/Autorizador
-    String btn_liberacaoCliforPagadores = "//*[@id='PAG_LIBERACAO']/a/span";
+    String btn_liberacaoCliforPagadores = "//*[@id='PAG_LIBERACAO']/a";
     String btn_desbloqueiaSelecionados = "//*[@id='controle-btDesbloq']/div/button";
     String btn_cliforPagadorCredito = "//*[@id='PAG_LIBERACAOCREDITO']";
     String btn_clicarBotaoConsultar = "//*[@id='filtro-btConsultar']/div/button/div";
@@ -36,9 +36,13 @@ public class TTB113_Page extends BasePage {
 
 
 
+    public void acessarPrimeiraPageCliforPagadorFeatureTTB113(String clifor) {
+        esperarMilissegundos(5000);
+//        clicarElementoByXpath(btn_liberacaoCliforPagadores);
+    }
+
     public void clicarBotaoTransicao() {
         clicarElementoByXpath(btn_liberacaoCliforPagadores);
-        clicarElementoByXpath(btn_cliforPagadorCredito);
     }
 
     public void marcarCheckboxDoCliforPagadorFeatureTTB113() {

@@ -81,6 +81,12 @@ public class TTB113_Step {
 
 //    Primeira page
 
+    @Quando("acessar primeira page {string} feature TTB113")
+    public void acessarPrimeiraPageCliforPagadorFeatureTTB113 (String clifor) {
+        TTB113_Page.clicarBotaoTransicao();
+        TTB113_Page.acessarPrimeiraPageCliforPagadorFeatureTTB113(clifor);
+    }
+
     @E("marcar checkbox do clifor pagador feature TTB113")
     public void marcarCheckboxDoCliforPagadorFeatureTTB113() {
         TTB113_Page.marcarCheckboxDoCliforPagadorFeatureTTB113();
