@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import pages.BasePage;
 import utils.DataUtils;
 
+import java.util.Objects;
+
 public class COM019_Page extends BasePage {
     WebDriver driver;
 
@@ -19,7 +21,10 @@ public class COM019_Page extends BasePage {
     String inputMoedaXpath = "//*[@id='pedido-cdMoeda";
     String inputFormaPagamentoXpath = "//*[@id='pedido-cdFormapagto";
     String inputTaxaXpath = "//*[@id='pedido-txMoedaconv";
+    String inputDescricaoMotivoLiberaRecusa = "//*[@id='pedido-dsMotivo']/div/input";
+
     String selectTipoPedidoXpath = "//*[@id='pedido-tpTxmoedaconv']/div/select";
+
     String chkSelecionaPedidoCompra = "//*[@id='pedido-chkSeleciona-";
 
     //Globais
@@ -27,11 +32,6 @@ public class COM019_Page extends BasePage {
     String inputXpathFim = "']/div/input";
     String inputXpathDataFim = "']/div/div/input";
     String btnXpathFim = "']/div/button";
-
-    //Botoes
-    String btnLiberar = "//*[@id='pedido-btnLiberar";
-//*[@id="pedido-btnRetornar"]/div/button/div
-//*[@id="pedido-btnRecusar"]/div/button/div
 
     public void confirmarMensagemSQLDeConsultaFeature() {
         esperarMilissegundos(12000); // Se realmente for necessário esperar antes
@@ -91,9 +91,24 @@ public class COM019_Page extends BasePage {
         testMarcaDesmarcaCheckBox("marcar", checkboxPedidosDeCompra);
     }
 
-    public void clicarBotaoLiberarFeatureCOM019() {
-        esperarMilissegundos(2000);
-        clicarElementoByXpath(btnLiberar + btnXpathFim);
+    public void clicarBotaoPedidoDoModal(String acao) {
+        String botaoPedidoModal;
+        if (Objects.equals(acao, "liberar")) {
+            botaoPedidoModal = "//*[@id='pedido-btnLiberar']/div/button";
+        } else if (Objects.equals(acao, "retornar")) {
+            botaoPedidoModal = "//*[@id='pedido-btnRetornar']/div/button";
+        } else if (Objects.equals(acao, "recusar")) {
+            botaoPedidoModal = "//*[@id='pedido-btnRecusar']/div/button";
+        } else {
+            throw new IllegalArgumentException("Botão inexistente: " + acao + ". Informe 'liberar', 'retornar' ou 'recusar'.");
+        }
+        {
+            esperarElementoClicavelByXpath(botaoPedidoModal);
+            clicarElementoByXpathComRetentativa(botaoPedidoModal);
+        }
+    }
+
+    public void informaMotivoLiberacaoRecusaFeatureCOM019(String dsMotivoLiberaRecusa) {
+        clicarElementoByXpath(inputDescricaoMotivoLiberaRecusa);
     }
 }
-

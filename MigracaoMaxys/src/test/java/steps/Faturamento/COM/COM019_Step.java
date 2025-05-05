@@ -153,15 +153,20 @@ public class COM019_Step {
         COM019_Page.marcarCheckboxNumeroDoPedidoFeatureCOM019();
     }
 
-    @E("clicar botão liberar feature COM019")
-    public void clicarBotaoLiberarFeatureCOM019() {
-        COM019_Page.clicarBotaoLiberarFeatureCOM019();
-
+    @E("clicar botão {string} feature COM019")
+    public void clicarBotaoPedidodoModalFeatureCOM019(String acao) {
+        COM019_Page.clicarBotaoPedidoDoModal(acao);
     }
+
 
     @E("apresentar o modal H4 {string} feature COM019")
     public void apresentarOModalH4FeatureCOM019(String title) {
         basePage.validaModalByH4(title);
+    }
+
+    @E("informa Motivo liberacao recusa feature COM019")
+    public void informaMotivoLiberacaoRecusaFeatureCOM019() {
+        COM019_Page.informaMotivoLiberacaoRecusaFeatureCOM019(massaTeste.getMassaTestePorPathEChave(tagMassa,"dsMotivoLiberaRecusa"));
     }
 
     @After
@@ -174,8 +179,6 @@ public class COM019_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
-
-
 
 }
 
