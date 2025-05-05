@@ -31,7 +31,7 @@ public class TTB113_Page extends BasePage {
     String btn_cliforPagadorCredito = "//*[@id='PAG_LIBERACAOCREDITO']";
     String btn_clicarBotaoConsultar = "//*[@id='filtro-btConsultar']/div/button/div";
     String inputMotivoRecusaAutorizacao = "//*[@id='clifortranspcred-dsMotcredclifor']/div/textarea";
-    //Integer inputClifor = "//*[@id='filtro-cdClifor']/div/input";
+    String inputClifor = "//*[@id='filtro-cdClifor']/div/input";
 
 
     //Globais
@@ -218,15 +218,12 @@ public class TTB113_Page extends BasePage {
     //Cenário triste
 
 
-//    public void preencherCliforFeatureTTB113() {
-//        clicarElementoByXpath(inputMotivoRecusaAutorizacao);
-//        esperarElementoVisivelByXpath(inputMotivoRecusaAutorizacao);
-//        preencherElementoByXpath(inputMotivoRecusaAutorizacao, 999999);
-//    }
-//
-//    public String pegarValorDoElemento(String element) {
-//        return driver.findElement(By.xpath(element)).getAttribute("value");
-//    }
+    public void preencherCliforFeatureTTB113(String valor) {
+        clicarElementoByXpath(inputClifor);
+        esperarElementoVisivelByXpath(inputClifor);
+        preencherElementoByXpath(inputClifor, valor);
+    }
+
 
 
 }

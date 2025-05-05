@@ -173,10 +173,10 @@ public class TTB113_Step {
     //Cenário triste
 
 
-//    @E("preencher clifor feature TTB113")
-//    public void preencherCliforFeatureTTB113() {
-//        TTB113_Page.preencherCliforFeatureTTB113(basePage.element("valor"));
-//    }
+    @E("preencher clifor feature TTB113")
+    public void preencherCliforFeatureTTB113() {
+        TTB113_Page.preencherCliforFeatureTTB113(massaTeste.getMassaTestePorPathEChave(tagMassa, "valor"));
+    }
 
 
 
