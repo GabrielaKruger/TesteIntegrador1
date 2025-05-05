@@ -98,14 +98,26 @@
      Então clicar botão "ok" do modal feature TTB113
 
 
-
-   @1403
+   @1wip
    Cenário: Liberação clifor pagador (crédito) | Caminho Negativo II
 
      Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
      E preencher clifor feature TTB113
      E clicar botão ToolBar "salvar" feature TTB113
      Então clicar botão "ok" do modal feature TTB113
+
+
+   @1403
+   Cenário: Liberação clifor pagador (crédito) | Teclas Atalho
+     Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
+     E clicar botão consultar feature TTB113
+     E marcar checkbox do clifor feature TTB113
+     E clicar botão ToolBar "salvar" feature TTB113
+     Então clicar botão "ok" do modall feature TTB113
+
+
+
+
 
 
 
