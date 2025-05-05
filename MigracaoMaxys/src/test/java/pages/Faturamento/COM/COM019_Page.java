@@ -20,31 +20,42 @@ public class COM019_Page extends BasePage {
     String inputFormaPagamentoXpath = "//*[@id='pedido-cdFormapagto";
     String inputTaxaXpath = "//*[@id='pedido-txMoedaconv";
     String selectTipoPedidoXpath = "//*[@id='pedido-tpTxmoedaconv']/div/select";
-
+    String chkSelecionaPedidoCompra = "//*[@id='pedido-chkSeleciona-";
 
     //Globais
     int primeiraLinhaEmBranco;
     String inputXpathFim = "']/div/input";
-    String inputXpatDataFim = "']/div/div/input";
+    String inputXpathDataFim = "']/div/div/input";
     String btnXpathFim = "']/div/button";
+
+    //Botoes
+    String btnLiberar = "//*[@id='pedido-btnLiberar";
+//*[@id="pedido-btnRetornar"]/div/button/div
+//*[@id="pedido-btnRecusar"]/div/button/div
+
+    public void confirmarMensagemSQLDeConsultaFeature() {
+        esperarMilissegundos(12000); // Se realmente for necessário esperar antes
+        clicarBotaoDoModal("ok");   // Reaproveita seu método já existente
+        esperarMilissegundos(8000);
+    }
 
 
     public void preencherCliforFeatureCOM019(String clifor) {
         esperarMilissegundos(500); // espera necessária
-        clicarElementoByXpathNVezes(inputCliforXpath + inputXpathFim,2);
+        clicarElementoByXpathNVezes(inputCliforXpath + inputXpathFim, 2);
         preencherElementoByXpath(inputCliforXpath + inputXpathFim, clifor);
         pressionaTabActions();
     }
 
     public void preencherCondiçãoPagtoFeatureCOM019(String condicaoPagamento) {
-        clicarElementoByXpathNVezes(inputConPagamentoXpath + inputXpathFim,2);
+        clicarElementoByXpathNVezes(inputConPagamentoXpath + inputXpathFim, 2);
         limparCampoDeTextoPorXpath(inputConPagamentoXpath + inputXpathFim);
         preencherElementoByXpath(inputConPagamentoXpath + inputXpathFim, condicaoPagamento);
         pressionaTabActions();
     }
 
     public void preencherMoedaFeatureCOM019(String moeda) {
-        clicarElementoByXpathNVezes(inputMoedaXpath + inputXpathFim,2);
+        clicarElementoByXpathNVezes(inputMoedaXpath + inputXpathFim, 2);
         limparCampoDeTextoPorXpath(inputMoedaXpath + inputXpathFim);
         esperarMilissegundos(1000); // espera necessária
         preencherElementoByXpath(inputMoedaXpath + inputXpathFim, moeda);
@@ -52,7 +63,7 @@ public class COM019_Page extends BasePage {
     }
 
     public void preencherFormaPagamentoFeatureCOM019(String formaPagamento) {
-        clicarElementoByXpathNVezes(inputFormaPagamentoXpath + inputXpathFim,2);
+        clicarElementoByXpathNVezes(inputFormaPagamentoXpath + inputXpathFim, 2);
         preencherElementoByXpath(inputFormaPagamentoXpath + inputXpathFim, formaPagamento);
         pressionaTabActions();
     }
@@ -63,16 +74,26 @@ public class COM019_Page extends BasePage {
     }
 
     public void preencherDtInícioDaCorreçãoFeatureCOM019() {
-        clicarElementoByXpathNVezes(inputDataIniCorrecaoXpath + inputXpatDataFim,2);
-        preencherElementoByXpath(inputDataIniCorrecaoXpath + inputXpatDataFim, DataUtils.DataAtual());
+        clicarElementoByXpathNVezes(inputDataIniCorrecaoXpath + inputXpathDataFim, 2);
+        preencherElementoByXpath(inputDataIniCorrecaoXpath + inputXpathDataFim, DataUtils.DataAtual());
         pressionaTabActions();
     }
 
     public void preencherTaxaFeatureCOM019(String valorTaxa) {
-        clicarElementoByXpathNVezes(inputTaxaXpath + inputXpathFim,2);
+        clicarElementoByXpathNVezes(inputTaxaXpath + inputXpathFim, 2);
         preencherElementoByXpath(inputTaxaXpath + inputXpathFim, valorTaxa);
         pressionaTabActions();
     }
 
+    public void marcarCheckboxNumeroDoPedidoFeatureCOM019() {
+        String checkboxPedidosDeCompra = chkSelecionaPedidoCompra + primeiraLinhaEmBranco + btnXpathFim;
+
+        testMarcaDesmarcaCheckBox("marcar", checkboxPedidosDeCompra);
+    }
+
+    public void clicarBotaoLiberarFeatureCOM019() {
+        esperarMilissegundos(2000);
+        clicarElementoByXpath(btnLiberar + btnXpathFim);
+    }
 }
 

@@ -51,7 +51,7 @@ public class COM019_Step {
 
     @Quando("confirmar mensagem SQL de Consulta feature COM019")
     public void confirmarMensagemSQLDeConsultaFeatureCOM019() {
-        basePage.confirmarMensagemSQLDeConsultaFeature();
+        COM019_Page.confirmarMensagemSQLDeConsultaFeature();
     }
 
     @E("acessar o programa {string} pela empresa {string} feature COM019")
@@ -148,6 +148,22 @@ public class COM019_Step {
 
     }
 
+    @E("marcar checkbox numero do pedido feature COM019")
+    public void marcarCheckboxNumeroDoPedidoFeatureCOM019() {
+        COM019_Page.marcarCheckboxNumeroDoPedidoFeatureCOM019();
+    }
+
+    @E("clicar botão liberar feature COM019")
+    public void clicarBotaoLiberarFeatureCOM019() {
+        COM019_Page.clicarBotaoLiberarFeatureCOM019();
+
+    }
+
+    @E("apresentar o modal H4 {string} feature COM019")
+    public void apresentarOModalH4FeatureCOM019(String title) {
+        basePage.validaModalByH4(title);
+    }
+
     @After
     public void tearDown() {
         if (driver != null) {
@@ -158,6 +174,8 @@ public class COM019_Step {
         }
         BasePage.tearDownCloseQuit(driver);
     }
+
+
 
 }
 

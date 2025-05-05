@@ -39,9 +39,6 @@ public class BasePage {
 
     int primeiraLinhaEmBranco;
 
-    // Strings Mensagem SQL
-    String btnOkXpath = "//*[@id='mxModalInfoBtnOk']";
-
     public BasePage(WebDriver driver) {
         this.driver = driver;
     }
@@ -1496,15 +1493,6 @@ public class BasePage {
         } else {
             throw new IllegalArgumentException("Índice da aba inválido: " + indiceAba);
         }
-    }
-
-//-------------------------------------------------------------------------------------------
-//    //Função de confirmar SQL - CLICAR OK
-// -------------------------------------------------------------------------------------------
-    public void confirmarMensagemSQLDeConsultaFeature() {
-        esperarMilissegundos(8000);
-        clicarElementoByXpath(btnOkXpath);
-        esperarMilissegundos(8000); // espera necessária
     }
 }
 
