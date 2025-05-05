@@ -57,10 +57,6 @@ public class TTB113_Step {
         basePage.clicarBotaoToolBar(botao);
     }
 
-    @Quando("apresentar o modal H5 {string} feature TTB113")
-    public void apresentarOModalH5FeatureTTB113(String title) {
-        basePage.validaModalByH5(title);
-    }
 
     @E("apresentar a mensagem {string} feature TTB113")
     public void apresentarAMensagemFeatureTTB113(String mensagem) {
@@ -82,41 +78,8 @@ public class TTB113_Step {
         basePage.validaModalByH5(title);
     }
 
-    @Então("pressionar tecla {string} feature TTB113")
-    public void pressionarTeclaFeatureFCT(String tecla) {
-        basePage.esperarMilissegundos(1000); // espera necessária
-        basePage.pressionarTecla(tecla);
-    }
 
-    @Então("pressionar teclas shift + f6 para excluir TTB113")
-    public void pressionarTeclasShiftF6ParaExcluirTTB113() {
-        basePage.pressionarShiftF6();
-    }
-
-    @E("preencher Empresa feature TTB113")
-    public void preencherEmpresaFeatureTTB113() {
-        TTB113_Page.preencherEmpresaFeatureTTB113(massaTeste.getMassaTestePorPathEChave(tagMassa, "empresa"));
-    }
-
-    @E("preencher Usuário feature TTB113")
-    public void preencherUsuárioFeatureTTB113() {
-        TTB113_Page.preencherUsuárioFeatureTTB113(massaTeste.getMassaTestePorPathEChave(tagMassa, "user"));
-    }
-
-    @E("preencher Tipo Solic featue TTB113")
-    public void preencherTipoSolicFeatueTTB113() {
-        TTB113_Page.preencherTipoSolicFeatueTTB113(massaTeste.getMassaTestePorPathEChave(tagMassa, "tipoSolicitante"));
-    }
-
-    @E("preencher Cód. da Alçada feature TTB113")
-    public void preencherCódDaAlçadaFeatureTTB113() {
-        TTB113_Page.preencherCódDaAlçadaFeatureTTB113();
-    }
-
-    @Então("prencher Data de Vencimento feature TTB113")
-    public void prencherDataDeVencimentoFeatureTTB113() {
-        TTB113_Page.prencherDataDeVencimentoFeatureTTB113();
-    }
+//    Primeira page
 
     @E("marcar checkbox do clifor pagador feature TTB113")
     public void marcarCheckboxDoCliforPagadorFeatureTTB113() {
@@ -177,15 +140,6 @@ public class TTB113_Step {
     public void preencherCliforFeatureTTB113() {
         TTB113_Page.preencherCliforFeatureTTB113(massaTeste.getMassaTestePorPathEChave(tagMassa, "valor"));
     }
-
-
-
-
-
-
-
-
-
 
 
     @After

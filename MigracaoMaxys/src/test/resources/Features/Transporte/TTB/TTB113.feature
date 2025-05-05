@@ -10,60 +10,7 @@
 #     TTB026 acessando na page TCF001
 #     Primeiro parâmetro - não bloquear clifor tipo "cliente pagador" em cadastros/alteração
 
-     # Refluxo - Pages não apresentam massa de dados
 
-   @wip
-   Cenário: Cadastro Alçada de Cadastro de Frete| Caminho feliz
-
-     Quando clicar botão ToolBar "novo" feature TTB113
-     E preencher Empresa feature TTB113
-     E preencher Usuário feature TTB113
-     E preencher Tipo Solic featue TTB113
-     E preencher Cód. da Alçada feature TTB113
-     Então prencher Data de Vencimento feature TTB113
-
-     Quando clicar botão ToolBar "salvar" feature TTB113
-     E apresentar o modal H5 "modal-basic-title" feature TTB113
-     E apresentar a mensagem "Registros salvos com sucesso." feature TTB113
-     Então clicar botão "ok" do modal feature TTB113
-
-     Quando clicar botão ToolBar "excluir" feature TTB113
-     E apresenta o modal H4 "modal-basic-title" feature TTB113
-     E clicar botão "sim" do modal feature TTB113
-     E apresenta o modal "modal-basic-title" feature TTB113
-     Então clicar botão "ok" do modal feature TTB113
-
-   @wip # Refluxo - Demora 10 segundo após recarregar
-   Cenário: Cadastro, edição e exclusão de Autorizador Restrito| Teclas Atalho
-
-     Quando pressionar tecla "f6" feature TTB113
-     E preencher Empresa feature TTB113
-     E preencher Usuário feature TTB113
-     E preencher Tipo Solic featue TTB113
-     E preencher Cód. da Alçada feature TTB113
-     Então prencher Data de Vencimento feature TTB113
-
-     Quando pressionar tecla "f10" feature TTB113
-     E apresentar o modal H5 "modal-basic-title" feature TTB113
-     E apresentar a mensagem "Registros salvos com sucesso." feature TTB113
-     Então clicar botão "ok" do modal feature TTB113
-
-     Quando pressionar teclas shift + f6 para excluir TTB113
-     E apresenta o modal H4 "modal-basic-title" feature TTB113
-     E clicar botão "sim" do modal feature TTB113
-     E apresenta o modal "modal-basic-title" feature TTB113
-     Então clicar botão "ok" do modal feature TTB113
-
-   @wip
-   Cenário: Liberação de clifor pagador| Caminho Negativo
-
-     Quando clicar botão ToolBar "novo" feature TTB113
-     E clicar botão ToolBar "salvar" feature TTB113
-     E apresenta o modal H4 "modal-basic-title" feature TTB113
-     E apresentar a mensagem "Confirma o desbloqueio dos clifors selecionados?" feature TTB113
-     Então clicar botão "ok" do modall feature TTB113
-
-   @wip
    Cenário: Liberação clifor pagador | Caminho feliz
 
      Quando acessar page "Liberação Clifor Pagador" feature TTB113
@@ -73,10 +20,20 @@
      Então clicar botão "ok" do modall feature TTB113
 
 
+
+   Cenário: Liberação de clifor pagador| Caminho Negativo
+
+     Quando clicar botão ToolBar "novo" feature TTB113
+     E clicar botão ToolBar "salvar" feature TTB113
+     E apresenta o modal H4 "modal-basic-title" feature TTB113
+     E apresentar a mensagem "Confirma o desbloqueio dos clifors selecionados?" feature TTB113
+     Então clicar botão "ok" do modall feature TTB113
+
+
+
    #Segunda page começa aqui
 
 
-   @wip
    Cenário: Liberação clifor pagador (crédito) | Caminho feliz
 
      Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
@@ -89,7 +46,16 @@
      Então clicar botão "ok" do modall feature TTB113
 
 
-   @wip
+
+   Cenário: Liberação clifor pagador (crédito) | Teclas Atalho
+     Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
+     E clicar botão consultar feature TTB113
+     E marcar checkbox do clifor feature TTB113
+     E clicar botão ToolBar "salvar" feature TTB113
+     Então clicar botão "ok" do modall feature TTB113
+
+
+
    Cenário: Liberação clifor pagador (crédito) | Caminho Negativo
 
      Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
@@ -98,7 +64,7 @@
      Então clicar botão "ok" do modal feature TTB113
 
 
-   @1wip
+
    Cenário: Liberação clifor pagador (crédito) | Caminho Negativo II
 
      Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
@@ -106,14 +72,6 @@
      E clicar botão ToolBar "salvar" feature TTB113
      Então clicar botão "ok" do modal feature TTB113
 
-
-   @1403
-   Cenário: Liberação clifor pagador (crédito) | Teclas Atalho
-     Quando acessar page "Liberação clifor pagador (crédito)" feature TTB113
-     E clicar botão consultar feature TTB113
-     E marcar checkbox do clifor feature TTB113
-     E clicar botão ToolBar "salvar" feature TTB113
-     Então clicar botão "ok" do modall feature TTB113
 
 
 
