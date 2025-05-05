@@ -82,7 +82,7 @@ public class COM019_Step {
     }
 
     @Então("clicar botão {string} do modal feature COM019")
-    public void clicarBotãoDoModalFeatureCOM019(String acao) {
+    public void clicarBotaoDoModalFeatureCOM019(String acao) {
         basePage.clicarBotaoDoModal(acao);
     }
 
@@ -114,8 +114,8 @@ public class COM019_Step {
 
 
     @E("preencher Condição Pagto feature COM019")
-    public void preencherCondiçãoPagtoFeatureCOM019() {
-        COM019_Page.preencherCondiçãoPagtoFeatureCOM019(massaTeste.getMassaTestePorPathEChave(tagMassa, "condicaoPagamento"));
+    public void preencherCondicaoPagtoFeatureCOM019() {
+        COM019_Page.preencherCondicaoPagtoFeatureCOM019(massaTeste.getMassaTestePorPathEChave(tagMassa, "condicaoPagamento"));
     }
 
     @E("preencher Moeda feature COM019")

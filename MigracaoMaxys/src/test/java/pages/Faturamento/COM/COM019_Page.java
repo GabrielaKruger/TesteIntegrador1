@@ -47,7 +47,7 @@ public class COM019_Page extends BasePage {
         pressionaTabActions();
     }
 
-    public void preencherCondiçãoPagtoFeatureCOM019(String condicaoPagamento) {
+    public void preencherCondicaoPagtoFeatureCOM019(String condicaoPagamento) {
         clicarElementoByXpathNVezes(inputConPagamentoXpath + inputXpathFim, 2);
         limparCampoDeTextoPorXpath(inputConPagamentoXpath + inputXpathFim);
         preencherElementoByXpath(inputConPagamentoXpath + inputXpathFim, condicaoPagamento);
@@ -109,6 +109,9 @@ public class COM019_Page extends BasePage {
     }
 
     public void informaMotivoLiberacaoRecusaFeatureCOM019(String dsMotivoLiberaRecusa) {
+        esperarElementoVisivelByXpath(inputDescricaoMotivoLiberaRecusa);
         clicarElementoByXpath(inputDescricaoMotivoLiberaRecusa);
+        preencherElementoByXpath(inputDescricaoMotivoLiberaRecusa, dsMotivoLiberaRecusa );
+        esperarMilissegundos(2000);
     }
 }
