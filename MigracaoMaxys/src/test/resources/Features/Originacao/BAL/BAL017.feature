@@ -1,5 +1,5 @@
 #language: pt
-@test @BAL017 @dt_BAL017 @chrome @1403
+@test @BAL017 @dt_BAL017 @chrome
 
 Funcionalidade: BAL017 - Pesagens bloqueadas/Peso manual
 
@@ -8,7 +8,7 @@ Funcionalidade: BAL017 - Pesagens bloqueadas/Peso manual
     Dado inicialize a execução dos cenários do BAL017
     E acessar o programa "BAL017" pela empresa "84" feature BAL017
 
-  @wip
+
   Cenário: Autorizar pesagens manuais bloqueadas |  Caminho feliz
     Quando preencher Empresa feature BAL017
     E preencher Depósito feature BAL017
@@ -24,7 +24,6 @@ Funcionalidade: BAL017 - Pesagens bloqueadas/Peso manual
     Então clicar botão "ok" do modal feature BAL017
 
 
-    @1403
   Cenário: Recusar pesagens manuais bloqueadas |  Caminho feliz
     Quando preencher Empresa feature BAL017
     E preencher Depósito feature BAL017
@@ -39,7 +38,7 @@ Funcionalidade: BAL017 - Pesagens bloqueadas/Peso manual
     E apresentar a mensagem parcial da recusa "recusada!" feature BAL017
     Então clicar botão "ok" do modal feature BAL017
 
-  @wip
+
   Cenário: Testar Filtros (Autorizado) |  Negativo
     Quando preencher Empresa feature BAL017
     E preencher Depósito feature BAL017
@@ -49,7 +48,7 @@ Funcionalidade: BAL017 - Pesagens bloqueadas/Peso manual
     E preencher Período final feature BAL017
     Então clicar botão para filtrar "Filtrar" BAL017
 
-  @wip
+
   Cenário: Testar Filtros (Recusado) |  Negativo
     Quando preencher Empresa feature BAL017
     E preencher Depósito feature BAL017

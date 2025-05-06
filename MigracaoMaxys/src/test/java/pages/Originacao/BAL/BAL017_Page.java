@@ -26,7 +26,8 @@ public class BAL017_Page extends BasePage {
 
     public void preencherEmpresaFeatureBAL017(String empresa) {
         esperarMilissegundos(2000);//espera necessária
-        clicarElementoByXpathNVezes(inputEmpresaXpath, 2);
+        clicarElementoByXpath(inputEmpresaXpath);
+        esperarMilissegundos(2000);
         preencherElementoByXpath(inputEmpresaXpath, empresa);
         esperarMilissegundos(2000);//espera necessária
     }
