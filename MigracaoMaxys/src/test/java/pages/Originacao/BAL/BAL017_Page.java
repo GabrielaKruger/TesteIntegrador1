@@ -11,10 +11,9 @@ public class BAL017_Page extends BasePage {
     String inputDepositoXpath= "//*[@id='filtro-nrMoega']/div/input";
     String inputPeriodoInicialXpath="//*[@id='filtro-dtInicio']/div/div/input";
     String inputPeriodoFinalXpath="//*[@id='filtro-dtFinal']/div/div/input";
-    String btnAutorizarXpath= "//*[@id='pesagembal-bntAutorizar']/button/div";
-    String btnRecusarXpath= "//*[@id='pesagembal-bntRecusar']/button/div";
-    String btnFiltrarXpath= "//*[@id='filtro-btnFiltrar']/button/div";
-    String btnFiltrarXpath1 = "//*[@id='filtro-btnFiltrar']/button";
+    String btnAutorizarXpath= "//*[@id='pesagembal-bntAutorizar-0']/div/button";
+    String btnRecusarXpath= "//*[@id='pesagembal-bntRecusar-0']/div/button";
+    String btnFiltrarXpath1 = "//*[@id='filtro-btnFiltrar']/div/button";
 
     //Strings para Filtrar
     String selectStatusXpath= "//*[@id='filtro-stBloqueio']/div/select";
@@ -69,7 +68,7 @@ public class BAL017_Page extends BasePage {
 
     public void clicarBotãoParaFiltrarBAL017(String filtrar) {
         esperarMilissegundos(3000);//espera necessária
-        clicarElementoByXpathNVezes(btnFiltrarXpath1, 3);
+        clicarElementoByXpathNVezes(btnFiltrarXpath1,1);
         esperarMilissegundos(5000);//espera necessária
         //Incluido clicar no campo empresa para desbloquear grid abaixo autorizar
         //clicarElementoByXpathNVezes(inputEmpresaXpath, 1);

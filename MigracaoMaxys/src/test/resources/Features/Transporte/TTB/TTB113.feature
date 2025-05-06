@@ -11,6 +11,7 @@
 #     Primeiro parâmetro - não bloquear clifor tipo "cliente pagador" em cadastros/alteração
 
 
+   @wip
    Cenário: Liberação clifor pagador | Caminho feliz
 
      Quando acessar primeira page "Liberação Clifor Pagador" feature TTB113
@@ -32,6 +33,7 @@
 
 
    #Segunda page começa aqui
+
 
 
    Cenário: Liberação clifor pagador (crédito) | Caminho feliz
