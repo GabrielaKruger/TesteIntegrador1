@@ -1,0 +1,12 @@
+{
+  "nomeCompleto": "João da Silva",
+  "endereco": "Rua das Flores, 123",
+  "cidade": "São Paulo",
+  "cnh": "12345678900",
+  "estado": "SP",
+  "cpf": "11122233344",
+  "celular": "11 999998888",
+  "pais": "Brasil",
+  "numero": "45",
+  "exemplo": "Valor de exemplo"
+}

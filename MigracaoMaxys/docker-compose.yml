@@ -1,0 +1,88 @@
+version: "3"
+
+services:
+  chrome:
+    build:
+      context: .
+      dockerfile: Dockerfile.chrome  # Referência para o Dockerfile personalizado
+
+    shm_size: 1gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+  chrome2:
+    build:
+      context: .
+      dockerfile: Dockerfile.chrome  # Referência para o Dockerfile personalizado
+    shm_size: 1gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+  chrome3:
+    build:
+      context: .
+      dockerfile: Dockerfile.chrome  # Referência para o Dockerfile personalizado
+    shm_size: 1gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+  chrome4:
+    build:
+      context: .
+      dockerfile: Dockerfile.chrome  # Referência para o Dockerfile personalizado
+    shm_size: 1gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+  firefox1:
+    build:
+      context: .
+      dockerfile: Dockerfile.firefox  # Referência para o Dockerfile personalizado
+    shm_size: 1gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+  firefox2:
+    build:
+      context: .
+      dockerfile: Dockerfile.firefox  # Referência para o Dockerfile personalizado
+    shm_size: 1gb
+    depends_on:
+      - selenium-hub
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+
+  selenium-hub:
+    build:
+      context: .
+      dockerfile: Dockerfile.hub  # Referência para o Dockerfile personalizado
+    ports:
+      - "4444:4444"
+      - "4442:4442"
+      - "4443:4443"
+    environment:
+      GRID_MAX_SESSION: 16
+      GRID_BROWSER_TIMEOUT: 30
+      GRID_TIMEOUT: 30
