@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="automatizacao_e2e_Migracao" />
+        <module name="TesteIntegrador" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="untitled" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

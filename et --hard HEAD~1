@@ -1,0 +1,307 @@
+[33mce9e517[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Automação
+[33m57c251e[m Automação
+[33m7573f74[m Fix: Step - REC001 , Feature - TGR004
+[33mc264656[m fix: feature, step, page e json - TGR004 - Runner
+[33meb1212a[m fix: feature, step, page e json - TGR004 - page - TTB113
+[33m112df53[m Fix: Feature, Step, Page - VFS015 - Feature - REC001 -  Alteração URL de acesso -LoginPage
+[33m10870c3[m fix: feature, step e page - TGR004
+[33ma9e3474[m Feature - COM019 - Step, Page - VFS014
+[33md5848ff[m fix: page, VFS014 - feature, VFS015
+[33m12d8b3e[m fix: Runner
+[33md295976[m fix: Runner
+[33mdf0856c[m fix: feature e page - BAL017 - Runner
+[33m8eaf02b[m fix: feature - BAL017 - Runner
+[33m2f47e36[m fix: feature - BAL017
+[33ma799ef8[m fix: feature, page e json - BAL017 - Runner
+[33m67b2154[m Fix: Feature, Step, Page - COM019 - Runner
+[33m9ccff0e[m fix: feature, step e page - TTB113
+[33m6fe6351[m fix: feature, step e page - TTB113 - Runner
+[33m1d795be[m Fix: Feature, Step, Page, Json - COM019
+[33m1b02df3[m Fix: Feature, Step, Page - COM019 - BasePage
+[33md90a1ad[m fix: feature - TTB113
+[33m68a88b7[m fix: feature, step e page - TTB113
+[33m6d1c82a[m fix: feature, step, page e json - TTB113
+[33m44b0118[m fix: feature, step e page - TTB113
+[33m398f614[m fix: Feature, Step, Page, Json - TTB113
+[33m76851c4[m fix: feature, step e page - TTB113
+[33m8f4fb9e[m fix: feature, step, page - TTB113 - Runner
+[33m6218ce4[m fix: feature, step e page - TTB113
+[33m392f8fc[m Fix: Feature, Step - COM019 - BasePage
+[33me669692[m fix: feature, step e page - TTB113
+[33m919f26c[m fix: feature, step e page - TTB113
+[33m4d88843[m fix: feature, step e page - TTB113
+[33m94d035e[m VFS014 Step, Page
+[33m4b74993[m fix: feature, step - TTB113 - Runner
+[33me7d7866[m fix: TTB113 feature
+[33m4112886[m fix: feature - TTB113 - ChromeManager - Runner
+[33m26cff78[m fix: feature, step, page - TTB113
+[33m1446525[m fix: feature, step, page - TTB113 - ChromeManager
+[33m38f180b[m Runner - Validação @COM007
+[33m899ffa4[m fix: Feature, Page - COM007 - ChromeManager
+[33mc206e00[m fix: feature, step, page e json - TTB113
+[33m2d286b4[m Validação ANV054 - Runner @ANV054
+[33m412ab3b[m Fix: Feature TCO024
+[33mbbfb08b[m Fix: Exclusão da pastas de capitura de tela
+[33m0b51c68[m Fix: Feature, Step, Page, Json - TCO035
+[33m93a8f01[m Fix: Feature CTI009
+[33mb817d21[m Fix: Feature TGR018
+[33mc0d1842[m Fix: Runner - Retornado @test
+[33m0829b50[m Fix: Feature, Step, Page - TGR025; Runner - Validação TGR025
+[33mcb5ed4b[m Fix: Exclusão Screenshots
+[33m75f3959[m Fix:Feature, Step, Page - TGR010; Runner - Validação TGR010
+[33m81643e1[m Fix: Feature, Step, Page, Json - TGR010
+[33m7b70b30[m Fix: Feature TGR010
+[33m1f211dc[m Fix: Feature, Step - TGR010
+[33m9575e76[m Fix: Feature, Step - TAF001
+[33mf958895[m Fix: Feature TAF001
+[33mb232dd5[m Fix: TAF001 Feature
+[33ma27d3e6[m Fix: Feature: COM004, REC001, REC300, TAF001; Step - REC300; Page - TAF001, REC300; Runner
+[33mef8446d[m Fix: VFS015 Featura
+[33mc2b07e7[m Fix: Feature VFS05
+[33m63ce2c5[m Fix: VFS015, ANV052
+[33m6c2b5e2[m "Fix: VFS015- Feature
+[33md744ed9[m Fix: Feature, Step - VFS015; Runner
+[33m93683df[m "Fix: ANV052- Step", VFS015- Feature
+[33m64263fc[m Fix: Feature BAL017
+[33m68c046b[m Fix: Remoção
+[33mac9ce71[m Fix: Conflito
+[33m4cb9f5b[m Fix: Feature COM019; Steps: TGR010 e COM007
+[33m5731d95[m Fix: TGR010 Feature, Step - VFS002 Feature, Step, Page
+[33m24d50f5[m Fix: BAL017 Feature - GAC Feature - GPE001 Feature - VFS002 Feature, Step, Page, Json - VFS014 Feature
+[33m651f474[m Fix: Feature, Step, Page - VFS002
+[33m4438ead[m Fix: Feaures, Steps, Pages - Telas com Refluxos
+[33m3b2081e[m Fix: ANV054 Step - VFS002 Feature, Page
+[33m601f0b5[m fix: VFS002 Page
+[33mc1ef30c[m Fix: ANV0054 feature, step, page
+[33m1df2fdf[m Fix: Migração
+[33m6befec8[m Fix: Feature, Step, Page - COM007
+[33mbd3921b[m Fix: Feature, Step, Page - COM007
+[33m4b98a6a[m Fix: Feature COM007
+[33m6c30dba[m Fix: Feature COM007
+[33m495cf88[m Fix: Runner - Validação COM007
+[33m0a5ca89[m Fix: Feature, Step, Page, Json - COM007; Page - VFS014
+[33m2a51d1b[m Fix: Runner - Validação telas com @test
+[33m21c45f6[m Fix: Feature VFS014
+[33mfef243c[m Fix: VFS014 Feature
+[33m51c4776[m Fix: VFS014 - Step; CTI009 e COM007; Runner - Validação VFS014
+[33maf74692[m Runner - Validação CTI009
+[33m3838cd6[m Fix: Feaure, Step, Page - CTI009
+[33mbc15df8[m Fix: Feature, Step, Page, Json - CTI009; GPE044 - Page; README
+[33m3bd0bcf[m Fix: Feature, Step, Page - COM019; README
+[33m88725b5[m Fix: Features: TCO035, VFS014; Step: TGR018; TCO035; README - Ajuste inicial do REAME.
+[33m77d0e1e[m Fix: Features: VFS017, GPE044; Step: TCO035, GPE044, VFS014; BasePage
+[33m141d8a6[m Fix: Pom, BasePage, Feature, Step - GPE044, Feature - COM003
+[33m363eeb6[m Fix: Feature COM003; Runner - Validação todas as telas
+[33m5dfbf3a[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33ma294225[m Fix: Feature, Step, Page, Json - REC001; BasePage
+[33m97e1a49[m "Fix: GAC002: Page"
+[33m8fc3a50[m "Fix: GAC002: Page"
+[33m3f13d50[m Fix: Feature GAC002 - Comentado o código
+[33m4a6fa19[m Fix: Featues, Steps, Pages e LoginStep, LoginPage - Alteração necessária pelo novo Login
+[33m27573ec[m Fix: LoginPage; REC001 - Feature, Step, Page, Json
+[33m4168131[m "Fix: GAC002: Page"
+[33me0175f0[m "Fix: GAC002: Feature, Step, Page"
+[33m42040e0[m Fix: Features: BAL017, GPE001, ANV052, ANV053
+[33m1a602c9[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33mf860b63[m Fix: Feature GAC002, Step TGR009; BasePage
+[33m80d3983[m VFS002 feature, step, page
+[33m1e55789[m "Fix: Feature"
+[33m4080da8[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m8537706[m Fix: Feature, Step, Page - COM003
+[33me84b4bc[m "Fix: Step"
+[33mf420366[m "Fix: Step"
+[33m6b80570[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m436b0ff[m "Fix: Feature, Step, Page, Json"
+[33m669b77f[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m112e8a0[m Fix: Feature, Step, Page, Json - COM004; Feature, Step - GPE001
+[33mab7f4b2[m "Fix: Feature, Step, Page, Json"
+[33m3ed3d00[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m735d509[m Fix: Pages: TGR010, TGR025, COM004; Step TGR010, Features: TGR010, COM004; Json - TGR010
+[33mc3ad7bc[m Fix: VFS002 feature, step, page, json
+[33m28bb1f2[m Fix: GPE001- Feature, Step, Page, Json
+[33mfd8b5f7[m Fix: Feature, Step, Page, Json - TGR009; Runner - Validação TGR009
+[33m7aaf8a1[m Fix: GPE001- Feature, Step, Json
+[33me929a7e[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33mbb731fa[m Fix: Feature, Step, Page - TGR009
+[33m5833b0e[m Fix: GPE001- Feature
+[33m3079a57[m Fix: Runner - Validação todas as telas @test
+[33m580157f[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m952c7b0[m Fix: Feature, Step, Page, Runner - TGR009
+[33m2e674a8[m Fix: GPE001- Feature, Step, Json, Step
+[33mc335280[m Fix: GPE001- Feature, Step, Json, Step
+[33m8e7c5e1[m Fix: Feature, Step, DataBAseConnection - Alteração dos dados de acesso
+[33mfb412e5[m Fix: Runner - Validação todas as telas @test
+[33m7741b83[m Fix: Runner e TGR009: Feature, Step, Page, Json
+[33m65ae431[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33mf552c6c[m Fix: Feature, Step, Page - TGR009
+[33m6911960[m Fix: GPE001- Feature, Step, Json, Step
+[33me91abed[m Fix: Runner - Validação todas as telas
+[33m33a0fe2[m Fix: Runner - Validação TGR018
+[33m4983265[m Fix: Feature, Step, Page - VFS002
+[33m9bd1883[m Fix: Runner - Validação todas as telas
+[33m0b6ae78[m Fix: Feature, Step, Page - VFS002
+[33mc713649[m Fix: Step VFS002
+[33m62edec8[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m6bcea2b[m Fix: Runner - Validação TGR018
+[33m1424613[m Fix: VFS002 Feature, Step, Page, Json
+[33m6348e94[m Fix: Runner - Validação todas as telas - @test
+[33mb42e3a7[m Fix: Runner - Validação segundo caso de teste - TGR018
+[33m642f9cf[m Fix: Feature, Step, Page - TGR010
+[33mfac6665[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m2e9d7b7[m Fix: Pom.xml. Feature, Page - COM004
+[33mc5259a7[m Fix: VFS002 Feature, Step, Page
+[33m0dcd8b5[m Fix: VFS002 Feature, Step, Page
+[33m22d71dc[m Fix: Runner - Validação todas as telas
+[33m575c066[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m53fbef9[m GPE044 - Feature, Step, Page, Json; VFS015 - Feature; DataUtils - Mais chamadas; Runner - Validação GPE044
+[33m7631965[m Fix: GPE001- Feature, Step, Json, Step
+[33me83ff54[m Fix: VFS014 Feature, Page - Runner @test
+[33me2cacc8[m Fix: Runner @VFS014
+[33mc249834[m Fix: VFS014 Step, Page
+[33mf81d855[m Fix: GPE001- Feature, Step, Json, Step
+[33m79db0c3[m Fix: VFS014 feature, step, page, json
+[33m350687a[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m2243a6b[m Fix: Feature, Step, Page - COM004
+[33mf5c1194[m Fix: GAC002- Feature, Step, Json, Step ANV052- Feature
+[33ma8c8116[m Fix: Feature, Step - TGR018; Runner - Validação todas as telas: @test
+[33ma533c7e[m Runner - Validação TGR018
+[33mf2c4056[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33ma561b6c[m Fix: Features: TGR018, COM004, GPE001; Steps: COM004, TGR018; Pages: COM004, TGR018; BasePage
+[33mc21392e[m Fix: GAC002- Feature, Step, Json, Step
+[33m2619b50[m Fix: VFS014 feature, Step, Page, json
+[33m4d524a9[m Fix: GAC002- Feature, Step, Json
+[33md29b22e[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m232ed3a[m Fix: TGR025 - Feature, Step, Page; REC001
+[33m0c82fb6[m Fix: ANV054 feature, Step, Page - VFS014 feature, step, page, json
+[33m59b7d02[m Fix: GAC002- Feature, Ste, Page, Json
+[33m186121e[m Fix: GAC002- Feature, Ste, Page
+[33mcb6d090[m Fix: Feature, Step, Page, Json - TGR025
+[33meb283ff[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m5de111c[m Fix: REC001: Feature, Step, Page, Json; TGR025: Feature, Step, Page
+[33mf22ee11[m Fix: VFS015- Feature GAC014- Feature, Step, Page
+[33m8f9aebe[m Fix: ANV052- Step VFS015- Feature, Step, Page, Json
+[33m9a60ad3[m Fix: ANV054 feature, step, page, json
+[33m1f778c5[m Fix: VFS015- Feature, Step, Page, Json
+[33m12804dc[m Fix: VFS015- Feature, Step, Page
+[33m724ca29[m Fix: ANV054 Page
+[33m1277d6c[m Fix: ANV054 - Feature, Step, Page, json
+[33mf51bc58[m Fix: ANV052- Feature ANV053- Feature
+[33m73e2976[m Fix: ANV052- Feature
+[33m552967a[m Fix: ANV052- Step
+[33mc233750[m Fix: ANV053- Feature; Runner(ANV052);
+[33ma83eb74[m Fix: Feature, Step, Page  - TGR025
+[33m07f8be0[m Fix: ANV052- Runner;
+[33m74bb651[m Fix: ANV052- Feature;
+[33m95f10dd[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m04437e2[m Fix: Feature, Step, Page - TGR025
+[33mb9fbeac[m Fix: ANV054 - Feature, Step, Page, Json
+[33md5b4959[m Fix: ANV052- Feature, Step; ANV053- Feature Json
+[33mc6fead0[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33ma0e7dd5[m Fix: ANV052- Page, Step; ANV053- Feature, STep, Page, Json
+[33me24773f[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m1c3c1c3[m Fix: GPE044 Feature
+[33ma1c8887[m Fix: ANV022- Feature
+[33m8659557[m Fix: ANV022- Feature, Step, Page, Json BAL017- Feature, Page
+[33m928ddd1[m Fix: BAL017- Page
+[33m6ad8827[m Fix: BAL017- Page FCT007- Page GPE001- Page
+[33me8ea6f5[m Fix: REC033- Step
+[33m3c0905d[m Fix: REC033- Feature, Step, Page, Json
+[33m948e982[m Fix: Runner.java
+[33m66d5d4f[m Fix: BAL017- Json
+[33m811df46[m Fix: Incluído tearDownCloseQuit dentro dos steps
+[33mcf6a7cc[m Fix: BAL017 Feature, Page
+[33mcb53b3f[m Fix: BAL017- Feature
+[33m56860bd[m Fix: Reorganização de pastas
+[33m51256d0[m Fix: BAL017- Feature, Page
+[33m9d53957[m Fix: BAL017- Json
+[33me525e1e[m Fix: BAL017- Feature
+[33m94fe692[m Fix: BAL017 Feature, Page
+[33m2365d9b[m Fix: BAL017- Page
+[33m7af1d85[m Fix: BAL017- Page
+[33m001b116[m Fix: BAL017- Page
+[33mae1a391[m Fix: BAL017- Page
+[33m284d114[m Fix: BAL017- Page
+[33m4b59026[m Fix: Runner.java- BAL017
+[33m9c65fcf[m Fix: BAL017- Feature
+[33m145a7de[m Fix: BAL017- Feature, Step, Page, Json
+[33mc5a59fb[m Fix: BAL017- Feature, Step, Page, Json
+[33m578b5e0[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33ma9e2774[m Fix: Feature, Step, Page - GPE044; BasePage - Método Alt+F4
+[33m21f542f[m Fix: GPE001- Feature BAL017- Feature
+[33mb0d1573[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33mdf64423[m Fix: Feature, Step, Page, Json - GPE044
+[33m8139c0a[m Fix: FCT007- Feature, Step, Page, Json
+[33mde7d4a0[m Fix: Feature TTB163
+[33m1d392d9[m Fix: Runner - Retornado @test
+[33mf870b14[m Fix: Feature, Step - TTB163; Runner - Validação TTB163
+[33ma528a06[m Fix: Retornado @wip
+[33m6601fdd[m Fix: TTB163: Feature, Step, Page, Json; Runner - Validação casos atalho TTB163
+[33mb4e13a1[m Fix: Feature, Step, Page - TTB163
+[33m614d79d[m Fix: Feature, Step, Page - TTB163
+[33m949a638[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33mcf56760[m Fix: Feature, Step, Page - TTB163
+[33mdb46c81[m Fix: FCT007- Feature, Step, Page, Json
+[33m91e3495[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m04d05e8[m Fix: Ajustes dos diretórios
+[33mcb7b7ae[m Fix: FCT007- Feature, Step, Page
+[33m88bce46[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33md5632d2[m Fix: Feature, Step, Page - FCT006; BaseStep
+[33m1526dc9[m Fix: FCT007- Feature, Step, Page, Json
+[33m7689b7d[m Fix: Feature, Status, Page - FCT006
+[33m3e37880[m Fix: Feature, Step, Page - FCT006
+[33mf7a31a8[m Fix: Step - FCT006
+[33m3004cab[m Fix: Feature, Step, Page - FCT006
+[33m8b415f4[m Fix: BasePage - SetPrimeiraLinhaEmBranco e VerificaOuSetarPrimeiraLinhaEmBranco
+[33m593502d[m Fix: Page - TCO024
+[33m8bcaaf6[m Fix: Feature, Step, Page, Json - FCT006; Step TCO024
+[33m361feaa[m Fix: FCT006 - Feature, Step, Page, Json
+[33mc8949e8[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m876b38e[m Fix: Feature, Step, Page - TCO024
+[33m61cd481[m Fix: GPE001- Feature, Step, Page; FCT007- Json
+[33m3127064[m Fix: GPE001- Feature, Step, Page
+[33mb74b9e3[m Fix: Feature, Step, Page - TCO024
+[33mb843a5f[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m520f3c5[m Fix: Feature, Step, Page, Json - TCO024
+[33m01bd00a[m Fix: GPE001- Feature
+[33mea8420a[m Fix: Feature - TCO024; Step, Page - FCT007
+[33m1341690[m Fix: Feature - GPE001
+[33m10cec46[m Fix: GPE001- Feature, Runner
+[33m3b406ba[m Fix: GPE001- Feature, Step, Page
+[33m79f0cd8[m Fix: GPE001- Feature, Step, Page
+[33meeb12cb[m Fix: GPE001-BasePage
+[33m34a582c[m Fix: GPE001- Page
+[33m68b6833[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m66b80fb[m Fix: BasePage - Metodo Limpar
+[33m134dc1b[m Fix: GPE001- Feature, Step, Page, Json
+[33me214982[m Fix: BasePage
+[33me9e27e9[m Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+[33m2d5824c[m Fix: Features: FCT006, FCT007
+[33m09673d1[m Fix: GPE001- Feature, Step, Page, Json
+[33m3647e61[m Fix: Feature, Step - GPE001
+[33mdda5fa6[m Fix: GPE001- Feature, Step, Page, Json
+[33m7231e10[m Fix: GPE001- Feature, Step, Page, Json
+[33mfcb22c7[m Fix: GPE001- Feature, Step, Page, Json
+[33mcb41fdf[m Fix: GPE001 - Page
+[33m1994af2[m Fix: GPE001- Feature, Step, Page
+[33m209c4f0[m Fix: Step GPE001, LoginPage
+[33mdd78dbd[m Fix: GPE001 - Step, Page
+[33m9aeceef[m Fix: LoginPage - Token GPE001. GPE001 - Step
+[33m7152fd5[m Fix: GPE001 - Feature, Step, Page
+[33m4c86241[m Fix: GPE001 - Feature, Step, Page
+[33m478162f[m Fix: Exclusão MKT002
+[33md394645[m Fix: Criação Feature, Step - GPE001
+[33m39ace50[m Fix: TCO024 - Featurre
+[33mcae6230[m Fix: Feature, Step, Page - TCO024 e TCO035
+[33mae3ebbe[m Fix: TCO035; BasePage, LoginPage, LoginStep, DataBaseConnection
+[33mc2f79f9[m Fix: TCO035; BasePage, LoginPage, LoginStep, DataBaseConnection
+[33m0038ae7[m Fix: MKT002 Feature
+[33m90a4f39[m Fix: MKT002 Feature
+[33mba7ca59[m test: MKT002 Feature
+[33ma269c0a[m Fix: Commit Merge
+[33ma2ab0ec[m Merge branch 'master'
+[33m1c0fe88[m Testeee
+[33mc5c25ef[m Fix: Teste Master
+[33m2901a0a[m Initial commit
+[33maea2a3c[m Fix: MKT002
+[33me295dd1[m Fix: Ajustes
+[33mb4f7436[m Initial commit

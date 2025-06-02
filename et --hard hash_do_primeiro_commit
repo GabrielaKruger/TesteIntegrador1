@@ -1,0 +1,257 @@
+[33mcommit b4f7436f7a50e822086bb91d24275204eca34623[m
+Author: Rafael F. Mascarello <rafael.mascarello@maxiconsystems.com.br>
+Date:   Fri Oct 4 11:51:12 2024 +0000
+
+    Initial commit
+
+[33mcommit e295dd19968ea6d2f16c36d46eca84da1b39db29[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Mon Oct 7 14:14:22 2024 -0300
+
+    Fix: Ajustes
+
+[33mcommit aea2a3c94756d1995d66a626101d40c270a0fa3d[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Mon Oct 7 14:38:18 2024 -0300
+
+    Fix: MKT002
+
+[33mcommit 2901a0aa1c3bf220701ff2cfc6c3a7663111c3e6[m
+Author: Rafael F. Mascarello <rafael.mascarello@maxiconsystems.com.br>
+Date:   Fri Oct 4 11:51:12 2024 +0000
+
+    Initial commit
+
+[33mcommit c5c25ef8677ca5753852f165141b38330f5053ae[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Mon Oct 7 15:09:23 2024 -0300
+
+    Fix: Teste Master
+
+[33mcommit 1c0fe88f9344e3173238cc9518edfe59f6afca76[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Mon Oct 7 15:21:30 2024 -0300
+
+    Testeee
+
+[33mcommit a2ab0eca3ebb909631d8ddbe4b56723e6fbe5050[m
+Merge: b4f7436 1c0fe88
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Tue Oct 8 10:40:43 2024 -0300
+
+    Merge branch 'master'
+
+[33mcommit a269c0ac058eae0969b833e8f530383544d0b55b[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Tue Oct 8 10:42:11 2024 -0300
+
+    Fix: Commit Merge
+
+[33mcommit ba7ca597fa893cf8766e7228d7858202fad1fc7e[m
+Author: Henrique Borges da Silva <henrique.silva@maxiconsystems.com.br>
+Date:   Tue Oct 8 11:03:53 2024 -0300
+
+    test: MKT002 Feature
+
+[33mcommit 90a4f39b5c396600554b802a50758fe4a7f6470d[m
+Author: Henrique Borges da Silva <henrique.silva@maxiconsystems.com.br>
+Date:   Wed Oct 9 17:01:54 2024 -0300
+
+    Fix: MKT002 Feature
+
+[33mcommit 0038ae7dd092df6097130aac8bab12fd3743ad3c[m
+Author: Henrique Borges da Silva <henrique.silva@maxiconsystems.com.br>
+Date:   Wed Oct 9 17:11:38 2024 -0300
+
+    Fix: MKT002 Feature
+
+[33mcommit c2f79f97cbea5706631ce4fe7741f36c0fee54e1[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Mon Nov 18 18:08:59 2024 -0300
+
+    Fix: TCO035; BasePage, LoginPage, LoginStep, DataBaseConnection
+
+[33mcommit ae3ebbe99974a679ac29dee0c0785bd9386c86ef[m
+Merge: c2f79f9 0038ae7
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Mon Nov 18 18:10:06 2024 -0300
+
+    Fix: TCO035; BasePage, LoginPage, LoginStep, DataBaseConnection
+
+[33mcommit cae62303e299e9c704a00ce24a560f7c40ad89f6[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Tue Nov 19 17:49:42 2024 -0300
+
+    Fix: Feature, Step, Page - TCO024 e TCO035
+
+[33mcommit 39ace507973cc16c638eb6bda2869e8369667fd8[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Mon Dec 2 10:53:12 2024 -0300
+
+    Fix: TCO024 - Featurre
+
+[33mcommit d394645cf1c2cb9ba231beb4f9617de4491b3359[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Mon Dec 2 11:12:16 2024 -0300
+
+    Fix: Criação Feature, Step - GPE001
+
+[33mcommit 478162f409c08f3628f848f86d4a938962be7652[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Mon Dec 2 11:15:14 2024 -0300
+
+    Fix: Exclusão MKT002
+
+[33mcommit 4c862410ab16dcfb5a61de3516c3b41f015d3f37[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Tue Dec 3 14:41:27 2024 -0300
+
+    Fix: GPE001 - Feature, Step, Page
+
+[33mcommit 7152fd5b38d929b8f88dac15b8a422f963cf373d[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Wed Dec 4 14:51:52 2024 -0300
+
+    Fix: GPE001 - Feature, Step, Page
+
+[33mcommit 9aeceefa44bb303973835931d8c55a2c142ce271[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Thu Dec 5 11:20:37 2024 -0300
+
+    Fix: LoginPage - Token GPE001. GPE001 - Step
+
+[33mcommit dd78dbd6efd5420b54b5f508752d2234b3dcf555[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Thu Dec 5 11:25:52 2024 -0300
+
+    Fix: GPE001 - Step, Page
+
+[33mcommit 209c4f0c8176b3b3ec7743f7f62ea20da716b318[m
+Merge: dd78dbd 9aeceef
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Thu Dec 5 11:51:26 2024 -0300
+
+    Fix: Step GPE001, LoginPage
+
+[33mcommit 1994af2e8fdd6e1174f166d240943028a3a39981[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Thu Dec 5 14:33:55 2024 -0300
+
+    Fix: GPE001- Feature, Step, Page
+
+[33mcommit cb41fdf4314a523952ad5df0c5da8b0772c6fb00[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Thu Dec 5 14:46:43 2024 -0300
+
+    Fix: GPE001 - Page
+
+[33mcommit fcb22c76bca0bee8a1d74831dee5394066a09bc4[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Fri Dec 6 14:55:06 2024 -0300
+
+    Fix: GPE001- Feature, Step, Page, Json
+
+[33mcommit 7231e100004d4539bd98aa489fdc0d5af7ce7333[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Tue Dec 10 14:51:56 2024 -0300
+
+    Fix: GPE001- Feature, Step, Page, Json
+
+[33mcommit dda5fa69065778b7df380a51c8ede5ba5ecab22d[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Wed Dec 11 10:45:51 2024 -0300
+
+    Fix: GPE001- Feature, Step, Page, Json
+
+[33mcommit 3647e618fc96408a0e13b8cdf89980211c3f14a1[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Wed Dec 11 11:29:19 2024 -0300
+
+    Fix: Feature, Step - GPE001
+
+[33mcommit 09673d1233ea1f418fbe0ea1efcdf4f9947067cb[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Wed Dec 11 14:47:08 2024 -0300
+
+    Fix: GPE001- Feature, Step, Page, Json
+
+[33mcommit 2d5824c9b5a916aacd94628306d81e30f8fcefe3[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Thu Dec 12 17:59:39 2024 -0300
+
+    Fix: Features: FCT006, FCT007
+
+[33mcommit e9e27e98ef0af838be458203010cbb18910421de[m
+Merge: 2d5824c 09673d1
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Thu Dec 12 17:59:43 2024 -0300
+
+    Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+
+[33mcommit e214982f563fc20af919e75393e9afbdfee82d83[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Fri Dec 13 09:19:50 2024 -0300
+
+    Fix: BasePage
+
+[33mcommit 134dc1bc61f7e9077dacacd916d6c471e5f15a92[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Fri Dec 13 13:37:25 2024 -0300
+
+    Fix: GPE001- Feature, Step, Page, Json
+
+[33mcommit 66b80fbd74cf939219363d5f318edf86d42b400c[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Fri Dec 13 13:42:28 2024 -0300
+
+    Fix: BasePage - Metodo Limpar
+
+[33mcommit 68b6833ce5fb059dbc0458700efa4bfc5f4235c7[m
+Merge: 66b80fb 134dc1b
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Fri Dec 13 13:42:35 2024 -0300
+
+    Merge branch 'main' of https://gitlab.maxiconsystems.com.br/automacao/migracaomaxys
+
+[33mcommit 34a582c877ffa17fb54f2e970c10fd03d70d6dc4[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Fri Dec 13 13:48:27 2024 -0300
+
+    Fix: GPE001- Page
+
+[33mcommit eeb12cb950191f7a9d048df6c42c8dd9c834432c[m
+Merge: 34a582c 68b6833
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Fri Dec 13 13:50:53 2024 -0300
+
+    Fix: GPE001-BasePage
+
+[33mcommit 79f0cd8a83c272f9598de94898a8c6aa0bf37a84[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Fri Dec 13 14:50:27 2024 -0300
+
+    Fix: GPE001- Feature, Step, Page
+
+[33mcommit 3b406ba9d8dbf1e4570b7b356fec46321df20f4e[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Mon Dec 16 13:41:17 2024 -0300
+
+    Fix: GPE001- Feature, Step, Page
+
+[33mcommit 10cec46e9a5fe5f38b7eaff392649479ceb57d4a[m
+Author: gabriela.alves <gabriela.alves@maxiconsystems.com.br>
+Date:   Mon Dec 16 13:52:39 2024 -0300
+
+    Fix: GPE001- Feature, Runner
+
+[33mcommit 134169082055e5277036e0f2b2b4a66264e15219[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Mon Dec 16 14:02:05 2024 -0300
+
+    Fix: Feature - GPE001
+
+[33mcommit ea8420a640d3d82871bea3aaef554c2a872a7908[m
+Author: tielen.lima <tielen.lima@maxiconsystems.com.br>
+Date:   Tue Dec 17 15:20:37 2024 -0300
+
+    Fix: Feature - TCO024; Step, Page - FCT0
