@@ -1,0 +1,12 @@
+{
+  "razaoSocial": "Empresa Exemplo Ltda",
+  "nomeFantasia": "Exemplo",
+  "cnpj": "12.345.678/0001-99",
+  "inscricaoEstadual": "1234567890",
+  "endereco": "Rua das Flores, 123",
+  "cidade": "São Paulo",
+  "estado": "SP",
+  "telefone": "(11) 98765-4321",
+  "email": "contato@exemplo.com.br",
+  "dataFundacao": "2000-01-01"
+}
